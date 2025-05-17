@@ -2,7 +2,7 @@
 <html lang="sw">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sahilion - Coming Soon</title>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <style>
@@ -17,27 +17,30 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100dvh;
+            min-height: 100vh; /* Changed to vh for consistency */
+            font-size: 16px; /* Base font size for relative units */
         }
 
         .logo {
-            max-width: 160px;
-            margin-top: 40px;
+            max-width: 10rem; /* Relative unit for better scaling */
+            width: 100%;
+            margin-top: 2.5rem;
         }
 
         .tagline-main {
             font-family: 'Montserrat', sans-serif;
             font-style: italic;
             font-weight: 300;
-            font-size: 1.8em;
+            font-size: 1.8rem;
             color: #5DADE2;
-            margin: 0.8em 0;
-            padding: 0 1em;
+            margin: 0.8rem 0;
+            padding: 0 1rem;
+            max-width: 90%; /* Prevent overflow */
         }
 
         h1 {
-            font-size: 3em;
-            margin: 0.3em 0;
+            font-size: 3rem;
+            margin: 0.3rem 0;
         }
 
         .highlight {
@@ -46,37 +49,87 @@
         }
 
         .divider {
-            margin: 1em 0;
+            margin: 1rem 0;
             width: 60%;
+            max-width: 600px; /* Limit divider width on large screens */
             border-top: 2px solid #4A2C2A;
         }
 
         .contact, .social-links {
-            font-size: 1em;
-            margin-top: 1em;
+            font-size: 1rem;
+            margin-top: 1rem;
         }
 
         .social-links a {
-            margin: 0 10px;
+            margin: 0 0.625rem;
             color: #4A2C2A;
             text-decoration: none;
+            font-size: 1.1rem; /* Slightly larger for touch targets */
         }
 
         footer {
-            margin-top: 2em;
-            font-size: 0.9em;
+            margin-top: 2rem;
+            font-size: 0.9rem;
             color: #444;
+            padding-bottom: 1rem;
         }
 
+        /* Desktop view (100% zoom optimization) */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 16px; /* Ensure consistent base font size */
+                max-width: 1200px; /* Constrain content width */
+                margin: 0 auto;
+            }
+            .logo {
+                max-width: 12rem;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            .tagline-main {
+                font-size: 2rem;
+            }
+        }
+
+        /* Tablet view */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            .tagline-main { font-size: 1.4em; }
+            body {
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .tagline-main {
+                font-size: 1.4rem;
+            }
+            .logo {
+                max-width: 8rem;
+            }
         }
 
+        /* Mobile view */
         @media (max-width: 480px) {
-            .logo { max-width: 120px; }
-            h1 { font-size: 1.8em; }
-            .tagline-main { font-size: 1.2em; }
+            body {
+                font-size: 12px;
+                padding: 1rem; /* Add padding for edge-to-edge screens */
+            }
+            .logo {
+                max-width: 7rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .tagline-main {
+                font-size: 1.2rem;
+            }
+            .social-links a {
+                margin: 0 0.5rem;
+                font-size: 1rem; /* Adjust for smaller screens */
+            }
+            .divider {
+                width: 80%; /* Wider divider for mobile */
+            }
         }
     </style>
 </head>
@@ -103,7 +156,7 @@
     </div>
 
     <footer>
-        &copy; 2025 Sahilion. Haki zote zimehifadhiwa.
+        © 2025 Sahilion. Haki zote zimehifadhiwa.
     </footer>
 </body>
 </html>
