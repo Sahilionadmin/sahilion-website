@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahilion - Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <style>
         body {
-            background: url('beach.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #F5F5DC;
             font-family: 'Madimi One', cursive;
             margin: 0;
             padding: 0;
@@ -20,28 +19,26 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            backdrop-filter: brightness(95%) blur(1px);
         }
 
         .logo {
             max-width: 160px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .tagline-main {
-            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.8em;
             color: #5DADE2;
-            margin: 0.5em 0;
+            margin: 0.8em 0;
+            padding: 0 1em;
         }
 
         h1 {
             font-size: 3em;
             margin: 0.3em 0;
-        }
-
-        .sub-taglines p {
-            margin: 0.2em 0;
-            font-size: 1.2em;
         }
 
         .highlight {
@@ -72,10 +69,15 @@
             color: #444;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            .tagline-main { font-size: 1.5em; }
-            .sub-taglines p, .contact, .social-links { font-size: 0.9em; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            .tagline-main { font-size: 1.4em; }
+        }
+
+        @media (max-width: 480px) {
+            .logo { max-width: 120px; }
+            h1 { font-size: 1.8em; }
+            .tagline-main { font-size: 1.2em; }
         }
     </style>
 </head>
@@ -84,18 +86,12 @@
     <h1>Sahilion</h1>
     <div class="tagline-main">From the Coast to the Cosmos</div>
 
-    <div class="sub-taglines">
-        <p>Flavors that speak Swahili</p>
-        <p>Cool crafted. Coast inspired</p>
-        <p>Warm hands. Bold heritage</p>
-    </div>
-
-    <p>Tunakuja hivi karibuni!</p>
+    <p>Kitu kitamu kinaandaliwa...</p>
     <p class="highlight">Usikose! Tafadhali rudi tena.</p>
 
     <div class="divider"></div>
 
-    <p>We're launching soon!</p>
+    <p>Something delicious is cooking...</p>
     <p class="highlight">Stay tuned and visit us again.</p>
 
     <div class="contact">
