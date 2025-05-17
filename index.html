@@ -8,38 +8,88 @@
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #F5F5DC;
+            background: url('beach.jpg') no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Madimi One', cursive;
             margin: 0;
             padding: 0;
+            color: #4A2C2A;
+            text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            color: #4A2C2A;
+            min-height: 100vh;
+            backdrop-filter: brightness(95%) blur(1px);
         }
+
+        .logo {
+            max-width: 160px;
+            margin-top: 30px;
+        }
+
+        .tagline-main {
+            font-size: 2em;
+            color: #5DADE2;
+            margin: 0.5em 0;
+        }
+
         h1 {
-            font-size: 4em;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1.5em;
+            font-size: 3em;
             margin: 0.3em 0;
         }
+
+        .sub-taglines p {
+            margin: 0.2em 0;
+            font-size: 1.2em;
+        }
+
         .highlight {
             color: #5DADE2;
+            font-weight: bold;
         }
+
         .divider {
             margin: 1em 0;
             width: 60%;
             border-top: 2px solid #4A2C2A;
         }
+
+        .contact, .social-links {
+            font-size: 1em;
+            margin-top: 1em;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #4A2C2A;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .tagline-main { font-size: 1.5em; }
+            .sub-taglines p, .contact, .social-links { font-size: 0.9em; }
+        }
     </style>
 </head>
 <body>
+    <img src="logo.png" alt="Sahilion Logo" class="logo">
     <h1>Sahilion</h1>
+    <div class="tagline-main">From the Coast to the Cosmos</div>
+
+    <div class="sub-taglines">
+        <p>Flavors that speak Swahili</p>
+        <p>Cool crafted. Coast inspired</p>
+        <p>Warm hands. Bold heritage</p>
+    </div>
+
     <p>Tunakuja hivi karibuni!</p>
     <p class="highlight">Usikose! Tafadhali rudi tena.</p>
 
@@ -47,5 +97,18 @@
 
     <p>We're launching soon!</p>
     <p class="highlight">Stay tuned and visit us again.</p>
+
+    <div class="contact">
+        <p>Wasiliana nasi: <a href="mailto:info@sahilion.com">info@sahilion.com</a></p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://x.com/SahilionHQ?t=DWH10L5-HnrPzbcG5mbVAA&s=09" target="_blank">X</a> |
+        <a href="https://www.instagram.com/sahilionhq?igsh=MXdkY245MDcxanhzNg==" target="_blank">Instagram</a>
+    </div>
+
+    <footer>
+        &copy; 2025 Sahilion. Haki zote zimehifadhiwa.
+    </footer>
 </body>
 </html>
