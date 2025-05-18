@@ -40,7 +40,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* smaller than h1 */
     color: #5DADE2;
     margin: 0.8rem 0;
     padding: 0 1rem;
@@ -58,7 +58,7 @@ h1 {
 }
 
 .divider {
-    margin: 1rem 0;
+    margin: 1rem auto; /* centered */
     width: 60%;
     max-width: 600px;
     border-top: 2px solid #4A2C2A;
@@ -92,14 +92,14 @@ footer {
     }
     .logo { max-width: 12rem; }
     h1 { font-size: 3.5rem; }
-    .tagline-main { font-size: 2rem; }
+    .tagline-main { font-size: 1.6rem; } /* smaller than h1 */
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
     body { font-size: 14px; }
     h1 { font-size: 2.2rem; }
-    .tagline-main { font-size: 1.4rem; }
+    .tagline-main { font-size: 1.3rem; }
     .logo { max-width: 8rem; }
 }
 
@@ -108,7 +108,7 @@ footer {
     body { font-size: 12px; padding: 1rem; }
     .logo { max-width: 7rem; }
     h1 { font-size: 1.8rem; }
-    .tagline-main { font-size: 1.2rem; }
+    .tagline-main { font-size: 1.1rem; }
     .social-links a {
         margin: 0 0.5rem;
         font-size: 1rem;
