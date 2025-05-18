@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@1,300&display=swap');
+
+body {
+    background: url('background-sahilion.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Madimi One', cursive;
+    margin: 0;
+    padding: 0;
+    color: #4A2C2A;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(245, 245, 220, 0.88); /* beige semi-transparent overlay */
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    max-width: 10rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.tagline-main {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #5DADE2;
+    margin: 0.8rem 0;
+    padding: 0 1rem;
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0.3rem 0;
+}
+
+.highlight {
+    color: #5DADE2;
+    font-weight: bold;
+}
+
+.divider {
+    margin: 1rem 0;
+    width: 60%;
+    max-width: 600px;
+    border-top: 2px solid #4A2C2A;
+}
+
+.contact, .social-links {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 0.625rem;
+    color: #4A2C2A;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #444;
+    padding-bottom: 1rem;
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .logo { max-width: 12rem; }
+    h1 { font-size: 3.5rem; }
+    .tagline-main { font-size: 2rem; }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    body { font-size: 14px; }
+    h1 { font-size: 2.2rem; }
+    .tagline-main { font-size: 1.4rem; }
+    .logo { max-width: 8rem; }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    body { font-size: 12px; padding: 1rem; }
+    .logo { max-width: 7rem; }
+    h1 { font-size: 1.8rem; }
+    .tagline-main { font-size: 1.2rem; }
+    .social-links a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .divider { width: 80%; }
+}
