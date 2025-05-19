@@ -6,7 +6,7 @@ body {
   font-family: 'Madimi One', cursive;
   margin: 0;
   padding: 0;
-  color: #4A2C2A;
+  color: #3A2A28;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ body::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(245, 245, 220, 0.88);
+  background-color: rgba(245, 245, 220, 0.93);
   z-index: 0;
 }
 
@@ -27,34 +27,36 @@ main {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 900px;
-  padding: 2rem 1rem;
+  max-width: 800px;
+  padding: 1.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .logo {
-  max-width: 6rem;
+  max-width: 5rem;
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin: 0.5rem 0;
+  font-size: 2.4rem;
+  margin: 0.3rem 0;
+  color: #2C3E50;
 }
 
 .tagline-main {
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 1.4rem;
-  color: #5DADE2;
-  margin: 0.4rem 0 1rem;
-  max-width: 90%;
+  font-size: 1.3rem;
+  color: #2980B9;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -63,13 +65,13 @@ p {
 }
 
 .highlight {
-  color: #5DADE2;
+  color: #2980B9;
   font-weight: bold;
 }
 
 .divider {
-  margin: 1.5rem 0;
-  width: 80%;
+  margin: 1.2rem 0;
+  width: 85%;
   border-top: 2px solid #4A2C2A;
 }
 
@@ -86,9 +88,73 @@ p {
 }
 
 footer {
+  position: relative;
   width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   font-size: 0.9rem;
-  color: #444;
+  color: #555;
+  background: transparent;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 4.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tagline-main {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .social-links {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 4rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .tagline-main {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
