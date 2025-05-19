@@ -1,121 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@1,300&display=swap');
 
 body {
-    background: url('background-sahilion.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Madimi One', cursive;
-    margin: 0;
-    padding: 0;
-    color: #4A2C2A;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+  background: url('background-sahilion.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Madimi One', cursive;
+  margin: 0;
+  padding: 0;
+  color: #4A2C2A;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(245, 245, 220, 0.88);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(245, 245, 220, 0.88);
+  z-index: 0;
 }
 
 main {
-    position: relative;
-    z-index: 1;
-    padding: 1.5rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-    max-width: 6.5rem;
-    margin: 1rem auto 0.5rem;
-    display: block;
+  max-width: 6.5rem;
+  margin: 1rem auto 0.5rem;
+  display: block;
 }
 
 h1 {
-    font-size: 2.2rem;
-    margin: 0.3rem 0;
+  font-size: 2.2rem;
+  margin: 0.3rem 0;
 }
 
 .tagline-main {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.3rem;
-    color: #2980B9;
-    margin-bottom: 0.8rem;
-    word-break: break-word;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: #2980B9;
+  margin-bottom: 0.8rem;
+  word-break: break-word;
 }
 
 .status-message {
-    font-family: 'Madimi One', cursive;
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    color: #4A2C2A;
+  font-family: 'Madimi One', cursive;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #4A2C2A;
 }
 
 .divider {
-    margin: 1rem auto;
-    width: 70%;
-    max-width: 500px;
-    border-top: 2px solid #4A2C2A;
+  margin: 1rem auto;
+  width: 70%;
+  max-width: 500px;
+  border-top: 2px solid #4A2C2A;
 }
 
-.contact, .social-links {
-    font-size: 1rem;
-    margin-top: 1rem;
+.contact,
+.social-links {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Mitandao ya kijamii disabled (greyed out, non-clickable) */
+.disabled-link {
+  color: #aaa; /* rangi hafifu ya kijivu */
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none; /* haiboniwezi kubonyezwa */
+  font-size: 1.1rem;
+  margin: 0 0.625rem;
 }
 
 .social-links a {
-    margin: 0 0.625rem;
-    color: #4A2C2A;
-    text-decoration: none;
-    font-size: 1.1rem;
+  margin: 0 0.625rem;
+  color: #4A2C2A;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 1rem 0 0.8rem;
-    font-size: 0.9rem;
-    color: #444;
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
+  user-select: none;
 }
 
 /* Desktop view */
 @media (min-width: 1024px) {
-    body {
-        font-size: 16px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .logo { max-width: 7rem; }
-    h1 { font-size: 2.8rem; }
+  body {
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo {
+    max-width: 7rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
-    body { font-size: 14px; }
-    h1 { font-size: 2.2rem; }
-    .tagline-main, .status-message { font-size: 1.2rem; }
-    .logo { max-width: 6rem; }
-    .divider { width: 80%; }
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .tagline-main,
+  .status-message {
+    font-size: 1.2rem;
+  }
+  .logo {
+    max-width: 6rem;
+  }
+  .divider {
+    width: 80%;
+  }
 }
 
 /* Mobile view */
 @media (max-width: 480px) {
-    body { font-size: 13px; padding: 1rem; }
-    .logo { max-width: 5.5rem; }
-    h1 { font-size: 1.8rem; }
-    .tagline-main, .status-message { font-size: 1.2rem; }
-    .social-links a {
-        margin: 0 0.5rem;
-        font-size: 1rem;
-    }
-    .divider { width: 85%; }
+  body {
+    font-size: 13px;
+    padding: 1rem;
+  }
+  .logo {
+    max-width: 5.5rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .tagline-main,
+  .status-message {
+    font-size: 1.2rem;
+  }
+  .social-links a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  .divider {
+    width: 85%;
+  }
 }
