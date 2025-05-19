@@ -7,7 +7,6 @@ body {
   margin: 0;
   padding: 0;
   color: #4A2C2A;
-  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,20 +26,20 @@ body::before {
 main {
   position: relative;
   z-index: 1;
-  padding: 1.5rem 1rem;
   width: 100%;
+  max-width: 900px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
 }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
 .logo {
-  max-width: 4.5rem;
-  height: auto;
+  max-width: 6rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -52,18 +51,15 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #5DADE2;
-  margin-bottom: 1rem;
+  margin: 0.4rem 0 1rem;
+  max-width: 90%;
 }
 
 p {
+  margin: 0.3rem 0;
   font-size: 1rem;
-  margin: 0.4rem auto;
-  max-width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .highlight {
@@ -72,43 +68,27 @@ p {
 }
 
 .divider {
-  margin: 1.2rem auto;
-  width: 65%;
-  max-width: 650px;
+  margin: 1.5rem 0;
+  width: 80%;
   border-top: 2px solid #4A2C2A;
 }
 
 .contact, .social-links {
-  margin-top: 1rem;
   font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .social-links a {
-  margin: 0 0.6rem;
+  margin: 0 0.625rem;
   color: #4A2C2A;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 footer {
   width: 100%;
   text-align: center;
+  padding: 1rem 0;
   font-size: 0.9rem;
   color: #444;
-  padding: 1rem 0;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  .tagline-main { font-size: 1.3rem; }
-  .logo { max-width: 4rem; }
-  p { font-size: 0.95rem; }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 1.6rem; }
-  .tagline-main { font-size: 1.1rem; }
-  .logo { max-width: 3.5rem; }
-  p { font-size: 0.9rem; }
-  .divider { width: 80%; }
 }
