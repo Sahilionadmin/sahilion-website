@@ -10,9 +10,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    font-size: 16px;
     position: relative;
 }
 
@@ -20,35 +18,32 @@ body::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(245, 245, 220, 0.88); /* beige semi-transparent overlay */
+    background-color: rgba(245, 245, 220, 0.88);
     z-index: 0;
 }
 
 main {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 700px;
-    padding: 1rem;
-    box-sizing: border-box;
+    padding: 1.5rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    max-width: 6rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    max-width: 6.5rem;
+    margin: 1rem auto 0.5rem;
+    display: block;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
+    font-size: 2.2rem;
+    margin: 0.3rem 0;
 }
 
-.tagline-main,
-.status-message {
+.tagline-main {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -58,8 +53,15 @@ h1 {
     word-break: break-word;
 }
 
+.status-message {
+    font-family: 'Madimi One', cursive;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #4A2C2A;
+}
+
 .divider {
-    margin: 1.5rem 0;
+    margin: 1rem auto;
     width: 70%;
     max-width: 500px;
     border-top: 2px solid #4A2C2A;
@@ -71,47 +73,49 @@ h1 {
 }
 
 .social-links a {
-    margin: 0 0.6rem;
+    margin: 0 0.625rem;
     color: #4A2C2A;
     text-decoration: none;
     font-size: 1.1rem;
 }
 
 footer {
-    position: relative;
-    width: 100%;
+    margin-top: auto;
     text-align: center;
     padding: 1rem 0 0.8rem;
     font-size: 0.9rem;
-    color: #555;
-    background: transparent;
-    margin-top: 1rem;
+    color: #444;
 }
 
 /* Desktop view */
 @media (min-width: 1024px) {
     body {
         font-size: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .logo { max-width: 7rem; }
-    h1 { font-size: 3rem; }
-    .tagline-main, .status-message { font-size: 1.4rem; }
+    h1 { font-size: 2.8rem; }
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
-    body { font-size: 15px; }
+    body { font-size: 14px; }
     h1 { font-size: 2.2rem; }
-    .logo { max-width: 6rem; }
     .tagline-main, .status-message { font-size: 1.2rem; }
+    .logo { max-width: 6rem; }
+    .divider { width: 80%; }
 }
 
 /* Mobile view */
 @media (max-width: 480px) {
-    body { font-size: 14px; padding: 1rem; }
+    body { font-size: 13px; padding: 1rem; }
+    .logo { max-width: 5.5rem; }
     h1 { font-size: 1.8rem; }
-    .logo { max-width: 5.5rem; margin-top: 1.5rem; }
-    .tagline-main, .status-message { font-size: 1rem; }
-    .divider { width: 80%; }
-    footer { font-size: 0.8rem; margin-top: 0.8rem; }
+    .tagline-main, .status-message { font-size: 1.2rem; }
+    .social-links a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .divider { width: 85%; }
 }
