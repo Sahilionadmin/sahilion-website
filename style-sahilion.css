@@ -31,25 +31,37 @@ main {
 }
 
 .logo {
-    max-width: 10rem;
+    max-width: 6rem; /* Imefanywa ndogo zaidi */
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0.3rem 0;
 }
 
 .tagline-main {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 1.4rem; /* smaller than h1 */
+    font-size: 1.8rem;
     color: #5DADE2;
     margin: 0.8rem 0;
     padding: 0 1rem;
     max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-h1 {
-    font-size: 3rem;
-    margin: 0.3rem 0;
+p,
+.highlight {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.3rem auto;
+    max-width: 90%;
 }
 
 .highlight {
@@ -58,7 +70,7 @@ h1 {
 }
 
 .divider {
-    margin: 1rem auto; /* centered */
+    margin: 1rem auto;
     width: 60%;
     max-width: 600px;
     border-top: 2px solid #4A2C2A;
@@ -90,25 +102,25 @@ footer {
         max-width: 1200px;
         margin: 0 auto;
     }
-    .logo { max-width: 12rem; }
+    .logo { max-width: 6rem; }
     h1 { font-size: 3.5rem; }
-    .tagline-main { font-size: 1.6rem; } /* smaller than h1 */
+    .tagline-main { font-size: 2rem; }
 }
 
 /* Tablet view */
 @media (max-width: 768px) {
     body { font-size: 14px; }
     h1 { font-size: 2.2rem; }
-    .tagline-main { font-size: 1.3rem; }
-    .logo { max-width: 8rem; }
+    .tagline-main { font-size: 1.4rem; }
+    .logo { max-width: 5.5rem; }
 }
 
 /* Mobile view */
 @media (max-width: 480px) {
     body { font-size: 12px; padding: 1rem; }
-    .logo { max-width: 7rem; }
+    .logo { max-width: 5rem; }
     h1 { font-size: 1.8rem; }
-    .tagline-main { font-size: 1.1rem; }
+    .tagline-main { font-size: 1.2rem; }
     .social-links a {
         margin: 0 0.5rem;
         font-size: 1rem;
