@@ -56,11 +56,9 @@ body::before {
   font-weight: 300;
   color: #5DADE2;
   margin-top: 0.25rem;
-  max-width: 12ch;
-  display: inline-block;
+  white-space: nowrap;
+  overflow: visible;
   text-align: center;
-  overflow-wrap: break-word;
-  white-space: normal;
 }
 
 /* Main Section */
@@ -132,7 +130,6 @@ main {
 
   .tagline-main {
     font-size: 1rem;
-    max-width: 100%;
   }
 
   .status-message {
@@ -151,7 +148,6 @@ main {
 
   .tagline-main {
     font-size: 0.95rem;
-    max-width: 100%;
     white-space: normal;
   }
 
