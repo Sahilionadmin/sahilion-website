@@ -23,46 +23,54 @@ body::before {
   z-index: -1;
 }
 
-/* Top Bar */
+/* --- TOP BAR --- */
 .top-bar {
   background-color: #4A2C2A;
-  padding: 1.8rem 1rem 1.3rem;
+  padding: 1.5rem 1rem 1.3rem;
 }
 
-.top-content {
+.top-horizontal {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .logo {
-  max-width: 5.2rem;
+  max-width: 5rem;
   height: auto;
-  margin-bottom: 0.6rem;
   border-radius: 0.5rem;
 }
 
+.name-tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
 .brand-name {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin: 0;
   color: #F5F5DC;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .tagline-main {
   font-family: 'Calibri Light', 'Calibri', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 300;
   color: #5DADE2;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
+  max-width: 12ch;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 12ch; /* matches width of "Sahilion" */
 }
 
-/* Main Section */
+/* --- MAIN --- */
 main {
   flex: 1;
   position: relative;
@@ -101,7 +109,7 @@ main {
   text-decoration: underline;
 }
 
-/* Bottom Bar */
+/* --- BOTTOM BAR --- */
 .bottom-bar {
   background-color: #4A2C2A;
   color: #F5F5DC;
@@ -119,14 +127,14 @@ main {
   opacity: 0.7;
 }
 
-/* Responsive Adjustments */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .logo {
     max-width: 4.2rem;
   }
 
   .brand-name {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .tagline-main {
@@ -134,8 +142,13 @@ main {
     max-width: 100%;
   }
 
-  .status-message {
-    font-size: 1.2rem;
+  .top-horizontal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .name-tagline {
+    align-items: center;
   }
 }
 
@@ -150,8 +163,6 @@ main {
 
   .tagline-main {
     font-size: 0.95rem;
-    white-space: normal;
-    max-width: 100%;
   }
 
   .divider {
