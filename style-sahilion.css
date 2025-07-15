@@ -1,36 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
-
-body {
-  background: url('background-sahilion.png') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #f5f5dc;
-  font-family: 'Madimi One', cursive, system-ui, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #4A2C2A;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(245, 245, 220, 0.88);
-  z-index: -1;
-}
-
 /* --- Top Bar --- */
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Kusawazisha logo na brand-block */
   background-color: #4A2C2A;
-  padding: 1rem 1rem;
-  gap: 0.8rem;
+  padding: 1rem 2rem;
+  max-width: 1200px; /* Mstatili yenye uwiano wa pande */
+  margin: 0 auto; /* Kusawazisha katikati ya ukurasa */
+  gap: 1.5rem;
   flex-wrap: nowrap;
+  border-radius: 0.5rem;
 }
 
 .logo {
@@ -42,13 +21,14 @@ body::before {
 
 .brand-block {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center; /* Kusawazisha wima na logo */
+  justify-content: flex-start;
 }
 
 .name-tagline {
-  display: inline-block;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Jina na tagline zimesawazishwa kushoto */
   max-width: fit-content;
 }
 
@@ -59,119 +39,79 @@ body::before {
   line-height: 1.1;
   font-weight: normal;
   letter-spacing: 0.02em;
+  max-width: 200px; /* Upana sawa na tagline */
+  text-align: left;
 }
 
 .tagline-main {
   font-family: 'Calibri Light', 'Calibri', sans-serif;
   font-size: 1.05rem;
   color: #5DADE2;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   line-height: 1.1;
-  max-width: 100%;
+  max-width: 200px; /* Upana sawa na jina */
   text-align: left;
-}
-
-/* --- Main Section --- */
-main {
-  flex: 1;
-  padding: 2rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.status-message {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-}
-
-.divider {
-  margin: 1.2rem auto;
-  width: 70%;
-  max-width: 500px;
-  border-top: 2px solid #4A2C2A;
-}
-
-.contact {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-.contact a {
-  color: #2980B9;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* --- Bottom Bar --- */
-.bottom-bar {
-  background-color: #4A2C2A;
-  color: #F5F5DC;
-  padding: 1rem 0.5rem;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
-.disabled-link {
-  color: #999;
-  cursor: not-allowed;
-  pointer-events: none;
-  font-size: 1.1rem;
-  margin: 0 0.5rem;
-  opacity: 0.7;
 }
 
 /* --- Responsive Layout --- */
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row; /* Kubaki usawa */
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 90%; /* Kupunguza upana kidogo */
   }
 
   .brand-block {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .brand-name {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.8rem;
+    max-width: 180px; /* Upana sawa na tagline */
+    text-align: left;
   }
 
   .tagline-main {
-    font-size: 1rem;
-    text-align: center;
-    white-space: normal;
+    font-size: 0.95rem;
+    max-width: 180px; /* Upana sawa na jina */
+    text-align: left;
   }
 
   .logo {
     width: 3rem;
   }
-
-  .status-message {
-    font-size: 1.2rem;
-  }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 13px;
-    padding: 0.5rem;
+  .top-bar {
+    flex-direction: column; /* Mpangilio wa wima kwa vifaa vidogo */
+    padding: 0.8rem;
+    gap: 0.8rem;
+    max-width: 95%;
+  }
+
+  .brand-block {
+    align-items: center; /* Kusawazisha katikati */
+  }
+
+  .name-tagline {
+    align-items: center; /* Jina na tagline katikati */
   }
 
   .brand-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    max-width: 160px; /* Upana sawa na tagline */
+    text-align: center;
   }
 
   .tagline-main {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    max-width: 160px; /* Upana sawa na jina */
+    text-align: center;
   }
 
-  .divider {
-    width: 85%;
+  .logo {
+    width: 2.8rem;
   }
 }
