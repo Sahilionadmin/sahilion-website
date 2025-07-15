@@ -1,117 +1,52 @@
-/* --- Top Bar --- */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Kusawazisha logo na brand-block */
-  background-color: #4A2C2A;
-  padding: 1rem 2rem;
-  max-width: 1200px; /* Mstatili yenye uwiano wa pande */
-  margin: 0 auto; /* Kusawazisha katikati ya ukurasa */
-  gap: 1.5rem;
-  flex-wrap: nowrap;
-  border-radius: 0.5rem;
-}
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahilion - Coming Soon</title>
+  <meta name="description" content="Sahilion – From the Coast to the Cosmos. Kitu kitamu kinaandaliwa.">
+  <link rel="stylesheet" href="style-sahilion.css?v=2.0.0" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <img src="logo.svg" alt="Sahilion Logo" class="logo" />
+    <div class="brand-block">
+      <h1 class="brand-name">Sahilion</h1>
+      <div class="tagline-main">From the Coast to the Cosmos</div>
+    </div>
+  </header>
 
-.logo {
-  width: 3.6rem;
-  height: auto;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
+  <!-- Main Content -->
+  <main>
+    <p class="status-message">Kitu kitamu kinaandaliwa...</p>
+    <p class="status-message">Usikose! Tafadhali rudi tena.</p>
 
-.brand-block {
-  display: flex;
-  align-items: center; /* Kusawazisha wima na logo */
-  justify-content: flex-start;
-}
+    <div class="divider"></div>
 
-.name-tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Jina na tagline zimesawazishwa kushoto */
-  max-width: fit-content;
-}
+    <p class="status-message">Something delicious is cooking...</p>
+    <p class="status-message">Stay tuned and visit us again.</p>
 
-.brand-name {
-  font-size: 2.1rem;
-  margin: 0;
-  color: #F5F5DC;
-  line-height: 1.1;
-  font-weight: normal;
-  letter-spacing: 0.02em;
-  max-width: 200px; /* Upana sawa na tagline */
-  text-align: left;
-}
+    <div class="contact">
+      <p>
+        Wasiliana nasi:
+        <a href="mailto:info@sahilion.com">info@sahilion.com</a>
+      </p>
+    </div>
+  </main>
 
-.tagline-main {
-  font-family: 'Calibri Light', 'Calibri', sans-serif;
-  font-size: 1.05rem;
-  color: #5DADE2;
-  margin-top: 0.3rem;
-  line-height: 1.1;
-  max-width: 200px; /* Upana sawa na jina */
-  text-align: left;
-}
-
-/* --- Responsive Layout --- */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: row; /* Kubaki usawa */
-    padding: 1rem;
-    gap: 1rem;
-    max-width: 90%; /* Kupunguza upana kidogo */
-  }
-
-  .brand-block {
-    align-items: flex-start;
-  }
-
-  .brand-name {
-    font-size: 1.8rem;
-    max-width: 180px; /* Upana sawa na tagline */
-    text-align: left;
-  }
-
-  .tagline-main {
-    font-size: 0.95rem;
-    max-width: 180px; /* Upana sawa na jina */
-    text-align: left;
-  }
-
-  .logo {
-    width: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .top-bar {
-    flex-direction: column; /* Mpangilio wa wima kwa vifaa vidogo */
-    padding: 0.8rem;
-    gap: 0.8rem;
-    max-width: 95%;
-  }
-
-  .brand-block {
-    align-items: center; /* Kusawazisha katikati */
-  }
-
-  .name-tagline {
-    align-items: center; /* Jina na tagline katikati */
-  }
-
-  .brand-name {
-    font-size: 1.6rem;
-    max-width: 160px; /* Upana sawa na tagline */
-    text-align: center;
-  }
-
-  .tagline-main {
-    font-size: 0.9rem;
-    max-width: 160px; /* Upana sawa na jina */
-    text-align: center;
-  }
-
-  .logo {
-    width: 2.8rem;
-  }
-}
+  <!-- Bottom Bar -->
+  <footer class="bottom-bar">
+    <div class="social-links">
+      <span class="disabled-link" title="Inajengwa">X</span> |
+      <span class="disabled-link" title="Inajengwa">Instagram</span> |
+      <span class="disabled-link" title="Inajengwa">Facebook</span>
+    </div>
+    <div class="copyright">
+      © 2025 Sahilion. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
