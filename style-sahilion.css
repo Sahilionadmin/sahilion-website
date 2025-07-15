@@ -26,7 +26,7 @@ body::before {
 /* Top Bar */
 .top-bar {
   background-color: #4A2C2A;
-  padding: 1.5rem 1rem 1rem;
+  padding: 1.8rem 1rem 1.3rem;
 }
 
 .top-content {
@@ -37,14 +37,14 @@ body::before {
 }
 
 .logo {
-  max-width: 4.2rem;
+  max-width: 5.2rem;
   height: auto;
   margin-bottom: 0.6rem;
   border-radius: 0.5rem;
 }
 
 .brand-name {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   margin: 0;
   color: #F5F5DC;
   line-height: 1.2;
@@ -56,8 +56,10 @@ body::before {
   font-weight: 300;
   color: #5DADE2;
   margin-top: 0.25rem;
-  max-width: 12ch; /* Limits width to approximate length of "Sahilion" */
-  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 12ch; /* matches width of "Sahilion" */
 }
 
 /* Main Section */
@@ -120,15 +122,16 @@ main {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .logo {
-    max-width: 3.5rem;
+    max-width: 4.2rem;
   }
 
   .brand-name {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .tagline-main {
     font-size: 1rem;
+    max-width: 100%;
   }
 
   .status-message {
@@ -137,12 +140,17 @@ main {
 }
 
 @media (max-width: 480px) {
+  .logo {
+    max-width: 3.5rem;
+  }
+
   .brand-name {
     font-size: 1.9rem;
   }
 
   .tagline-main {
     font-size: 0.95rem;
+    white-space: normal;
     max-width: 100%;
   }
 
