@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 body {
   background: url('background-sahilion.png') no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Madimi One', cursive;
+  background-color: #f5f5dc;
+  font-family: 'Madimi One', cursive, system-ui, sans-serif;
   margin: 0;
   padding: 0;
   color: #4A2C2A;
@@ -17,147 +18,146 @@ body {
 body::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(245, 245, 220, 0.88);
-  z-index: 0;
+  z-index: -1;
 }
 
+/* Top Bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4A2C2A;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 3.5rem;
+  height: auto;
+  margin-right: 0.75rem;
+}
+
+.brand-text h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #F5F5DC;
+}
+
+.tagline-main {
+  font-family: 'Calibri Light', 'Calibri', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #D35400;
+  margin-top: 0.2rem;
+}
+
+/* Main Section */
 main {
+  flex: 1;
   position: relative;
   z-index: 1;
-  padding: 1.5rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
-  max-width: 6.5rem;
-  margin: 1rem auto 0.5rem;
-  display: block;
-}
-
-h1 {
-  font-size: 2.2rem;
-  margin: 0.3rem 0;
-}
-
-.tagline-main {
-  font-family: 'Montserrat', sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.3rem;
-  color: #2980B9;
-  margin-bottom: 0.8rem;
-  word-break: break-word;
-}
-
 .status-message {
-  font-family: 'Madimi One', cursive;
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
   color: #4A2C2A;
 }
 
 .divider {
-  margin: 1rem auto;
+  margin: 1.2rem auto;
   width: 70%;
   max-width: 500px;
   border-top: 2px solid #4A2C2A;
 }
 
-.contact,
-.social-links {
+.contact {
   font-size: 1rem;
   margin-top: 1rem;
 }
 
-/* Mitandao ya kijamii disabled (greyed out, non-clickable) */
-.disabled-link {
-  color: #aaa; /* rangi hafifu ya kijivu */
-  cursor: not-allowed;
+.contact a {
+  color: #2980B9;
   text-decoration: none;
-  pointer-events: none; /* haiboniwezi kubonyezwa */
-  font-size: 1.1rem;
-  margin: 0 0.625rem;
 }
 
-.social-links a {
-  margin: 0 0.625rem;
-  color: #4A2C2A;
-  text-decoration: none;
-  font-size: 1.1rem;
+.contact a:hover {
+  text-decoration: underline;
 }
 
-footer {
-  margin-top: auto;
+/* Bottom Bar */
+.bottom-bar {
+  background-color: #4A2C2A;
+  color: #F5F5DC;
+  padding: 1rem 0.5rem;
   text-align: center;
-  padding: 1rem 0 1rem;
-  font-size: 0.85rem;
-  color: #4A2C2A; /* rangi ya haki miliki */
-  font-family: 'Madimi One', cursive;
-  letter-spacing: 0.02em;
-  user-select: none;
+  font-size: 0.95rem;
 }
 
-/* Desktop view */
+.disabled-link {
+  color: #999;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
 @media (min-width: 1024px) {
-  body {
-    font-size: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
+  .brand-text h1 {
+    font-size: 2.6rem;
+  }
+  .tagline-main {
+    font-size: 1.25rem;
   }
   .logo {
-    max-width: 7rem;
+    max-width: 4rem;
   }
-  h1 {
-    font-size: 2.8rem;
-  }
-}
-
-/* Tablet view */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 2.2rem;
-  }
-  .tagline-main,
   .status-message {
-    font-size: 1.2rem;
-  }
-  .logo {
-    max-width: 6rem;
-  }
-  .divider {
-    width: 80%;
+    font-size: 1.4rem;
   }
 }
 
-/* Mobile view */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo {
+    margin: 0 0 0.5rem;
+  }
+  .brand-text h1 {
+    font-size: 2rem;
+  }
+  .tagline-main {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 13px;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .logo {
-    max-width: 5.5rem;
+    max-width: 3rem;
   }
-  h1 {
-    font-size: 1.8rem;
+  .brand-text h1 {
+    font-size: 1.6rem;
   }
-  .tagline-main,
-  .status-message {
-    font-size: 1.2rem;
-  }
-  .social-links a {
-    margin: 0 0.5rem;
+  .tagline-main {
     font-size: 1rem;
+  }
+  .status-message {
+    font-size: 1.1rem;
   }
   .divider {
     width: 85%;
