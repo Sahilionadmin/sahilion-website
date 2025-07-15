@@ -37,6 +37,7 @@ body::before {
   max-width: 3.5rem;
   height: auto;
   margin-right: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .brand-text h1 {
@@ -49,7 +50,7 @@ body::before {
   font-family: 'Calibri Light', 'Calibri', sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
-  color: #D35400;
+  color: #5DADE2;
   margin-top: 0.2rem;
 }
 
