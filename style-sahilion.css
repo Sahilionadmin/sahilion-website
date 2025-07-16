@@ -4,7 +4,7 @@ body {
   background: url('background-sahilion.png') no-repeat center center fixed;
   background-size: cover;
   background-color: #f5f5dc;
-  font-family: 'Madimi One', cursive, system-ui, sans-serif;
+  font-family: 'Madimi One', cursive;
   margin: 0;
   padding: 0;
   color: #4A2C2A;
@@ -23,50 +23,34 @@ body::before {
   z-index: -1;
 }
 
-/* Top Bar */
+/* ==== TOP BAR ==== */
 .top-bar {
   background-color: #4A2C2A;
-  padding: 1.8rem 1rem 1.3rem;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
 }
 
-.top-content {
+.banner-wrapper {
+  width: 600px;
+  height: 160px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
-  max-width: 5.2rem;
+.banner-img {
+  width: 100%;
   height: auto;
-  margin-bottom: 0.6rem;
-  border-radius: 0.5rem;
+  display: block;
 }
 
-.brand-name {
-  font-size: 2.8rem;
-  margin: 0;
-  color: #F5F5DC;
-  line-height: 1.2;
-}
-
-.tagline-main {
-  font-family: 'Calibri Light', 'Calibri', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: #5DADE2;
-  margin-top: 0.25rem;
-  overflow-wrap: break-word;
-  white-space: normal;
-  text-align: center;
-}
-
-/* Main Section */
+/* ==== MAIN ==== */
 main {
   flex: 1;
-  position: relative;
-  z-index: 1;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +84,7 @@ main {
   text-decoration: underline;
 }
 
-/* Bottom Bar */
+/* ==== BOTTOM BAR ==== */
 .bottom-bar {
   background-color: #4A2C2A;
   color: #F5F5DC;
@@ -118,48 +102,23 @@ main {
   opacity: 0.7;
 }
 
-/* Responsive Adjustments */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  .logo {
-    max-width: 4.2rem;
-  }
-
-  .brand-name {
-    font-size: 2.3rem;
-  }
-
-  .tagline-main {
-    font-size: 1rem;
+  .banner-wrapper {
+    width: 90%;
+    height: auto;
   }
 
   .status-message {
     font-size: 1.2rem;
   }
+
+  .divider {
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
-  .top-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    max-width: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .brand-name {
-    font-size: 1.9rem;
-    margin: 0;
-  }
-
-  .tagline-main {
-    font-size: 0.95rem;
-    white-space: normal;
-    max-width: 90%;
-    margin-top: 0.3rem;
-  }
-
   .status-message {
     font-size: 1.1rem;
   }
