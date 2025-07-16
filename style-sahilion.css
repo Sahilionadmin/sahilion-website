@@ -24,12 +24,12 @@ body::before {
 /* Top Bar */
 .top-bar {
   background-color: #4A2C2A;
-  padding: 1.2rem 1rem 1rem;
+  padding: 2rem 1rem 1.5rem;
   text-align: center;
 }
 
 .banner {
-  max-width: 290px;
+  max-width: 360px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -90,34 +90,3 @@ main {
   font-size: 1.1rem;
   margin: 0 0.5rem;
   opacity: 0.7;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .banner {
-    max-width: 250px;
-  }
-
-  .status-message {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 13px;
-    padding: 0.5rem;
-  }
-
-  .banner {
-    max-width: 220px;
-  }
-
-  .status-message {
-    font-size: 1.1rem;
-  }
-
-  .divider {
-    width: 85%;
-  }
-}
