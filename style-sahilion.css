@@ -29,7 +29,7 @@ body::before {
 }
 
 .banner {
-  max-width: 360px;
+  max-width: 420px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -90,3 +90,34 @@ main {
   font-size: 1.1rem;
   margin: 0 0.5rem;
   opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    max-width: 360px;
+  }
+
+  .status-message {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+    padding: 0.5rem;
+  }
+
+  .banner {
+    max-width: 320px;
+  }
+
+  .status-message {
+    font-size: 1.1rem;
+  }
+
+  .divider {
+    width: 85%;
+  }
+}
