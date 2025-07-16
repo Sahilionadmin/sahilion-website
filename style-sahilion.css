@@ -3,7 +3,6 @@
 body {
   background: url('background-sahilion.png') no-repeat center center fixed;
   background-size: cover;
-  background-color: #f5f5dc;
   font-family: 'Madimi One', cursive;
   margin: 0;
   padding: 0;
@@ -19,26 +18,31 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(245, 245, 220, 0.88);
-  z-index: -1;
+  background-color: rgba(245, 245, 220, 0.88); /* #F5F5DC with transparency */
+  z-index: 0;
 }
 
-/* ==== TOP BAR ==== */
-.top-bar {
-  background-color: #4A2C2A;
-  height: 260px;
+main {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1rem;
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+  background-color: #4A2C2A;
+  padding: 1.2rem 1rem;
+  text-align: center;
 }
 
 .banner-wrapper {
-  width: 600px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 288.8px;
+  margin: 0 auto;
 }
 
 .banner-img {
@@ -47,16 +51,7 @@ body::before {
   display: block;
 }
 
-/* ==== MAIN ==== */
-main {
-  flex: 1;
-  padding: 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
+/* ===== Main Content ===== */
 .status-message {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
@@ -64,71 +59,69 @@ main {
 }
 
 .divider {
-  margin: 1.2rem auto;
+  margin: 1rem auto;
   width: 70%;
   max-width: 500px;
   border-top: 2px solid #4A2C2A;
 }
 
-.contact {
+.contact,
+.social-links {
   font-size: 1rem;
   margin-top: 1rem;
 }
 
-.contact a {
-  color: #2980B9;
+.disabled-link {
+  color: #aaa;
+  cursor: not-allowed;
   text-decoration: none;
+  pointer-events: none;
+  font-size: 1.1rem;
+  margin: 0 0.625rem;
 }
 
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* ==== BOTTOM BAR ==== */
+/* ===== Bottom Bar ===== */
 .bottom-bar {
   background-color: #4A2C2A;
   color: #F5F5DC;
   padding: 1rem 0.5rem;
   text-align: center;
   font-size: 0.95rem;
+  font-family: 'Madimi+One', cursive;
+  letter-spacing: 0.02em;
+  user-select: none;
 }
 
-.disabled-link {
-  color: #999;
-  cursor: not-allowed;
-  pointer-events: none;
-  font-size: 1.1rem;
-  margin: 0 0.5rem;
-  opacity: 0.7;
-}
-
-/* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
-  .banner-wrapper {
-    width: 90%;
-    height: auto;
+/* ===== Responsive ===== */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
+}
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
   .status-message {
     font-size: 1.2rem;
   }
-
   .divider {
     width: 80%;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 13px;
+    padding: 1rem;
+  }
   .status-message {
     font-size: 1.1rem;
   }
-
   .divider {
     width: 85%;
-  }
-
-  .contact,
-  .social-links {
-    font-size: 0.95rem;
   }
 }
