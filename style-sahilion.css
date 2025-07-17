@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
 body {
   background: url('background-sahilion.png') no-repeat center center fixed;
   background-size: cover;
@@ -24,13 +26,14 @@ body::before {
 /* Top Bar */
 .top-bar {
   background-color: #4A2C2A;
-  padding: 2rem 1rem 1.5rem;
+  padding: 1.5rem 1rem 1rem;
   text-align: center;
 }
 
 .banner {
-  max-width: 420px;
   height: auto;
+  max-height: 160px;
+  width: auto;
   display: block;
   margin: 0 auto;
 }
@@ -95,7 +98,7 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner {
-    max-width: 360px;
+    max-height: 130px;
   }
 
   .status-message {
@@ -110,7 +113,7 @@ main {
   }
 
   .banner {
-    max-width: 320px;
+    max-height: 110px;
   }
 
   .status-message {
