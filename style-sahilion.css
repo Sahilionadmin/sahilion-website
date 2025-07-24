@@ -32,7 +32,7 @@ body::before {
 
 .banner {
   height: auto;
-  max-height: 130px;
+  max-height: 105px;
   width: auto;
   display: block;
   margin: 0 auto;
@@ -98,7 +98,7 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner {
-    max-height: 110px;
+    max-height: 95px;
   }
 
   .status-message {
@@ -113,7 +113,7 @@ main {
   }
 
   .banner {
-    max-height: 95px;
+    max-height: 85px;
   }
 
   .status-message {
