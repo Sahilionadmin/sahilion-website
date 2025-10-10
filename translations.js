@@ -1,7 +1,3 @@
-/* translations.js
-   Simple dictionary for strings used on the page.
-   script.js will use these when toggling languages.
-*/
 const TRANSLATIONS = {
   "sw": {
     "nav.home":"Nyumbani",
@@ -40,30 +36,7 @@ const TRANSLATIONS = {
     "footer.follow":"Fuata sisi kwa hadithi zaidi:",
     "footer.copyright":"© 2025 Sahilion. Haki zote zimehifadhiwa.",
     "footer.terms":"Vegezo na Masharti",
-    "footer.privacy":"Sera ya Faragha",
-
-    "terms.title":"Vegezo na Masharti",
-    "terms.list": [
-      "Tovuti haitakusanya taarifa zisizo za lazima kutoka kwa watumiaji.",
-      "Taarifa zinazokusanywa zinatumika kwa ufuatiliaji wa hadithi na maudhui yetu tu.",
-      "Sahilion haina nafasi ya watumiaji kuongeza maudhui yao.",
-      "Barua pepe zinazokusanywa zinahifadhiwa kwa usalama na hazitauzwa au kupeanwa kwa wengine.",
-      "Watumiaji wanaweza kuondoa jina lao kutoka kwenye orodha za jarida wakati wowote.",
-      "Watumiaji wanapaswa kutumia tovuti kwa heshima na kuepuka tabia ya kudhalilisha wengine.",
-      "Hakuna maudhui yasiyo halali yatakubaliwa kuonyeshwa kwenye tovuti.",
-      "Tovuti inaweza kutumia cookie kwa uboreshaji wa uzoefu wa mtumiaji.",
-      "Tunahifadhi haki ya kurekebisha masharti bila taarifa ya awali.",
-      "Kutumia tovuti kunachukuliwa kuwa kukubaliana na masharti haya."
-    ],
-
-    "privacy.title":"Sera ya Faragha",
-    "privacy.list": [
-      "Tovuti haitakusanya taarifa za kibinafsi zisizo za lazima kutoka kwa watumiaji.",
-      "Taarifa zinazokusanywa zinatumika kwa ufuatiliaji wa hadithi na maudhui yetu tu.",
-      "Sahilion haina sehemu ya watumiaji kuongeza maudhui yao binafsi.",
-      "Barua pepe zinahifadhiwa kwa usalama na hazitauzwa au kupeanwa kwa wengine.",
-      "Watumiaji wanaweza kuondoa jina lao kutoka kwenye orodha za jarida wakati wowote."
-    ]
+    "footer.privacy":"Sera ya Faragha"
   },
 
   "en": {
@@ -103,29 +76,6 @@ const TRANSLATIONS = {
     "footer.follow":"Follow us for more stories:",
     "footer.copyright":"© 2025 Sahilion. All rights reserved.",
     "footer.terms":"Terms & Conditions",
-    "footer.privacy":"Privacy Policy",
-
-    "terms.title":"Terms & Conditions",
-    "terms.list": [
-      "The website does not collect unnecessary information from users.",
-      "Collected information is used solely for tracking our stories and content.",
-      "Sahilion does not allow users to submit their own content.",
-      "Emails collected are stored securely and not sold or shared.",
-      "Users can unsubscribe from newsletters at any time.",
-      "Users should use the site respectfully and avoid harassment.",
-      "No illegal content will be accepted on the website.",
-      "The site may use cookies to enhance user experience.",
-      "We reserve the right to modify the terms without prior notice.",
-      "Using the website implies agreement with these terms."
-    ],
-
-    "privacy.title":"Privacy Policy",
-    "privacy.list": [
-      "The website does not collect unnecessary personal information from users.",
-      "Collected information is used solely for tracking our stories and content.",
-      "Sahilion does not have a section for users to submit their own content.",
-      "Emails are securely stored and not sold or shared with others.",
-      "Users may remove themselves from newsletter lists at any time."
-    ]
+    "footer.privacy":"Privacy Policy"
   }
 };

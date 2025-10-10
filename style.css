@@ -1,263 +1,36 @@
-/* Reset + base */
-* { box-sizing: border-box; margin:0; padding:0; }
-:root{
-  --brand-brown: #4A2C2A;
-  --brand-orange: #D35400;
-  --brand-blue: #5DADE2;
-  --brand-beige: #F5F5DC;
-  --text-dark: #2f241f;
-  --muted-white: rgba(255,255,255,0.9);
-}
-html,body{
-  height:100%;
-  font-family: "Calibri", sans-serif;
-  color:var(--text-dark);
-  background: var(--brand-beige);
-  -webkit-font-smoothing:antialiased;
-}
-
-/* HEADER */
-header#site-header {
-  position: sticky;
-  top:0;
-  z-index:1000;
-  background: var(--brand-brown);
-  color:var(--brand-beige);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-.header-inner{
-  max-width:1200px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0.9rem 1rem;
-  gap:1rem;
-}
-.logo img{
-  height:56px;
-  display:inline-block;
-  vertical-align:middle;
-}
-.logo span{
-  font-family: 'Madimi One', cursive;
-  color:var(--brand-beige);
-  font-size:1.6rem;
-  margin-left:0.5rem;
-  vertical-align:middle;
-}
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:1rem;
-  align-items:center;
-}
-nav ul li{ position:relative; }
-nav a{
-  color:var(--brand-beige);
-  padding:0.45rem 0.2rem;
-  display:inline-block;
-  font-weight:600;
-  text-decoration:none;
-  transition: color .22s ease;
-}
-nav a::after{
-  content:"";
-  position:absolute;
-  left:10%; right:10%;
-  bottom:-6px;
-  height:2px;
-  background:var(--brand-beige);
-  transform: scaleX(0);
-  transform-origin:left;
-  transition: transform .28s cubic-bezier(.2,.9,.3,1);
-}
-nav a:hover::after, nav a.active::after{ transform: scaleX(1); }
-
-/* Language Toggle */
-.lang-switch{
-  cursor:pointer;
-  border:1px solid rgba(255,255,255,0.12);
-  padding:0.35rem 0.7rem;
-  border-radius:6px;
-  color:var(--brand-beige);
-  background: var(--brand-orange);
-  font-weight:700;
-  transition: background .2s, color .2s;
-}
-.lang-switch:hover{ background: var(--brand-blue); color: white; }
-.lang-switch:active{ background: var(--brand-blue); color:white; }
-
-/* HERO */
-.hero{
-  position:relative;
-  height:78vh;
-  min-height:420px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.hero-bg{
-  position:absolute;
-  inset:0;
-  background:url('assets/beach_sunset.jpg') center/cover no-repeat;
-  transform:scale(1.02);
-}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background: linear-gradient(rgba(10,10,10,0.28), rgba(10,10,10,0.28));
-}
-.hero-inner{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  padding:1.2rem;
-  max-width:1000px;
-}
-.hero-title{
-  font-family: 'Madimi One', cursive;
-  color: var(--brand-beige);
-  font-size: clamp(2rem, 4.5vw, 3.4rem);
-  margin-bottom:0.6rem;
-  text-shadow: 0 6px 22px rgba(0,0,0,0.35);
-}
-.hero-sub{
-  color: rgba(245,245,245,0.92);
-  font-size: clamp(1rem,2.2vw,1.25rem);
-  margin-bottom:1rem;
-}
-
-/* CTA Buttons */
-.cta, .btn, button[type="submit"]{
-  background:var(--brand-orange);
-  color:white;
-  padding:0.6rem 1rem;
-  border-radius:8px;
-  font-weight:700;
-  text-decoration:none;
-  cursor:pointer;
-  transition: background .2s, transform .18s ease, box-shadow .18s ease;
-}
-.cta:hover, .btn:hover, button[type="submit"]:hover{ background:var(--brand-blue); }
-.cta:active, .btn:active, button[type="submit"]:active{ background:var(--brand-blue); }
-
-/* CONTENT SECTIONS */
-.content-section{ padding:3.2rem 1rem; }
-.container{ max-width:1100px; margin:0 auto; }
-.content-section h2{
-  font-family:'Madimi One', cursive;
-  color:var(--brand-brown);
-  font-size: clamp(1.3rem, 3.2vw, 2rem);
-  margin-bottom:0.75rem;
-}
-.content-section p{ color:var(--text-dark); line-height:1.6; margin-bottom:0.85rem; }
-
-/* STORIES GRID */
-.stories-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  gap:1rem;
-  margin-top:1rem;
-}
-.story-card{
-  background: #fff;
-  border-radius:12px;
-  padding:1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: transform .18s ease;
-}
-.story-card:hover{ transform: translateY(-6px); }
-
-/* FORMS */
-.form-row{
-  display:flex;
-  gap:0.6rem;
-  margin-top:0.6rem;
-  align-items:center;
-}
-.newsletter input[type="email"], .contact-form input, .contact-form textarea{
-  width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.08); font-size:1rem;
-}
-.newsletter button[type="submit"]{ margin-left:0.5rem; }
-
-/* FOOTER */
-footer{
-  background:var(--brand-brown);
-  color:var(--brand-beige);
-  padding:2rem 1rem 4rem 1rem;
-  margin-top:1.4rem;
-  display:flex;
-  flex-direction:column;
-  gap:1.2rem;
-}
-.footer-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.footer-top .social-icons{
-  display:flex;
-  gap:0.6rem;
-}
-.footer-top .social-icons img{
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  filter: grayscale(1) brightness(1.6) sepia(0.9) saturate(0.2) hue-rotate(-10deg);
-  transition: transform .18s ease;
-}
-.footer-top .social-icons img:hover{ transform: translateY(-4px) scale(1.05); }
-
-.footer-top .newsletter{
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
-}
-
-.footer-middle{
-  display:flex;
-  justify-content:center;
-  gap:1.5rem;
-  flex-wrap:wrap;
-  text-align:center;
-}
-.footer-middle nav ul{
-  list-style:none;
-  display:flex;
-  gap:0.7rem;
-  flex-wrap:wrap;
-}
-.footer-middle nav a{ color:var(--brand-beige); font-weight:600; text-decoration:none; }
-
-/* Bottom row: Terms | Copyright | Privacy */
-.footer-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:0.85rem;
-  color:var(--brand-beige);
-  flex-wrap:wrap;
-  border-top:1px solid rgba(255,255,255,0.12);
-  padding-top:0.6rem;
-  margin-top:1rem;
-}
-.footer-bottom a{
-  color:var(--brand-beige);
-  text-decoration:none;
-}
-.footer-bottom a:hover{ text-decoration:underline; }
-
-/* Small devices */
-@media (max-width:900px){
-  .header-inner{ padding:0.7rem 1rem; flex-direction:column; align-items:flex-start; }
-  nav ul{ gap:0.6rem; flex-wrap:wrap; margin-top:0.6rem; }
-  .footer-top, .footer-middle, .footer-bottom{ flex-direction:column; align-items:center; text-align:center; gap:0.8rem; }
-  .newsletter button[type="submit"]{ margin-left:0; }
-}
-
-/* smooth in-view animation */
-.fade-in { opacity:0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity:1; transform: translateY(0); }
+const TRANSLATIONS = {
+  "sw":{
+    "nav.home":"Nyumbani",
+    "nav.story":"Hadithi Yetu",
+    "nav.explore":"Gundua",
+    "nav.connect":"Ungana",
+    "nav.opps":"Fursa",
+    "nav.contact":"Wasiliana",
+    "hero.title":"Karibu kwenye dunia ya Sahilion",
+    "hero.sub":"Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.",
+    "cta.join":"Jiunge na Safari",
+    "newsletter.label":"Jisajili kupokea hadithi mpya:",
+    "newsletter.btn":"Tuma",
+    "footer.follow":"Fuata sisi kwa hadithi zaidi:",
+    "footer.copyright":"© 2025 Sahilion. Haki zote zimehifadhiwa.",
+    "footer.terms":"Vegezo na Masharti",
+    "footer.privacy":"Sera ya Faragha"
+  },
+  "en":{
+    "nav.home":"Home",
+    "nav.story":"Our Story",
+    "nav.explore":"Explore",
+    "nav.connect":"Connect",
+    "nav.opps":"Opportunities",
+    "nav.contact":"Contact",
+    "hero.title":"Welcome to the world of Sahilion",
+    "hero.sub":"Stories and flavors from the Swahili coast to the cosmos.",
+    "cta.join":"Join the Journey",
+    "newsletter.label":"Subscribe for new stories:",
+    "newsletter.btn":"Submit",
+    "footer.follow":"Follow us for more stories:",
+    "footer.copyright":"© 2025 Sahilion. All rights reserved.",
+    "footer.terms":"Terms & Conditions",
+    "footer.privacy":"Privacy Policy"
+  }
+};

@@ -1,95 +1,85 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sahilion | Sera ya Faragha</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahilion - Sera ya Faragha</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Madimi+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header id="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <a href="index.html" id="logo-link">
-          <img src="assets/logohq.png" alt="Sahilion logo">
-          <img src="assets/logo_name.png" alt="Sahilion Name">
-        </a>
-      </div>
+<!-- Header -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="display:flex; align-items:center; gap:0.6rem;">
+      <img src="assets/logohq.png" alt="Sahilion Logo" style="height:56px;">
+      <img src="assets/logo_name.png" alt="Sahilion Name" style="height:56px;">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#home" class="nav-link" data-key="nav.home"></a></li>
+        <li><a href="index.html#story" class="nav-link" data-key="nav.story"></a></li>
+        <li><a href="index.html#explore" class="nav-link" data-key="nav.explore"></a></li>
+        <li><a href="index.html#opps" class="nav-link" data-key="nav.opps"></a></li>
+        <li><a href="index.html#contact" class="nav-link" data-key="nav.contact"></a></li>
+      </ul>
+    </nav>
+    <button id="language-toggle" style="background:#D35400; color:white; border:none; padding:0.4rem 0.8rem; border-radius:6px; cursor:pointer;">English</button>
+  </div>
+</header>
 
-      <nav id="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="index.html#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="index.html#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="index.html#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="index.html#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="index.html#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">Swahili</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- Privacy Content -->
+<main class="content-section">
+  <div class="container">
+    <h2 data-key="privacy.title"></h2>
+    <p data-key="privacy.desc"></p>
+    <ul data-key="privacy.list">
+      <!-- List items dynamically replaced via TRANSLATIONS -->
+    </ul>
+  </div>
+</main>
 
-  <!-- PRIVACY CONTENT -->
-  <main class="content-section">
-    <div class="container">
-      <h1 data-key="privacy.title">Sera ya Faragha</h1>
-      <p>Tunathamini faragha ya wageni wetu. Hapa kuna masharti ya sera yetu ya faragha:</p>
-      <ol>
-        <li>Tovuti yetu haitakusanya taarifa za kibinafsi zisizo za lazima kutoka kwa watumiaji.</li>
-        <li>Taarifa zote zinazokusanywa zinatumika kwa ufuatiliaji wa hadithi, ladha, na maudhui yetu tu.</li>
-        <li>Sahilion haina sehemu ya watumiaji kuongeza maudhui yao binafsi.</li>
-        <li>Taarifa za barua pepe zinahifadhiwa kwa usalama na hazitauzwa au kupeanwa kwa wadau wengine.</li>
-        <li>Watumiaji wanaweza kuondoa jina lao kutoka kwenye orodha za jarida kwa wakati wowote kwa kutumia linki ya unsubscribe.</li>
-      </ol>
-    </div>
-  </main>
+<!-- Footer -->
+<footer>
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-social-newsletter">
-      <div class="footer-left">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-      </div>
-
-      <div class="footer-center">
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="index.html#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-            <li><a href="index.html#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-            <li><a href="index.html#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-            <li><a href="index.html#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-            <li><a href="index.html#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-            <li><a href="index.html#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-right">
-        <form class="newsletter" id="newsletter-footer-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row newsletter-row">
-            <input id="newsletter-footer-email" name="email" type="email" placeholder="Barua pepe yako" required>
-            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-          </div>
-        </form>
-      </div>
+    <!-- Left: Social Media -->
+    <div class="footer-icons" style="display:flex; gap:0.8rem;">
+      <a href="https://www.tiktok.com" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="https://www.x.com" target="_blank"><img src="assets/x.png" alt="X"></a>
+      <a href="https://www.youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
     </div>
 
-    <div class="footer-bottom">
-      <span class="terms-left" data-key="footer.terms"><a href="terms.html">Vegezo na Masharti</a></span>
-      <span class="copyright-center" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</span>
-      <span class="privacy-right" data-key="footer.privacy"><a href="privacy.html">Sera ya Faragha</a></span>
+    <!-- Center: Mini Nav -->
+    <div class="footer-nav" style="text-align:center;">
+      <ul style="list-style:none; display:flex; gap:0.7rem; justify-content:center; padding:0; margin:0;">
+        <li><a href="index.html#home" class="nav-link" data-key="nav.home"></a></li>
+        <li><a href="index.html#story" class="nav-link" data-key="nav.story"></a></li>
+        <li><a href="index.html#explore" class="nav-link" data-key="nav.explore"></a></li>
+        <li><a href="index.html#opps" class="nav-link" data-key="nav.opps"></a></li>
+        <li><a href="index.html#contact" class="nav-link" data-key="nav.contact"></a></li>
+      </ul>
     </div>
-  </footer>
 
-<script src="translations.js"></script>
-<script src="script.js"></script>
+    <!-- Right: Newsletter -->
+    <div class="footer-newsletter" style="display:flex; gap:0.5rem; align-items:center;">
+      <input type="email" placeholder="" data-key="newsletter.label" style="padding:0.6rem 0.8rem; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
+      <button class="btn" data-key="newsletter.btn" style="background:#D35400; color:white; border:none; padding:0.6rem 1rem; border-radius:8px;">Tuma</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row: Terms | Copyright | Privacy -->
+  <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; padding-top:0.8rem; font-size:0.875rem; border-top:1px solid rgba(255,255,255,0.2); margin-top:1rem;">
+    <a href="terms.html" data-key="footer.terms" class="footer-link" style="color:var(--brand-beige); text-decoration:none;"></a>
+    <span data-key="footer.copyright"></span>
+    <a href="privacy.html" data-key="footer.privacy" class="footer-link" style="color:var(--brand-beige); text-decoration:none;"></a>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
