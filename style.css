@@ -1,84 +1,62 @@
-/* Reset + base */
-* { box-sizing: border-box; margin:0; padding:0; }
-:root{
-  --brand-brown: #4A2C2A;
-  --brand-orange: #D35400;
-  --brand-orange-click: #5DADE2;
-  --brand-beige: #F5F5DC;
-  --text-dark: #2f241f;
-  --muted-white: rgba(255,255,255,0.9);
+/* Footer bottom layout */
+.footer-bottom {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  background: var(--brand-brown);
+  color: var(--brand-beige);
+  padding: 1.5rem 2rem;
 }
-html,body{ height:100%; font-family: "Calibri", sans-serif; color:var(--text-dark); background: var(--brand-beige); -webkit-font-smoothing:antialiased; }
 
-/* HEADER */
-header#site-header { position: sticky; top:0; z-index:1000; background: var(--brand-brown); color:var(--brand-beige); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
-.header-inner{ max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:0.9rem 1rem; gap:1rem; }
-.logo img{ height:56px; display:block; }
-nav ul{ list-style:none; display:flex; gap:0.9rem; align-items:center; flex-wrap:wrap; }
-nav ul li{ position:relative; }
-nav a{ color:var(--brand-beige); padding:0.45rem 0.2rem; display:inline-block; font-weight:600; transition: color .22s ease; text-decoration:none; }
-
-/* Underline animation */
-nav a::after{
-  content:""; position:absolute; left:10%; right:10%; bottom: -6px; height:2px; background:var(--brand-beige); transform: scaleX(0); transform-origin:left; transition: transform .28s cubic-bezier(.2,.9,.3,1);
+.footer-left, .footer-right, .footer-center {
+  display:flex;
+  align-items:center;
 }
-nav a:hover::after, nav a.active::after { transform: scaleX(1); }
 
-.lang-switch{
-  cursor:pointer; border:1px solid rgba(255,255,255,0.12);
-  padding:0.35rem 0.7rem; border-radius:6px;
-  color:var(--brand-beige);
-  background:transparent;
-  transition:background .2s, color .2s;
+.footer-left a, .footer-right a {
+  margin: 0 0.5rem;
 }
-.lang-switch:active { color: var(--brand-orange-click); }
 
-/* HERO */
-.hero{ position:relative; height:78vh; min-height:420px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-.hero-bg{ position:absolute; inset:0; background:url('assets/beach_sunset.jpg') center/cover no-repeat; transform:scale(1.02); }
-.hero-overlay{ position:absolute; inset:0; background: linear-gradient(rgba(10,10,10,0.28), rgba(10,10,10,0.28)); }
-.hero-inner{ position:relative; z-index:2; text-align:center; padding:1.2rem; max-width:1000px; }
-.hero-title{ font-family: 'Madimi One', cursive; color: var(--brand-beige); font-size: clamp(2rem, 4.5vw, 3.4rem); margin-bottom:0.6rem; text-shadow: 0 6px 22px rgba(0,0,0,0.35); }
-.hero-sub{ color: rgba(245,245,245,0.92); font-size: clamp(1rem,2.2vw,1.25rem); margin-bottom:1rem; }
-
-/* CTA */
-.cta{ display:inline-block; background:var(--brand-orange); color: white; padding:0.6rem 1rem; border-radius:8px; font-weight:700; text-decoration:none; box-shadow: 0 6px 18px rgba(211,83,0,0.18); transition: transform .18s ease; }
-.cta:active{ background: var(--brand-orange-click); transform: translateY(-1px); }
-
-/* CONTENT SECTIONS */
-.content-section{ padding:3.2rem 1rem; }
-.container{ max-width:1100px; margin:0 auto; }
-.content-section h2{ font-family:'Madimi One', cursive; color:var(--brand-brown); font-size: clamp(1.3rem, 3.2vw, 2rem); margin-bottom:0.75rem; }
-.content-section p{ color:var(--text-dark); line-height:1.6; margin-bottom:0.85rem; }
-
-/* STORIES GRID */
-.stories-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1rem; }
-.story-card{ background: #fff; border-radius:12px; padding:1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06); transition: transform .18s ease; }
-.story-card:hover{ transform: translateY(-6px); }
-
-/* FORMS */
-.form-row{ display:flex; gap:0.6rem; margin-top:0.6rem; align-items:center; }
-.newsletter input[type="email"], .contact-form input, .contact-form textarea{
-  width:100%; padding:0.8rem; border-radius:8px; border:1px solid rgba(0,0,0,0.08); font-size:1rem;
+.footer-left img {
+  filter: grayscale(1) brightness(1.6) sepia(0.9) saturate(0.2) hue-rotate(-10deg); /* beige tint */
+  width: 34px;
+  transition: transform .2s ease;
 }
-.btn, button[type="submit"]{ background:var(--brand-orange); color:white; border:none; padding:0.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700; }
-.btn:active{ background:var(--brand-orange-click); }
 
-/* FOOTER */
-footer{ background:var(--brand-brown); color:var(--brand-beige); padding:2rem 1rem; margin-top:1.4rem; }
-.footer-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; align-items:center; max-width:1100px; margin:0 auto; gap:1rem; }
-.footer-left, .footer-center, .footer-right{ display:flex; align-items:center; justify-content:center; flex-direction:column; }
-.footer-left a img, .footer-right form input{ filter: grayscale(1) brightness(1.6) sepia(0.9) saturate(0.2) hue-rotate(-10deg); }
-.footer-left a img{ width:34px; margin:0 0.5rem; transition: transform .18s ease; }
-.footer-left a:hover img{ transform: scale(1.05) translateY(-2px); }
-.footer-logo{ max-height:48px; margin-bottom:0.5rem; }
-.footer-nav ul{ display:flex; gap:0.8rem; flex-wrap:wrap; justify-content:center; margin-bottom:0.5rem; }
-.footer-nav a{ color:var(--brand-beige); text-decoration:none; font-weight:600; }
+.footer-left a:hover img {
+  transform: translateY(-4px) scale(1.05);
+}
 
-/* Small devices */
-@media (max-width:900px){
-  .header-inner{ padding:0.7rem 1rem; }
-  .footer-grid{ grid-template-columns:1fr; text-align:center; }
-  .form-row{ flex-direction:column; }
-  nav ul{ gap:0.6rem; }
+/* Footer center */
+.footer-center {
+  flex-direction: column;
+  text-align: center;
+  gap:0.6rem;
+}
+
+.footer-center .footer-logo {
+  max-height:48px;
+  margin-bottom:0.5rem;
+}
+
+/* Newsletter row inline */
+.newsletter-row {
+  display:flex;
+  gap:0.5rem;
+}
+
+.newsletter-row input {
+  flex:1;
+}
+
+/* Buttons color */
+.btn, .cta, .lang-switch {
+  background:#D35400;
+  color:#fff;
+  transition: background .18s ease;
+}
+
+.btn:active, .cta:active, .lang-switch:active {
+  background:#5DADE2;
 }
