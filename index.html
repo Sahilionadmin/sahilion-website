@@ -20,8 +20,8 @@
         <ul>
           <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
           <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="#explore" class="nav-link" data-key="nav.explore">Chunguza</a></li>
-          <li><a href="#connect" class="nav-link" data-key="nav.connect">Unganisha</a></li>
+          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
           <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
           <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
           <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
@@ -53,7 +53,7 @@
     <!-- EXPLORE -->
     <section id="explore" class="content-section">
       <div class="container">
-        <h2 data-key="explore.title">Chunguza Hadithi</h2>
+        <h2 data-key="explore.title">Gundua Hadithi</h2>
         <div class="stories-grid">
           <article class="story-card">
             <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
@@ -70,8 +70,8 @@
     <!-- CONNECT -->
     <section id="connect" class="content-section">
       <div class="container">
-        <h2 data-key="connect.title">Unganisha na Safari</h2>
-        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
+        <h2 data-key="connect.title">Ungana na Safari</h2>
+        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida.</p>
         <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
         <a href="#opportunities" class="link-to-news" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
       </div>
@@ -110,46 +110,39 @@
   </main>
 
   <!-- FOOTER -->
-  <footer style="background-color:#4A2C2A; color:#F5F5DC; padding:2rem 1rem;">
-    <div class="container footer-grid">
-      <!-- Newsletter + social -->
-      <div class="footer-top" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-        <div style="flex:1 1 300px; margin-bottom:1rem;">
-          <form class="newsletter" id="footer-newsletter" action="https://formspree.io/f/xanpjqnl" method="POST">
-            <label for="footer-email" style="display:block; margin-bottom:0.5rem;">Jisajili kupokea hadithi mpya:</label>
-            <div style="display:flex; gap:0.5rem;">
-              <input id="footer-email" name="email" type="email" placeholder="Barua pepe yako" required style="flex:1; padding:0.6rem; border-radius:6px; border:none;">
-              <button type="submit" class="btn" style="padding:0.6rem 1rem; background:#D35400;">Tuma</button>
-            </div>
+  <footer>
+    <div class="footer-bottom">
+      <div class="container footer-grid">
+        <!-- Left: Social icons -->
+        <div class="footer-left">
+          <a href="#"><img src="assets/tiktok.png" alt="TikTok"></a>
+          <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="assets/x.png" alt="X"></a>
+          <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+        </div>
+
+        <!-- Middle: Logo, mini nav, copyright -->
+        <div class="footer-center">
+          <img src="assets/logohq.png" alt="Sahilion logo" class="footer-logo">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+              <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+              <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+              <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
+              <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
+              <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+            </ul>
+          </nav>
+          <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
+        </div>
+
+        <!-- Right: Newsletter -->
+        <div class="footer-right">
+          <form class="newsletter" id="newsletter-form-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
+            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
+            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
           </form>
-        </div>
-
-        <div style="flex:1 1 300px; text-align:center;">
-          <div style="margin-bottom:0.6rem;">Fuata sisi kwa hadithi zaidi:</div>
-          <div style="display:flex; justify-content:center; gap:0.6rem;">
-            <a href="https://www.tiktok.com/@sahilionhq?_t=ZM-90LhtBHCVPU&_r=1" target="_blank"><img src="assets/tiktok.png" alt="TikTok" style="width:34px;"></a>
-            <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram" style="width:34px;"></a>
-            <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X" style="width:34px;"></a>
-            <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:34px;"></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer nav + copyright -->
-      <div class="footer-bottom" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.2); padding-top:1rem;">
-        <div style="flex:1 1 200px; text-align:center; margin-bottom:0.5rem;">
-          <a href="#home" class="nav-link" data-key="nav.home" style="color:#F5F5DC; margin:0 0.5rem;">Nyumbani</a>
-          <a href="#ourstory" class="nav-link" data-key="nav.story" style="color:#F5F5DC; margin:0 0.5rem;">Hadithi Yetu</a>
-          <a href="#explore" class="nav-link" data-key="nav.explore" style="color:#F5F5DC; margin:0 0.5rem;">Chunguza</a>
-          <a href="#connect" class="nav-link" data-key="nav.connect" style="color:#F5F5DC; margin:0 0.5rem;">Unganisha</a>
-          <a href="#opportunities" class="nav-link" data-key="nav.opps" style="color:#F5F5DC; margin:0 0.5rem;">Fursa</a>
-          <a href="#contact" class="nav-link" data-key="nav.contact" style="color:#F5F5DC; margin:0 0.5rem;">Wasiliana</a>
-        </div>
-        <div style="flex:1 1 200px; text-align:center; margin-bottom:0.5rem;">
-          <img src="assets/sahilion_logo_symmetrical.png" alt="Sahilion" style="max-height:48px;">
-        </div>
-        <div style="flex:1 1 200px; text-align:center; margin-bottom:0.5rem;">
-          <small>© 2025 Sahilion. Haki zote zimehifadhiwa.</small>
         </div>
       </div>
     </div>
