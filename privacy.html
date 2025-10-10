@@ -3,75 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-key="privacy.title">Sera ya Faragha</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Sera ya Faragha - Sahilion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="translations.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
+  <!-- HEADER -->
   <header id="site-header">
     <div class="header-inner">
       <div class="logo">
-        <a href="index.html"><img src="assets/logohq.png" alt="Sahilion Logo"></a>
+        <img src="assets/logohq.png" alt="Sahilion Logo">
       </div>
       <nav>
         <ul>
-          <li><a href="index.html" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="index.html#our" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="index.html#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="index.html#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="index.html#opps" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="index.html#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          <li><a class="nav-link" data-key="nav.home" href="index.html">Nyumbani</a></li>
+          <li><a class="nav-link" data-key="nav.story" href="index.html#our-story">Hadithi Yetu</a></li>
+          <li><a class="nav-link" data-key="nav.explore" href="index.html#explore">Gundua</a></li>
+          <li><a class="nav-link" data-key="nav.connect" href="index.html#connect">Ungana</a></li>
+          <li><a class="nav-link" data-key="nav.opps" href="index.html#opps">Fursa</a></li>
+          <li><a class="nav-link" data-key="nav.contact" href="index.html#contact">Wasiliana</a></li>
         </ul>
       </nav>
-      <button id="language-toggle">English</button>
+      <button id="language-toggle" class="lang-switch">English</button>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
   <main class="content-section">
     <div class="container">
-      <h1 data-key="privacy.title">Sera ya Faragha</h1>
-      <p data-key="privacy.content">
-        Taarifa ya sera ya faragha itakuwa hapa...
-      </p>
+      <h1>Sera ya Faragha</h1>
+      <p>Karibu kwenye ukurasa wa Sera ya Faragha wa Sahilion. Taarifa zifuatazo zinahusu jinsi tunavyokusanya na kutumia data ya watumiaji wetu:</p>
+      <ol>
+        <li>Tovuti inakusanya barua pepe tu kwa watumiaji wanaojiandikisha kwenye jarida la habari (newsletter).</li>
+        <li>Maelezo ya barua pepe hayatagawanywa na wahusika wengine bila idhini.</li>
+        <li>Tovuti inakusanya takwimu zisizo za kibinafsi kwa ajili ya uchambuzi na kuboresha uzoefu wa watumiaji.</li>
+        <li>Tovuti haina jukumu la kudhibiti maudhui ya watumiaji wengine au vyanzo vya nje.</li>
+        <li>Watumiaji wanapaswa kuheshimu sheria za mtandao na maadili ya Kiswahili wanapotumia tovuti hii.</li>
+      </ol>
+      <p>Kwa kutumia tovuti hii, unakubali sera hii ya faragha na masharti ya utumiaji wa tovuti.</p>
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <div class="footer-grid">
-      <div class="footer-icons" style="text-align:left;">
-        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="assets/x.png" alt="X"></a>
-        <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
-      </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-icons">
+          <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="assets/x.png" alt="X"></a>
+          <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+        </div>
 
-      <div class="footer-logo" style="text-align:center;">
-        <img src="assets/logohq.png" alt="Sahilion Logo">
-        <ul class="footer-nav">
-          <li><a href="index.html" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="index.html#our" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="index.html#explore" data-key="nav.explore">Gundua</a></li>
-          <li><a href="index.html#connect" data-key="nav.connect">Ungana</a></li>
-        </ul>
-        <small id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</small>
-      </div>
+        <div class="footer-center">
+          <img src="assets/logohq.png" class="footer-logo" alt="Sahilion Logo">
+          <ul class="footer-nav">
+            <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
+            <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
+          </ul>
+          <p id="copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
+        </div>
 
-      <div class="footer-newsletter" style="text-align:right;">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="email" placeholder="" data-key="form.email" name="email" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-        </form>
+        <div class="footer-newsletter">
+          <form action="https://formspree.io/f/maykzvzb" method="POST" class="newsletter">
+            <input type="email" name="email" placeholder="Andika barua pepe yako hapa:" data-key="newsletter.label" required>
+            <button type="submit" data-key="newsletter.btn">Tuma</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <div style="display:flex; justify-content:space-between; margin-top:1rem; font-size:0.85rem;">
-      <a href="terms.html" data-key="terms.title">Vegezo na Masharti</a>
-      <a href="privacy.html" data-key="privacy.title">Sera ya Faragha</a>
     </div>
   </footer>
-
-  <script src="js/translations.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
