@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header id="site-header">
     <div class="header-inner">
       <div class="logo">
@@ -80,13 +79,15 @@
 
     <!-- OPPORTUNITIES + NEWSLETTER -->
     <section id="opportunities" class="content-section">
-      <div class="container newsletter-footer">
+      <div class="container">
         <h2 data-key="opps.title">Fursa</h2>
         <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
 
         <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+          <div class="form-row">
+            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+            <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+          </div>
         </form>
       </div>
     </section>
@@ -109,35 +110,43 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-bottom">
+    <div class="container footer-grid">
       <div class="footer-left">
-        <a href="#"><img src="assets/tiktok.png" alt="TikTok"></a>
-        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="assets/x.png" alt="X"></a>
-        <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+        <div class="footer-icons">
+          <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
+          <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+          <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
+          <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <img src="assets/logohq.png" alt="Sahilion Logo" class="footer-logo">
+        <ul class="footer-nav">
+          <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+          <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
+          <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
+          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+        </ul>
+        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
       </div>
 
       <div class="footer-right">
-        <form class="newsletter-footer-inline" id="newsletter-form-bottom" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <input type="email" name="email" placeholder="Barua pepe yako" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+        <form class="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <div class="form-row">
+            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
+          </div>
         </form>
       </div>
+    </div>
 
-      <div class="footer-middle">
-        <img src="assets/logohq.png" alt="Sahilion" class="footer-logo">
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-            <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-            <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-            <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-            <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-            <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          </ul>
-        </nav>
-        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
-      </div>
+    <!-- EXTREME BOTTOM FOOTER -->
+    <div class="footer-bottom">
+      <a href="terms.html" class="footer-link" data-key="footer.terms">Masharti na Hali</a>
+      <a href="privacy.html" class="footer-link" data-key="footer.privacy">Sera ya Faragha</a>
     </div>
   </footer>
 
