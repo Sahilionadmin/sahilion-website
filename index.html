@@ -10,117 +10,14 @@
 </head>
 <body>
 
-<header id="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="#home" id="logo-link"><img src="assets/sahilion_logo.svg" alt="Sahilion logo"></a>
-    </div>
-
-    <nav id="main-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-        <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-        <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-        <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-        <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-        <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-        <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section id="home" class="hero" aria-label="Hero section">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <h1 id="hero-title" class="hero-title" data-key="hero.title">Karibu kwenye dunia ya Sahilion</h1>
-      <p id="hero-sub" class="hero-sub" data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
-      <a href="#connect" class="cta" id="cta-join" data-key="cta.join">Jiunge na Safari</a>
-    </div>
-  </section>
-
-  <section id="ourstory" class="content-section">
-    <div class="container">
-      <h2 data-key="our.title">Hadithi Yetu</h2>
-      <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
-    </div>
-  </section>
-
-  <section id="explore" class="content-section">
-    <div class="container">
-      <h2 data-key="explore.title">Gundua Hadithi</h2>
-      <div class="stories-grid">
-        <article class="story-card">
-          <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
-          <p data-key="explore.card1.desc">Hadithi na picha za chakula cha pwani.</p>
-        </article>
-        <article class="story-card">
-          <h3 data-key="explore.card2.title">Uzoefu wa Ladha</h3>
-          <p data-key="explore.card2.desc">Pata ladha asilia kupitia mapishi na maelezo ya hadithi.</p>
-        </article>
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#home" id="logo-link"><img src="assets/sahilion_logo.svg" alt="Sahilion logo"></a>
       </div>
-    </div>
-  </section>
 
-  <section id="connect" class="content-section">
-    <div class="container">
-      <h2 data-key="connect.title">Ungana na Safari</h2>
-      <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
-      <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
-      <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-        <div class="form-row newsletter-row">
-          <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section id="opportunities" class="content-section">
-    <div class="container">
-      <h2 data-key="opps.title">Fursa</h2>
-      <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="content-section">
-    <div class="container">
-      <h2 data-key="contact.title">Wasiliana Nasi</h2>
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-        <div class="form-row">
-          <input name="name" type="text" placeholder="Jina lako" required>
-          <input name="email" type="email" placeholder="Barua pepe" required>
-        </div>
-        <textarea name="message" rows="5" placeholder="Ujumbe wako" required></textarea>
-        <button type="submit" class="btn" data-key="contact.btn">Tuma</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-bottom">
-    <div class="footer-left">
-      <a href="#"><img src="assets/tiktok.png" alt="TikTok"></a>
-      <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="assets/x.png" alt="X"></a>
-      <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
-    </div>
-
-    <div class="footer-right">
-      <form class="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
-        <div class="form-row newsletter-row">
-          <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="footer-center">
-      <img src="assets/logohq.png" alt="Sahilion Logo" class="footer-logo">
-      <nav class="footer-nav">
+      <nav id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
           <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
@@ -128,12 +25,121 @@
           <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
           <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
           <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
         </ul>
       </nav>
-      <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
     </div>
-  </div>
-</footer>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero" aria-label="Hero section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <h1 id="hero-title" class="hero-title" data-key="hero.title">Karibu kwenye dunia ya Sahilion</h1>
+        <p id="hero-sub" class="hero-sub" data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
+        <a href="#connect" class="cta" id="cta-join" data-key="cta.join">Jiunge na Safari</a>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section id="ourstory" class="content-section">
+      <div class="container">
+        <h2 data-key="our.title">Hadithi Yetu</h2>
+        <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
+      </div>
+    </section>
+
+    <!-- EXPLORE -->
+    <section id="explore" class="content-section">
+      <div class="container">
+        <h2 data-key="explore.title">Gundua Hadithi</h2>
+        <div class="stories-grid">
+          <article class="story-card">
+            <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
+            <p data-key="explore.card1.desc">Hadithi na picha za chakula cha pwani.</p>
+          </article>
+          <article class="story-card">
+            <h3 data-key="explore.card2.title">Uzoefu wa Ladha</h3>
+            <p data-key="explore.card2.desc">Pata ladha asilia kupitia mapishi na maelezo ya hadithi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section id="connect" class="content-section">
+      <div class="container">
+        <h2 data-key="connect.title">Ungana na Safari</h2>
+        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
+        <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
+        <a href="#opportunities" class="link-to-news" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
+      </div>
+    </section>
+
+    <!-- OPPORTUNITIES + NEWSLETTER -->
+    <section id="opportunities" class="content-section">
+      <div class="container newsletter-footer">
+        <h2 data-key="opps.title">Fursa</h2>
+        <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
+
+        <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="content-section">
+      <div class="container">
+        <h2 data-key="contact.title">Wasiliana Nasi</h2>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <div class="form-row">
+            <input name="name" type="text" placeholder="Jina lako" required>
+            <input name="email" type="email" placeholder="Barua pepe" required>
+          </div>
+          <textarea name="message" rows="5" placeholder="Ujumbe wako" required></textarea>
+          <button type="submit" class="btn" data-key="contact.btn">Tuma</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <a href="#"><img src="assets/tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="assets/x.png" alt="X"></a>
+        <a href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <div class="footer-right">
+        <form class="newsletter-footer-inline" id="newsletter-form-bottom" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <input type="email" name="email" placeholder="Barua pepe yako" required>
+          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+        </form>
+      </div>
+
+      <div class="footer-middle">
+        <img src="assets/logohq.png" alt="Sahilion" class="footer-logo">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+            <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+            <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+            <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
+            <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
+            <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          </ul>
+        </nav>
+        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
 
 <script src="translations.js"></script>
 <script src="script.js"></script>

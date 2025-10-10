@@ -5,6 +5,7 @@
    - smooth scroll active nav highlighting (IntersectionObserver)
    - fade-in on scroll
    - simple form submission UX improvements (no backend changes)
+   - button :active color handled via CSS
 */
 
 (() => {
@@ -14,38 +15,41 @@
   // Apply translations to all elements with data-key
   function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang] || TRANSLATIONS['sw'];
+
+    // All elements with data-key
     document.querySelectorAll('[data-key]').forEach(el => {
       const key = el.getAttribute('data-key');
-      if(key && dict[key]) el.textContent = dict[key];
+      if (key && dict[key]) el.textContent = dict[key];
     });
 
-    // update language toggle label
+    // Nav links
+    document.querySelectorAll('nav a.nav-link').forEach(a => {
+      const key = a.getAttribute('data-key');
+      if (key && dict[key]) a.textContent = dict[key];
+    });
+
+    // Newsletter placeholder
+    document.querySelectorAll('.footer-right input[type="email"]').forEach(input => {
+      if(dict['newsletter.placeholder']){
+        input.setAttribute('placeholder', dict['newsletter.placeholder']);
+      }
+    });
+
+    // CTA buttons
+    document.querySelectorAll('.cta, .btn').forEach(btn => {
+      const key = btn.getAttribute('data-key');
+      if(key && dict[key]) btn.textContent = dict[key];
+    });
+
+    // Update language toggle label
     const langToggle = document.getElementById('language-toggle');
     if(langToggle) langToggle.textContent = (lang === 'sw') ? 'English' : 'Kiswahili';
 
-    // update copyright
+    // Update copyright
     const copyrightEl = document.getElementById('copyright');
     if(copyrightEl) {
       copyrightEl.textContent = dict['footer.copyright'] || '';
     }
-
-    // update placeholders inside inputs
-    const newsletterInputs = document.querySelectorAll('#newsletter-email, #newsletter-email-footer');
-    newsletterInputs.forEach(input => {
-      input.placeholder = (lang === 'sw') ? 'Barua pepe yako' : 'Your email';
-    });
-    const contactInputs = document.querySelectorAll('.contact-form input[name="name"]');
-    contactInputs.forEach(input => {
-      input.placeholder = (lang === 'sw') ? 'Jina lako' : 'Your Name';
-    });
-    const contactEmails = document.querySelectorAll('.contact-form input[name="email"]');
-    contactEmails.forEach(input => {
-      input.placeholder = (lang === 'sw') ? 'Barua pepe' : 'Email';
-    });
-    const contactMessages = document.querySelectorAll('.contact-form textarea[name="message"]');
-    contactMessages.forEach(input => {
-      input.placeholder = (lang === 'sw') ? 'Ujumbe wako' : 'Your Message';
-    });
   }
 
   // Initialize translations
@@ -59,6 +63,7 @@
       applyTranslations(currentLang);
       toggleBtn.setAttribute('aria-pressed', currentLang === 'en');
     });
+    // keyboard accessibility
     toggleBtn.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' || e.key === ' ') toggleBtn.click();
     });
@@ -79,7 +84,7 @@
     });
   });
 
-  // IntersectionObserver for active nav link (and fade-in)
+  // IntersectionObserver for active nav link & fade-in
   const sections = document.querySelectorAll('main section, footer');
   const navLinks = document.querySelectorAll('nav a.nav-link, .footer-nav a');
 
@@ -89,12 +94,9 @@
       const navMatch = document.querySelectorAll(`a[href="#${id}"]`);
       if(entry.isIntersecting){
         navMatch.forEach(a => a.classList.add('active'));
+        entry.target.classList.add('visible'); // fade-in
       } else {
         navMatch.forEach(a => a.classList.remove('active'));
-      }
-
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
       }
     });
   }, { threshold: 0.45 });
@@ -108,7 +110,7 @@
     sectionObserver.observe(el);
   });
 
-  // Form submission UX
+  // UX: show simple submit feedback on forms
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       const btn = form.querySelector('button[type="submit"], .btn');
