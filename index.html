@@ -1,132 +1,147 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sahilion</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Madimi+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahilion</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header -->
-<header id="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo" style="display:flex; align-items:center; gap:0.6rem;">
-      <img src="assets/logohq.png" alt="Sahilion Logo" style="height:56px;">
-      <img src="assets/logo_name.png" alt="Sahilion Name" style="height:56px;">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#home" class="nav-link" data-key="nav.home"></a></li>
-        <li><a href="#story" class="nav-link" data-key="nav.story"></a></li>
-        <li><a href="#explore" class="nav-link" data-key="nav.explore"></a></li>
-        <li><a href="#opps" class="nav-link" data-key="nav.opps"></a></li>
-        <li><a href="#contact" class="nav-link" data-key="nav.contact"></a></li>
-      </ul>
-    </nav>
-    <button id="language-toggle" style="background:#D35400; color:white; border:none; padding:0.4rem 0.8rem; border-radius:6px; cursor:pointer;">English</button>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logohq.png" alt="Sahilion Logo">
+        <img src="assets/logo_name.png" alt="Sahilion Name" style="height:56px;">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#hero" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+          <li><a href="#our-story" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
+          <li><a href="#opps" class="nav-link" data-key="nav.opps">Fursa</a></li>
+          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+        </ul>
+      </nav>
+      <button id="language-toggle" class="lang-switch" aria-pressed="false">English</button>
+    </div>
+  </header>
 
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <h1 class="hero-title" data-key="hero.title"></h1>
-    <p class="hero-sub" data-key="hero.sub"></p>
-    <a href="#story" class="cta" data-key="cta.join"></a>
-  </div>
-</section>
-
-<!-- Content Sections -->
-<main>
-  <section id="story" class="content-section">
-    <div class="container">
-      <h2 data-key="our.title"></h2>
-      <p data-key="our.desc"></p>
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title" data-key="hero.title">Karibu kwenye dunia ya Sahilion</h1>
+      <p class="hero-sub" data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
+      <a href="#connect" class="cta" data-key="cta.join">Jiunge na Safari</a>
     </div>
   </section>
 
-  <section id="explore" class="content-section">
-    <div class="container">
-      <h2 data-key="explore.title"></h2>
-      <div class="stories-grid">
-        <div class="story-card">
-          <h3 data-key="explore.card1.title"></h3>
-          <p data-key="explore.card1.desc"></p>
-        </div>
-        <div class="story-card">
-          <h3 data-key="explore.card2.title"></h3>
-          <p data-key="explore.card2.desc"></p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Our Story -->
+    <section class="content-section" id="our-story">
+      <div class="container">
+        <h2 data-key="our.title">Hadithi Yetu</h2>
+        <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
+      </div>
+    </section>
+
+    <!-- Explore -->
+    <section class="content-section" id="explore">
+      <div class="container">
+        <h2 data-key="explore.title">Chunguza Hadithi</h2>
+        <div class="stories-grid">
+          <div class="story-card">
+            <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
+            <p data-key="explore.card1.desc">Hadithi na picha za chakula cha pwani.</p>
+          </div>
+          <div class="story-card">
+            <h3 data-key="explore.card2.title">Uzoefu wa Ladha</h3>
+            <p data-key="explore.card2.desc">Pata ladha asilia kupitia mapishi na maelezo ya hadithi.</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- Connect -->
+    <section class="content-section" id="connect">
+      <div class="container">
+        <h2 data-key="connect.title">Ungana na Safari</h2>
+        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida.</p>
+        <p data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
+        <form action="https://formspree.io/f/yourformid" method="POST" class="newsletter">
+          <input type="email" name="email" placeholder="Jisajili kupokea hadithi mpya:" data-key="newsletter.label" required>
+          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Opportunities -->
+    <section class="content-section" id="opps">
+      <div class="container">
+        <h2 data-key="opps.title">Fursa</h2>
+        <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="content-section" id="contact">
+      <div class="container">
+        <h2 data-key="contact.title">Wasiliana Nasi</h2>
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Jina lako" required>
+          <input type="email" name="email" placeholder="Barua pepe" required>
+          <textarea name="message" placeholder="Ujumbe" required></textarea>
+          <button type="submit" class="btn" data-key="contact.btn">Tuma</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top container">
+      <div class="footer-left">
+        <ul class="footer-icons">
+          <li><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="assets/x.png" alt="X"></a></li>
+          <li><a href="#"><img src="assets/youtube.png" alt="YouTube"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-nav">
+          <li><a href="#hero" data-key="nav.home">Nyumbani</a></li>
+          <li><a href="#our-story" data-key="nav.story">Hadithi Yetu</a></li>
+          <li><a href="#explore" data-key="nav.explore">Gundua</a></li>
+          <li><a href="#connect" data-key="nav.connect">Ungana</a></li>
+          <li><a href="#opps" data-key="nav.opps">Fursa</a></li>
+          <li><a href="#contact" data-key="nav.contact">Wasiliana</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <form action="https://formspree.io/f/yourformid" method="POST" class="newsletter-inline">
+          <input type="email" name="email" placeholder="Jisajili kupokea hadithi mpya:" data-key="newsletter.label" required>
+          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+        </form>
+      </div>
     </div>
-  </section>
 
-  <section id="opps" class="content-section">
-    <div class="container">
-      <h2 data-key="opps.title"></h2>
-      <p data-key="opps.desc"></p>
+    <div class="footer-bottom container">
+      <div class="footer-bottom-left"><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></div>
+      <div class="footer-bottom-center"><span id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</span></div>
+      <div class="footer-bottom-right"><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></div>
     </div>
-  </section>
+  </footer>
 
-  <section id="contact" class="content-section">
-    <div class="container">
-      <h2 data-key="contact.title"></h2>
-      <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Jina / Name">
-          <input type="email" name="email" placeholder="Barua pepe / Email">
-          <button type="submit" class="btn" data-key="contact.btn"></button>
-        </div>
-      </form>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer>
-  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;">
-
-    <!-- Left: Social Media -->
-    <div class="footer-icons" style="display:flex; gap:0.8rem;">
-      <a href="https://www.tiktok.com" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
-      <a href="https://www.instagram.com" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-      <a href="https://www.x.com" target="_blank"><img src="assets/x.png" alt="X"></a>
-      <a href="https://www.youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-    </div>
-
-    <!-- Center: Mini Nav -->
-    <div class="footer-nav" style="text-align:center;">
-      <ul style="list-style:none; display:flex; gap:0.7rem; justify-content:center; padding:0; margin:0;">
-        <li><a href="#home" class="nav-link" data-key="nav.home"></a></li>
-        <li><a href="#story" class="nav-link" data-key="nav.story"></a></li>
-        <li><a href="#explore" class="nav-link" data-key="nav.explore"></a></li>
-        <li><a href="#opps" class="nav-link" data-key="nav.opps"></a></li>
-        <li><a href="#contact" class="nav-link" data-key="nav.contact"></a></li>
-      </ul>
-    </div>
-
-    <!-- Right: Newsletter -->
-    <div class="footer-newsletter" style="display:flex; gap:0.5rem; align-items:center;">
-      <input type="email" placeholder="" data-key="newsletter.label" style="padding:0.6rem 0.8rem; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
-      <button class="btn" data-key="newsletter.btn" style="background:#D35400; color:white; border:none; padding:0.6rem 1rem; border-radius:8px;">Tuma</button>
-    </div>
-
-  </div>
-
-  <!-- Bottom Row: Terms | Copyright | Privacy -->
-  <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; padding-top:0.8rem; font-size:0.875rem; border-top:1px solid rgba(255,255,255,0.2); margin-top:1rem;">
-    <a href="terms.html" data-key="footer.terms" class="footer-link" style="color:var(--brand-beige); text-decoration:none;"></a>
-    <span data-key="footer.copyright"></span>
-    <a href="privacy.html" data-key="footer.privacy" class="footer-link" style="color:var(--brand-beige); text-decoration:none;"></a>
-  </div>
-
-</footer>
-
-<script src="js/translations.js"></script>
-<script src="js/script.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
