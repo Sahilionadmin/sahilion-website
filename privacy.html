@@ -1,91 +1,71 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sera ya Faragha - Sahilion</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sahilion | Sera ya Faragha</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (same as index.html) -->
   <header id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logohq.png" alt="Sahilion Logo">
-        <img src="assets/logo_name.png" alt="Sahilion Name" style="height:56px;">
-      </a>
-      <nav>
+      <div class="logo">
+        <a href="index.html" id="logo-link" class="logo-combo">
+          <img src="assets/logohq.png" alt="Sahilion Logo HQ">
+          <img src="assets/logo_name.png" alt="Sahilion Name">
+        </a>
+      </div>
+      <nav id="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html#hero" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="index.html#our-story" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+          <li><a href="index.html#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+          <li><a href="index.html#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
           <li><a href="index.html#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
           <li><a href="index.html#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="index.html#opps" class="nav-link" data-key="nav.opps">Fursa</a></li>
+          <li><a href="index.html#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
           <li><a href="index.html#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
         </ul>
       </nav>
-      <button id="language-toggle" class="lang-switch" aria-pressed="false">English</button>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <section class="content-section" id="privacy">
-      <div class="container">
-        <h2 data-key="privacy.title">Sera ya Faragha</h2>
-        <p>Tunathamini faragha yako na tunahakikisha kwamba taarifa unazotoa zinatibiwa kwa usalama.</p>
-        <ol>
-          <li>Taarifa unazotoa ni kwa madhumuni ya kupata hadithi mpya na ladha kutoka Sahilion.</li>
-          <li>Taarifa ya barua pepe inahifadhiwa kwa usalama na haishirikiwi kwa wahusika wengine bila idhini.</li>
-          <li>Tovuti haitahifadhi taarifa za malipo au taarifa nyeti za kifedha.</li>
-          <li>Taarifa zinazokusanywa ni tu za kimsingi kufuatilia usajili wa newsletter na mawasiliano ya huduma.</li>
-          <li>Watumiaji wanaweza kuomba kuondoa taarifa zao kwa kutuma barua pepe au kutumia fom ya mawasiliano.</li>
-        </ol>
-      </div>
-    </section>
+  <!-- PRIVACY CONTENT -->
+  <main class="content-section">
+    <div class="container">
+      <h2>Sera ya Faragha</h2>
+      <p>Sahalion inathamini faragha ya watumiaji wake. Tafadhali soma sera hii kwa makini kuelewa jinsi data zinavyokusudiwa kutumika.</p>
+
+      <ol>
+        <li>Sahalion haitokusanya taarifa binafsi kutoka kwa watumiaji isipokuwa barua pepe kwa usajili wa jarida.</li>
+        <li>Taarifa ya barua pepe itatumika kwa madhumuni ya kutuma hadithi mpya na sasisho za tovuti pekee.</li>
+        <li>Hakuna taarifa nyingine yoyote ya kibinafsi itakayokusudiwa au kuhifadhiwa kutoka kwa watumiaji.</li>
+        <li>Watumiaji wanakubali kwamba data zao za barua pepe hazitauzwa au kugawanywa na wahusika wengine.</li>
+        <li>Sahalion inaweza kutumia data za barua pepe kwa takwimu zisizo za kibinafsi (analytics) ili kuboresha huduma.</li>
+      </ol>
+    </div>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (same as index.html) -->
   <footer>
-    <div class="footer-top container">
-      <div class="footer-left">
-        <ul class="footer-icons">
-          <li><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
-          <li><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
-          <li><a href="#"><img src="assets/x.png" alt="X"></a></li>
-          <li><a href="#"><img src="assets/youtube.png" alt="YouTube"></a></li>
-        </ul>
-      </div>
-
-      <div class="footer-center">
-        <ul class="footer-nav">
-          <li><a href="index.html#hero" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="index.html#our-story" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="index.html#explore" data-key="nav.explore">Gundua</a></li>
-          <li><a href="index.html#connect" data-key="nav.connect">Ungana</a></li>
-          <li><a href="index.html#opps" data-key="nav.opps">Fursa</a></li>
-          <li><a href="index.html#contact" data-key="nav.contact">Wasiliana</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-right">
-        <form action="https://formspree.io/f/yourformid" method="POST" class="newsletter-inline">
-          <input type="email" name="email" placeholder="Jisajili kupokea hadithi mpya:" data-key="newsletter.label" required>
-          <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-        </form>
-      </div>
+    <div class="footer-social">
+      <a href="https://www.tiktok.com/@sahilionhq?_t=ZM-90LhtBHCVPU&_r=1" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
+      <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
+      <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
+      <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
     </div>
 
-    <div class="footer-bottom container">
-      <div class="footer-bottom-left"><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></div>
-      <div class="footer-bottom-center"><span id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</span></div>
-      <div class="footer-bottom-right"><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></div>
+    <div class="footer-bottom">
+      <div class="footer-left"><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></div>
+      <div class="footer-center"><span data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</span></div>
+      <div class="footer-right"><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></div>
     </div>
   </footer>
 
-  <script src="js/translations.js"></script>
-  <script src="js/script.js"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
