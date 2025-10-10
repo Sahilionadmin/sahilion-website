@@ -4,8 +4,7 @@
    - replacing text via TRANSLATIONS
    - smooth scroll active nav highlighting (IntersectionObserver)
    - fade-in on scroll
-   - simple form submission UX improvements
-   - newsletter form layout (button inline with input)
+   - simple form submission UX improvements (no backend changes)
 */
 
 (() => {
@@ -15,32 +14,46 @@
   // Apply translations to all elements with data-key
   function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang] || TRANSLATIONS['sw'];
+
+    // Replace text for elements with data-key
     document.querySelectorAll('[data-key]').forEach(el => {
       const key = el.getAttribute('data-key');
       if(key && dict[key]) el.textContent = dict[key];
     });
 
-    // update language toggle label
+    // Update nav links
+    document.querySelectorAll('nav a.nav-link').forEach(a => {
+      const key = a.getAttribute('data-key');
+      if(key && dict[key]) a.textContent = dict[key];
+    });
+
+    // Update placeholders in forms/newsletter
+    document.querySelectorAll('input[data-key]').forEach(input => {
+      const key = input.getAttribute('data-key');
+      if(key && dict[key]) input.setAttribute('placeholder', dict[key]);
+    });
+
+    // Update newsletter/submit buttons
+    document.querySelectorAll('button[data-key]').forEach(btn => {
+      const key = btn.getAttribute('data-key');
+      if(key && dict[key]) btn.textContent = dict[key];
+    });
+
+    // Language toggle label
     const langToggle = document.getElementById('language-toggle');
     if(langToggle) langToggle.textContent = (lang === 'sw') ? 'English' : 'Kiswahili';
 
-    // update copyright
+    // Footer copyright
     const copyrightEl = document.getElementById('copyright');
     if(copyrightEl) {
       copyrightEl.textContent = dict['footer.copyright'] || '';
     }
-
-    // update newsletter placeholder and button
-    const newsletterInput = document.querySelector('.newsletter input[type="email"]');
-    if(newsletterInput) newsletterInput.placeholder = dict['newsletter.label'] || '';
-    const newsletterBtn = document.querySelector('.newsletter button');
-    if(newsletterBtn) newsletterBtn.textContent = dict['newsletter.btn'] || '';
   }
 
   // Initialize translations
   applyTranslations(currentLang);
 
-  // Language toggle behavior
+  // Language toggle
   const toggleBtn = document.getElementById('language-toggle');
   if(toggleBtn){
     toggleBtn.addEventListener('click', () => {
@@ -48,7 +61,6 @@
       applyTranslations(currentLang);
       toggleBtn.setAttribute('aria-pressed', currentLang === 'en');
     });
-    // keyboard accessible
     toggleBtn.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' || e.key === ' ') toggleBtn.click();
     });
@@ -69,10 +81,8 @@
     });
   });
 
-  // IntersectionObserver for active nav link and fade-in
+  // IntersectionObserver for nav active links and fade-in
   const sections = document.querySelectorAll('main section, footer');
-  const navLinks = document.querySelectorAll('nav a.nav-link, .footer-mini-nav a');
-
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.id;
@@ -90,11 +100,13 @@
     sec.classList.add('fade-in');
     sectionObserver.observe(sec);
   });
+
+  // Observe inner containers for smoother fade
   document.querySelectorAll('.content-section .container').forEach(el => {
     sectionObserver.observe(el);
   });
 
-  // Form submission UX improvements
+  // Form submission UX
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       const btn = form.querySelector('button[type="submit"], .btn');
@@ -110,7 +122,7 @@
     });
   });
 
-  // Image fallback
+  // Image error fallback
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', () => { img.style.display='none'; });
   });

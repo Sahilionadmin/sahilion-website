@@ -14,8 +14,12 @@
   <header id="site-header">
     <div class="header-inner">
       <div class="logo">
-        <a href="#home"><img src="assets/sahilion_logo.svg" alt="Sahilion logo"></a>
+        <a href="#home" id="logo-link">
+          <img src="assets/logohq.png" alt="Sahilion logo">
+          <img src="assets/logo_name.png" alt="Sahilion Name">
+        </a>
       </div>
+
       <nav id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
@@ -24,7 +28,7 @@
           <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
           <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
           <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          <li class="lang-switch" id="language-toggle" role="button" tabindex="0">English</li>
+          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
         </ul>
       </nav>
     </div>
@@ -70,7 +74,7 @@
     <!-- CONNECT -->
     <section id="connect" class="content-section">
       <div class="container">
-        <h2 data-key="connect.title">Ungana na Safari</h2>
+        <h2 data-key="connect.title">Unganisha na Safari</h2>
         <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
         <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
         <a href="#opportunities" class="link-to-news" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
@@ -79,14 +83,14 @@
 
     <!-- OPPORTUNITIES + NEWSLETTER -->
     <section id="opportunities" class="content-section">
-      <div class="container">
+      <div class="container newsletter-bottom">
         <h2 data-key="opps.title">Fursa</h2>
         <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
 
         <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row newsletter-row">
-            <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+          <div class="form-row">
             <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+            <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
           </div>
         </form>
       </div>
@@ -110,48 +114,35 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-grid">
-      <!-- Left: Social Icons -->
-      <div class="footer-icons">
+    <div class="footer-bottom">
+      <div class="footer-left">
         <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
         <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
         <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
         <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
       </div>
 
-      <!-- Center: Logo + Mini Nav + Copyright -->
       <div class="footer-center">
-        <img src="assets/logohq.png" alt="Sahilion Logo" class="footer-logo">
-        <ul class="footer-mini-nav">
-          <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+        <ul class="footer-nav">
+          <li><a href="index.html">Nyumbani</a></li>
+          <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
+          <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
         </ul>
         <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
       </div>
 
-      <!-- Right: Newsletter -->
-      <div class="footer-newsletter">
-        <form class="newsletter" id="footer-newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row newsletter-row">
-            <input id="footer-newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+      <div class="footer-right">
+        <form class="newsletter" id="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <div class="form-row">
             <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
           </div>
         </form>
       </div>
     </div>
-
-    <!-- Extreme Bottom: Terms & Privacy -->
-    <div class="footer-bottom">
-      <a href="terms.html" class="footer-link" data-key="footer.terms">Masharti na Sera</a>
-      <a href="privacy.html" class="footer-link" data-key="footer.privacy">Sera ya Faragha</a>
-    </div>
   </footer>
 
-<script src="translations.js"></script>
-<script src="script.js"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
