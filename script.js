@@ -14,46 +14,61 @@
   // Apply translations to all elements with data-key
   function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang] || TRANSLATIONS['sw'];
-
-    // Replace text for elements with data-key
     document.querySelectorAll('[data-key]').forEach(el => {
       const key = el.getAttribute('data-key');
       if(key && dict[key]) el.textContent = dict[key];
     });
 
-    // Update nav links
-    document.querySelectorAll('nav a.nav-link').forEach(a => {
-      const key = a.getAttribute('data-key');
-      if(key && dict[key]) a.textContent = dict[key];
-    });
+    // Update language toggle label
+    const langToggle = document.getElementById('language-toggle');
+    if(langToggle) langToggle.textContent = (lang === 'sw') ? 'English' : 'Kiswahili';
 
-    // Update placeholders in forms/newsletter
-    document.querySelectorAll('input[data-key]').forEach(input => {
-      const key = input.getAttribute('data-key');
+    // Update copyright
+    const copyrightEl = document.getElementById('copyright');
+    if(copyrightEl) copyrightEl.textContent = dict['footer.copyright'] || '';
+
+    // Update Terms & Privacy page content if present
+    const termsTitle = document.getElementById('terms-title');
+    const termsList = document.getElementById('terms-list');
+    if(termsTitle && termsList) {
+      termsTitle.textContent = dict.terms.title;
+      termsList.innerHTML = '';
+      dict.terms.list.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        termsList.appendChild(li);
+      });
+    }
+
+    const privacyTitle = document.getElementById('privacy-title');
+    const privacyList = document.getElementById('privacy-list');
+    if(privacyTitle && privacyList) {
+      privacyTitle.textContent = dict.privacy.title;
+      privacyList.innerHTML = '';
+      dict.privacy.list.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        privacyList.appendChild(li);
+      });
+    }
+
+    // Update placeholders for newsletter/input boxes
+    document.querySelectorAll('input[data-placeholder]').forEach(input => {
+      const key = input.getAttribute('data-placeholder');
       if(key && dict[key]) input.setAttribute('placeholder', dict[key]);
     });
 
-    // Update newsletter/submit buttons
+    // Update newsletter button
     document.querySelectorAll('button[data-key]').forEach(btn => {
       const key = btn.getAttribute('data-key');
       if(key && dict[key]) btn.textContent = dict[key];
     });
-
-    // Language toggle label
-    const langToggle = document.getElementById('language-toggle');
-    if(langToggle) langToggle.textContent = (lang === 'sw') ? 'English' : 'Kiswahili';
-
-    // Footer copyright
-    const copyrightEl = document.getElementById('copyright');
-    if(copyrightEl) {
-      copyrightEl.textContent = dict['footer.copyright'] || '';
-    }
   }
 
   // Initialize translations
   applyTranslations(currentLang);
 
-  // Language toggle
+  // Language toggle behavior
   const toggleBtn = document.getElementById('language-toggle');
   if(toggleBtn){
     toggleBtn.addEventListener('click', () => {
@@ -61,12 +76,13 @@
       applyTranslations(currentLang);
       toggleBtn.setAttribute('aria-pressed', currentLang === 'en');
     });
+    // keyboard accessibility
     toggleBtn.addEventListener('keydown', (e) => {
       if(e.key === 'Enter' || e.key === ' ') toggleBtn.click();
     });
   }
 
-  // Smooth scroll for internal links
+  // Smooth scroll behavior for internal links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e){
       const href = this.getAttribute('href');
@@ -81,7 +97,7 @@
     });
   });
 
-  // IntersectionObserver for nav active links and fade-in
+  // IntersectionObserver for active nav link and fade-in
   const sections = document.querySelectorAll('main section, footer');
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -100,13 +116,11 @@
     sec.classList.add('fade-in');
     sectionObserver.observe(sec);
   });
-
-  // Observe inner containers for smoother fade
   document.querySelectorAll('.content-section .container').forEach(el => {
     sectionObserver.observe(el);
   });
 
-  // Form submission UX
+  // Newsletter/form submission UX
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => {
       const btn = form.querySelector('button[type="submit"], .btn');
@@ -122,8 +136,7 @@
     });
   });
 
-  // Image error fallback
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', () => { img.style.display='none'; });
-  });
+  // Button color :active handled via CSS
+  // Example: .btn:active { background-color:#5DADE2; }
+
 })();

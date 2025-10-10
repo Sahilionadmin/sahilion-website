@@ -28,7 +28,7 @@
           <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
           <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
           <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
+          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">Swahili</li>
         </ul>
       </nav>
     </div>
@@ -74,23 +74,21 @@
     <!-- CONNECT -->
     <section id="connect" class="content-section">
       <div class="container">
-        <h2 data-key="connect.title">Unganisha na Safari</h2>
+        <h2 data-key="connect.title">Ungana na Safari</h2>
         <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
-        <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
-        <a href="#opportunities" class="link-to-news" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
       </div>
     </section>
 
     <!-- OPPORTUNITIES + NEWSLETTER -->
     <section id="opportunities" class="content-section">
-      <div class="container newsletter-bottom">
+      <div class="container">
         <h2 data-key="opps.title">Fursa</h2>
         <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
 
         <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
-            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
+          <div class="form-row newsletter-row">
             <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
           </div>
         </form>
       </div>
@@ -114,7 +112,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-bottom">
+    <div class="footer-social-newsletter">
       <div class="footer-left">
         <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
         <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
@@ -123,26 +121,36 @@
       </div>
 
       <div class="footer-center">
-        <ul class="footer-nav">
-          <li><a href="index.html">Nyumbani</a></li>
-          <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
-          <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
-        </ul>
-        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
+            <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
+            <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
+            <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
+            <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
+            <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="footer-right">
-        <form class="newsletter" id="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
+        <form class="newsletter" id="newsletter-footer-form" action="https://formspree.io/f/xanpjqnl" method="POST">
+          <div class="form-row newsletter-row">
+            <input id="newsletter-footer-email" name="email" type="email" placeholder="Barua pepe yako" required>
             <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
           </div>
         </form>
       </div>
     </div>
+
+    <div class="footer-bottom">
+      <span class="terms-left" data-key="footer.terms"><a href="terms.html">Vegezo na Masharti</a></span>
+      <span class="copyright-center" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</span>
+      <span class="privacy-right" data-key="footer.privacy"><a href="privacy.html">Sera ya Faragha</a></span>
+    </div>
   </footer>
 
-  <script src="translations.js"></script>
-  <script src="script.js"></script>
+<script src="translations.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
