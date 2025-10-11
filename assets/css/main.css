@@ -186,52 +186,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader (ADDED BLOCK)
+# Preloader (FULLY CORRECTED BLOCK)
 --------------------------------------------------------------*/
 #preloader {
-  display: flex;
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 99999; /* Crucial: Must cover all content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Important for animation */
 }
 
 #preloader:before,
 #preloader:after {
-  content: "";
-  /* Using the background variable for consistency, fall back to black if not defined */
-  background-color: var(--background-color, #000000); 
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  height: 100%;
-  transition: all 0.3s ease 0s;
-  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+  width: 50%;
 }
 
 #preloader:after {
-  left: auto;
-  right: 0;
+  left: 50%;
 }
 
-/* These styles are necessary for the JS logic to fade it out */
-#preloader.loaded:before,
+/* Style for the inner spinning line/dot */
+#preloader .line {
+  display: block;
+  position: relative;
+  width: 1px;
+  height: 28px;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: 500ms ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  left: -6.5px;
+  top: 0;
+  width: 14px;
+  height: 28px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 500ms ease 0s;
+}
+
+/* State when JS adds the 'loaded' class */
+#preloader.loaded {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Animation starts here to shrink the two halves and reveal content */
+#preloader.loaded:before {
+  left: -50%;
+}
+
 #preloader.loaded:after {
-  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+  left: 100%;
 }
 
-/* Animation to close the two background halves */
-@keyframes preloaderfinish {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
-  }
+#preloader.loaded .line {
+  opacity: 0;
 }
-/* Note: The original template also had a .line animation, 
-  but this simplified version focuses on making the background disappear. */
 
 
 /*--------------------------------------------------------------
