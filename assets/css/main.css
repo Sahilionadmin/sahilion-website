@@ -1,31 +1,53 @@
 /**
-* Template Name: PhotoFolio (Adapted for Sahilion)
-* Author: Sahilion
+* Template Name: Sahilion PhotoFolio Adapted
+* Original Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+* Updated: Oct 11 2025 with Sahilion Branding
+* Author: Adapted by Makame Faki
 * License: https://bootstrapmade.com/license/
 */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
+/* Fonts */
 :root {
-  --default-font: 'Roboto', sans-serif;
-  --heading-font: 'Madimi One', cursive;
-  --nav-font: 'Roboto', sans-serif;
+  --default-font: "Calibri", sans-serif;
+  --heading-font: "Madimi One", sans-serif;
+  --nav-font: "Inter", sans-serif;
+}
 
-  --background-color: #F5F5DC;   /* Sahilion beige */
-  --default-color: #4A2C2A;      /* Sahilion brown */
-  --heading-color: #4A2C2A;      
-  --accent-color: #D35400;       /* Sahilion orange */
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+/* Global Colors */
+:root { 
+  --background-color: #F5F5DC; /* Sahilion beige */
+  --default-color: #4A2C2A;    /* Sahilion brown for text */
+  --heading-color: #4A2C2A;    /* Headings brown */
+  --accent-color: #D35400;     /* Sahilion orange for buttons, links */
+  --surface-color: #ffffff;    /* Cards, boxes, surfaces */
+  --contrast-color: #ffffff;   /* Text on accent color backgrounds */
+}
 
-  /* Navigation Colors */
-  --nav-color: rgba(74, 44, 42, 0.7);
+/* Nav Menu Colors */
+:root {
+  --nav-color: rgba(74,44,42,0.7);  /* brown, semi-transparent */
   --nav-hover-color: #4A2C2A;
   --nav-mobile-background-color: #F5F5DC;
   --nav-dropdown-background-color: #F5F5DC;
-  --nav-dropdown-color: rgba(74, 44, 42, 0.7);
-  --nav-dropdown-hover-color: #D35400;
+  --nav-dropdown-color: rgba(74,44,42,0.7);
+  --nav-dropdown-hover-color: #4A2C2A;
+}
+
+/* Color Presets */
+.light-background {
+  --background-color: #ffffff;
+  --surface-color: #F5F5DC;
+}
+
+.dark-background {
+  --background-color: #4A2C2A;
+  --default-color: #F5F5DC;
+  --heading-color: #F5F5DC;
+  --surface-color: #5DADE2; /* light blue surface */
+  --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
@@ -58,8 +80,54 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
 }
 
+/* PHP Email Form Messages */
+.php-email-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: var(--accent-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.php-email-form .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /*--------------------------------------------------------------
-# Header
+# Global Header
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
@@ -75,143 +143,74 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 400;
   color: var(--heading-color);
+  font-family: var(--heading-font);
 }
 
 .header .header-social-links a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding-left: 6px;
-  display: inline-block;
-  transition: 0.3s;
 }
 
 .header .header-social-links a:hover {
   color: var(--accent-color);
 }
 
+/* Navmenu Desktop & Mobile colors already inherited, hover effects adapted */
+
 /*--------------------------------------------------------------
-# Navigation Menu
+# Global Footer
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
-@media (min-width: 1200px) {
-  .navmenu ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-
-  .navmenu li {
-    position: relative;
-  }
-
-  .navmenu a {
-    color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 14px;
-    font-family: var(--nav-font);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active {
-    color: var(--nav-hover-color);
-  }
-
-  .navmenu .dropdown ul {
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 0;
-    top: 100%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-  }
-
-  .navmenu .dropdown ul li a {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-
-  .navmenu .dropdown ul li a:hover {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
+.footer {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  background-color: var(--background-color);
 }
 
-/* Navmenu - Mobile */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    cursor: pointer;
-  }
+.footer .social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+}
 
-  .navmenu ul {
-    display: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 
-  .navmenu a {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader:before, #preloader:after {
+  background-color: var(--background-color);
+}
 
-  .navmenu .dropdown ul {
-    background-color: var(--nav-dropdown-background-color);
-  }
+#preloader .line:before {
+  background-color: var(--accent-color);
+}
 
-  .mobile-nav-active .navmenu>ul {
-    display: block;
-  }
+#preloader .line:after {
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  background-color: var(--accent-color);
+}
+
+.scroll-top i {
+  color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
-  width: 100%;
-  min-height: 30vh;
-  padding: 120px 0 60px 0;
-  display: flex;
-  align-items: center;
-}
-
-.hero h2 {
-  margin: 0 0 10px 0;
-  font-size: 38px;
-  font-weight: 700;
-  font-family: var(--heading-font);
+.hero h2 .underlight:before {
+  background: var(--accent-color);
 }
 
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
-  padding: 12px 40px;
-  border-radius: 4px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.5s;
 }
 
 .hero .btn-get-started:hover {
@@ -221,110 +220,94 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
-.gallery .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.gallery .gallery-item img {
-  transition: 0.3s;
-}
-
 .gallery .gallery-links {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0,0,0,0.3);
-  z-index: 3;
+  background: rgba(74,44,42,0.6); /* semi-transparent brown overlay */
 }
 
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
-  font-size: 20px;
-  color: rgba(255,255,255,0.8);
-  margin: 30px 8px 0 8px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.gallery .gallery-item:hover .gallery-links {
-  opacity: 1;
-}
-
-.gallery .gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-}
-
-.footer .social-links a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(74,44,42,0.5);
-  color: rgba(74,44,42,0.5);
-  margin: 0 5px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
   color: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
-# Sections
+# About Section
 --------------------------------------------------------------*/
-section, .section {
+.about .content ul i {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials .testimonial-item {
+  background-color: var(--surface-color);
+}
+
+.testimonials .testimonial-item .stars i {
+  color: #ffc107;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+  background-color: var(--surface-color);
+}
+
+.services .service-item .icon i {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 60px 0;
+  background-color: var(--accent-color);
 }
 
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(74,44,42,0.5);
-  font-family: var(--default-font);
+.services .service-item:hover i {
+  color: var(--accent-color);
+  background-color: var(--default-color);
 }
 
-.section-title p {
-  color: var(--heading-color);
-  font-size: 36px;
-  font-weight: 400;
-  font-family: var(--heading-font);
+.services .service-item:hover:before {
+  background: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
-# Contact Form
+# Pricing Section
 --------------------------------------------------------------*/
+.pricing .pricing-item h4 {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item i {
+  color: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
   color: var(--default-color);
   background-color: var(--surface-color);
-  border-color: rgba(74,44,42,0.3);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);
-  padding: 14px 40px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
