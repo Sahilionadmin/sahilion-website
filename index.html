@@ -1,186 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Sahilion | From the Coast to the Cosmos</title>
-  <meta name="description" content="Sahilion: Stories and flavors of the Swahili Coast.">
-  <meta name="keywords" content="Sahilion, Swahili, food culture, stories, coast">
-  <meta name="author" content="Makame Faki">
-  <meta property="og:title" content="Sahilion - From the Coast to the Cosmos">
-  <meta property="og:description" content="Discover the flavors and stories of the Swahili Coast.">
-  <meta property="og:image" content="assets/img/logohq.png">
-  <meta property="og:type" content="website">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <base href="/sahilion-photofolio/"> <!-- Update with your repo name -->
+
 </head>
+
 <body class="index-page">
-  <!-- Header -->
-  <header id="header" class="header fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html#hero" class="logo d-flex align-items-center">
-        <img src="assets/img/logohq.png" alt="Sahilion Logo">
-        <img src="assets/img/sahilion_logo_header.png" alt="Sahilion Name">
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="#kuhusu" data-key="nav.about">Kuhusu</a></li>
-          <li class="dropdown">
-            <a href="#maonyesho" data-key="nav.explore"><span>Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#maonyesho" data-key="nav.explore.photos">Picha</a></li>
-              <li><a href="#maonyesho" data-key="nav.explore.videos">Video</a></li>
-            </ul>
-          </li>
-          <li><a href="#hadithi" data-key="nav.story">Hadithi</a></li>
-          <li><a href="#mawasiliano" data-key="nav.contact">Mawasiliano</a></li>
-          <li><a href="#" class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</a></li>
-        </ul>
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      </nav>
-      <div class="header-social-links d-flex align-items-center">
-        <span class="follow-us" data-key="nav.follow">Follow Us:</span>
-        <a href="https://www.tiktok.com/@sahilionhq" class="tiktok"><img src="assets/img/tiktok.png" alt="TikTok"></a>
-        <a href="https://www.instagram.com/sahilionhq" class="instagram"><img src="assets/img/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/SahilionHQ" class="twitter"><img src="assets/img/x.png" alt="X"></a>
-        <a href="https://youtube.com/@sahilionmedia" class="youtube"><img src="assets/img/youtube.png" alt="YouTube"></a>
-      </div>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo me-auto me-xl-0">
+  <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 60px;">
+</a>
+
+     <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="index.html" class="active">Nyumbani</a></li>
+
+    <li class="dropdown">
+      <a href="maonyesho.html"><span>Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="picha.html">Picha</a></li>
+        <li><a href="video.html">Video</a></li>
+      </ul>
+    </li>
+
+    <li><a href="hadithi.html">Hadithi</a></li>
+    <li><a href="kuhusu.html">Kuhusu</a></li>
+    <li><a href="mawasiliano.html">Mawasiliano</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+      <div class="header-social-links">
+  <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
+    <img src="assets/img/tiktok.png" alt="TikTok" style="height:24px;">
+  </a>
+  <a href="https://www.instagram.com/sahilionhq" target="_blank">
+    <img src="assets/img/instagram.png" alt="Instagram" style="height:24px;">
+  </a>
+  <a href="https://x.com/SahilionHQ" target="_blank">
+    <img src="assets/img/x.png" alt="X / Twitter" style="height:24px;">
+  </a>
+  <a href="https://youtube.com/@sahilionmedia" target="_blank">
+    <img src="assets/img/youtube.png" alt="YouTube" style="height:24px;">
+  </a>
+</div>
+
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero section dark-background">
-    <img src="assets/img/beach_sunset.jpg" alt="Swahili Coast Sunset" data-aos="fade-in">
-    <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-      <h2 data-key="hero.title">Karibu kwenye dunia ya Sahilion</h2>
-      <p data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
-      <a href="#maonyesho" class="btn-get-started scrollto" data-key="cta.join">Jiunge na Safari</a>
-    </div>
-  </section>
+  <main class="main">
 
-  <!-- Kuhusu Section -->
-  <section id="kuhusu" class="about section">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2 data-key="nav.about">Kuhusu</h2>
-        <p data-key="about.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
+   <!-- Hero Section -->
+<section id="hero" class="hero section">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2>
+          <span>Karibu kwenye </span>
+          <span class="underlight">Sahilion</span>
+          <span> – From the Coast to the Cosmos</span>
+        </h2>
+        <p>Gundua uzoefu wa kisasa wenye urithi wa pwani, hadithi za kipekee, na maonyesho ya ubunifu yaliyoundwa kuhamasisha na kukuunganisha na kiini cha Sahilion.</p>
+        <a href="mawasiliano.html" class="btn-get-started">Wasiliana Nasi<br></a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Maonyesho Section (Gallery with Photos and Videos) -->
-  <section id="maonyesho" class="gallery section">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2 data-key="nav.explore">Maonyesho</h2>
-      </div>
-      <div class="row gy-4 portfolio-container">
-        <div class="col-xl-4 col-md-6 portfolio-item filter-photos">
-          <div class="portfolio-wrap">
-            <img src="assets/img/beach_sunset.jpg" class="img-fluid" alt="Swahili Coast">
-            <div class="portfolio-links">
-              <a href="assets/img/beach_sunset.jpg" data-gallery="portfolioGallery" class="glightbox" title="Mapishi ya Kiswahili"><i class="bi bi-arrows-angle-expand"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4 data-key="explore.card1.title">Mapishi ya Kiswahili</h4>
-              <p data-key="explore.card1.desc">Hadithi na picha za chakula cha pwani.</p>
-            </div>
+</section><!-- /Hero Section -->
+
+   <!-- Maonyesho Section -->
+<section id="gallery" class="gallery section">
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 justify-content-center">
+
+      <!-- Picha -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="gallery-item h-100">
+          <img src="assets/img/maonyesho/picha-1.jpg" class="img-fluid" alt="Picha 1">
+          <div class="gallery-links d-flex align-items-center justify-content-center">
+            <a href="assets/img/maonyesho/picha-1.jpg" title="Picha 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+            <a href="maonyesho-picha.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 portfolio-item filter-videos">
-          <div class="portfolio-wrap">
-            <img src="assets/img/beach_sunset.jpg" class="img-fluid" alt="Coastal Feast">
-            <div class="portfolio-links">
-              <a href="https://www.youtube.com/watch?v=example" data-gallery="portfolioGallery" class="glightbox" title="Uzoefu wa Ladha"><i class="bi bi-play-circle"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4 data-key="explore.card2.title">Uzoefu wa Ladha</h4>
-              <p data-key="explore.card2.desc">Pata ladha asilia kupitia mapishi na maelezo ya hadithi.</p>
-            </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="gallery-item h-100">
+          <img src="assets/img/maonyesho/picha-2.jpg" class="img-fluid" alt="Picha 2">
+          <div class="gallery-links d-flex align-items-center justify-content-center">
+            <a href="assets/img/maonyesho/picha-2.jpg" title="Picha 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+            <a href="maonyesho-picha.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </div><!-- End Gallery Item -->
 
-  <!-- Hadithi Section -->
-  <section id="hadithi" class="services section">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2 data-key="nav.story">Hadithi</h2>
-        <p data-key="story.desc">Hadithi za pwani ya Kiswahili, kutoka chakula hadi mila, zinazoshirikiwa kwa upendo na ubunifu.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mawasiliano Section (Newsletter and Contact) -->
-  <section id="mawasiliano" class="contact section">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2 data-key="nav.contact">Mawasiliano</h2>
-      </div>
-      <div class="row mt-5 justify-content-center">
-        <div class="col-lg-6">
-          <!-- Newsletter Form -->
-          <form action="https://formspree.io/f/xanpjqnl" method="POST" class="php-email-form mb-5">
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" placeholder="Barua pepe" required data-key="newsletter.label">
-            </div>
-            <div class="text-center mt-3"><button type="submit" data-key="connect.signup">Jisajili kupokea hadithi mpya</button></div>
-          </form>
-          <!-- Contact Form -->
-          <form action="https://formspree.io/f/mblzydly" method="POST" class="php-email-form">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" placeholder="Jina lako" required>
-              </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" placeholder="Barua pepe" required data-key="newsletter.label">
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Ujumbe wako" required></textarea>
-            </div>
-            <div class="text-center mt-3"><button type="submit" data-key="contact.btn">Tuma</button></div>
-          </form>
+      <!-- Video -->
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="gallery-item h-100">
+          <img src="assets/img/maonyesho/video-1.jpg" class="img-fluid" alt="Video 1">
+          <div class="gallery-links d-flex align-items-center justify-content-center">
+            <a href="https://www.youtube.com/watch?v=example1" title="Video 1" class="glightbox preview-link"><i class="bi bi-play-circle"></i></a>
+            <a href="maonyesho-video.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </div><!-- End Gallery Item -->
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        <p data-key="footer.copyright">&copy; 2025 Sahilion. Haki zote zimehifadhiwa.</p>
-      </div>
-      <div class="credits">
-        <a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a> |
-        <a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a>
-      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6">
+        <div class="gallery-item h-100">
+          <img src="assets/img/maonyesho/video-2.jpg" class="img-fluid" alt="Video 2">
+          <div class="gallery-links d-flex align-items-center justify-content-center">
+            <a href="https://www.youtube.com/watch?v=example2" title="Video 2" class="glightbox preview-link"><i class="bi bi-play-circle"></i></a>
+            <a href="maonyesho-video.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+        </div>
+      </div><!-- End Gallery Item -->
+
     </div>
-  </footer>
+
+  </div>
+
+</section><!-- /Maonyesho Section -->
+
+</main>
+
+ <footer id="footer" class="footer">
+
+  <div class="container">
+    <!-- Copyright -->
+    <div class="copyright text-center">
+      <p>© <span>Haki Miliki</span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
+        <img src="assets/img/tiktok.png" alt="TikTok" style="height:24px;">
+      </a>
+      <a href="https://www.instagram.com/sahilionhq" target="_blank">
+        <img src="assets/img/instagram.png" alt="Instagram" style="height:24px;">
+      </a>
+      <a href="https://x.com/SahilionHQ" target="_blank">
+        <img src="assets/img/x.png" alt="X / Twitter" style="height:24px;">
+      </a>
+      <a href="https://youtube.com/@sahilionmedia" target="_blank">
+        <img src="assets/img/youtube.png" alt="YouTube" style="height:24px;">
+      </a>
+    </div>
+
+    <!-- Footer Credits / Tagline -->
+    <div class="credits text-center mt-2">
+      From the Coast to the Cosmos
+    </div>
+  </div>
+
+</footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS -->
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="translations.js"></script>
+
 </body>
+
 </html>
