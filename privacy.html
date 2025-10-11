@@ -1,85 +1,49 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahilion | Sera ya Faragha</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Sahilion: Privacy Policy.">
+  <meta name="keywords" content="Sahilion, privacy, Swahili, food culture">
+  <meta name="author" content="Makame Faki">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <base href="/sahilion-photofolio/">
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header id="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <a href="index.html" id="logo-link">
-          <img src="assets/logohq.png" alt="Sahilion logo">
-          <img src="assets/logo_name.png" alt="Sahilion Name">
-        </a>
-      </div>
-
-      <nav id="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Header (same as index.html) -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <!-- Same header code as index.html -->
   </header>
 
-  <!-- PRIVACY CONTENT -->
-  <main class="content-section">
+  <!-- Privacy Section -->
+  <section id="privacy" class="section">
     <div class="container">
-      <h1>Sera ya Faragha</h1>
-      <p>Tovuti ya Sahilion inaheshimu faragha ya watumiaji wake na inakusudia kutoa taarifa zinazohusiana na matumizi ya huduma za tovuti.</p>
+      <div class="section-title">
+        <h2 data-key="privacy.title">Sera ya Faragha</h2>
+        <p data-key="privacy.intro">Sera hii inatoa taarifa kuhusu jinsi Sahilion inavyokusanya na kutumia data.</p>
+      </div>
       <ol>
-        <li>Taarifa zinazokusanywa ni pamoja na barua pepe kwa usajili wa jarida na mawasiliano na timu ya Sahilion.</li>
-        <li>Sahilion haitauza, kushiriki au kutoa taarifa zako binafsi kwa wahusika wengine bila ruhusa.</li>
-        <li>Tovuti inaweza kutumia cookies au teknolojia nyingine kuboresha uzoefu wa mtumiaji.</li>
-        <li>Taarifa za jumla zinaweza kutumika kwa uchambuzi wa takwimu na kuboresha huduma, bila kuonesha watumiaji binafsi.</li>
-        <li>Watumiaji wana haki ya kuomba kufutwa kwa taarifa zao au kurekebisha taarifa zao sahihi kwa kuwasiliana na timu ya Sahilion.</li>
+        <li data-key="privacy.1">Sahilion haina kuhifadhi maudhui ya watumiaji.</li>
+        <li data-key="privacy.2">Data ndogo kama barua pepe kwa jarida hutumika tu kwa usajili wa habari.</li>
+        <li data-key="privacy.3">Tovuti haiusambazi data kwa mtu wa tatu bila idhini.</li>
+        <li data-key="privacy.4">Tunahakikisha usalama wa data unavyokusanywa.</li>
+        <li data-key="privacy.5">Watumiaji wanaweza kuondoa usajili wao wakati wowote.</li>
       </ol>
     </div>
-  </main>
+  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-bottom">
-      <div class="footer-left">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-      </div>
-
-      <div class="footer-center">
-        <ul class="footer-nav">
-          <li><a href="index.html">Nyumbani</a></li>
-          <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
-          <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
-        </ul>
-        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
-      </div>
-
-      <div class="footer-right">
-        <form class="newsletter" id="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
-            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
-          </div>
-        </form>
-      </div>
-    </div>
+  <!-- Footer (same as index.html) -->
+  <footer id="footer" class="footer">
+    <!-- Same footer code as index.html -->
   </footer>
 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
   <script src="translations.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>

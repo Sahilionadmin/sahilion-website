@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahilion | From the Coast to the Cosmos</title>
-  <meta name="description" content="Sahilion: Swahili Coast food culture storytelling.">
+  <meta name="description" content="Sahilion: Stories and flavors of the Swahili Coast.">
   <meta name="keywords" content="Sahilion, Swahili, food culture, stories, coast">
   <meta name="author" content="Makame Faki">
   <meta property="og:title" content="Sahilion - From the Coast to the Cosmos">
   <meta property="og:description" content="Discover the flavors and stories of the Swahili Coast.">
   <meta property="og:image" content="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759350039/Logo_ncs751.png">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -19,7 +19,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <base href="/sahilion-photofolio/"> <!-- Update with your repo name -->
 </head>
-<body>
+<body class="index-page">
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
@@ -29,29 +29,32 @@
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#home" class="nav-link active" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
+          <li><a href="#home" class="active" data-key="nav.home">Nyumbani</a></li>
+          <li><a href="#ourstory" data-key="nav.story">Hadithi Yetu</a></li>
+          <li><a href="#gallery" data-key="nav.explore">Gundua</a></li>
+          <li><a href="#connect" data-key="nav.connect">Ungana</a></li>
+          <li><a href="#contact" data-key="nav.contact">Wasiliana</a></li>
           <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+      <div class="header-social-links">
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank"><i class="bi bi-youtube"></i></a>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero section">
-    <div class="hero-bg" style="background-image: url('https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/beach_sunset.jpg');"></div>
-    <div class="hero-overlay"></div>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-          <h2 data-key="hero.title">Karibu kwenye dunia ya Sahilion</h2>
+          <h2><span data-key="hero.title">Karibu kwenye dunia ya Sahilion</span></h2>
           <p data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
-          <a href="#explore" class="btn-get-started" data-key="cta.join">Jiunge na Safari</a>
+          <a href="#gallery" class="btn-get-started" data-key="cta.join">Jiunge na Safari</a>
         </div>
       </div>
     </div>
@@ -60,21 +63,25 @@
   <!-- Our Story Section -->
   <section id="ourstory" class="section">
     <div class="container">
-      <h2 data-key="our.title">Hadithi Yetu</h2>
-      <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
+      <div class="section-title">
+        <h2 data-key="our.title">Hadithi Yetu</h2>
+        <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Explore Section -->
-  <section id="explore" class="section gallery">
-    <div class="container">
-      <h2 data-key="explore.title">Gundua Hadithi</h2>
-      <div class="row gy-4 stories-grid">
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item story-card">
-            <img src="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/spice-market.jpg" class="img-fluid" alt="Zanzibar spice market">
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery section">
+    <div class="container-fluid">
+      <div class="section-title">
+        <h2 data-key="nav.explore">Gundua</h2>
+      </div>
+      <div class="row gy-4 justify-content-center">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="gallery-item h-100">
+            <img src="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/spice-market.jpg" class="img-fluid" alt="Zanzibar Spice Market">
             <div class="gallery-links d-flex align-items-center justify-content-center">
-              <a href="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/spice-market.jpg" class="glightbox preview-link" title="Zanzibar Spice Market"><i class="bi bi-arrows-angle-expand"></i></a>
+              <a href="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/spice-market.jpg" title="Zanzibar Spice Market" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
             </div>
             <div class="portfolio-info">
               <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
@@ -82,11 +89,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="gallery-item story-card">
-            <img src="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/coastal-feast.jpg" class="img-fluid" alt="Coastal feast">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="gallery-item h-100">
+            <img src="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/coastal-feast.jpg" class="img-fluid" alt="Coastal Feast">
             <div class="gallery-links d-flex align-items-center justify-content-center">
-              <a href="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/coastal-feast.jpg" class="glightbox preview-link" title="Coastal Feast"><i class="bi bi-arrows-angle-expand"></i></a>
+              <a href="https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/coastal-feast.jpg" title="Coastal Feast" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
             </div>
             <div class="portfolio-info">
               <h3 data-key="explore.card2.title">Uzoefu wa Ladha</h3>
@@ -101,74 +108,66 @@
   <!-- Connect Section -->
   <section id="connect" class="section">
     <div class="container">
-      <h2 data-key="connect.title">Ungana na Safari</h2>
-      <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida.</p>
-      <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
-      <div class="social-links">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/img/tiktok.png" alt="TikTok"></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/img/x.png" alt="X"></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/img/youtube.png" alt="YouTube"></a>
+      <div class="section-title">
+        <h2 data-key="connect.title">Ungana na Safari</h2>
+        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida.</p>
       </div>
-      <a href="#opportunities" class="btn-get-started" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
-    </div>
-  </section>
-
-  <!-- Opportunities Section -->
-  <section id="opportunities" class="section">
-    <div class="container">
-      <h2 data-key="opps.title">Fursa</h2>
-      <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
-      <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-        <div class="form-row">
-          <input name="email" type="email" placeholder="Barua pepe yako" required data-key="newsletter.label">
-          <button type="submit" class="btn-get-started" data-key="newsletter.btn">Tuma</button>
-        </div>
-      </form>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="text-center">
+        <a href="#contact" class="btn-get-started" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section contact">
     <div class="container">
-      <h2 data-key="contact.title">Wasiliana Nasi</h2>
-      <form id="contact-form" class="php-email-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-        <div class="form-row">
-          <input name="name" type="text" class="form-control" placeholder="Jina lako" required>
-          <input name="email" type="email" class="form-control" placeholder="Barua pepe" required data-key="newsletter.label">
+      <div class="section-title">
+        <h2 data-key="contact.title">Wasiliana Nasi</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form id="contact-form" class="php-email-form" action="https://formspree.io/f/xanpjqnl" method="POST">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" placeholder="Jina lako" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" name="email" class="form-control" placeholder="Barua pepe" required data-key="newsletter.label">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Ujumbe wako" required></textarea>
+            </div>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn-get-started" data-key="contact.btn">Tuma</button>
+            </div>
+          </form>
         </div>
-        <textarea name="message" class="form-control" rows="5" placeholder="Ujumbe wako" required></textarea>
-        <div class="text-center"><button type="submit" class="btn-get-started" data-key="contact.btn">Tuma</button></div>
-      </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer id="footer" class="footer">
     <div class="container">
-      <div class="footer-bottom">
-        <div class="footer-left">
-          <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/img/tiktok.png" alt="TikTok"></a>
-          <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
-          <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/img/x.png" alt="X"></a>
-          <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/img/youtube.png" alt="YouTube"></a>
-        </div>
-        <div class="footer-center">
-          <ul class="footer-nav">
-            <li><a href="index.html" data-key="nav.home">Nyumbani</a></li>
-            <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
-            <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
-          </ul>
-          <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
-        </div>
-        <div class="footer-right">
-          <form class="newsletter" id="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
-            <div class="form-row">
-              <input name="email" type="email" class="form-control" placeholder="Barua pepe yako" required data-key="newsletter.label">
-              <button type="submit" class="btn-get-started" data-key="newsletter.btn">Tuma</button>
-            </div>
-          </form>
-        </div>
+      <div class="copyright text-center">
+        <p data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank"><i class="bi bi-youtube"></i></a>
+      </div>
+      <div class="credits">
+        <a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a> | 
+        <a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a>
       </div>
     </div>
   </footer>
