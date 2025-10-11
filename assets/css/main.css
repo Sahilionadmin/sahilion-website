@@ -44,18 +44,18 @@ body::before {
 /* Header */
 .header {
   background-color: var(--brand-brown);
-  padding: 15px 0;
   border-bottom: none;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 .header .logo img {
-  height: 56px;
+  max-height: 56px;
   margin-right: 0.4rem;
 }
 .navmenu a, .navmenu a:focus {
   color: var(--nav-color);
   font-family: var(--nav-font);
   font-weight: 600;
+  text-transform: none;
 }
 .navmenu a:hover, .navmenu .active {
   color: var(--nav-hover-color);
@@ -67,26 +67,25 @@ body::before {
   border-radius: 6px;
   color: var(--brand-beige);
   background: var(--brand-orange);
-  transition: background 0.2s;
 }
 .navmenu .lang-switch:hover, .navmenu .lang-switch:active {
   background: var(--brand-blue);
 }
+.header-social-links a {
+  color: var(--brand-beige);
+}
+.header-social-links a:hover {
+  color: var(--brand-orange);
+}
 
 /* Hero */
 .hero {
-  min-height: 78vh;
+  min-height: 50vh;
+  background: url('https://res.cloudinary.com/dwsjp3s1k/image/upload/v1759411762/beach_sunset.jpg') center/cover no-repeat;
   position: relative;
-  overflow: hidden;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
-}
-.hero-overlay {
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(10,10,10,0.28), rgba(10,10,10,0.28));
@@ -104,7 +103,6 @@ body::before {
 .hero .btn-get-started {
   background: var(--brand-orange);
   color: var(--contrast-color);
-  box-shadow: 0 6px 18px rgba(211,83,0,0.18);
 }
 .hero .btn-get-started:hover {
   background: var(--brand-blue);
@@ -112,64 +110,48 @@ body::before {
 
 /* Sections */
 .section {
-  padding: 3.2rem 1rem;
+  padding: 60px 0;
 }
-.section h2 {
+.section-title h2 {
   font-family: var(--heading-font);
   font-size: clamp(1.3rem, 3.2vw, 2rem);
   color: var(--brand-brown);
 }
-.section p, .section li {
+.section-title p, .section li {
   color: var(--text-dark);
   line-height: 1.6;
 }
 
-/* Stories Grid */
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-.story-card {
-  background: var(--surface-color);
+/* Gallery */
+.gallery .gallery-item {
   border-radius: 12px;
-  padding: 1rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-.story-card:hover {
-  transform: translateY(-6px);
-}
-.story-card img {
+.gallery .gallery-item img {
   height: 200px;
   object-fit: cover;
 }
-.portfolio-info {
+.gallery .portfolio-info {
   padding: 1rem;
 }
-.portfolio-info h3 {
+.gallery .portfolio-info h3 {
   font-family: var(--heading-font);
   font-size: 1.2rem;
   color: var(--brand-brown);
 }
 
-/* Forms */
-.form-row {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-.newsletter input, .php-email-form input, .php-email-form textarea {
+/* Contact Form */
+.php-email-form input, .php-email-form textarea {
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.08);
   background: var(--surface-color);
   color: var(--text-dark);
 }
-.newsletter .btn-get-started, .php-email-form .btn-get-started {
-  min-width: 110px;
+.php-email-form .btn-get-started {
   background: var(--brand-orange);
   color: var(--contrast-color);
 }
-.newsletter .btn-get-started:hover, .php-email-form .btn-get-started:hover {
+.php-email-form .btn-get-started:hover {
   background: var(--brand-blue);
 }
 
@@ -178,27 +160,23 @@ body::before {
   background: var(--brand-brown);
   color: var(--brand-beige);
 }
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.footer-left img, .footer-right img {
-  width: 34px;
-  margin-right: 0.6rem;
-  filter: grayscale(1) brightness(1.6) sepia(0.9) saturate(0.2) hue-rotate(-10deg);
-}
-.footer-left a:hover img, .footer-right a:hover img {
-  transform: translateY(-4px) scale(1.04);
-}
-.footer-nav a {
+.footer .social-links a {
   color: var(--brand-beige);
-  font-weight: 600;
+  border-color: var(--brand-beige);
+}
+.footer .social-links a:hover {
+  color: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+.footer .credits a {
+  color: var(--brand-beige);
+}
+.footer .credits a:hover {
+  color: var(--brand-orange);
 }
 
 /* Mobile */
-@media (max-width: 900px) {
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .form-row { flex-direction: column; }
+@media (max-width: 1199px) {
+  .section { scroll-margin-top: 66px; }
+  .php-email-form .form-group { margin-bottom: 1rem; }
 }
