@@ -304,29 +304,3 @@ section, .section {
   font-weight: 400;
   font-family: var(--heading-font);
 }
-
-/*--------------------------------------------------------------
-# Contact Form
---------------------------------------------------------------*/
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: rgba(74,44,42,0.3);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  padding: 14px 40px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
-}
