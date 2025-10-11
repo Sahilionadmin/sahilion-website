@@ -12,27 +12,20 @@
   --heading-font: 'Madimi One', cursive;
   --nav-font: 'Roboto', sans-serif;
 
-  /* Colors */
   --background-color: #F5F5DC;   /* Sahilion beige */
   --default-color: #4A2C2A;      /* Sahilion brown */
   --heading-color: #4A2C2A;      
   --accent-color: #D35400;       /* Sahilion orange */
   --surface-color: #ffffff;
-  --contrast-color: #F5F5DC;     /* For brown backgrounds */
+  --contrast-color: #F5F5DC;     /* for dark backgrounds */
 
   /* Navigation Colors */
-  --nav-color: rgba(245,245,220,0.9);      /* beige for dark bg nav */
+  --nav-color: rgba(74, 44, 42, 0.9);
   --nav-hover-color: #D35400;
-  --nav-mobile-background-color: #4A2C2A;
-  --nav-dropdown-background-color: #4A2C2A;
-  --nav-dropdown-color: #F5F5DC;
+  --nav-mobile-background-color: #F5F5DC;
+  --nav-dropdown-background-color: #F5F5DC;
+  --nav-dropdown-color: rgba(74, 44, 42, 0.9);
   --nav-dropdown-hover-color: #D35400;
-
-  /* Social Icon Brand Colors */
-  --social-color-1: #5DADE2;
-  --social-color-2: #D35400;
-  --social-color-3: #4A2C2A;
-  --social-color-4: #F5F5DC;
 }
 
 /* Smooth scroll */
@@ -70,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--contrast-color);
-  background-color: #4A2C2A;
+  background-color: #4A2C2A;  /* dark brown header */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -80,11 +73,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--contrast-color);
+  color: #F5F5DC; /* light text */
 }
 
 .header .header-social-links a {
-  color: var(--contrast-color);
+  color: #F5F5DC; /* light icons */
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
@@ -110,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .navmenu a {
-    color: var(--contrast-color);
+    color: #F5F5DC; /* links visible on dark header */
     padding: 18px 15px;
     font-size: 14px;
     font-family: var(--nav-font);
@@ -158,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--contrast-color);
+    color: #4A2C2A;
     font-size: 28px;
     cursor: pointer;
   }
@@ -170,20 +163,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: #4A2C2A;
+    background-color: var(--nav-mobile-background-color);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
   }
 
   .navmenu a {
-    color: var(--contrast-color);
+    color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-size: 16px;
   }
 
   .navmenu .dropdown ul {
-    background-color: #4A2C2A;
+    background-color: var(--nav-dropdown-background-color);
   }
 
   .mobile-nav-active .navmenu>ul {
@@ -192,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (Option B - Beige background)
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -200,20 +193,24 @@ h1, h2, h3, h4, h5, h6 {
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
-  background-color: var(--background-color);
-  color: var(--default-color);
+  background-color: #F5F5DC; /* beige */
+  color: #4A2C2A;            /* brown text for clarity */
 }
 
-.hero h2 {
-  margin: 0 0 10px 0;
-  font-size: 38px;
-  font-weight: 700;
+.hero h2,
+.hero h1,
+.hero h3 {
+  color: #4A2C2A; /* ensure all headings are brown */
   font-family: var(--heading-font);
 }
 
+.hero p {
+  color: #4A2C2A; /* body text inside hero */
+}
+
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #F5F5DC;          /* text on button */
+  background: #D35400;     /* button accent color */
   padding: 12px 40px;
   border-radius: 4px;
   font-weight: 500;
@@ -223,7 +220,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  background-color: #5DADE2; /* optional hover color */
+}
+
+/* Hero social icons (if any) */
+.hero .header-social-links a {
+  color: #4A2C2A; /* brand brown */
+  transition: 0.3s;
+}
+
+.hero .header-social-links a:hover {
+  color: #D35400; /* accent color on hover */
 }
 
 /*--------------------------------------------------------------
@@ -251,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
   font-size: 20px;
-  color: var(--contrast-color);
+  color: rgba(255,255,255,0.8);
   margin: 30px 8px 0 8px;
 }
 
@@ -267,8 +274,8 @@ h1, h2, h3, h4, h5, h6 {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--contrast-color);
-  background-color: #4A2C2A;
+  color: #F5F5DC;           /* light text */
+  background-color: #4A2C2A; /* dark footer */
   font-size: 14px;
   padding: 40px 0;
 }
@@ -277,23 +284,23 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--contrast-color);
-  color: var(--contrast-color);
+  border: 1px solid #F5F5DC;
+  color: #F5F5DC;
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #D35400;
+  border-color: #D35400;
 }
 
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 section, .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #4A2C2A;           /* brown text */
+  background-color: #F5F5DC; /* beige section */
   padding: 60px 0;
 }
 
@@ -307,7 +314,7 @@ section, .section {
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: #4A2C2A;
   font-size: 36px;
   font-weight: 400;
   font-family: var(--heading-font);
@@ -321,14 +328,14 @@ section, .section {
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
-  color: var(--default-color);
-  background-color: var(--surface-color);
+  color: #4A2C2A;
+  background-color: #ffffff;
   border-color: rgba(74,44,42,0.3);
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #F5F5DC;
+  background: #D35400;
   padding: 14px 40px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -336,5 +343,5 @@ section, .section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  background-color: #5DADE2;
 }
