@@ -1,105 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahilion - From the Coast to the Cosmos</title>
-  
-  <!-- Template CSS -->
+  <title>Sahilion Bistro</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  
-  <!-- Sahilion Custom CSS -->
-  <link href="assets/css/sahilion.css" rel="stylesheet">
-  
-  <!-- Icons -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.png">
 </head>
-
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo">
-        Sahilion
-        <div class="tagline">From the Coast to the Cosmos</div>
-      </div>
+      <!-- Logo -->
+      <a href="#hero" class="logo d-flex align-items-center">
+        <img src="assets/img/sahilion_logo_header.svg" alt="Sahilion Logo">
+        <span class="ms-2">Sahilion</span>
+      </a>
 
-      <nav id="navmenu" class="navmenu d-none d-lg-flex">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <!-- Navigation -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a class="nav-link active" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#menu">Menu</a></li>
+          <li><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
 
-      <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
     </div>
   </header>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="container" data-aos="fade-up">
-      <h1>Welcome to Sahilion</h1>
-      <p>Experience Coastal-Heritage Modern Cuisine</p>
-      <a href="#menu" class="btn btn-primary mt-3">See Our Menu</a>
+  <section id="hero" class="hero d-flex align-items-center" style="background: url('assets/img/background.png') center center / cover no-repeat;">
+    <div class="container text-center position-relative" data-aos="fade-up">
+      <h1>Welcome to <span>Sahilion</span></h1>
+      <p>From the Coast to the Cosmos – Coastal Heritage Modern Bistro</p>
+      <a href="#menu" class="btn-get-started scrollto">Explore Menu</a>
     </div>
   </section>
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="py-5">
+  <section id="about" class="about section-bg py-5">
     <div class="container" data-aos="fade-up">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-lg-6">
-          <h2>About Sahilion</h2>
-          <p>At Sahilion, we blend coastal heritage with modern flavors, crafting a unique dining experience that transcends the ordinary.</p>
+          <img src="assets/img/beach_sunset.jpg" class="img-fluid rounded" alt="Sahilion Bistro">
         </div>
-        <div class="col-lg-6">
-          <img src="assets/img/about.jpg" class="img-fluid rounded" alt="About Sahilion">
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h2>About Sahilion</h2>
+          <p>Experience the perfect blend of coastal heritage and modern dining. Sahilion Bistro brings you fresh, exotic flavors inspired by the coast, served in a warm, contemporary environment.</p>
+          <ul>
+            <li>Coastal Heritage Inspired Dishes</li>
+            <li>Fresh and Organic Ingredients</li>
+            <li>Cozy and Elegant Ambience</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======= Menu Section ======= -->
-  <section id="menu" class="py-5 bg-light">
+  <section id="menu" class="menu py-5">
     <div class="container" data-aos="fade-up">
       <div class="section-title text-center">
         <h2>Our Menu</h2>
-        <p>Signature dishes crafted for every taste</p>
+        <p>Discover our signature dishes and refreshing beverages</p>
       </div>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="assets/img/dish1.jpg" class="card-img-top" alt="Dish 1">
-            <div class="card-body">
-              <h5 class="card-title">Dish Name 1</h5>
-              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
-            </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="menu-item">
+            <h4>Papaya & Mango Juice</h4>
+            <p>Freshly blended tropical fruits</p>
+            <span>$5</span>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="assets/img/dish2.jpg" class="card-img-top" alt="Dish 2">
-            <div class="card-body">
-              <h5 class="card-title">Dish Name 2</h5>
-              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
-            </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="menu-item">
+            <h4>Coastal Seafood Platter</h4>
+            <p>Assortment of fresh seafood dishes</p>
+            <span>$20</span>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="assets/img/dish3.jpg" class="card-img-top" alt="Dish 3">
-            <div class="card-body">
-              <h5 class="card-title">Dish Name 3</h5>
-              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
-            </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="menu-item">
+            <h4>Heritage Spiced Chicken</h4>
+            <p>Grilled to perfection with coastal spices</p>
+            <span>$15</span>
           </div>
         </div>
       </div>
@@ -107,48 +101,57 @@
   </section>
 
   <!-- ======= Gallery Section ======= -->
-  <section id="gallery" class="py-5">
+  <section id="gallery" class="gallery py-5 section-bg">
     <div class="container" data-aos="fade-up">
       <div class="section-title text-center">
         <h2>Gallery</h2>
-        <p>Snapshots of our coastal-heritage modern bistro</p>
+        <p>Our space, our food, our ambiance</p>
       </div>
       <div class="row g-3">
-        <div class="col-md-4 gallery-item">
-          <img src="assets/img/gallery1.jpg" class="img-fluid" alt="Gallery 1">
+        <div class="col-lg-4 col-md-6">
+          <a href="assets/img/beach_sunset.jpg" class="glightbox">
+            <img src="assets/img/beach_sunset.jpg" class="img-fluid rounded" alt="Gallery Image">
+          </a>
         </div>
-        <div class="col-md-4 gallery-item">
-          <img src="assets/img/gallery2.jpg" class="img-fluid" alt="Gallery 2">
+        <div class="col-lg-4 col-md-6">
+          <a href="assets/img/background.png" class="glightbox">
+            <img src="assets/img/background.png" class="img-fluid rounded" alt="Gallery Image">
+          </a>
         </div>
-        <div class="col-md-4 gallery-item">
-          <img src="assets/img/gallery3.jpg" class="img-fluid" alt="Gallery 3">
+        <div class="col-lg-4 col-md-6">
+          <a href="assets/img/logohq.png" class="glightbox">
+            <img src="assets/img/logohq.png" class="img-fluid rounded" alt="Gallery Image">
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="contact py-5">
     <div class="container" data-aos="fade-up">
       <div class="section-title text-center">
         <h2>Contact Us</h2>
-        <p>We'd love to hear from you</p>
+        <p>Get in touch for reservations or inquiries</p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <form action="forms/contact.php" method="post" class="contact-form">
-            <div class="mb-3">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        <div class="col-lg-8">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
             </div>
-            <div class="mb-3">
-              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            <div class="form-group mb-3">
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
             </div>
-            <div class="mb-3">
-              <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+            <div class="form-group mb-3">
+              <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
             </div>
-            <div class="text-center">
-              <button type="submit">Send Message</button>
-            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
       </div>
@@ -156,18 +159,31 @@
   </section>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      &copy; 2025 Sahilion. All Rights Reserved.
+  <footer id="footer" class="footer section-bg py-4">
+    <div class="container d-flex flex-column align-items-center text-center">
+      <a href="#hero" class="footer-logo mb-3">
+        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" width="120">
+      </a>
+      <div class="social-links mb-3">
+        <a href="https://www.instagram.com/sahilion"><img src="assets/img/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@sahilion"><img src="assets/img/tiktok.svg" alt="TikTok"></a>
+        <a href="https://twitter.com/sahilion"><img src="assets/img/x.svg" alt="X"></a>
+        <a href="https://www.youtube.com/sahilion"><img src="assets/img/youtube.svg" alt="YouTube"></a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 <strong>Sahilion</strong>. All Rights Reserved.
+      </div>
     </div>
   </footer>
 
-  <!-- Vendor JS Files -->
+  <!-- ======= Vendor JS Files ======= -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Sahilion Custom JS -->
+  <!-- ======= Main JS ======= -->
   <script src="assets/js/main.js"></script>
-</body>
 
+</body>
 </html>
