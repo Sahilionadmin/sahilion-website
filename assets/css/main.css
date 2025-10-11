@@ -12,20 +12,30 @@
   --heading-font: 'Madimi One', cursive;
   --nav-font: 'Roboto', sans-serif;
 
-  --background-color: #F5F5DC;   /* Sahilion beige */
-  --default-color: #4A2C2A;      /* Sahilion brown */
-  --heading-color: #4A2C2A;      
-  --accent-color: #D35400;       /* Sahilion orange */
+  /* Section background & text */
+  --background-color: #F5F5DC;   /* beige sections */
+  --default-color: #4A2C2A;      /* brown text */
+  --heading-color: #4A2C2A;
+  --accent-color: #D35400;       /* orange accent */
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 
+  /* Header & Footer */
+  --header-bg: #4A2C2A;
+  --header-text: #F5F5DC;
+  --footer-bg: #4A2C2A;
+  --footer-text: #F5F5DC;
+
   /* Navigation Colors */
-  --nav-color: rgba(74, 44, 42, 0.7);
-  --nav-hover-color: #4A2C2A;
-  --nav-mobile-background-color: #F5F5DC;
-  --nav-dropdown-background-color: #F5F5DC;
-  --nav-dropdown-color: rgba(74, 44, 42, 0.7);
-  --nav-dropdown-hover-color: #D35400;
+  --nav-color: var(--header-text);
+  --nav-hover-color: var(--accent-color);
+  --nav-mobile-background-color: var(--header-bg);
+  --nav-dropdown-background-color: var(--header-bg);
+  --nav-dropdown-color: var(--header-text);
+  --nav-dropdown-hover-color: var(--accent-color);
+
+  /* Social icon colors (pick any brand color for clarity) */
+  --social-color: #5DADE2;
 }
 
 /* Smooth scroll */
@@ -62,23 +72,23 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--header-text);
+  background-color: var(--header-bg);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--header-bg);
 }
 
 .header .logo h1 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--heading-color);
+  color: var(--header-text);
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: var(--header-text);
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
@@ -186,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (beige)
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -194,6 +204,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
+  background-color: var(--background-color);
+  color: var(--default-color);
 }
 
 .hero h2 {
@@ -259,8 +271,8 @@ h1, h2, h3, h4, h5, h6 {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--footer-text);
+  background-color: var(--footer-bg);
   font-size: 14px;
   padding: 40px 0;
 }
@@ -269,15 +281,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(74,44,42,0.5);
-  color: rgba(74,44,42,0.5);
+  border: 1px solid var(--footer-text);
+  color: var(--footer-text);
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--social-color);
+  border-color: var(--social-color);
 }
 
 /*--------------------------------------------------------------
@@ -329,4 +341,24 @@ section, .section {
 
 .contact .php-email-form button[type=submit]:hover {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+/*--------------------------------------------------------------
+# Quick overrides for clarity (optional safety)
+--------------------------------------------------------------*/
+#header, .header,
+#footer, .footer {
+  background-color: var(--header-bg) !important;
+  color: var(--header-text) !important;
+}
+
+.header .logo, .header .logo h1,
+.header .header-social-links a,
+.navmenu a, .mobile-nav-toggle {
+  color: var(--header-text) !important;
+}
+
+.footer .social-links a {
+  border-color: var(--footer-text) !important;
+  color: var(--footer-text) !important;
 }
