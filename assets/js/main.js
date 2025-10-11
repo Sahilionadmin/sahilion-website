@@ -1,4 +1,3 @@
-// Photofolio: Bootstrap and glightbox
 (function() {
   "use strict";
   const select = (el, all = false) => {
@@ -23,7 +22,7 @@
     window.addEventListener('load', headerScrolled);
     onscroll(document, headerScrolled);
   }
-  let navbarlinks = select('#navmenu .nav-link', true);
+  let navbarlinks = select('#navmenu a', true);
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
     navbarlinks.forEach(navbarlink => {
@@ -45,7 +44,7 @@
     this.classList.toggle('bi-list');
     this.classList.toggle('bi-x');
   });
-  on('click', '.nav-link.scrollto', function(e) {
+  on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault();
       let body = select('body');
@@ -58,39 +57,37 @@
       scrollto(this.hash);
     }
   }, true);
-})();
 
-// Sahilion: Language toggle and animations
-(() => {
+  // Sahilion: Bilingual Toggle and Form UX
   const LANG_DEFAULT = 'sw';
   let currentLang = LANG_DEFAULT;
   function applyTranslations(lang) {
     const dict = TRANSLATIONS[lang] || TRANSLATIONS['sw'];
-    document.querySelectorAll('[data-key]').forEach(el => {
+    select('[data-key]', true).forEach(el => {
       const key = el.getAttribute('data-key');
       if (key && dict[key]) el.textContent = dict[key];
     });
-    document.querySelectorAll('input[data-key]').forEach(input => {
+    select('input[data-key]', true).forEach(input => {
       const key = input.getAttribute('data-key');
       if (key && dict[key]) input.setAttribute('placeholder', dict[key]);
     });
-    const langToggle = document.getElementById('language-toggle');
+    const langToggle = select('#language-toggle');
     if (langToggle) langToggle.textContent = (lang === 'sw') ? 'English' : 'Kiswahili';
   }
   applyTranslations(currentLang);
-  const toggleBtn = document.getElementById('language-toggle');
+  const toggleBtn = select('#language-toggle');
   if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
+    on('click', '#language-toggle', () => {
       currentLang = (currentLang === 'sw') ? 'en' : 'sw';
       applyTranslations(currentLang);
       toggleBtn.setAttribute('aria-pressed', currentLang === 'en');
     });
-    toggleBtn.addEventListener('keydown', (e) => {
+    on('keydown', '#language-toggle', (e) => {
       if (e.key === 'Enter' || e.key === ' ') toggleBtn.click();
     });
   }
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', (e) => {
+  select('form', true).forEach(form => {
+    on('submit', form, (e) => {
       const btn = form.querySelector('button[type="submit"]');
       if (btn) {
         btn.disabled = true;
@@ -103,7 +100,7 @@
       }
     });
   });
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', () => img.style.display = 'none');
+  select('img', true).forEach(img => {
+    on('error', img, () => img.style.display = 'none');
   });
 })();
