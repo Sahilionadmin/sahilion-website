@@ -1,45 +1,40 @@
 /**
-* Template Name: PhotoFolio (Branded for Sahilion)
-* Updated: Oct 11 2025
-* Author: BootstrapMade.com + customized for Sahilion
+* Template Name: PhotoFolio (Adapted for Sahilion)
+* Author: Sahilion
+* License: https://bootstrapmade.com/license/
 */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --heading-font: "Cardo", sans-serif;
-  --nav-font: "Inter", sans-serif;
+  --default-font: 'Roboto', sans-serif;
+  --heading-font: 'Madimi One', cursive;
+  --nav-font: 'Roboto', sans-serif;
 
-  /* Brand Colors */
-  --brand-beige: #F5F5DC;
-  --brand-brown: #4A2C2A;
-  --brand-orange: #D35400;
-  --brand-blue: #5DADE2;
-
-  /* Global Colors */
-  --background-color: var(--brand-beige);
-  --default-color: var(--brand-brown);
-  --heading-color: var(--brand-brown);
-  --accent-color: var(--brand-orange);
-  --surface-color: #fff8e0; /* lighter beige for cards/panels */
+  --background-color: #F5F5DC;   /* Sahilion beige */
+  --default-color: #4A2C2A;      /* Sahilion brown */
+  --heading-color: #4A2C2A;      
+  --accent-color: #D35400;       /* Sahilion orange */
+  --surface-color: #ffffff;
   --contrast-color: #ffffff;
 
-  /* Nav Menu Colors */
-  --nav-color: rgba(255, 255, 255, 0.8);
-  --nav-hover-color: #ffffff;
-  --nav-mobile-background-color: var(--brand-brown);
-  --nav-dropdown-background-color: var(--brand-brown);
-  --nav-dropdown-color: rgba(255,255,255,0.8);
+  /* Navigation Colors */
+  --nav-color: rgba(74, 44, 42, 0.7);
+  --nav-hover-color: #4A2C2A;
+  --nav-mobile-background-color: #F5F5DC;
+  --nav-dropdown-background-color: #F5F5DC;
+  --nav-dropdown-color: rgba(74, 44, 42, 0.7);
   --nav-dropdown-hover-color: #D35400;
 }
 
 /* Smooth scroll */
-:root { scroll-behavior: smooth; }
+:root {
+  scroll-behavior: smooth;
+}
 
 /*--------------------------------------------------------------
-# General Styling
+# General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
@@ -54,11 +49,11 @@ a {
 }
 
 a:hover {
-  color: var(--brand-blue);
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
@@ -67,21 +62,26 @@ h1,h2,h3,h4,h5,h6 {
 # Header
 --------------------------------------------------------------*/
 .header {
-  background-color: var(--brand-brown);
-  color: var(--contrast-color);
+  color: var(--default-color);
+  background-color: var(--background-color);
   padding: 20px 0;
-  border-bottom: 1px solid #3b1f1b;
-  z-index: 997;
   transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid var(--background-color);
 }
 
 .header .logo h1 {
   font-size: 32px;
-  color: var(--contrast-color);
+  margin: 0;
+  font-weight: 400;
+  color: var(--heading-color);
 }
 
 .header .header-social-links a {
-  color: rgba(255,255,255,0.7);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding-left: 6px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .header .header-social-links a:hover {
@@ -91,38 +91,188 @@ h1,h2,h3,h4,h5,h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-.navmenu a,
-.navmenu a:focus {
-  color: var(--nav-color);
-  font-family: var(--nav-font);
+/* Navmenu - Desktop */
+@media (min-width: 1200px) {
+  .navmenu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 14px;
+    font-family: var(--nav-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+  }
+
+  .navmenu .dropdown ul li a {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .navmenu .dropdown ul li a:hover {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
 }
 
-.navmenu li:hover>a,
-.navmenu .active {
-  color: var(--nav-hover-color);
+/* Navmenu - Mobile */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .navmenu ul {
+    display: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .navmenu a {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .navmenu .dropdown ul {
+    background-color: var(--nav-dropdown-background-color);
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
 }
 
-.navmenu .dropdown ul {
-  background-color: var(--nav-dropdown-background-color);
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 30vh;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
 }
 
-.navmenu .dropdown ul a:hover {
-  color: var(--nav-dropdown-hover-color);
+.hero h2 {
+  margin: 0 0 10px 0;
+  font-size: 38px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  padding: 12px 40px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.hero .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0,0,0,0.3);
+  z-index: 3;
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: rgba(255,255,255,0.8);
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background-color: var(--brand-brown);
-  color: var(--contrast-color);
-  padding: 40px 0;
+  color: var(--default-color);
+  background-color: var(--background-color);
   font-size: 14px;
+  padding: 40px 0;
 }
 
 .footer .social-links a {
-  border: 1px solid rgba(255,255,255,0.5);
-  color: rgba(255,255,255,0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(74,44,42,0.5);
+  color: rgba(74,44,42,0.5);
+  margin: 0 5px;
+  transition: 0.3s;
 }
 
 .footer .social-links a:hover {
@@ -133,124 +283,50 @@ h1,h2,h3,h4,h5,h6 {
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
-section,
-.section {
-  background-color: var(--background-color);
+section, .section {
   color: var(--default-color);
+  background-color: var(--background-color);
   padding: 60px 0;
 }
 
-/*--------------------------------------------------------------
-# Section Titles
---------------------------------------------------------------*/
 .section-title h2 {
-  color: rgba(0,0,0,0.5);
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(74,44,42,0.5);
+  font-family: var(--default-font);
 }
 
 .section-title p {
   color: var(--heading-color);
+  font-size: 36px;
+  font-weight: 400;
+  font-family: var(--heading-font);
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Contact Form
 --------------------------------------------------------------*/
-.hero {
-  padding: 120px 0 60px 0;
-  display: flex;
-  align-items: center;
-}
-
-.hero h2 {
-  font-size: 38px;
-  font-weight: 700;
-}
-
-.hero .btn-get-started {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.hero .btn-get-started:hover {
-  background-color: var(--brand-blue);
-}
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-button, .btn {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 4px;
-  padding: 12px 40px;
-  text-transform: uppercase;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--brand-blue);
-}
-
-/*--------------------------------------------------------------
-# Gallery
---------------------------------------------------------------*/
-.gallery .gallery-item {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.gallery .gallery-links {
-  background: rgba(74,44,42,0.6); /* brown overlay */
-}
-
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonials .testimonial-item {
-  background-color: var(--surface-color);
-  color: var(--brand-brown);
-}
-
-.testimonials .testimonial-item .stars i {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info-item i {
-  background-color: var(--surface-color);
-  color: var(--accent-color);
-}
-
-.contact .php-email-form input,
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  color: var(--default-color);
   background-color: var(--surface-color);
-  color: var(--brand-brown);
+  border-color: rgba(74,44,42,0.3);
 }
 
 .contact .php-email-form button[type=submit] {
-  background-color: var(--accent-color);
   color: var(--contrast-color);
+  background: var(--accent-color);
+  padding: 14px 40px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background-color: var(--brand-blue);
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader .line:before {
-  background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Scroll Top
---------------------------------------------------------------*/
-.scroll-top {
-  background-color: var(--accent-color);
-}
-
-.scroll-top:hover {
-  background-color: var(--brand-blue);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
