@@ -13,18 +13,18 @@
   --nav-font: 'Roboto', sans-serif;
 
   --background-color: #F5F5DC;   /* Sahilion beige */
-  --default-color: #4A2C2A;      /* Sahilion brown */
-  --heading-color: #4A2C2A;      
+  --default-color: #F5F5DC;      /* Text color for dark header/footer */
+  --heading-color: #F5F5DC;      
   --accent-color: #D35400;       /* Sahilion orange */
   --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+  --contrast-color: #F5F5DC;     /* buttons & contrast texts */
 
   /* Navigation Colors */
-  --nav-color: rgba(74, 44, 42, 0.7);
-  --nav-hover-color: #4A2C2A;
-  --nav-mobile-background-color: #F5F5DC;
-  --nav-dropdown-background-color: #F5F5DC;
-  --nav-dropdown-color: rgba(74, 44, 42, 0.7);
+  --nav-color: rgba(245,245,220,0.7);
+  --nav-hover-color: #F5F5DC;
+  --nav-mobile-background-color: #4A2C2A;
+  --nav-dropdown-background-color: #4A2C2A;
+  --nav-dropdown-color: rgba(245,245,220,0.9);
   --nav-dropdown-hover-color: #D35400;
 }
 
@@ -37,7 +37,7 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  color: #4A2C2A; /* Main text color for sections */
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
@@ -54,7 +54,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
+  color: #4A2C2A;
   font-family: var(--heading-font);
 }
 
@@ -63,29 +63,29 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #4A2C2A; /* brand brown */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid #4A2C2A;
 }
 
 .header .logo h1 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--heading-color);
+  color: var(--default-color);
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #5DADE2; /* brand blue for clarity */
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
 }
 
 .header .header-social-links a:hover {
-  color: var(--accent-color);
+  color: #D35400; /* accent orange on hover */
 }
 
 /*--------------------------------------------------------------
@@ -201,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 38px;
   font-weight: 700;
   font-family: var(--heading-font);
+  color: #4A2C2A;
 }
 
 .hero .btn-get-started {
@@ -260,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #4A2C2A; /* brand brown */
   font-size: 14px;
   padding: 40px 0;
 }
@@ -269,22 +270,22 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(74,44,42,0.5);
-  color: rgba(74,44,42,0.5);
+  border: 1px solid #5DADE2;
+  color: #5DADE2;
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #D35400;
+  border-color: #D35400;
 }
 
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 section, .section {
-  color: var(--default-color);
+  color: #4A2C2A;
   background-color: var(--background-color);
   padding: 60px 0;
 }
@@ -299,7 +300,7 @@ section, .section {
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: #4A2C2A;
   font-size: 36px;
   font-weight: 400;
   font-family: var(--heading-font);
@@ -313,7 +314,7 @@ section, .section {
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
-  color: var(--default-color);
+  color: #4A2C2A;
   background-color: var(--surface-color);
   border-color: rgba(74,44,42,0.3);
 }
