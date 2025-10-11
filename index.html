@@ -1,148 +1,173 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sahilion | From the Coast to the Cosmos</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahilion - From the Coast to the Cosmos</title>
+  
+  <!-- Template CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  
+  <!-- Sahilion Custom CSS -->
+  <link href="assets/css/sahilion.css" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Calibri:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header id="site-header">
-    <div class="header-inner">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
+
       <div class="logo">
-        <a href="#home" id="logo-link">
-          <img src="assets/logohq.png" alt="Sahilion logo">
-          <img src="assets/logo_name.png" alt="Sahilion Name">
-        </a>
+        Sahilion
+        <div class="tagline">From the Coast to the Cosmos</div>
       </div>
 
-      <nav id="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="#home" class="nav-link" data-key="nav.home">Nyumbani</a></li>
-          <li><a href="#ourstory" class="nav-link" data-key="nav.story">Hadithi Yetu</a></li>
-          <li><a href="#explore" class="nav-link" data-key="nav.explore">Gundua</a></li>
-          <li><a href="#connect" class="nav-link" data-key="nav.connect">Ungana</a></li>
-          <li><a href="#opportunities" class="nav-link" data-key="nav.opps">Fursa</a></li>
-          <li><a href="#contact" class="nav-link" data-key="nav.contact">Wasiliana</a></li>
-          <li class="lang-switch" id="language-toggle" role="button" tabindex="0" aria-pressed="false">English</li>
-        </ul>
+      <nav id="navmenu" class="navmenu d-none d-lg-flex">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section id="home" class="hero" aria-label="Hero section">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-inner">
-        <h1 id="hero-title" class="hero-title" data-key="hero.title">Karibu kwenye dunia ya Sahilion</h1>
-        <p id="hero-sub" class="hero-sub" data-key="hero.sub">Hadithi na ladha kutoka pwani ya Kiswahili hadi ulimwengu wote.</p>
-        <a href="#connect" class="cta" id="cta-join" data-key="cta.join">Jiunge na Safari</a>
-      </div>
-    </section>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="container" data-aos="fade-up">
+      <h1>Welcome to Sahilion</h1>
+      <p>Experience Coastal-Heritage Modern Cuisine</p>
+      <a href="#menu" class="btn btn-primary mt-3">See Our Menu</a>
+    </div>
+  </section>
 
-    <!-- OUR STORY -->
-    <section id="ourstory" class="content-section">
-      <div class="container">
-        <h2 data-key="our.title">Hadithi Yetu</h2>
-        <p data-key="our.desc">Tunashiriki urithi, ladha, na ubunifu wa Kiswahili kupitia hadithi na maudhui ya chakula.</p>
-      </div>
-    </section>
-
-    <!-- EXPLORE -->
-    <section id="explore" class="content-section">
-      <div class="container">
-        <h2 data-key="explore.title">Gundua Hadithi</h2>
-        <div class="stories-grid">
-          <article class="story-card">
-            <h3 data-key="explore.card1.title">Mapishi ya Kiswahili</h3>
-            <p data-key="explore.card1.desc">Hadithi na picha za chakula cha pwani.</p>
-          </article>
-          <article class="story-card">
-            <h3 data-key="explore.card2.title">Uzoefu wa Ladha</h3>
-            <p data-key="explore.card2.desc">Pata ladha asilia kupitia mapishi na maelezo ya hadithi.</p>
-          </article>
+  <!-- ======= About Section ======= -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>About Sahilion</h2>
+          <p>At Sahilion, we blend coastal heritage with modern flavors, crafting a unique dining experience that transcends the ordinary.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/img/about.jpg" class="img-fluid rounded" alt="About Sahilion">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONNECT -->
-    <section id="connect" class="content-section">
-      <div class="container">
-        <h2 data-key="connect.title">Unganisha na Safari</h2>
-        <p data-key="connect.desc">Fuata hadithi zetu na ladha kupitia mitandao ya kijamii; jisajili kwa hadithi mpya kupitia fomu ya jarida (newsletter).</p>
-        <p class="social-list" data-key="connect.list">Mitandao: TikTok, Instagram, X, YouTube</p>
-        <a href="#opportunities" class="link-to-news" data-key="connect.signup">Jisajili kupokea hadithi mpya</a>
+  <!-- ======= Menu Section ======= -->
+  <section id="menu" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center">
+        <h2>Our Menu</h2>
+        <p>Signature dishes crafted for every taste</p>
       </div>
-    </section>
-
-    <!-- OPPORTUNITIES + NEWSLETTER -->
-    <section id="opportunities" class="content-section">
-      <div class="container newsletter-bottom">
-        <h2 data-key="opps.title">Fursa</h2>
-        <p data-key="opps.desc">Gundua hadithi mpya na safari za ladha zinazokuja.</p>
-
-        <form class="newsletter" id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
-            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-            <input id="newsletter-email" name="email" type="email" placeholder="Barua pepe yako" required>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="assets/img/dish1.jpg" class="card-img-top" alt="Dish 1">
+            <div class="card-body">
+              <h5 class="card-title">Dish Name 1</h5>
+              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
+            </div>
           </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="content-section">
-      <div class="container">
-        <h2 data-key="contact.title">Wasiliana Nasi</h2>
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
-            <input name="name" type="text" placeholder="Jina lako" required>
-            <input name="email" type="email" placeholder="Barua pepe" required>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="assets/img/dish2.jpg" class="card-img-top" alt="Dish 2">
+            <div class="card-body">
+              <h5 class="card-title">Dish Name 2</h5>
+              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
+            </div>
           </div>
-          <textarea name="message" rows="5" placeholder="Ujumbe wako" required></textarea>
-          <button type="submit" class="btn" data-key="contact.btn">Tuma</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-bottom">
-      <div class="footer-left">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/tiktok.png" alt="TikTok"></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/x.png" alt="X"></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-      </div>
-
-      <div class="footer-center">
-        <ul class="footer-nav">
-          <li><a href="index.html">Nyumbani</a></li>
-          <li><a href="terms.html" data-key="footer.terms">Vegezo na Masharti</a></li>
-          <li><a href="privacy.html" data-key="footer.privacy">Sera ya Faragha</a></li>
-        </ul>
-        <p id="copyright" data-key="footer.copyright">© 2025 Sahilion. Haki zote zimehifadhiwa.</p>
-      </div>
-
-      <div class="footer-right">
-        <form class="newsletter" id="newsletter-footer" action="https://formspree.io/f/xanpjqnl" method="POST">
-          <div class="form-row">
-            <button type="submit" class="btn" data-key="newsletter.btn">Tuma</button>
-            <input id="newsletter-email-footer" name="email" type="email" placeholder="Barua pepe yako" required>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="assets/img/dish3.jpg" class="card-img-top" alt="Dish 3">
+            <div class="card-body">
+              <h5 class="card-title">Dish Name 3</h5>
+              <p class="card-text">A brief description of the dish highlighting ingredients and taste.</p>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center">
+        <h2>Gallery</h2>
+        <p>Snapshots of our coastal-heritage modern bistro</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4 gallery-item">
+          <img src="assets/img/gallery1.jpg" class="img-fluid" alt="Gallery 1">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="assets/img/gallery2.jpg" class="img-fluid" alt="Gallery 2">
+        </div>
+        <div class="col-md-4 gallery-item">
+          <img src="assets/img/gallery3.jpg" class="img-fluid" alt="Gallery 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" class="contact-form">
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      &copy; 2025 Sahilion. All Rights Reserved.
     </div>
   </footer>
 
-  <script src="translations.js"></script>
-  <script src="script.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Sahilion Custom JS -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
