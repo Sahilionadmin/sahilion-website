@@ -1,194 +1,137 @@
-/**
-* Template Name: PhotoFolio (Adapted for Sahilion)
-* Author: Sahilion
-* License: https://bootstrapmade.com/license/
-*/
+/*--------------------------------------------------------------
+# Sahilion – Classic Warm Theme
+# Inspired by Photofolio by BootstrapMade
+# Modified and localized for Kiswahili default
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Font & Color Variables
+# General
 --------------------------------------------------------------*/
 :root {
-  --default-font: 'Roboto', sans-serif;
-  --heading-font: 'Madimi One', cursive;
-  --nav-font: 'Roboto', sans-serif;
+  --color-primary: #D35400;       /* Orange accent */
+  --color-secondary: #4A2C2A;     /* Deep brown */
+  --color-light: #F5F5DC;         /* Beige */
+  --color-accent: #5DADE2;        /* Light blue */
+  --color-dark: #1f1f1f;
 
-  /* Colors */
-  --background-color: #F5F5DC;   /* Sahilion beige */
-  --default-color: #4A2C2A;      /* Sahilion brown */
-  --heading-color: #4A2C2A;      
-  --accent-color: #D35400;       /* Sahilion orange */
-  --surface-color: #ffffff;
-  --contrast-color: #F5F5DC;     /* For brown backgrounds */
-
-  /* Navigation Colors */
-  --nav-color: rgba(245,245,220,0.9);      /* beige for dark bg nav */
-  --nav-hover-color: #D35400;
-  --nav-mobile-background-color: #4A2C2A;
-  --nav-dropdown-background-color: #4A2C2A;
-  --nav-dropdown-color: #F5F5DC;
-  --nav-dropdown-hover-color: #D35400;
-
-  /* Social Icon Brand Colors */
-  --social-color-1: #5DADE2;
-  --social-color-2: #5DADE2;
-  --social-color-3: #5DADE2;
-  --social-color-4: #5DADE2;
+  --font-heading: 'Madimi One', sans-serif;
+  --font-body: 'Calibri', 'Segoe UI', sans-serif;
 }
 
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
-}
-
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  margin: 0;
+  overflow-x: hidden;
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--color-primary);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+  color: var(--color-secondary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--contrast-color);
-  background-color: #4A2C2A;
-  padding: 20px 0;
-  transition: all 0.5s;
-  z-index: 997;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(245, 245, 220, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s;
+  padding: 15px 0;
 }
 
-.header .logo h1 {
-  font-size: 32px;
-  margin: 0;
-  font-weight: 400;
-  color: var(--contrast-color);
+.header .logo img {
+  height: 40px;
 }
 
-.header .header-social-links a {
-  color: var(--contrast-color);
-  padding-left: 6px;
-  display: inline-block;
-  transition: 0.3s;
+.header .sitename {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-secondary);
 }
 
-.header .header-social-links a:hover {
-  color: var(--accent-color);
+.header .tagline {
+  font-family: 'Calibri Light', sans-serif;
+  font-size: 14px;
+  color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
-@media (min-width: 1200px) {
-  .navmenu ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-
-  .navmenu li {
-    position: relative;
-  }
-
-  .navmenu a {
-    color: var(--contrast-color);
-    padding: 18px 15px;
-    font-size: 14px;
-    font-family: var(--nav-font);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active {
-    color: var(--accent-color);
-  }
-
-  .navmenu .dropdown ul {
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 0;
-    top: 100%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-  }
-
-  .navmenu .dropdown ul li a {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-
-  .navmenu .dropdown ul li a:hover {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
+.navmenu {
+  margin-left: auto;
 }
 
-/* Navmenu - Mobile */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--contrast-color);
-    font-size: 28px;
-    cursor: pointer;
-  }
+.navmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
 
-  .navmenu ul {
-    display: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: #4A2C2A;
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
+.navmenu li {
+  position: relative;
+  white-space: nowrap;
+}
 
-  .navmenu a {
-    color: var(--contrast-color);
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+.navmenu a {
+  display: block;
+  padding: 8px 20px;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
 
-  .navmenu .dropdown ul {
-    background-color: #4A2C2A;
-  }
+.navmenu a:hover,
+.navmenu .active {
+  color: var(--color-primary);
+}
 
-  .mobile-nav-active .navmenu>ul {
-    display: block;
-  }
+.navmenu .dropdown ul {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--color-light);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  transition: 0.3s;
+  z-index: 99;
+}
+
+.navmenu .dropdown:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.navmenu .dropdown ul li a {
+  padding: 8px 18px;
+  color: var(--color-secondary);
+}
+
+.navmenu .dropdown ul li a:hover {
+  color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -196,145 +139,223 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 30vh;
-  padding: 120px 0 60px 0;
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(74, 44, 42, 0.35),
+      rgba(74, 44, 42, 0.35)
+    ),
+    url("../img/hero-bg.jpg") center center / cover no-repeat;
   display: flex;
   align-items: center;
-  background-color: var(--background-color);
-  color: var(--default-color);
+  justify-content: center;
+  text-align: center;
 }
 
-.hero h2 {
-  margin: 0 0 10px 0;
-  font-size: 38px;
-  font-weight: 700;
-  font-family: var(--heading-font);
+.hero h1 {
+  font-family: var(--font-heading);
+  color: var(--color-light);
+  font-size: 50px;
+  margin-bottom: 15px;
 }
 
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  padding: 12px 40px;
-  border-radius: 4px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.5s;
-}
-
-.hero .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+.hero p {
+  color: #fff;
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# Sections
 --------------------------------------------------------------*/
-.gallery .gallery-item {
-  position: relative;
+section {
+  padding: 80px 0;
   overflow: hidden;
-  border-radius: 10px;
 }
 
-.gallery .gallery-item img {
-  transition: 0.3s;
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.gallery .gallery-links {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0,0,0,0.3);
-  z-index: 3;
+.section-title h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-secondary);
+  position: relative;
+  display: inline-block;
 }
 
-.gallery .gallery-links .preview-link,
-.gallery .gallery-links .details-link {
-  font-size: 20px;
-  color: var(--contrast-color);
-  margin: 30px 8px 0 8px;
-}
-
-.gallery .gallery-item:hover .gallery-links {
-  opacity: 1;
-}
-
-.gallery .gallery-item:hover img {
-  transform: scale(1.05);
+.section-title h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  display: block;
+  margin: 10px auto 0;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--contrast-color);
-  background-color: #4A2C2A;
-  font-size: 14px;
+  background: var(--color-secondary);
+  color: var(--color-light);
   padding: 40px 0;
+  font-size: 15px;
+}
+
+.footer .copyright p {
+  margin: 0;
+  color: var(--color-light);
+}
+
+.footer .sitename {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
 }
 
 .footer .social-links a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--contrast-color);
-  color: var(--contrast-color);
-  margin: 0 5px;
+  color: var(--color-light);
+  margin: 0 10px;
+  font-size: 18px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--color-primary);
+}
+
+.footer .credits {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer .credits a {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.footer .credits a:hover {
+  color: var(--color-primary);
+}
+
+/* Replace credit with tagline */
+.footer .credits::before {
+  content: "From the Coast to the Cosmos — Sahilion";
+  display: block;
+  font-family: 'Calibri Light', sans-serif;
+  color: var(--color-light);
+  font-style: italic;
+  margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------------
-# Sections
+# Scroll Top Button
 --------------------------------------------------------------*/
-section, .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 60px 0;
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.4s;
+  z-index: 9999;
 }
 
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(74,44,42,0.5);
-  font-family: var(--default-font);
+.scroll-top i {
+  font-size: 24px;
+  line-height: 0;
 }
 
-.section-title p {
-  color: var(--heading-color);
-  font-size: 36px;
-  font-weight: 400;
-  font-family: var(--heading-font);
+.scroll-top:hover {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
-# Contact Form
+# Preloader
 --------------------------------------------------------------*/
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: rgba(74,44,42,0.3);
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  padding: 14px 40px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+#preloader .line {
+  width: 120px;
+  height: 3px;
+  background: var(--color-primary);
+  animation: preloader 1.5s infinite ease-in-out;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+@keyframes preloader {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0.3;
+  }
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    background: var(--color-light);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    display: none;
+  }
+
+  .navmenu ul.active {
+    display: block;
+  }
+
+  .navmenu li a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
 }
