@@ -1,81 +1,87 @@
+/**
+* Template Name: PhotoFolio (Adapted for Sahilion)
+* Author: Sahilion
+* License: https://bootstrapmade.com/license/
+*/
+
 (function() {
-  "use strict";
+  "use strict";
 
-  // Toggle .scrolled class on body when scroll down
-  function toggleScrolled() {
-    const body = document.body;
-    const header = document.querySelector('#header');
-    if (!header) return;
-    window.scrollY > 100 ? body.classList.add('scrolled') : body.classList.remove('scrolled');
-  }
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+  /**
+   * Apply .scrolled class to the body as the page is scrolled down
+   */
+  function toggleScrolled() {
+    const selectBody = document.querySelector('body');
+    const selectHeader = document.querySelector('#header');
+    if (!selectHeader.classList.contains('scroll-up-sticky') &&
+       !selectHeader.classList.contains('sticky-top') &&
+       !selectHeader.classList.contains('fixed-top')) return;
+    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+  }
 
-  // Mobile nav toggle
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-  if (mobileNavToggleBtn) {
-    function mobileNavToggle() {
-      document.body.classList.toggle('mobile-nav-active');
-      mobileNavToggleBtn.classList.toggle('bi-list');
-      mobileNavToggleBtn.classList.toggle('bi-x');
-    }
-    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+  document.addEventListener('scroll', toggleScrolled);
+  window.addEventListener('load', toggleScrolled);
 
-    // Close mobile nav on same-page/hash links
-    document.querySelectorAll('#navmenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (document.body.classList.contains('mobile-nav-active')) {
-          mobileNavToggle();
-        }
-      });
-    });
+  /**
+   * Mobile nav toggle
+   */
+  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-    // Mobile nav dropdowns
-    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(drop => {
-      drop.addEventListener('click', function(e) {
-        e.preventDefault();
-        this.parentNode.classList.toggle('active');
-        this.parentNode.nextElementSibling?.classList.toggle('dropdown-active');
-        e.stopImmediatePropagation();
-      });
-    });
-  }
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavToggleBtn.classList.toggle('bi-list');
+    mobileNavToggleBtn.classList.toggle('bi-x');
+  }
+  document.querySelector('.mobile-nav-toggle').addEventListener('click', mobileNavToogle);
 
-  // Preloader
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => preloader.classList.add('loaded'), 1000);
-      setTimeout(() => preloader.remove(), 2000);
-    });
-  }
+  /**
+   * Hide mobile nav on same-page click
+   */
+  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+    navmenu.addEventListener('click', () => {
+      if (document.querySelector('.mobile-nav-active')) {
+        mobileNavToogle();
+      }
+    });
+  });
 
-  // Scroll top button
-  const scrollTop = document.querySelector('.scroll-top');
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  if (scrollTop) {
-    scrollTop.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    window.addEventListener('load', toggleScrollTop);
-    document.addEventListener('scroll', toggleScrollTop);
-  }
 
-  // AOS init
-  window.addEventListener('load', () => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
-    }
-  });
+  /**
+   * Preloader (The logic to hide the loading screen)
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      // Step 1: Wait 1000ms, then add 'loaded' class (starts CSS animation)
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+      }, 1000);
+      // Step 2: Wait 2000ms total, then remove the preloader element from the DOM
+      setTimeout(() => {
+        preloader.remove();
+      }, 2000);
+    });
+  }
 
-  // Glightbox init
-  if (typeof GLightbox !== 'undefined') {
-    GLightbox({ selector: '.glightbox' });
-  }
+
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+  /**
+   * Initiate AOS animation of pages
+   */
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('load', aosInit);
 
 })();
