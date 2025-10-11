@@ -1,155 +1,224 @@
+/**
+* Template Name: Sahilion Main CSS
+* Based on: PhotoFolio Bootstrap Template
+* Updated: Oct 2025
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+/* Fonts */
 :root {
-  --default-font: "Calibri", sans-serif;
-  --heading-font: "Madimi One", cursive;
-  --nav-font: "Calibri", sans-serif;
-  --background-color: #F5F5DC;
-  --default-color: #2f241f;
-  --heading-color: #4A2C2A;
-  --accent-color: #D35400;
-  --contrast-color: #ffffff;
-  --nav-color: #F5F5DC;
-  --nav-hover-color: #D35400;
-  --nav-mobile-background-color: #4A2C2A;
-  --nav-dropdown-background-color: #4A2C2A;
-  --nav-dropdown-color: #F5F5DC;
+  --default-font: "Calibri", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Madimi One", sans-serif;
+  --nav-font: "Inter", sans-serif;
+}
+
+/* Global Colors */
+:root { 
+  --background-color: #F5F5DC; /* Sahilion beige background */
+  --default-color: #4A2C2A; /* Dark brown default text */
+  --heading-color: #4A2C2A; /* Dark brown headings */
+  --accent-color: #D35400; /* Orange accent for buttons/links */
+  --surface-color: #FFFFFF; /* White boxed elements */
+  --contrast-color: #FFFFFF; /* Text on accent backgrounds */
+}
+
+/* Nav Menu Colors */
+:root {
+  --nav-color: rgba(74,44,42,0.7);
+  --nav-hover-color: #4A2C2A;
+  --nav-mobile-background-color: #F5F5DC;
+  --nav-dropdown-background-color: #F5F5DC;
+  --nav-dropdown-color: rgba(74,44,42,0.7);
   --nav-dropdown-hover-color: #D35400;
 }
 
-body {
-  font-family: var(--default-font);
-  color: var(--default-color);
-  background-color: var(--background-color);
-}
-body::before {
-  content: "";
-  background: url('../img/background.png') no-repeat center center/cover;
-  opacity: 0.05;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+/* Color Presets */
+.light-background {
+  --background-color: #F5F5DC;
+  --surface-color: #FFFFFF;
 }
 
+.dark-background {
+  --background-color: #4A2C2A;
+  --default-color: #F5F5DC;
+  --heading-color: #F5F5DC;
+  --surface-color: #5DADE2; /* light blue contrast */
+  --contrast-color: #FFFFFF;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 .header {
-  background-color: var(--nav-mobile-background-color);
-  color: var(--nav-color);
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  z-index: 997;
+  border-bottom: 1px solid var(--background-color);
 }
-.header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+
+.header .logo h1 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
 }
-.navmenu ul {
-  display: flex;
-  justify-content: center;
+
+.header .header-social-links a:hover {
+  color: var(--accent-color);
 }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* Keep nav styles functional; only update colors */
 .navmenu a, .navmenu a:focus {
   color: var(--nav-color);
-  font-family: var(--nav-font);
-  padding: 10px 15px;
 }
-.navmenu a:hover, .navmenu .active, .navmenu .lang-switch:hover {
+
+.navmenu a:hover, .navmenu .active {
   color: var(--nav-hover-color);
 }
-.navmenu .lang-switch {
-  border: 1px solid var(--nav-color);
-  padding: 5px 10px;
-  border-radius: 4px;
-}
+
 .navmenu .dropdown ul {
   background: var(--nav-dropdown-background-color);
 }
+
 .navmenu .dropdown ul a {
   color: var(--nav-dropdown-color);
 }
+
 .navmenu .dropdown ul a:hover {
   color: var(--nav-dropdown-hover-color);
 }
-.header-social-links .follow-us {
-  margin-right: 10px;
-  color: var(--nav-color);
-}
-.header-social-links img {
-  width: 24px;
-  height: 24px;
-  margin: 0 5px;
-}
 
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-.hero::before {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-.hero .container {
-  position: relative;
-  z-index: 3;
-}
-.hero h2 {
-  font-family: var(--heading-font);
-  color: var(--contrast-color);
-  font-size: 48px;
-}
-.hero p {
-  color: rgba(255, 255, 255, 0.8);
-}
-.btn-get-started {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 8px 20px;
-  border-radius: 4px;
-}
-.btn-get-started:hover {
-  background: #5DADE2;
-}
-
-.section-title h2 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-}
-.section-title p, .content ol {
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background-color: var(--background-color);
   color: var(--default-color);
 }
-.portfolio .portfolio-wrap:hover img {
-  transform: scale(1.1);
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
-.portfolio-info h4 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  background-color: var(--background-color);
 }
-.php-email-form input, .php-email-form textarea {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.php-email-form button[type="submit"] {
+
+.hero .btn-get-started {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-.php-email-form button[type="submit"]:hover {
-  background: #5DADE2;
+
+.hero .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
-.footer {
-  background: var(--nav-mobile-background-color);
-  color: var(--nav-color);
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery .gallery-links {
+  background: rgba(245, 245, 220, 0.6); /* light overlay */
 }
-.footer .credits a {
-  color: var(--nav-color);
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  color: rgba(74,44,42,0.7);
 }
-.footer .credits a:hover {
-  color: var(--nav-hover-color);
+
+/*--------------------------------------------------------------
+# About / Services / Contact
+--------------------------------------------------------------*/
+.about .content ul i,
+.services .service-item .icon i,
+.contact .info-item i {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+button, .btn, .btn-visit, .cta-btn {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+button:hover, .btn:hover, .btn-visit:hover, .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# Misc functional sections
+--------------------------------------------------------------*/
+/* Testimonials, Gallery Details, Pricing remain functional, only adjust colors */
+.testimonials .testimonial-item {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
+.gallery-details .portfolio-info .btn-visit {
+  background-color: var(--accent-color);
+}
+
+/* Contact form */
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact .php-email-form button[type=submit] {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+section, .section {
+  background-color: var(--background-color);
+  color: var(--default-color);
 }
