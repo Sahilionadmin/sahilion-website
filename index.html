@@ -30,20 +30,27 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0 auto 20px auto; /* Imeongeza nafasi chini ili kutenganisha na paragrafu */
     }
     .hero-card h2 {
         font-family: 'Madimi One', sans-serif;
-        color: var(--default-color); /* Au rangi unayopendelea */
-        margin-bottom: 15px;
+        color: var(--default-color); 
+        margin-bottom: 0; /* Kuondoa nafasi ya chini kabla ya kadi kuishia */
         font-size: 2.5rem;
     }
-    .hero-card p {
-        /* Rangi ya maandishi imebaki nyeusi ili kusomeka vizuri */
-        color: #333; 
+    .transparent-text-block {
+        /* Darasa jipya la paragrafu, lisilo na background */
+        background-color: transparent !important; 
+        color: white; /* Rangi ya maandishi nyeupe ili isomeke vizuri juu ya picha ya giza */
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Kivuli cha maandishi ili kusomeka zaidi */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 10px;
         font-size: 1.1rem;
-        margin-bottom: 25px;
         line-height: 1.6;
+    }
+    .hero-buttons {
+        margin-top: 20px;
     }
     .hero-card .btn-group {
         display: flex;
@@ -115,18 +122,20 @@
       <div class="container" style="position: relative; z-index: 2;">
         <div class="row justify-content-center">
           <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
+            
             <div class="hero-card">
               <h2>Kutoka Pwani hadi Ulimwenguni</h2>
-              
-              <p>
-                Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
-              </p>
-              
-              <div class="btn-group">
+            </div>
+            
+            <p class="transparent-text-block">
+              Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
+            </p>
+            
+            <div class="btn-group hero-buttons">
                 <a href="kuhusu.html" class="btn-get-started">Gundua Zaidi</a>
                 <a href="maonyesho.html" class="btn-get-started" style="background-color: var(--default-color);">Tazama Bidhaa Zetu</a>
-              </div>
             </div>
+
           </div>
         </div>
       </div>
