@@ -24,8 +24,8 @@
   
   <style>
     .hero-card {
-        /* Kadi bado ina background nyeupe yenye uwazi mdogo, lakini inashika content yote */
-        background-color: rgba(255, 255, 255, 0.85); 
+        /* Opacity Imepunguzwa: 0.85 imebadilishwa kuwa 0.65 */
+        background-color: rgba(255, 255, 255, 0.65); 
         padding: 40px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -41,18 +41,15 @@
         color: var(--default-color); 
         margin-bottom: 15px; 
         font-size: 2.5rem;
-        /* Kichwa kinatumia background ya kadi */
     }
     .hero-card p {
-        /* Hiki ndicho kilichobadilishwa: Inaondolewa background yoyote inayotokana na kadi */
+        /* Hakikisha paragrafu haina background ili picha ya nyuma ionekane */
         background-color: transparent !important; 
-        color: #333; /* Imeacha rangi nyeusi ili isomeke vizuri juu ya background nyeupe */
-        /* Kama ukiamua kuondoa 'background-color' ya kadi kabisa, badilisha 'color' iwe 'white' */
-        
+        color: #333; 
         font-size: 1.1rem;
         margin-bottom: 25px;
         line-height: 1.6;
-        padding: 0; /* Kuondoa padding yoyote inayoweza kusababisha kivuli */
+        padding: 0; 
         margin-left: 0;
         margin-right: 0;
     }
