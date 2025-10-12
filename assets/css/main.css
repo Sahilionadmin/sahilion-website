@@ -1,13 +1,13 @@
 /**
-* Template Name: PhotoFolio (MODIFIED FOR SAHILION - LIGHT THEME)
+* Template Name: PhotoFolio (MODIFIED FOR SAHILION)
 * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-* Updated: Oct 2025 (Sahilion Customization - New Color Palette)
+* Updated: Oct 2025 (Sahilion Customization)
 * Author: BootstrapMade.com & Sahilion Team
 * License: https://bootstrapmade.com/license/
 */
 
 /*--------------------------------------------------------------
-# Font & Color Variables - SAHILION CUSTOMIZATION (LIGHT/BEIGE THEME)
+# Font & Color Variables - SAHILION CUSTOMIZATION
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -17,43 +17,54 @@
   --nav-font: "Roboto", sans-serif; /* Tumia Roboto kwa nav pia */
 }
 
-/* Sahilion Global Colors (Beige/Brown Theme) */
+/* Global Colors - SAHILION PALETTE */
 :root {
-  /* BACKGROUND & DEFAULT TEXT COLORS */
-  --background-color: #F5F5DC; /* Beige/Cream - Kwa Sehemu Kuu ya Body */
-  --default-color: #4A2C2A; /* Brown/Dark Accent - Rangi ya Maandishi kwa Body */
-  --heading-color: #4A2C2A; /* Brown/Dark Accent - Rangi ya Vichwa kwa Body */
-  --surface-color: #FFF; /* White - Kwa Cards/Boxes (ndani ya body) */
-  --contrast-color: #FFFFFF; /* White - Rangi ya Maandishi juu ya Primary/Accent */
+  /* Background/Default Colors (Dark mode) */
+  --background-color: #000000; /* Baki na Weusi */
+  --default-color: #EFEBD8; /* Beige Nyepesi (Contrast kwa weusi) - Badilisha kutoka #fafafa */
+  --heading-color: #EFEBD8; /* Heading color baki Beige */
+  --surface-color: #1A100F; /* Darker Brown/Black - Surface color (kwa cards/boxes) */
+  --contrast-color: #ffffff; /* White - Rangi ya maandishi juu ya accent color */
 
-  /* PRIMARY BRAND COLORS */
-  --primary-brand-color: #D35400; /* Orange - Rangi Kuu ya Accent */
-  --secondary-brand-color: #4A2C2A; /* Brown - Rangi ya Pili ya Accent */
-  --tertiary-brand-color: #5DADE2; /* Blue - Rangi ya Tatu ya Accent (Kama inahitajika) */
-
+  /* Sahilion Accent Colors */
+  --primary-brand-color: #D35400; /* Orange/Accent color */
+  --secondary-brand-color: #4A2C2A; /* Brown/Dark Accent */
+  
   --accent-color: var(--primary-brand-color); /* Tumia Orange kama rangi kuu ya accent */
-}
-
-/* HEADER & FOOTER COLORS (Dark Brown Section) */
-.header, .footer {
-  background-color: #4A2C2A !important; /* Brown/Dark Accent */
-  color: #F5F5DC !important; /* Beige/Cream */
-  border-color: rgba(245, 245, 220, 0.2) !important;
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: rgba(245, 245, 220, 0.7);  /* Beige iliyofifia */
-  --nav-hover-color: #FFFFFF; /* White */
-  --nav-mobile-background-color: #4A2C2A; /* Dark Brown */
-  --nav-dropdown-background-color: #4A2C2A; /* Dark Brown */
-  --nav-dropdown-color: rgba(245, 245, 220, 0.7);
-  --nav-dropdown-hover-color: #FFFFFF;
+  --nav-color: rgba(239, 235, 216, 0.7);  /* Beige iliyofifia */
+  --nav-hover-color: #ffffff; /* White */
+  --nav-mobile-background-color: #1A100F; /* Dark Surface */
+  --nav-dropdown-background-color: #1A100F; /* Dark Surface */
+  --nav-dropdown-color: rgba(239, 235, 216, 0.7);
+  --nav-dropdown-hover-color: #ffffff;
+}
+
+/* Color Presets - SAHILION ADJUSTMENTS (Tumefanya hizi zikubaliane na palette mpya) */
+.light-background {
+  --background-color: #1A100F; /* Dark Brown */
+  --surface-color: #343434;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #EFEBD8;
+  --heading-color: #EFEBD8;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+/* Smooth scroll (baki kama ilivyokuwa) */
+:root {
+  scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+/* ... Baki na Staili hizi kama zilivyo kwenye template ya asili ... */
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -61,13 +72,13 @@ body {
 }
 
 a {
-  color: var(--secondary-brand-color); /* Brown */
+  color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: var(--primary-brand-color); /* Orange */
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
 
@@ -80,199 +91,173 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
-/* PHP Email Form Messages (Hizi zinabaki kwa ajili ya validate.js)
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-/* ... (Sehemu zingine za PHP Email Form zikibaki kama zilivyokuwa) ... */
+/* ... Staili za PHP Email Form zibaki kama zilivyokuwa ... */
 
 /*--------------------------------------------------------------
-# Global Header (Adjustments for #4A2C2A)
+# Global Header (Iliyobadilishwa kidogo kwa Sahilion Logo)
 --------------------------------------------------------------*/
 .header {
-  /* Rangi zimeamuliwa na .header override hapo juu */
-  border-bottom: 1px solid rgba(245, 245, 220, 0.2); /* Border laini (Beige iliyofifia) */
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0; /* Punguza padding kidogo */
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); /* Border laini */
 }
 
-.header .logo h1 {
-  color: #F5F5DC; /* Beige/Cream */
-}
-
-.header .header-social-links a {
-  color: rgba(245, 245, 220, 0.6); /* Beige iliyofifia */
+/* Kurekebisha saizi ya SVG Logo */
+.header .logo img {
+  max-height: 50px; /* Ongeza saizi kidogo ya logo ili iendane na muundo wa SVG */
+  margin-right: 0px;
 }
 
 .header .header-social-links a:hover {
-  color: var(--primary-brand-color); /* Orange */
+  color: var(--primary-brand-color); /* Rangi ya Orange */
 }
 
 /*--------------------------------------------------------------
-# Preloader (Adjusted for Light theme)
+# Hero Section - SAHILION CUSTOMIZATION
 --------------------------------------------------------------*/
-#preloader:before,
-#preloader:after {
-  content: "";
-  background-color: #F5F5DC; /* Background Beige/Cream */
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  height: 100%;
-  transition: all 0.3s ease 0s;
-  z-index: -1;
+.hero {
+  /* ... Baki na staili za kwanza ... */
 }
 
-#preloader .line:before {
-  background-color: var(--primary-brand-color); /* Orange */
+.hero h2 {
+  /* ... Baki na staili za kwanza ... */
 }
 
-#preloader .line:after {
-  background-color: var(--background-color); /* Beige */
-}
-
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
-.page-title {
-  /* Rangi ya Sehemu za Page Title bado itumie Body Colors */
-  color: var(--default-color);
-  background-color: var(--background-color);
-}
-
-.page-title .heading {
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.page-title .heading .cta-btn {
-  color: var(--contrast-color); /* White */
-  background: var(--secondary-brand-color); /* Dark Brown */
-}
-
-.page-title .heading .cta-btn:hover {
-  background-color: color-mix(in srgb, var(--secondary-brand-color) 80%, black 20%);
-}
-
-.page-title nav {
-  background-color: color-mix(in srgb, var(--background-color), transparent 5%); /* Beige Kidogo */
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* Hii ni staili muhimu kwa ajili ya kufanya maandishi kwenye Hero yasionekane vibaya, hasa juu ya picha yenye rangi mchanganyiko */
 .hero h2 .underlight {
-  color: var(--primary-brand-color); /* Orange */
-  background: var(--surface-color); /* White/Surface */
+  color: var(--secondary-brand-color); /* Tumia Brown/Dark Accent kwa maandishi */
+  background: var(--default-color); /* Tumia Beige kama background */
   padding: 5px 12px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.hero h2 .underlight:before {
+  content: none; /* Ondoa mstari wa rangi ya accent color chini yake */
+}
+
 .hero p {
-  color: var(--default-color); /* Dark Brown */
-  background-color: rgba(255, 255, 255, 0.7); /* Background nyeupe iliyofifia ili maandishi yasomeke */
+  color: color-mix(in srgb, var(--default-color), transparent 10%); /* Maandishi meusi kidogo */
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5); /* Background nyeusi kidogo ili maandishi yasomeke vizuri */
+  display: inline-block;
+  padding: 5px 10px;
 }
 
 .hero .btn-get-started {
   background: var(--primary-brand-color); /* Orange */
-  color: var(--contrast-color); /* White */
+}
+
+.hero .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--primary-brand-color) 90%, white 10%);
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
-.gallery .gallery-links {
-  background: rgba(74, 44, 42, 0.8); /* Dark Brown na opacity (kama ulivyopenda) */
+.page-title .heading h1 {
+  font-size: 54px; /* Punguza kidogo ukubwa wa kichwa */
+  font-weight: 700;
+  font-family: var(--heading-font);
 }
 
+.page-title .heading .cta-btn {
+  background: var(--secondary-brand-color); /* Tumia Brown kwa CTA */
+}
+
+.page-title .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--secondary-brand-color) 90%, white 10%);
+}
+
+/*--------------------------------------------------------------
+# Gallery Section (Picha/Video)
+--------------------------------------------------------------*/
 .gallery .gallery-links .preview-link,
 .gallery .gallery-links .details-link {
-  color: var(--default-color); /* Beige/Cream */
+  color: var(--default-color); /* White/Beige */
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonial-item {
-  background-color: var(--surface-color); /* White/Surface */
-  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: var(--primary-brand-color); /* Orange */
+}
+
+.gallery .gallery-links {
+  background: rgba(74, 44, 42, 0.7); /* Brown na opacity */
 }
 
 /*--------------------------------------------------------------
 # Services Section (Hadithi na Maonyesho Hub)
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color); /* White/Surface */
+.services .service-item h4 a {
+  color: var(--heading-color);
 }
 
 .services .service-item:before {
-  background: var(--secondary-brand-color); /* Dark Brown kwa hover effect */
+  background: var(--secondary-brand-color); /* Tumia Brown kwa hover effect */
 }
 
 .services .service-item .icon i {
-  color: var(--contrast-color); /* White */
   background-color: var(--primary-brand-color); /* Icon background Orange */
-}
-
-.services .service-item:hover h4 a,
-.services .service-item:hover p {
-  color: var(--contrast-color); /* White */
 }
 
 .services .service-item:hover i {
   color: var(--secondary-brand-color); /* Icon color Brown kwenye hover */
-  background-color: var(--default-color); /* Beige */
 }
 
-/* CTA Ndogo kwa Hadithi (Soma Zaidi) */
 .small-cta-link {
-  color: var(--primary-brand-color);
+    color: var(--primary-brand-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
 }
 .small-cta-link:hover {
-  color: color-mix(in srgb, var(--primary-brand-color) 70%, black 30%);
+    color: color-mix(in srgb, var(--primary-brand-color), transparent 30%);
 }
 
 
 /*--------------------------------------------------------------
-# Contact Section
+# Contact Section - SAHILION CUSTOMIZATION
 --------------------------------------------------------------*/
-.contact .info-item i {
-  color: var(--primary-brand-color); /* Orange */
-  border: 1px solid color-mix(in srgb, var(--primary-brand-color), transparent 40%);
-}
 
-.contact .info-item:hover i {
-  background: var(--primary-brand-color);
-}
-
+/* Kwa Mawasiliano Kadi: Tutategemea CSS ya ndani kwenye mawasaliano.html, lakini tutarekebisha form control colors */
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  color: var(--default-color); /* Dark Brown */
-  background-color: var(--surface-color); /* Background White */
+  color: var(--secondary-brand-color); /* Maandishi Brown */
+  background-color: var(--default-color); /* Background Beige */
   border-color: color-mix(in srgb, var(--secondary-brand-color), transparent 70%);
 }
 
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: var(--primary-brand-color); /* Border Orange kwenye focus */
+}
+
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--secondary-brand-color), transparent 30%);
+}
+
+.contact .php-email-form button[type=submit] {
+  color: var(--contrast-color); /* White */
+  background: var(--primary-brand-color); /* Orange */
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background-color: color-mix(in srgb, var(--primary-brand-color) 80%, white 20%);
+}
+
 /*--------------------------------------------------------------
-# Global Footer (Adjustments for #4A2C2A)
+# Global Footer
 --------------------------------------------------------------*/
-.footer {
-  /* Rangi zimeamuliwa na .footer override hapo juu */
-  border-top: 1px solid rgba(245, 245, 220, 0.2);
-}
-
-.footer .social-links a {
-  color: rgba(245, 245, 220, 0.6);
-  border: 1px solid rgba(245, 245, 220, 0.6);
-}
-
 .footer .social-links a:hover {
   color: var(--primary-brand-color); /* Orange */
   border-color: var(--primary-brand-color);
