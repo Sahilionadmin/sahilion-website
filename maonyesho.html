@@ -21,6 +21,45 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Kurekebisha urefu wa logo kwenye header */
+    .header .logo img {
+        height: 80px; /* Ukubwa umerekebishwa */
+    }
+    
+    /* Kurekebisha Spacing ya Paragraph kwenye heading */
+    .page-title .heading p {
+        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
+    }
+    
+    /* Kurekebisha Spacing na Alignment ya kadi za Maonyesho (Horizontal Grid) */
+    #maonyesho-hub .service-item {
+        padding: 30px; 
+        min-height: 180px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    #maonyesho-hub .service-item .description {
+        margin-bottom: 0;
+        text-align: justify;
+    }
+    
+    #maonyesho-hub .row.gy-4.mb-5 {
+        margin-bottom: 40px !important; 
+    }
+    
+    /* Alignment ya title na description ndani ya kadi */
+    #maonyesho-hub .service-item > div {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+  </style>
 
 </head>
 
@@ -30,7 +69,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 60px;">
+                <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo">
       </a>
 
      <nav id="navmenu" class="navmenu">
@@ -89,10 +128,12 @@
           </ol>
         </div>
       </nav>
-    </div><section id="maonyesho-hub" class="services section">
+    </div>
+    
+    <section id="maonyesho-hub" class="services section">
       <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4 mb-5">
+                <div class="row gy-4 mb-5">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-image"></i></div>
@@ -101,7 +142,9 @@
                 <p class="description">Angalia kila picha kama hadithi, kutoka soko la viungo Zanzibar hadi meza za duniani. Picha hizi zinanasa ladha na roho ya pwani.</p>
               </div>
             </div>
-          </div><div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          </div>
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-camera-video"></i></div>
               <div>
@@ -109,7 +152,8 @@
                 <p class="description">Utaona tukio la maandalizi, ladha zinazoundwa, na uzuri wa chakula cha pwani ukitolewa kwa maisha halisi. Uzoefu halisi wa upishi.</p>
               </div>
             </div>
-          </div></div>
+          </div>
+        </div>
         
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
@@ -127,7 +171,7 @@
     <div class="container">
       <div class="copyright text-center">
         <p>© <span> 2025 </span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
-      </div>
+        </div>
 
       <div class="social-links d-flex justify-content-center">
         <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
