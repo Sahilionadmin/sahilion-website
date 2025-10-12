@@ -24,33 +24,37 @@
   
   <style>
     .hero-card {
-        /* Imeondoa background ya beige na kuweka rangi nyeupe/nyepesi yenye uwazi mdogo */
+        /* Kadi bado ina background nyeupe yenye uwazi mdogo, lakini inashika content yote */
         background-color: rgba(255, 255, 255, 0.85); 
         padding: 40px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         max-width: 600px;
-        margin: 0 auto 20px auto; /* Imeongeza nafasi chini ili kutenganisha na paragrafu */
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .hero-card h2 {
         font-family: 'Madimi One', sans-serif;
         color: var(--default-color); 
-        margin-bottom: 0; /* Kuondoa nafasi ya chini kabla ya kadi kuishia */
+        margin-bottom: 15px; 
         font-size: 2.5rem;
+        /* Kichwa kinatumia background ya kadi */
     }
-    .transparent-text-block {
-        /* Darasa jipya la paragrafu, lisilo na background */
+    .hero-card p {
+        /* Hiki ndicho kilichobadilishwa: Inaondolewa background yoyote inayotokana na kadi */
         background-color: transparent !important; 
-        color: white; /* Rangi ya maandishi nyeupe ili isomeke vizuri juu ya picha ya giza */
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Kivuli cha maandishi ili kusomeka zaidi */
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 10px;
+        color: #333; /* Imeacha rangi nyeusi ili isomeke vizuri juu ya background nyeupe */
+        /* Kama ukiamua kuondoa 'background-color' ya kadi kabisa, badilisha 'color' iwe 'white' */
+        
         font-size: 1.1rem;
+        margin-bottom: 25px;
         line-height: 1.6;
-    }
-    .hero-buttons {
-        margin-top: 20px;
+        padding: 0; /* Kuondoa padding yoyote inayoweza kusababisha kivuli */
+        margin-left: 0;
+        margin-right: 0;
     }
     .hero-card .btn-group {
         display: flex;
@@ -125,15 +129,15 @@
             
             <div class="hero-card">
               <h2>Kutoka Pwani hadi Ulimwenguni</h2>
-            </div>
-            
-            <p class="transparent-text-block">
-              Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
-            </p>
-            
-            <div class="btn-group hero-buttons">
-                <a href="kuhusu.html" class="btn-get-started">Gundua Zaidi</a>
-                <a href="maonyesho.html" class="btn-get-started" style="background-color: var(--default-color);">Tazama Bidhaa Zetu</a>
+              
+              <p>
+                Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
+              </p>
+              
+              <div class="btn-group">
+                  <a href="kuhusu.html" class="btn-get-started">Gundua Zaidi</a>
+                  <a href="maonyesho.html" class="btn-get-started" style="background-color: var(--default-color);">Tazama Bidhaa Zetu</a>
+              </div>
             </div>
 
           </div>
