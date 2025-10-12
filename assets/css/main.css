@@ -12,19 +12,24 @@
   --heading-font: 'Madimi One', cursive;
   --nav-font: 'Roboto', sans-serif;
 
-  --background-color: #F5F5DC;   /* Sahilion beige */
-  --default-color: #4A2C2A;      /* Sahilion brown */
-  --heading-color: #4A2C2A;      
-  --accent-color: #D35400;       /* Sahilion orange */
+  --background-color: #F5F5DC;          /* Sahilion beige (main page background) */
+  --default-color: #4A2C2A;            /* Sahilion brown (main page text color) */
+  --heading-color: #4A2C2A;
+
+  --accent-color: #D35400;              /* Sahilion orange */
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 
-  /* Navigation Colors */
-  --nav-color: rgba(74, 44, 42, 0.7);
-  --nav-hover-color: #4A2C2A;
-  --nav-mobile-background-color: #F5F5DC;
-  --nav-dropdown-background-color: #F5F5DC;
-  --nav-dropdown-color: rgba(74, 44, 42, 0.7);
+  /* NEW Header/Footer Contrast Colors */
+  --header-footer-bg: #4A2C2A;         /* Dark Brown */
+  --header-footer-text: #F5F5DC;       /* Light Beige */
+
+  /* Navigation Colors - Adjusted for dark header background */
+  --nav-color: rgba(245, 245, 220, 0.8); /* Light, semi-transparent for contrast */
+  --nav-hover-color: #F5F5DC;            /* Light Beige for hover/active */
+  --nav-mobile-background-color: #F5F5DC; /* Remains light */
+  --nav-dropdown-background-color: #F5F5DC; /* Remains light */
+  --nav-dropdown-color: #4A2C2A;        /* Remains dark */
   --nav-dropdown-hover-color: #D35400;
 }
 
@@ -62,23 +67,25 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--header-footer-text); /* New Text Color */
+  background-color: var(--header-footer-bg); /* New Background Color */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid var(--background-color);
+  /* Use the new dark background color for a seamless look */
+  border-bottom: 1px solid var(--header-footer-bg);
 }
 
 .header .logo h1 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--heading-color);
+  color: var(--header-footer-text); /* Ensure logo text is light */
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  /* Base color needs to be a muted version of the light text */
+  color: rgba(245, 245, 220, 0.7);
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
@@ -104,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .navmenu a {
-    color: var(--nav-color);
+    color: var(--nav-color); /* Uses the new light, transparent color */
     padding: 18px 15px;
     font-size: 14px;
     font-family: var(--nav-font);
@@ -116,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .navmenu li:hover>a,
   .navmenu .active {
-    color: var(--nav-hover-color);
+    color: var(--nav-hover-color); /* Uses the new light hover color */
   }
 
   .navmenu .dropdown ul {
@@ -152,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: var(--nav-hover-color); /* Use light color for the menu icon */
     font-size: 28px;
     cursor: pointer;
   }
@@ -259,8 +266,8 @@ h1, h2, h3, h4, h5, h6 {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--header-footer-text); /* New Text Color */
+  background-color: var(--header-footer-bg); /* New Background Color */
   font-size: 14px;
   padding: 40px 0;
 }
@@ -269,8 +276,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(74,44,42,0.5);
-  color: rgba(74,44,42,0.5);
+  /* Border and icon color should be a muted version of the new light text color */
+  border: 1px solid rgba(245, 245, 220, 0.5);
+  color: rgba(245, 245, 220, 0.5);
   margin: 0 5px;
   transition: 0.3s;
 }
@@ -283,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
+/* These sections remain the light background with dark text */
 section, .section {
   color: var(--default-color);
   background-color: var(--background-color);
