@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
@@ -23,57 +23,57 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* Kurekebisha urefu wa logo kwenye header */
+    /* ILIYOHIFADHIWA: Kurekebisha urefu wa logo kwenye header (Uthabiti) */
     .header .logo img {
-        height: 80px; /* Sasa ni 80px kulingana na muundo thabiti */
+        height: 80px;
     }
     
-    /* Kurekebisha Spacing ya Paragraph kwenye heading */
+    /* ILIYOHIFADHIWA: Kurekebisha Spacing ya Paragraph kwenye heading (Uthabiti) */
     .page-title .heading p {
-        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
+        margin-bottom: 20px !important;
     }
 
-    /* Kurekebisha Spacing na Alignment ya kadi za Hadithi */
+    /* CUSTOM CSS KWA MUUNDO WA HADITHI (HORIZONTAL CARDS) */
     #stories.section {
-        padding-top: 40px; 
+        padding-top: 40px;
         padding-bottom: 60px;
     }
-    
     #stories .service-item {
-        padding: 30px; 
-        min-height: 150px; 
+        padding: 30px;
+        min-height: 150px;
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* Layout ya usawa */
         align-items: flex-start;
         text-align: left;
         transition: 0.3s;
     }
-    
     #stories .service-item:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
-
     #stories .service-item .description {
         margin-bottom: 0;
         text-align: left;
         font-size: 0.9rem;
     }
-
     #stories .service-item .icon {
         margin-right: 20px;
         font-size: 36px;
         line-height: 1;
         color: var(--primary-color);
-        width: 40px; 
+        width: 40px;
     }
-    
     #stories .service-item .title a {
         font-size: 1.25rem;
         line-height: 1.5;
         font-weight: 600;
         color: var(--default-color);
     }
-    
+    
+    /* CUSTOM CSS KWA MAFUNGAMANO YA PRICING SECTION (Kadi za Makundi) */
+    #categories.pricing h4 i {
+        color: var(--primary-brand-color); /* Rangi ya Orange */
+        font-size: 1.5rem;
+    }
   </style>
 
 </head>
@@ -124,7 +124,7 @@
 
   <main class="main">
 
-    <div class="page-title" data-aos="fade">
+        <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
@@ -144,9 +144,8 @@
           </ol>
         </div>
       </nav>
-    </div>
-    
-    <section id="stories" class="services section">
+    </div>    
+        <section id="stories" class="services section">
       <div class="container" data-aos="fade-up">
         
         <div class="row gy-4">
@@ -194,9 +193,52 @@
           </div>
 
       </div>
-    </section>
+    </section>        <section id="categories" class="pricing section">
 
-  </main>
+            <div class="container section-title" data-aos="fade-up">
+        <h2>Makundi Makuu ya Hadithi</h2>
+        <p>Gundua aina mbalimbali za simulizi tunazoshiriki</p>
+      </div>      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 gx-lg-5">
+
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Urithi na Historia</h3>
+              <h4><i class="bi bi-hourglass-split"></i></h4>
+            </div>
+          </div>          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Mapishi na Maelekezo</h3>
+              <h4><i class="bi bi-book"></i></h4>
+            </div>
+          </div>          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Watu na Maisha ya Pwani</h3>
+              <h4><i class="bi bi-person-circle"></i></h4>
+            </div>
+          </div>          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Mazingira na Safari</h3>
+              <h4><i class="bi bi-globe-americas"></i></h4>
+            </div>
+          </div>          
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Ubunifu na Teknolojia ya Chakula</h3>
+              <h4><i class="bi bi-lightbulb"></i></h4>
+            </div>
+          </div>          
+          <div class="col-lg-6">
+            <div class="pricing-item d-flex justify-content-between">
+              <h3>Vyakula vya Msimu</h3>
+              <h4><i class="bi bi-sun"></i></h4>
+            </div>
+          </div>        </div>
+
+      </div>
+
+    </section>      </main>
 
   <footer id="footer" class="footer">
 
