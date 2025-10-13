@@ -99,7 +99,7 @@ h6 {
 .header {
   color: #F5F5DC; /* Beige */
   background-color: #4A2C2A; /* Brown */
-  padding: 20px 0; 
+  padding: 10px 0; 
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, #F5F5DC, transparent 90%); /* Border laini */
@@ -111,8 +111,8 @@ h6 {
 
 /* Kurekebisha saizi ya SVG Logo */
 .header .logo img {
-  max-height: 45px; /* MAREKEBISHO: Logo Imeongezwa ukubwa */
-  margin-right: 8px;
+  max-height: 50px; 
+  margin-right: 0px;
 }
 
 .header .logo h1 {
@@ -626,8 +626,8 @@ h6 {
 }
 
 .page-title .heading h1 {
-  font-size: 64px; 
-  font-weight: 400;
+  font-size: 54px; 
+  font-weight: 700;
   font-family: var(--heading-font);
 }
 
@@ -781,7 +781,6 @@ section,
   }
 }
 
-/* Kitufe cha kwanza (Gundua zaidi) */
 .hero .btn-get-started {
   color: var(--contrast-color); /* White */
   background: var(--primary-brand-color); /* Orange */
@@ -797,25 +796,6 @@ section,
 
 .hero .btn-get-started:hover {
   background-color: color-mix(in srgb, var(--primary-brand-color) 90%, white 10%);
-}
-
-/* Kitufe kipya cha "Tazama bidhaa zetu" - Rangi Sawa na Gundua zaidi */
-.hero .btn-tazama { /* MAREKEBISHO: Kiongozi Kipya */
-  color: var(--contrast-color); /* White */
-  background: #D35400; /* Orange - Sawa na var(--primary-brand-color) */
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-left: 15px; /* Ili kutenganisha na button ya kwanza */
-}
-
-.hero .btn-tazama:hover { /* MAREKEBISHO: Kiongozi Kipya */
-  background-color: color-mix(in srgb, #D35400 90%, white 10%); /* Hover color sawa */
 }
 
 /*--------------------------------------------------------------
@@ -918,10 +898,6 @@ section,
 --------------------------------------------------------------*/
 .gallery-details .portfolio-details-slider img {
   width: 100%;
-}
-
-.gallery-details .swiper-wrapper {
-  height: auto;
 }
 
 .gallery-details .swiper-button-prev,
