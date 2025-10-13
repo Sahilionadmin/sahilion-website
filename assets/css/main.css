@@ -405,7 +405,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8); /* Brown Overlay */
+    background: rgba(74, 44, 42, 0.8); /* Brown Overlay */
     transition: 0.3s;
   }
 
