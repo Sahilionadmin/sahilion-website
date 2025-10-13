@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -21,45 +21,73 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
-  
-  <style>
-    /* Kurekebisha urefu wa logo kwenye header */
-    .header .logo img {
-        height: 80px; /* Ukubwa umerekebishwa */
-    }
-    
-    /* Kurekebisha Spacing ya Paragraph kwenye heading */
-    .page-title .heading p {
-        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
-    }
-    
-    /* Kurekebisha Spacing na Alignment ya kadi za Maonyesho (Horizontal Grid) */
-    #maonyesho-hub .service-item {
-        padding: 30px; 
-        min-height: 180px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: left;
-    }
-    
-    #maonyesho-hub .service-item .description {
-        margin-bottom: 0;
-        text-align: justify;
-    }
-    
-    #maonyesho-hub .row.gy-4.mb-5 {
-        margin-bottom: 40px !important; 
-    }
-    
-    /* Alignment ya title na description ndani ya kadi */
-    #maonyesho-hub .service-item > div {
-        flex-grow: 1;
-        width: 100%;
-    }
+  
+  <style>
+    /* Kurekebisha urefu wa logo kwenye header */
+    .header .logo img {
+        height: 80px; /* Ukubwa umerekebishwa */
+    }
+    
+    /* Kurekebisha Spacing ya Paragraph kwenye heading */
+    .page-title .heading p {
+        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
+    }
+    
+    /* Kurekebisha Spacing na Alignment ya kadi za Maonyesho (Horizontal Grid) */
+    #maonyesho-hub .service-item {
+        padding: 30px; 
+        min-height: 180px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        /* Kuongeza mpaka (border) mdogo kwenye kadi kwa muonekano wa kuvutia zaidi */
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
 
-  </style>
+    #maonyesho-hub .service-item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+    }
+
+    #maonyesho-hub .service-item .icon {
+        /* Kurekebisha muonekano wa iconi */
+        margin-right: 15px;
+        font-size: 36px;
+        line-height: 1;
+        color: var(--default-color, #ffb03b); /* Rangi kuu ya Sahilion */
+    }
+
+    #maonyesho-hub .service-item .description {
+        margin-bottom: 0;
+        text-align: justify;
+    }
+    
+    #maonyesho-hub .row.gy-4.mb-5 {
+        margin-bottom: 40px !important; 
+    }
+    
+    /* Alignment ya title na description ndani ya kadi */
+    #maonyesho-hub .service-item > div {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    /* Kuhakikisha kadi zote zinalingana kwa urefu katika desktop mode */
+    @media (min-width: 992px) {
+        #maonyesho-hub .row.gy-4.mb-5 {
+            display: flex;
+            align-items: stretch;
+        }
+        #maonyesho-hub .col-lg-6 {
+            display: flex;
+        }
+    }
+
+  </style>
 
 </head>
 
@@ -69,7 +97,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo me-auto me-xl-0">
-                <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo">
+        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
       </a>
 
      <nav id="navmenu" class="navmenu">
@@ -129,13 +157,13 @@
         </div>
       </nav>
     </div>
-    
-    <section id="maonyesho-hub" class="services section">
+    
+    <section id="maonyesho-hub" class="services section">
       <div class="container" data-aos="fade-up">
 
-                <div class="row gy-4 mb-5">
+        <div class="row gy-4 mb-5">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex">
+            <div class="service-item d-flex align-items-start">
               <div class="icon flex-shrink-0"><i class="bi bi-image"></i></div>
               <div>
                 <h4 class="title"><a href="picha.html" class="stretched-link">Tazama Picha Zetu</a></h4>
@@ -143,9 +171,9 @@
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex align-items-start">
               <div class="icon flex-shrink-0"><i class="bi bi-camera-video"></i></div>
               <div>
                 <h4 class="title"><a href="video.html" class="stretched-link">Tazama Video Zetu</a></h4>
@@ -153,11 +181,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>
         
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <a href="picha.html" class="cta-btn">Anza na Picha<br></a>
+            <a href="picha.html" class="cta-btn">Anza Kuangalia Picha<br></a>
           </div>
         </div>
 
