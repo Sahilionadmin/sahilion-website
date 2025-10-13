@@ -5,48 +5,82 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Mawasiliano - Sahilion | Wasiliana Nasi</title>
-  <meta name="description" content="Wasiliana na Sahilion kwa maswali, ushirikiano, au maoni. Jaza fomu zetu rahisi za Formspree.">
-  <meta name="keywords" content="Mawasiliano, Fomu, Formspree, Sahilion, Maswali, Ushirikiano">
+  <meta name="description" content="Wasiliana na Sahilion kwa miradi ya upigaji picha, video, au maswali kuhusu hadithi na matukio ya utamaduni wa Pwani.">
+  <meta name="keywords" content="Mawasiliano, Sahilion, Simu, Barua pepe, Pwani, Mradi">
 
-  <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.png" rel="icon">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* ILIYOHIFADHIWA: Kurekebisha urefu wa logo kwenye header (Uthabiti) */
+    /* Kurekebisha urefu wa logo kwenye header ili kufanana na faili zingine */
     .header .logo img {
-        height: 80px;
+        height: 80px; 
     }
-    /* ILIYOHIFADHIWA: Kurekebisha Spacing ya Paragraph kwenye heading (Uthabiti) */
-    .page-title .heading p {
-        margin-bottom: 20px !important;
+
+    /* CSS kwa ajili ya kufanana na ukubwa wa 'Kuhusu' Breadcrumbs */
+    .page-title .heading {
+        padding-top: 80px;
+        padding-bottom: 20px;
     }
-    /* Custom styles for form separation */
-    .form-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--heading-color);
-        margin-bottom: 20px;
-        border-bottom: 2px solid var(--primary-color);
-        padding-bottom: 5px;
+    .page-title .breadcrumbs {
+        padding: 15px 0;
     }
-    /* Fomu zote za Formspree zitavaa mtindo wa PhotoFolio (php-email-form) */
-    #contact .php-email-form {
+
+    /* Kurekebisha muundo wa form kwa ajili ya Mawasiliano */
+    .contact .info-item {
         padding: 30px;
-        background: var(--color-white);
-        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-        border-radius: 8px;
+        background: var(--surface-color);
+        box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08);
     }
+
+    .contact .info-item i {
+        font-size: 20px;
+        color: var(--accent-color, #ffb03b);
+        float: left;
+        width: 44px;
+        height: 44px;
+        background: #ffe9cc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact .info-item h4 {
+        padding: 0 0 0 60px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--heading-color);
+    }
+
+    .contact .info-item p {
+        padding: 0 0 0 60px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: var(--default-color);
+    }
+
+    .contact .php-email-form {
+        width: 100%;
+        background: var(--surface-color);
+        box-shadow: 0px 0 30px rgba(0, 0, 0, 0.08);
+        padding: 30px;
+    }
+    /* Mawasiliano zaidi ya fomu hapa... */
+
   </style>
 
 </head>
@@ -72,7 +106,7 @@
             </ul>
           </li>
           <li><a href="hadithi.html">Hadithi</a></li>
-          <li><a href="mawasiliano.html" class="active">Mawasiliano</a></li>
+                      <li><a href="mawasiliano.html" class="active">Mawasiliano</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -102,8 +136,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Mawasiliano</h1>
-              <p class="mb-0">Tafadhali chagua fomu inayofaa hapa chini kutuma ujumbe wako. Tunahakikisha tunajibu ndani ya saa 48.</p>
+              <h1>Wasiliana Nasi</h1>
+              <p class="mb-0">Tupigie simu, tutumie barua pepe, au tumia fomu ya Mawasiliano kwa maswali yoyote au miradi unayotaka kufanya nasi.</p>
             </div>
           </div>
         </div>
@@ -116,76 +150,69 @@
           </ol>
         </div>
       </nav>
-    </div>        <section id="contact" class="contact section">
+    </div>
+    
+    <section id="contact" class="contact section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="row gy-4">
-          
-                    <div class="col-lg-6">
-            <h3 class="form-title">1. Ushirikiano na Maswali Mengine</h3>
-            <form action="https://formspree.io/f/YOUR_HASH_1" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-              <div class="row gy-4">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-map"></i>
+              <h4>Ofisi Yetu:</h4>
+              <p>P.O Box 1234, Zanzibar, Tanzania</p>
+            </div>
+          </div>
 
-                <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Jina Lako Kamili" required>
-                </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h4>Barua Pepe:</h4>
+              <p>info@sahilion.com</p>
+            </div>
+          </div>
 
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="_replyto" placeholder="Barua pepe (Email)" required>
-                </div>
-                
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Kichwa cha Ujumbe/Lengo la Ushirikiano" required>
-                </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-telephone"></i>
+              <h4>Piga Simu:</h4>
+              <p>+255 7XX XXX XXX</p>
+            </div>
+          </div>
+        </div>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Ujumbe wako kamili..." required></textarea>
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-lg-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Jina Lako" required="">
                 </div>
-
-                <div class="col-md-12 text-center">
-                  <button type="submit">Tuma Ujumbe wa Ushirikiano</button>
+                <div class="col-lg-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Barua Pepe Yako" required="">
                 </div>
-
               </div>
-            </form>
-          </div>                    <div class="col-lg-6">
-            <h3 class="form-title">2. Maoni, Ripoti, au Mapendekezo</h3>
-            <form action="https://formspree.io/f/YOUR_HASH_2" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-
-                <div class="col-md-12">
-                  <input type="text" name="name" class="form-control" placeholder="Jina Lako (Si lazima)" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="_replyto" placeholder="Barua pepe (Si lazima)" required>
-                </div>
-
-                <div class="col-md-12">
-                  <select name="type" class="form-control" required>
-                    <option value="">Chagua Aina ya Maoni</option>
-                    <option value="Suggestion">Pendekezo la Hadithi/Maudhui</option>
-                    <option value="Website_Bug">Ripoti ya Dosari ya Tovuti</option>
-                    <option value="Other_Feedback">Maoni Mengine</option>
-                  </select>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Maoni/Ripoti yako kamili..." required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <button type="submit">Tuma Maoni/Ripoti</button>
-                </div>
-
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Kichwa cha Ujumbe" required="">
               </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Ujumbe" required=""></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Inatuma</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Ujumbe wako umetolewa. Asante!</div>
+              </div>
+              <div class="text-center"><button type="submit">Tuma Ujumbe</button></div>
             </form>
-          </div>        </div>
+          </div>
+        </div>
 
       </div>
 
-    </section>  </main>
+    </section>
+  </main>
 
   <footer id="footer" class="footer">
 
@@ -216,14 +243,15 @@
 
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader">
     <div class="line"></div>
   </div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 

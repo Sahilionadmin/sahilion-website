@@ -23,11 +23,21 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Kurekebisha urefu wa logo kwenye header */
+    /* Kurekebisha urefu wa logo kwenye header ili kufanana na faili zingine */
     .header .logo img {
         height: 80px; 
     }
 
+    /* CSS kwa ajili ya kufanana na ukubwa wa 'Kuhusu' Breadcrumbs */
+    /* Haya yameongezwa ili kuhakikisha mpangilio wa Page Title ni sawa na kurasa zingine */
+    .page-title .heading {
+        padding-top: 80px; 
+        padding-bottom: 20px; 
+    }
+    .page-title .breadcrumbs {
+        padding: 15px 0; 
+    }
+    
     /* Kurekebisha nafasi kati ya paragrafu (margin) na alignment ya maandishi */
     .services .content p, .services .section-header p {
         /* Punguza nafasi ya chini (margin-bottom) kwa paragraphs zote */
@@ -121,7 +131,7 @@
               <li><a href="video.html">Video</a></li>
             </ul>
           </li>
-          <li><a href="hadithi.html" class="active">Hadithi</a></li>
+                      <li><a href="hadithi.html" class="active">Hadithi</a></li>
           <li><a href="mawasiliano.html">Mawasiliano</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
