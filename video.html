@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -25,6 +25,14 @@
     /* Custom Style kwa logo yenye height iliyo thabiti */
     .header .logo img {
         height: 80px;
+    }
+    /* CSS kwa ajili ya kufanana na ukubwa wa 'Kuhusu' Breadcrumbs */
+    .page-title .heading {
+        padding-top: 80px; 
+        padding-bottom: 20px;
+    }
+    .page-title .breadcrumbs {
+        padding: 15px 0;
     }
     /* Custom styles kwa ajili ya kuonyesha icon ya Video/Play kwenye placeholder */
     .gallery-item .gallery-links .preview-link i.bi-play-circle-fill {
@@ -40,7 +48,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo">
+        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -60,10 +68,18 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="social-link"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="social-link"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="social-link"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
+          <img src="assets/img/tiktok.svg" alt="TikTok" style="height:24px;">
+        </a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank">
+          <img src="assets/img/instagram.svg" alt="Instagram" style="height:24px;">
+        </a>
+        <a href="https://x.com/SahilionHQ" target="_blank">
+          <img src="assets/img/x.svg" alt="X / Twitter" style="height:24px;">
+        </a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank">
+          <img src="assets/img/youtube.svg" alt="YouTube" style="height:24px;">
+        </a>
       </div>
 
     </div>
@@ -92,110 +108,41 @@
           </div>
         </nav>
     </div>        <section id="gallery" class="gallery section">
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
+              <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
-                              <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 1">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="#" title="Video 1 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 2">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 2 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 3">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 3 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 4">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 4 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 5">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 5 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 6">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 6 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 7">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 7 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>                    <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/placeholder.jpg" class="img-fluid" alt="Video 8">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="#" title="Video 8 (Placeholder)" class="glightbox preview-link"><i class="bi bi-play-circle-fill"></i></a>
-                <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>        </div>
-
+                    <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+          <div class="col-xl-3 col-lg-4 col-md-6">...</div>
+        </div>
       </div>
-
     </section>  </main>
 
   <footer id="footer" class="footer">
-
-    <div class="container">
+        <div class="container">
       <div class="copyright text-center">
         <p>© <span> 2025 </span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
         <p>Kutoka Pwani hadi Ulimwenguni</p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="social-link"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="social-link"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="social-link"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank"><img src="assets/img/tiktok.svg" alt="TikTok" style="height:24px;"></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank"><img src="assets/img/instagram.svg" alt="Instagram" style="height:24px;"></a>
+        <a href="https://x.com/SahilionHQ" target="_blank"><img src="assets/img/x.svg" alt="X / Twitter" style="height:24px;"></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank"><img src="assets/img/youtube.svg" alt="YouTube" style="height:24px;"></a>
       </div>
     </div>
-
   </footer>
 
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <div id="preloader">
-    <div class="line"></div>
-  </div>
-
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <div id="preloader"><div class="line"></div></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
