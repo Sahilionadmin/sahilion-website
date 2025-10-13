@@ -12,15 +12,69 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Kurekebisha urefu wa logo kwenye header */
+    .header .logo img {
+        height: 80px; /* Sasa ni 80px kulingana na muundo thabiti */
+    }
+    
+    /* Kurekebisha Spacing ya Paragraph kwenye heading */
+    .page-title .heading p {
+        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
+    }
+
+    /* Kurekebisha Spacing na Alignment ya kadi za Hadithi */
+    #stories.section {
+        padding-top: 40px; 
+        padding-bottom: 60px;
+    }
+    
+    #stories .service-item {
+        padding: 30px; 
+        min-height: 150px; 
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        transition: 0.3s;
+    }
+    
+    #stories .service-item:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #stories .service-item .description {
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    #stories .service-item .icon {
+        margin-right: 20px;
+        font-size: 36px;
+        line-height: 1;
+        color: var(--primary-color);
+        width: 40px; 
+    }
+    
+    #stories .service-item .title a {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: 600;
+        color: var(--default-color);
+    }
+    
+  </style>
 
 </head>
 
@@ -30,7 +84,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 60px;">
+                <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
       </a>
 
      <nav id="navmenu" class="navmenu">
@@ -77,11 +131,11 @@
             <div class="col-lg-8">
               <h1>Hadithi Zetu</h1>
               <p class="mb-0">Karibu kwenye Hadithi za Sahilion. Mahali ambapo tunashiriki makala, simulizi, na maandiko yanayochora picha kamili ya ladha, urithi, na ubunifu wetu wa mwambao wetu.</p>
-              <a href="#stories" class="cta-btn">Angalia Zote<br></a>
+                          </div>
             </div>
           </div>
         </div>
-      </div>
+        
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
@@ -90,12 +144,14 @@
           </ol>
         </div>
       </nav>
-    </div><section id="stories" class="services section">
+    </div>
+    
+    <section id="stories" class="services section">
       <div class="container" data-aos="fade-up">
         
         <div class="row gy-4">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
               <div>
@@ -103,3 +159,88 @@
                 <p class="description">Hapa unaweza kusoma kuhusu: Utamaduni wa chakula na ladha zake za kipekee. Tunaangazia safari ya viungo kutoka mashambani hadi meza za dunia.</p>
               </div>
             </div>
+          </div>
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+              <div>
+                <h4 class="title"><a href="hadithi-post-2.html" class="stretched-link">Mapishi ya Kiarusi: Ubunifu wa Kisasa</a></h4>
+                <p class="description">Jifunze jinsi wapishi wetu wanavyochanganya mbinu za jadi na ufundi wa kisasa ili kuleta ladha mpya katika vyakula vya pwani.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <h4 class="title"><a href="hadithi-post-3.html" class="stretched-link">Safari ya Bahari: Vyakula Vitokavyo Pwani</a></h4>
+                <p class="description">Tukio la uvuvi na jinsi vyakula vya baharini vinavyopatikana na kuandaliwa kwa heshima kubwa kwenye mwambao wetu.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
+              <div>
+                <h4 class="title"><a href="hadithi-post-4.html" class="stretched-link">Soko la Vyakula: Moyo wa Utamaduni</a></h4>
+                <p class="description">Simulizi kuhusu soko la vyakula—mahali ambapo kila kitu hukutana, kutoka kwa wazalishaji hadi kwa wateja, kuunda jamii imara.</p>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span> 2025 </span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
+      </div>
+
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
+          <img src="assets/img/tiktok.svg" alt="TikTok" style="height:24px;">
+        </a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank">
+          <img src="assets/img/instagram.svg" alt="Instagram" style="height:24px;">
+        </a>
+        <a href="https://x.com/SahilionHQ" target="_blank">
+          <img src="assets/img/x.svg" alt="X / Twitter" style="height:24px;">
+        </a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank">
+          <img src="assets/img/youtube.svg" alt="YouTube" style="height:24px;">
+        </a>
+      </div>
+
+      <div class="credits text-center mt-2">
+        Kutoka Pwani hadi Ulimwenguni
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
