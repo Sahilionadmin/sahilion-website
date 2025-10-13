@@ -15,66 +15,66 @@
  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,100;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    /* Kurekebisha urefu wa logo kwenye header */
-    .header .logo img {
-        height: 80px; /* Ukubwa umerekebishwa */
-    }
-    
-    /* Kurekebisha Spacing ya Paragraph kwenye heading */
-    .page-title .heading p {
-        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
-    }
+  <style>
+    /* Kurekebisha urefu wa logo kwenye header */
+    .header .logo img {
+        height: 80px; /* Sasa ni 80px kulingana na muundo thabiti */
+    }
+    
+    /* Kurekebisha Spacing ya Paragraph kwenye heading */
+    .page-title .heading p {
+        margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
+    }
 
-    /* Kurekebisha Spacing na Alignment ya kadi za Hadithi */
-    #stories.section {
-        padding-top: 40px; 
-        padding-bottom: 60px;
-    }
-    
-    #stories .service-item {
-        padding: 30px; 
-        min-height: 150px; /* Kadi ziwe na urefu mdogo kuliko za Maonyesho */
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-        transition: 0.3s;
-    }
-    
-    #stories .service-item:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+    /* Kurekebisha Spacing na Alignment ya kadi za Hadithi */
+    #stories.section {
+        padding-top: 40px; 
+        padding-bottom: 60px;
+    }
+    
+    #stories .service-item {
+        padding: 30px; 
+        min-height: 150px; 
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        transition: 0.3s;
+    }
+    
+    #stories .service-item:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-    #stories .service-item .description {
-        margin-bottom: 0;
-        text-align: left;
-        font-size: 0.9rem;
-    }
+    #stories .service-item .description {
+        margin-bottom: 0;
+        text-align: left;
+        font-size: 0.9rem;
+    }
 
-    #stories .service-item .icon {
-        margin-right: 20px;
-        font-size: 36px;
-        line-height: 1;
-        color: var(--primary-color);
-        width: 40px; 
-    }
-    
-    #stories .service-item .title a {
-        font-size: 1.25rem;
-        line-height: 1.5;
-        font-weight: 600;
-        color: var(--default-color);
-    }
-    
-  </style>
+    #stories .service-item .icon {
+        margin-right: 20px;
+        font-size: 36px;
+        line-height: 1;
+        color: var(--primary-color);
+        width: 40px; 
+    }
+    
+    #stories .service-item .title a {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: 600;
+        color: var(--default-color);
+    }
+    
+  </style>
 
 </head>
 
@@ -84,7 +84,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo me-auto me-xl-0">
-                <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo">
+                <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
       </a>
 
      <nav id="navmenu" class="navmenu">
@@ -131,11 +131,11 @@
             <div class="col-lg-8">
               <h1>Hadithi Zetu</h1>
               <p class="mb-0">Karibu kwenye Hadithi za Sahilion. Mahali ambapo tunashiriki makala, simulizi, na maandiko yanayochora picha kamili ya ladha, urithi, na ubunifu wetu wa mwambao wetu.</p>
-              <a href="#stories" class="cta-btn">Angalia Zote<br></a>
+                          </div>
             </div>
           </div>
         </div>
-      </div>
+        
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
@@ -145,8 +145,8 @@
         </div>
       </nav>
     </div>
-    
-    <section id="stories" class="services section">
+    
+    <section id="stories" class="services section">
       <div class="container" data-aos="fade-up">
         
         <div class="row gy-4">
@@ -160,8 +160,8 @@
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
               <div>
@@ -170,8 +170,8 @@
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-geo-alt"></i></div>
               <div>
@@ -180,8 +180,8 @@
               </div>
             </div>
           </div>
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
               <div>
@@ -190,8 +190,8 @@
               </div>
             </div>
           </div>
-          
-          </div>
+          
+          </div>
 
       </div>
     </section>
