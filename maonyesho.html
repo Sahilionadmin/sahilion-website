@@ -23,6 +23,8 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
+    /* CSS YA NDANI ILIYOONDOLEWA/KUREKEBISHWA ILI ISIPINGANE NA main.css */
+    
     /* Kurekebisha urefu wa logo kwenye header */
     .header .logo img {
         height: 80px; /* Ukubwa umerekebishwa */
@@ -33,50 +35,8 @@
         margin-bottom: 20px !important; /* Spacing iliyorekebishwa */
     }
     
-    /* Kurekebisha Spacing na Alignment ya kadi za Maonyesho (Horizontal Grid) */
-    #maonyesho-hub .service-item {
-        padding: 30px; 
-        min-height: 180px; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: left;
-        /* Kuongeza mpaka (border) mdogo kwenye kadi kwa muonekano wa kuvutia zaidi */
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 8px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #maonyesho-hub .service-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transform: translateY(-3px);
-    }
-
-    #maonyesho-hub .service-item .icon {
-        /* Kurekebisha muonekano wa iconi */
-        margin-right: 15px;
-        font-size: 36px;
-        line-height: 1;
-        color: var(--default-color, #ffb03b); /* Rangi kuu ya Sahilion */
-    }
-
-    #maonyesho-hub .service-item .description {
-        margin-bottom: 0;
-        text-align: justify;
-    }
-    
-    #maonyesho-hub .row.gy-4.mb-5 {
-        margin-bottom: 40px !important; 
-    }
-    
-    /* Alignment ya title na description ndani ya kadi */
-    #maonyesho-hub .service-item > div {
-        flex-grow: 1;
-        width: 100%;
-    }
-
     /* Kuhakikisha kadi zote zinalingana kwa urefu katika desktop mode */
+    /* Hii inahitajika hapa kwa sababu inahusiana na layout ya maonyesho.html tu */
     @media (min-width: 992px) {
         #maonyesho-hub .row.gy-4.mb-5 {
             display: flex;
@@ -86,7 +46,6 @@
             display: flex;
         }
     }
-
   </style>
 
 </head>
@@ -158,12 +117,13 @@
       </nav>
     </div>
     
-    <section id="maonyesho-hub" class="services section">
+        <section id="maonyesho-hub" class="services section">
       <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4 mb-5">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex align-items-start">
+                <div class="row gy-4 mb-5">
+          
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item d-flex align-items-start">
               <div class="icon flex-shrink-0"><i class="bi bi-image"></i></div>
               <div>
                 <h4 class="title"><a href="picha.html" class="stretched-link">Tazama Picha Zetu</a></h4>
@@ -172,7 +132,7 @@
             </div>
           </div>
           
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item d-flex align-items-start">
               <div class="icon flex-shrink-0"><i class="bi bi-camera-video"></i></div>
               <div>
