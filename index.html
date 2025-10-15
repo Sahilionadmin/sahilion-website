@@ -1,3 +1,46 @@
+<main class="main">
+
+    <section id="hero" class="hero section" style="background-image: url('assets/img/beach_sunset.jpg'); background-size: cover; background-position: center; position: relative; padding-top: 100px; padding-bottom: 100px;">
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="hero-card" style="
+              /* Rangi ya low opacity beige, kama ulivyoomba */
+              background-color: rgba(245, 245, 220, 0.7); /* Beige (F5F5DC) na opacity 0.7 */
+              padding: 40px;
+              border-radius: 10px;
+              color: #4A2C2A; /* Rangi kuu ya maandishi (Dark Brown) */
+              border: 1px solid rgba(74, 44, 42, 0.3);
+            ">
+              <h2 style="color: #4A2C2A;">Kutoka Pwani hadi Ulimwenguni</h2>
+              <p style="margin-bottom: 30px; color: #4A2C2A;"> 
+                Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
+              </p>
+              
+              <div class="btn-group" style="display: flex; justify-content: center;">
+                <a href="kuhusu.html" class="btn-get-started" style="
+                  background-color: #D35400; 
+                  color: white; 
+                  border-radius: 8px; 
+                  padding: 10px 24px;
+                  text-decoration: none;
+                ">Gundua Zaidi</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    ```
+
+Kwa matumizi rahisi, hapa kuna **HTML nzima iliyorekebishwa upya** na tatizo la *rectangular block* likiwa limetatuliwa:
+
+```html
 <!DOCTYPE html>
 <html lang="sw">
 
@@ -78,18 +121,18 @@
           <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
 
             <div class="hero-card" style="
-              /* MAREKEBISHO HAPA: Rangi ya low opacity beige */
+              /* MAREKEBISHO YAMEFANYIKA HAPA: Rangi ya low opacity beige */
               background-color: rgba(245, 245, 220, 0.7); /* Beige (F5F5DC) na opacity 0.7 */
               padding: 40px;
               border-radius: 10px;
-              color: #4A2C2A; /* Maandishi meusi (Brown/Dark) ili yasomeke vizuri kwenye beige */
-              border: 1px solid rgba(74, 44, 42, 0.3); /* Mpaka mwepesi uendane na rangi ya maandishi */
-              /* backdrop-filter: blur(5px); */
+              color: #4A2C2A; /* Rangi kuu ya maandishi ya kadi */
+              border: 1px solid rgba(74, 44, 42, 0.3);
             ">
               <h2 style="color: #4A2C2A;">Kutoka Pwani hadi Ulimwenguni</h2>
               <p style="margin-bottom: 30px; color: #4A2C2A;">
                 Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Sahilion inakupeleka kwenye safari ya chakula cha Kiswahili, ambacho ni burudisho, utambulisho, na sanaa kwa kila ladha.
               </p>
+              
               <div class="btn-group" style="display: flex; justify-content: center;">
                 <a href="kuhusu.html" class="btn-get-started" style="
                   background-color: #D35400; 
@@ -97,7 +140,6 @@
                   border-radius: 8px; 
                   padding: 10px 24px;
                   text-decoration: none;
-                  /* Kuondoa margin-right ya kitufe kilichoondolewa */
                 ">Gundua Zaidi</a>
                 </div>
             </div>
