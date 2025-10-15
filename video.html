@@ -8,48 +8,35 @@
   <meta name="description" content="Tazama makusanyo yetu ya video, ikiwemo matukio, filamu fupi, na mahojiano yenye maudhui ya kipekee.">
   <meta name="keywords" content="Video, Videography, Maonyesho, Filamu, Sahilion">
 
-    <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->  
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/favicon.png" rel="favicon.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/css/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<!-- Vendor CSS Files -->  
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link href="assets/css/main.css" rel="stylesheet">
+<!-- Main CSS File -->  
+<link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    /* Custom Style kwa logo yenye height iliyo thabiti */
-    .header .logo img {
-        height: 80px;
-    }
-    /* CSS kwa ajili ya kufanana na ukubwa wa 'Kuhusu' Breadcrumbs */
-    .page-title .heading {
-        padding-top: 80px; 
-        padding-bottom: 20px;
-    }
-    .page-title .breadcrumbs {
-        padding: 15px 0;
-    }
-    /* Custom styles kwa ajili ya kuonyesha icon ya Video/Play kwenye placeholder */
-    .gallery-item .gallery-links .preview-link i.bi-play-circle-fill {
-        font-size: 30px;
-        color: var(--color-white);
-    }
-  </style>
 </head>
 
 <body class="gallery-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
-      </a>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
+      </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -68,20 +55,21 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div class="header-social-links">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
-          <img src="assets/img/tiktok.svg" alt="TikTok" style="height:24px;">
-        </a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank">
-          <img src="assets/img/instagram.svg" alt="Instagram" style="height:24px;">
-        </a>
-        <a href="https://x.com/SahilionHQ" target="_blank">
-          <img src="assets/img/x.svg" alt="X / Twitter" style="height:24px;">
-        </a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank">
-          <img src="assets/img/youtube.svg" alt="YouTube" style="height:24px;">
-        </a>
-      </div>
+       <div class="header-social-links">
+       <div class="social-links">
+  <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok">
+    <i class="bi bi-tiktok"></i>
+  </a>
+  <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+  <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube">
+    <i class="bi bi-youtube"></i>
+  </a>
+</div>
 
     </div>
   </header>
@@ -108,8 +96,9 @@
             </ol>
           </div>
         </nav>
-    </div>        <section id="gallery" class="gallery section">
-              <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    </div>        
+        <section id="gallery" class="gallery section">
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
                     <div class="col-xl-3 col-lg-4 col-md-6">...</div>
           <div class="col-xl-3 col-lg-4 col-md-6">...</div>
@@ -123,41 +112,54 @@
       </div>
     </section>  </main>
 
-  <footer id="footer" class="footer">
+ <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
 
-    <div class="container">
-      <div class="copyright text-center">
-        <p>© <span> 2025 </span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
-      </div>
+  <div class="container text-center">
 
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank">
-          <img src="assets/img/tiktok.svg" alt="TikTok" style="height:24px;">
-        </a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank">
-          <img src="assets/img/instagram.svg" alt="Instagram" style="height:24px;">
-        </a>
-        <a href="https://x.com/SahilionHQ" target="_blank">
-          <img src="assets/img/x.svg" alt="X / Twitter" style="height:24px;">
-        </a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank">
-          <img src="assets/img/youtube.svg" alt="YouTube" style="height:24px;">
-        </a>
-      </div>
+    <!-- Copyright -->
+    <div class="copyright mb-2">
+      <p style="color:#F5F5DC;">© <span>2025</span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
+    </div>
 
-      <div class="credits text-center mt-2">
-        Kutoka Pwani hadi Ulimwenguni
-      </div>
-    </div>
+    <!-- Social Links (Bootstrap Icons) -->
+    <div class="social-links d-flex justify-content-center gap-3 mb-2">
+      <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;">
+        <i class="bi bi-tiktok"></i>
+      </a>
+      <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
 
-  </footer>
+    <!-- Tagline / Credits -->
+    <div class="credits" style="color:#F5F5DC;">
+      Kutoka Pwani hadi Ulimwenguni
+    </div>
 
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"><div class="line"></div></div>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  </div>
+
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="line"></div>
+</div>
+
+<!-- JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 
