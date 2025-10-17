@@ -39,7 +39,7 @@
   --nav-hover-color: #ffffff; /* White */
   --nav-mobile-background-color: #4A2C2A; /* Dark Surface (Brown) */
   --nav-dropdown-background-color: #4A2C2A; /* Dark Surface (Brown) */
-  --nav-dropdown-color: rgba(255, 255, 255, 0.8);
+  --nav-dropdown-color: #F5F5DC;
   --nav-dropdown-hover-color: #ffffff;
 }
 
