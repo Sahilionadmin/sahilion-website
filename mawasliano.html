@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="favicon.png">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,11 +30,14 @@
 
 <body class="contact-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/sahilion_logo.svg" alt="Sahilion Logo" style="height: 80px;">
       </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Nyumbani</a></li>
@@ -51,24 +54,17 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <div class="header-social-links">
-        <div class="social-links">
-          <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok">
-            <i class="bi bi-tiktok"></i>
-          </a>
-          <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube">
-            <i class="bi bi-youtube"></i>
-          </a>
-        </div>
+
+      <div class="header-social-links d-flex align-items-center">
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
       </div>
+
     </div>
   </header>
+  <!-- End Header -->
 
   <main class="main">
 
@@ -92,82 +88,85 @@
           </ol>
         </div>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
         <div class="container section-title" data-aos="fade-up">
           <h2>Mawasiliano</h2>
           <p>Ungana nasi au tuandikie ujumbe wako. Tunafurahia kusikia kutoka kwako!</p>
         </div>
 
         <!-- Newsletter Signup -->
-        <div class="newsletter-wrapper mb-5 text-center">
+        <div class="newsletter-wrapper mb-5 text-center" data-aos="fade-up" data-aos-delay="200">
           <h4>Usajili wa Jarida la Sahilion</h4>
           <p>Jiunge nasi ili upokee habari, ladha, na hadithi mpya kutoka Pwani hadi Ulimwenguni.</p>
           <form action="https://formspree.io/f/xanpjqnl" method="POST" class="newsletter-signup d-flex justify-content-center align-items-center mt-3">
             <input type="email" name="email" class="form-control me-2" placeholder="Weka barua pepe yako..." required>
-            <button type="submit" class="btn" style="background-color:#D35400; color:white;">Jiunge</button>
+            <button type="submit" class="btn btn-primary" style="background-color:#D35400; border:none;">Jiunge</button>
           </form>
         </div>
 
         <!-- Contact Form -->
-        <div class="contact-wrapper">
+        <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="300">
           <h4 class="text-center mb-4">Tuma Ujumbe Wako</h4>
-          <form action="https://formspree.io/f/mblzydly" method="POST" data-aos="fade-up" data-aos-delay="300" class="contact-form">
+          <form action="https://formspree.io/f/mblzydly" method="POST" class="php-email-form">
             <div class="row gy-4">
+
               <div class="col-md-6">
                 <input type="text" name="name" class="form-control" placeholder="Jina Lako" required>
               </div>
+
               <div class="col-md-6">
                 <input type="email" name="email" class="form-control" placeholder="Barua Pepe Yako" required>
               </div>
+
               <div class="col-md-12">
                 <input type="text" name="subject" class="form-control" placeholder="Kichwa cha Ujumbe" required>
               </div>
+
               <div class="col-md-12">
                 <textarea name="message" class="form-control" rows="6" placeholder="Ujumbe Wako" required></textarea>
               </div>
+
               <div class="col-md-12 text-center">
-                <button type="submit" class="btn" style="background-color:#D35400; color:white;">Tuma Ujumbe</button>
+                <div class="loading">Inatuma...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Ujumbe wako umetumwa. Asante!</div>
+                <button type="submit" style="background-color:#D35400; border:none;">Tuma Ujumbe</button>
               </div>
+
             </div>
           </form>
         </div>
 
       </div>
-    </section><!-- /Contact Section -->
+    </section>
+    <!-- /Contact Section -->
 
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
     <div class="container text-center">
-      <!-- Copyright -->
       <div class="copyright mb-2">
         <p style="color:#F5F5DC;">© <span>2025</span> <strong class="px-1 sitename">Sahilion</strong> <span>Haki Zote Zimehifadhiwa</span></p>
       </div>
-      <!-- Social Links (Bootstrap Icons) -->
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-tiktok"></i>
-        </a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-youtube"></i>
-        </a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-youtube"></i></a>
       </div>
-      <!-- Tagline / Credits -->
       <div class="credits" style="color:#F5F5DC;">
         Kutoka Pwani hadi Ulimwenguni
       </div>
     </div>
   </footer>
+  <!-- End Footer -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -179,6 +178,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
