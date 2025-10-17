@@ -210,6 +210,48 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<!-- Your HTML content above remains unchanged -->
+
+<!-- Your custom JavaScript code -->
+<script>
+  document.querySelector('#contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Show the loading message
+    document.querySelector('.loading').style.display = 'block';
+
+    const formData = new FormData(this);
+
+    // Send the form data using Fetch API
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        // Check if the form submission was successful
+        if (response.ok) {
+            // Hide loading and show success message
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.sent-message').style.display = 'block';
+        } else {
+            // Handle error case if needed
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.error-message').style.display = 'block';
+            document.querySelector('.error-message').textContent = 'Something went wrong. Please try again.';
+        }
+    })
+    .catch(error => {
+        // Handle any JavaScript error
+        document.querySelector('.loading').style.display = 'none';
+        document.querySelector('.error-message').style.display = 'block';
+        document.querySelector('.error-message').textContent = 'Network error. Please try again later.';
+    });
+});
+</script>
+
+</body>
+
+
 </body>
 
 </html>
