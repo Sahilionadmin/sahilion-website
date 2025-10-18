@@ -178,25 +178,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Language-switcher
---------------------------------------------------------------*/
-
-.language-switcher {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.lang-switch img {
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.lang-switch img:hover {
-  opacity: 0.7;
-}
-
-/*--------------------------------------------------------------
 # Navigation Menu (Header imebadilika, hivi pia)
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
