@@ -129,8 +129,42 @@
         new Swiper(swiperElement, config);
       }
     });
+
   }
 
   window.addEventListener("load", initSwiper);
 
 })();
+
+// Get all language switcher elements
+const langSwitchers = document.querySelectorAll('.lang-switch');
+
+langSwitchers.forEach(switcher => {
+  switcher.addEventListener('click', (event) => {
+    const lang = event.target.closest('.lang-switch').getAttribute('data-lang');
+
+    // Set the language on the page
+    setLanguage(lang);
+  });
+});
+
+function setLanguage(language) {
+  // Change page language here
+  document.documentElement.lang = language;
+
+  // You can also implement more logic to show/hide text in each language
+  if (language === 'en') {
+    document.querySelectorAll('[data-en]').forEach((element) => {
+      const text = element.getAttribute('data-en');
+      if (text) {
+        element.textContent = text;
+      }
+    });
+  } else if (language === 'sw') {
+    document.querySelectorAll('[data-en]').forEach((element) => {
+      const originalText = element.textContent;
+      // You can have a mapping of translations for Swahili here
+      element.textContent = originalText; // Or keep it as it is
+    });
+  }
+}
