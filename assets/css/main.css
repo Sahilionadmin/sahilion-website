@@ -178,6 +178,46 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Language Toggle
+--------------------------------------------------------------*/
+.language-toggle {
+  margin-left: auto; /* Itasogezwa kushoto mwa Mobile nav/Social links */
+  margin-right: 15px;
+}
+
+.language-toggle a {
+  color: var(--nav-hover-color); /* White */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle a:hover {
+  color: var(--primary-brand-color); /* Orange kwenye hover */
+}
+
+.language-toggle .flag-icon {
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Border ndogo nyeupe */
+  margin-right: 5px;
+}
+
+/* Kurekebisha mpangilio wa lugha kwenye simu */
+@media (max-width: 1200px) {
+  .language-toggle {
+    order: 2; /* Itahama ili iwe karibu na Social Links/Mobile Toggle */
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu (Header imebadilika, hivi pia)
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
