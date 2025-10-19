@@ -178,6 +178,60 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Language Switcher Styling (Marekebisho Kamili)
+--------------------------------------------------------------*/
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  /* Kutoa nafasi kulia sawa na header-social-links, na nafasi kushoto */
+  padding-left: 15px; 
+  padding-right: 15px; 
+  /* Ongeza kigawanyo upande wa kushoto wa lang-switcher */
+  border-left: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%); /* Beige iliyofifia */
+}
+
+.lang-switcher .lang-flag {
+  /* Kurahisisha alignment, sawa na <a> ya social icons */
+  display: inline-block; 
+  
+  /* Rangi ya default ya bendera */
+  opacity: 0.6; 
+  color: color-mix(in srgb, #F5F5DC, transparent 40%); /* Rangi sawa na social icons */
+  
+  /* Mpangilio wa nafasi sawa na social icons */
+  padding-left: 6px;
+  
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lang-switcher .lang-flag:hover {
+  opacity: 1;
+  color: var(--primary-brand-color); /* Rangi ya Orange */
+}
+
+/* Kurekebisha Ukubwa na Muonekano wa Picha ya Bendera */
+.lang-switcher .flag-icon {
+  /* Ukubwa sawa na font-size ya social icons */
+  width: 16px; 
+  height: 16px; 
+  
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  
+  /* MUHIMU: Kutumia line-height: 0px sawa na social icons ili kupanga katikati */
+  line-height: 0px; 
+  vertical-align: middle;
+}
+
+/* STYLE (Active/Clicked Effect) */
+.lang-switcher .flag-icon.active {
+  opacity: 1;
+  border: 2px solid var(--primary-brand-color, #ff5722); /* Rangi ya Orange */
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu (Header imebadilika, hivi pia)
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
