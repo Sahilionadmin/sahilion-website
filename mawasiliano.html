@@ -199,46 +199,41 @@
 
   <script src="assets/js/main.js"></script>
 
-<script>
-  // NOTE: This script handles the form submission messages.
-  // The error message 'Something went wrong. Please try again.' is hardcoded in English here.
-  // If you want this error message translated via your i18n script, you will need to add a key
-  // (e.g., 'contact_error_general') and load it into your JavaScript.
-  document.querySelector('#contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+ <script>
+    document.querySelector('#contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Use data-i18n to get the translated loading message if the script is run first
-    const loadingMessage = this.querySelector('.loading').textContent;
-    this.querySelector('.loading').style.display = 'block';
+        const loadingDiv = this.querySelector('.loading');
+        const errorDiv = this.querySelector('.error-message');
+        const sentDiv = this.querySelector('.sent-message');
+        
+        errorDiv.style.display = 'none';
+        sentDiv.style.display = 'none';
+        loadingDiv.style.display = 'block';
 
-    const formData = new FormData(this);
+        const formData = new FormData(this);
+        const self = this; 
 
-    // Send the form data using Fetch API
-    fetch(this.action, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            // Hide loading and show success message (which is translated by i18n)
-            this.querySelector('.loading').style.display = 'none';
-            this.querySelector('.sent-message').style.display = 'block';
-        } else {
-            // Error handling
-            this.querySelector('.loading').style.display = 'none';
-            this.querySelector('.error-message').style.display = 'block';
-            // Hardcoded English message below:
-            this.querySelector('.error-message').textContent = 'Something went wrong. Please try again.';
-        }
-    })
-    .catch(error => {
-        // Network error handling
-        this.querySelector('.loading').style.display = 'none';
-        this.querySelector('.error-message').style.display = 'block';
-        // Hardcoded English message below:
-        this.querySelector('.error-message').textContent = 'Network error. Please try again later.';
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            loadingDiv.style.display = 'none'; 
+
+            if (response.ok) {
+                sentDiv.style.display = 'block';
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.textContent = getTranslation('contact_error_general'); 
+            }
+        })
+        .catch(error => {
+            loadingDiv.style.display = 'none';
+            errorDiv.style.display = 'block';
+            errorDiv.textContent = getTranslation('contact_error_network'); 
+        });
     });
-});
 </script>
 
 </body>
