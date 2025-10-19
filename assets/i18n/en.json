@@ -133,4 +133,6 @@
   "contact_submit_btn": "Send Message",
   "contact_loading_message": "Loading",
   "contact_sent_message": "Your message has been sent. Thank you!"
+  "contact_error_general": "Something went wrong. Please try again.",
+  "contact_error_network": "Network error. Please try again later."
 }
