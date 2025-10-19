@@ -114,11 +114,17 @@
   "videos_cta_btn": "Submit Your Project",
 
   "title_contact": "Contact - Sahilion | Contact Us",
+
   "meta_desc_contact": "The voice of creativity from the Coast. Discover and join us on a journey of food culture, stories, and coastal innovation projects. Contact us or subscribe to our newsletter for the latest updates.",
+
   "meta_keywords_contact": "Contact, Sahilion, Phone, Email, Coast, Project",
+
   "nav_breadcrumbs_current_contact": "Contact",
+
   "page_title_contact": "Contact Us",
+
   "page_subtitle_contact": "Use the contact form to reach out with questions, suggestions, or ideas for projects you’d like us to collaborate on. We value every idea and welcome conversations that inspire creativity and foster partnership.",
+
   "contact_section_title": "Contact",
   "contact_section_subtitle": "Connect with us or send us your message. We look forward to hearing from you!",
   "newsletter_title": "Sahilion Newsletter Subscription",
@@ -133,6 +139,5 @@
   "contact_submit_btn": "Send Message",
   "contact_loading_message": "Loading",
   "contact_sent_message": "Your message has been sent. Thank you!"
-  "contact_error_general": "Something went wrong. Please try again.",
-  "contact_error_network": "Network error. Please try again later."
+
 }
