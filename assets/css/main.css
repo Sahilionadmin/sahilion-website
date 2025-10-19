@@ -105,18 +105,6 @@ h6 {
   border-bottom: 1px solid color-mix(in srgb, #F5F5DC, transparent 90%); /* Border laini */
 }
 
-/* NEW: Kontena mpya ya kuunganisha bendera na social icons kwenye desktop */
-.header-right-tools {
-    display: flex;
-    align-items: center;
-}
-
-/* NEW: Hii inahakikisha navmenu inachukua nafasi katikati ya logo na tools kwenye desktop */
-.header > .container-fluid > .d-flex {
-    justify-content: space-between; 
-}
-
-
 .header .logo {
   line-height: 1;
 }
@@ -160,38 +148,6 @@ h6 {
 }
 
 @media (max-width: 1200px) {
-  /* MOBILE FIXES: Kuficha Social Icons na Kurekebisha Mpangilio */
-  
-  /* Badilisha order ya .header-right-tools ili iwe pamoja na mobile-nav-toggle (hamburger) */
-  .header .header-right-tools {
-    order: 2; /* Inakaa katikati, karibu na mobile-nav-toggle */
-    margin-left: auto; /* Inasaidia kusukuma Lang/Social kwenda kulia */
-  }
-
-  /* Kuficha Social Icons Kwenye Simu (Lengo Kuu) */
-  .header .header-social-links {
-    display: none !important;
-  }
-  
-  /* Rekebisha Lang Switcher isichukue nafasi nyingi */
-  .lang-switcher {
-    padding-right: 10px !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-  }
-
-  /* Weka Lang Switcher kushoto kidogo ya Hamburger Icon */
-  .header .mobile-nav-toggle {
-      order: 3; /* Inakaa kulia kabisa */
-      margin-left: 10px; /* Nafasi kati ya lang icon na hamburger */
-  }
-
-  /* Navigation menu inafichwa (kwa default) */
-  .header .navmenu {
-    display: none;
-  }
-
-  /* Sheria zilizopo za logo, n.k., bado ziko sahihi hapa */
   .header .logo {
     order: 1;
   }
@@ -204,6 +160,17 @@ h6 {
     font-size: 20px;
   }
 
+  .header .header-social-links {
+    order: 2;
+  }
+
+  .header .header-social-links a {
+    font-size: 16px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
 }
 
 .scrolled .header {
@@ -211,13 +178,23 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Language Switcher Styling (Na Duara Beige) - REVISED
+# SAHILION CUSTOMIZATION: Ficha Social Icons kwenye Simu (Mobile)
+--------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  /* Ficha kabisa social icons zote kwenye header (kama vile Twitter, Facebook) */
+  .header .header-social-links {
+    display: none !important; /* Tumia !important kuhakikisha inashinda sheria nyingine */
+  }
+}
+
+/*--------------------------------------------------------------
+# Language Switcher Styling (Na Duara Beige)
 --------------------------------------------------------------*/
 .lang-switcher {
   display: flex;
   align-items: center;
   /* Nafasi kati ya navmenu na bendera/social icons */
-  /* Margin-right iliyopita imeondolewa kwa kuwa sasa imewekwa kwa .header-social-links na Mobile Fixes */
+  margin-right: 15px; 
 }
 
 /* CONTAINER YA KILA BENDERA (LANG-FLAG) - Hii ndiyo Inaunda Duara la Beige */
@@ -271,15 +248,17 @@ h6 {
 /*--------------------------------------------------------------
 # Active State Styling (Duara Zima)
 --------------------------------------------------------------*/
+/* Hii inahakikisha duara zima linang'aa lugha inapochaguliwa */
 .lang-switcher .lang-flag.active {
   opacity: 1;
   /* Badilisha border ya duara kwa rangi ya primary/orange */
   border-color: var(--primary-brand-color, #ff5722);
 }
 
+/* Kuzuia hover effect kwenye lugha ambayo tayari imechaguliwa */
 .lang-switcher .lang-flag.active:hover {
-  opacity: 1; 
-  transform: none; 
+  opacity: 1; /* Inabaki mkali */
+  transform: none; /* Inabaki imara */
 }
 
 /*--------------------------------------------------------------
