@@ -187,41 +187,6 @@ h6 {
   }
 }
 
-@media (max-width: 1200px) {
-  /* SHERIA MPYA: Inaiweka Hamburger Toggle Kushoto Kabisa */
-  .mobile-nav-toggle {
-    order: 1; 
-    margin-right: 10px; 
-    margin-left: 0;
-  }
-
-  /* KUBADILISHA: Sasa Logo (order: 2) inakaa katikati zaidi */
-  .header .logo {
-    order: 2; 
-    margin-left: auto; /* Inasaidia kuweka katikati */
-    margin-right: auto;
-  }
-  
-  /* KUBADILISHA: Fanya Logo iwe ndogo kidogo */
-  .header .logo h1 {
-    font-size: 24px;
-  }
-
-  /* KUBADILISHA: Ficha social links kabisa */
-  .header .header-social-links {
-    display: none !important; 
-  }
-
-  /* SHERIA MPYA: Lang Switcher inasukumwa Kulia Kabisa */
-  .lang-switcher {
-    order: 3;
-    margin-left: auto; /* Hii ndiyo siri ya kuisukuma kulia */
-    margin-right: 0;
-  }
-  
-  /* ... sheria nyingine za mobile nav ... */
-}
-
 /*--------------------------------------------------------------
 # Language Switcher Styling (Na Duara Beige)
 --------------------------------------------------------------*/
