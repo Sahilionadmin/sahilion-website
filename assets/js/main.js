@@ -16,23 +16,20 @@
   // KAZI ZA I18N (INTERNATIONALIZATION)
   // =========================================================================
 
-  /**
- * Localization Logic (Added to assets/js/main.js)
- */
-
 const LANG_KEY = 'sahilion_lang'; // Key for localStorage
-const DEFAULT_LANG = 'sw'; // Swahili is default
+const DEFAULT_LANG = 'sw'; // Swahili ni lugha chaguomsingi (default)
 
 let translations = {}; // Object to hold loaded translations
 
-// 1. Fetch Translations from JSON File
+// 1. Fetch Translations from JSON File (Kumbuka: Faili inapaswa kuwa en.json)
 async function fetchTranslations(lang) {
     if (lang === DEFAULT_LANG) {
-        return {}; // No need to load a file for Swahili default
+        return {}; // Hakuna haja ya kupakia faili ya Swahili
     }
     
     try {
-        const response = await fetch(`assets/i18n/en.json`);
+        // Tumeacha .translation na kutumia .json
+        const response = await fetch(`assets/i18n/${lang}.json`); 
         if (!response.ok) {
             console.error(`Could not load translation file for ${lang}.`);
             return {};
@@ -44,25 +41,19 @@ async function fetchTranslations(lang) {
     }
 }
 
-// 2. Apply Translations to the DOM
+// 2. Apply Translations to the DOM (Inatumika tu baada ya page reload)
 function applyTranslations(lang, data) {
-    // Update HTML lang attribute for SEO/Accessibility
     document.documentElement.setAttribute('lang', lang); 
 
     // Find all elements with data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        let value = data[key];
+        const value = data[key];
 
-        // If translation is missing or language is Swahili, rely on default HTML content
-        if (!value || lang === DEFAULT_LANG) {
-            // Special handling for elements where the attribute content is the key
-            if (element.hasAttribute('placeholder')) {
-                // If it's a placeholder, we need to reset/use the Swahili placeholder value
-                // Since we don't have the original Swahili placeholders in the JSON, 
-                // we leave the HTML value, assuming the browser keeps it.
-            }
-            return;
+        // Haina haja ya kuangalia tena kama lang === DEFAULT_LANG hapa,
+        // kwa sababu tunatumia 'reload' na kuzuia fetching ya SW.
+        if (!value) {
+            return; // Acha maudhui ya asili ya HTML kama hakuna tafsiri
         }
 
         // Handle content replacements
@@ -70,64 +61,65 @@ function applyTranslations(lang, data) {
             element.setAttribute('title', value);
         } else if (element.hasAttribute('placeholder')) {
             element.setAttribute('placeholder', value);
-        } else if (element.tagName === 'META') {
-            // Handle meta tags for SEO metadata
-            if (element.getAttribute('name') === 'description') {
-                element.setAttribute('content', value);
-            }
+        } else if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
+            element.setAttribute('content', value);
         } else if (element.tagName === 'TITLE') {
-             // Handle the page title
              element.textContent = value;
         } else {
-            // Default: replace inner HTML content
             element.innerHTML = value;
         }
     });
 }
 
-// 3. Update Flag Visuals
+// 3. Update Flag Visuals (Huu ni msingi wa 'click effect')
 function updateFlagVisual(newLang) {
-    document.querySelectorAll('.flag-icon').forEach(flag => {
-        const parent = flag.closest('.lang-flag');
-        const flagLang = parent ? parent.getAttribute('data-lang') : null;
+    document.querySelectorAll('.lang-flag').forEach(parent => {
+        const flag = parent.querySelector('.flag-icon');
+        const flagLang = parent.getAttribute('data-lang');
 
         if (flagLang === newLang) {
-            flag.classList.add('active');
+            flag.classList.add('active'); // Inaongeza urembo
+            parent.opacity = 1; 
         } else {
             flag.classList.remove('active');
+            parent.opacity = 0.6; // Inafanya bendera nyingine ififia
         }
     });
 }
 
-// 4. Main function to change the language
-async function setLanguage(lang) {
+// 4. Main function to change the language - INATUMIA RELOAD
+async function setLanguageAndReload(lang) {
     // 1. Save preference
     localStorage.setItem(LANG_KEY, lang);
     
-    // 2. Fetch and cache translations if not Swahili
-    translations = await fetchTranslations(lang);
-
-    // 3. Apply changes to the DOM
-    applyTranslations(lang, translations);
-
-    // 4. Update the flags
-    updateFlagVisual(lang);
+    // 2. Reload the page to load content in the new language
+    window.location.reload(); 
 }
 
 // 5. Initialize the application on page load
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Get language preference from localStorage or use default
     const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
 
-    // Load translations and set up the page based on the preference
-    setLanguage(savedLang);
+    if (savedLang !== DEFAULT_LANG) {
+        // 2. Fetch and cache translations (in English)
+        translations = await fetchTranslations(savedLang);
+
+        // 3. Apply changes to the DOM
+        applyTranslations(savedLang, translations);
+    }
+    
+    // 4. Update the flags to show the active language (Hii inafanya kazi mara moja)
+    updateFlagVisual(savedLang);
 
     // Set up click listeners for the flag buttons
     document.querySelectorAll('.lang-flag').forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const lang = button.getAttribute('data-lang');
-            setLanguage(lang);
+            
+            // Tunaita kazi mpya ya kubadilisha na kupakia upya
+            setLanguageAndReload(lang); 
         });
     });
 });
