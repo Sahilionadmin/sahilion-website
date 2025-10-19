@@ -245,6 +245,29 @@ h6 {
   transform: scale(1.05);
 }
 
+@media (max-width: 1200px) {
+  /* ... sheria zako za awali ... */
+  
+  .header .logo {
+    order: 2; /* Hii itaweka Logo katikati ya simu */
+  }
+
+  /*
+   * Tumeshakubaliana kuficha social links,
+   * lakini kama Lang Switcher inajitegemea:
+   */
+  .lang-switcher {
+    order: 3; /* Hii itaweka Lang Icons mwishoni mwa flex row */
+  }
+  
+  /* Kuhakikisha Lang Switcher inashirikiana na Toggle */
+  .header .mobile-nav-toggle {
+    /* Haihitaji order:3 kwa sababu Lang Switcher ina order:3 */
+    /* Lang Switcher na mobile-nav-toggle huenda zikashare nafasi moja
+       ya "mwisho kabisa" kulingana na HTML markup. */
+  }
+}
+
 /*--------------------------------------------------------------
 # Active State Styling (Duara Zima)
 --------------------------------------------------------------*/
