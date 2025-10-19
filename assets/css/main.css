@@ -178,57 +178,77 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Language Switcher Styling (Marekebisho Kamili)
+# Language Switcher Styling (Na Duara Beige)
 --------------------------------------------------------------*/
 .lang-switcher {
   display: flex;
   align-items: center;
-  /* Kutoa nafasi kulia sawa na header-social-links, na nafasi kushoto */
-  padding-left: 15px; 
-  padding-right: 15px; 
-  /* Ongeza kigawanyo upande wa kushoto wa lang-switcher */
-  border-left: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%); /* Beige iliyofifia */
+  /* Nafasi kati ya navmenu na bendera/social icons */
+  margin-right: 15px; 
 }
 
+/* CONTAINER YA KILA BENDERA (LANG-FLAG) - Hii ndiyo Inaunda Duara la Beige */
 .lang-switcher .lang-flag {
-  /* Kurahisisha alignment, sawa na <a> ya social icons */
-  display: inline-block; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Hizi zinaunda Duara la Beige kuzunguka bendera, sawa na footer icons */
+  width: 32px; /* Upana wa duara (kama footer social icons) */
+  height: 32px; /* Urefu wa duara (kama footer social icons) */
+  border-radius: 50%; /* Inafanya iwe duara */
   
-  /* Rangi ya default ya bendera */
-  opacity: 0.6; 
-  color: color-mix(in srgb, #F5F5DC, transparent 40%); /* Rangi sawa na social icons */
+  /* Rangi ya Beige/Picha iliyofifia kama divider */
+  background-color: transparent; 
+  border: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%); 
   
-  /* Mpangilio wa nafasi sawa na social icons */
-  padding-left: 6px;
-  
-  transition: 0.3s;
+  opacity: 0.7; 
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  
+  /* Nafasi kati ya bendera */
+  margin-right: 8px; 
 }
 
 .lang-switcher .lang-flag:hover {
   opacity: 1;
-  color: var(--primary-brand-color); /* Rangi ya Orange */
+  /* Mabadiliko ya hover kwenye duara nzima */
+  border-color: var(--primary-brand-color, #ff5722); 
 }
 
-/* Kurekebisha Ukubwa na Muonekano wa Picha ya Bendera */
+/* PICHA YA BENDERA INAYOKAA NDANI YA DUARA */
 .lang-switcher .flag-icon {
-  /* Ukubwa sawa na font-size ya social icons */
-  width: 16px; 
-  height: 16px; 
-  
+  width: 18px; /* Ukubwa wa picha ya bendera (sawa na icons) */
+  height: 18px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2); 
-  
-  /* MUHIMU: Kutumia line-height: 0px sawa na social icons ili kupanga katikati */
+  /* Ondoa border kwa picha yenyewe, duara linatumiwa kama border */
+  border: none; 
   line-height: 0px; 
   vertical-align: middle;
 }
 
-/* STYLE (Active/Clicked Effect) */
+/* STYLE KWA BENDERA ILIYOCHAGULIWA (Active Effect) */
 .lang-switcher .flag-icon.active {
   opacity: 1;
-  border: 2px solid var(--primary-brand-color, #ff5722); /* Rangi ya Orange */
+  /* Kutoa kivuli kidogo tu, border itachukuliwa na .lang-flag:hover */
   box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+  transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
+# Active State Styling (Duara Zima)
+--------------------------------------------------------------*/
+/* Hii inahakikisha duara zima linang'aa lugha inapochaguliwa */
+.lang-switcher .lang-flag.active {
+  opacity: 1;
+  /* Badilisha border ya duara kwa rangi ya primary/orange */
+  border-color: var(--primary-brand-color, #ff5722);
+}
+
+/* Kuzuia hover effect kwenye lugha ambayo tayari imechaguliwa */
+.lang-switcher .lang-flag.active:hover {
+  opacity: 1; /* Inabaki mkali */
+  transform: none; /* Inabaki imara */
 }
 
 /*--------------------------------------------------------------
