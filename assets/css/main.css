@@ -1,41 +1,38 @@
 /**
 * Template Name: PhotoFolio (MODIFIED FOR SAHILION)
-* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
 * Updated: Oct 2025 (Sahilion Customization)
 * Author: BootstrapMade.com & Sahilion Team
 * License: https://bootstrapmade.com/license/
 */
 
 /*--------------------------------------------------------------
-# Font & Color Variables - SAHILION CUSTOMIZATION
+# FONT & COLOR VARIABLES - SAHILION CUSTOMIZATION
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  /* Badilisha fonti: Kutoka Cardo/Inter kwenda Roboto/Madimi One */
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --heading-font: "Madimi One", cursive; /* Fonti kwa vichwa vikuu */
   --nav-font: "Roboto", sans-serif; /* Tumia Roboto kwa nav pia */
 }
 
-/* Global Colors - SAHILION PALETTE (Mabadiliko Kuu Hapa) */
+/* GLOBAL COLORS - SAHILION PALETTE */
 :root {
-  /* Background/Default Colors (Sasa ni Light/Beige Mode) */
-  --background-color: #F5F5DC; /* Sasa: Beige/Cream (Sehemu Kuu ya Body) */
-  --default-color: #4A2C2A; /* Sasa: Brown/Dark Accent (Maandishi Kuu) */
-  --heading-color: #4A2C2A; /* Sasa: Brown (Vichwa Vikuu) */
-  --surface-color: #FFFFFF; /* White/Light Surface (kwa cards/boxes) */
-  --contrast-color: #FFFFFF; /* White - Rangi ya maandishi juu ya accent color */
+  /* Background/Default Colors The entire website, Light/Beige Mode */
+  --background-color: #F5F5DC; /* For the body background, Beige/Cream */
+  --default-color: #4A2C2A; /* For the website texts, Brown/Dark Accent */
+  --heading-color: #4A2C2A; /* For main Headings, Brown (Vichwa Vikuu) */
+  --surface-color: #FFFFFF; /* White/Light Surface for (cards/boxes) */
+  --contrast-color: #FFFFFF; /* White - ext color for accent background */
 
-  /* Sahilion Accent Colors */
-  --primary-brand-color: #D35400; /* Orange/Accent color (Kama CTA) */
-  --secondary-brand-color: #4A2C2A; /* Brown/Dark Accent (Kama Primary/Darkest Color) */
-  
+  /* SAHILION ACCENT COLORS */
+  --primary-brand-color: #D35400; /* Orange/Accent color (CTA) */
+  --secondary-brand-color: #4A2C2A; /* Brown/Dark Accent (Primary/Darkest Color) */
   --accent-color: var(--primary-brand-color); /* Tumia Orange kama rangi kuu ya accent */
 }
 
-/* Nav Menu Colors */
+/* NAV MENU COLORS */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.7); /* White iliyofifia (Juxtaposed na Brown Header) */
+  --nav-color: rgba(255, 255, 255, 0.7); /* White iliyofifia (Juxtaposed & Brown Header) */
   --nav-hover-color: #ffffff; /* White */
   --nav-mobile-background-color: #4A2C2A; /* Dark Surface (Brown) */
   --nav-dropdown-background-color: #4A2C2A; /* Dark Surface (Brown) */
@@ -43,7 +40,7 @@
   --nav-dropdown-hover-color: #ffffff;
 }
 
-/* Color Presets (Zinaweza kutoa matatizo, tunazipuuza kwa muda, au tunazirekebisha kidogo) */
+/* COLOR PRESETS (Zinaweza kutoa matatizo, tunazipuuza kwa muda, au tunazirekebisha kidogo) */
 .light-background {
   --background-color: #F5F5DC; /* Beige */
   --surface-color: #FFFFFF;
@@ -63,7 +60,7 @@
 }
 
 /*--------------------------------------------------------------
-# General Styling & Shared Classes
+# GENERAL STYLING & SHARED CLASSES
 --------------------------------------------------------------*/
 body {
   /* Maandishi #4A2C2A na Background #F5F5DC */
@@ -94,7 +91,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header (Tunatumia Brown)
+# GLOBAL HEADER
 --------------------------------------------------------------*/
 .header {
   color: #F5F5DC; /* Beige */
@@ -178,114 +175,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# SAHILION CUSTOMIZATION: Ficha Social Icons kwenye Simu (Mobile)
---------------------------------------------------------------*/
-@media (max-width: 1200px) {
-  /* Ficha kabisa social icons zote kwenye header (kama vile Twitter, Facebook) */
-  .header .header-social-links {
-    display: none !important; /* Tumia !important kuhakikisha inashinda sheria nyingine */
-  }
-}
-
-/*--------------------------------------------------------------
-# Language Switcher Styling (Na Duara Beige)
---------------------------------------------------------------*/
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  /* Nafasi kati ya navmenu na bendera/social icons */
-  margin-right: 15px; 
-}
-
-/* CONTAINER YA KILA BENDERA (LANG-FLAG) - Hii ndiyo Inaunda Duara la Beige */
-.lang-switcher .lang-flag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Hizi zinaunda Duara la Beige kuzunguka bendera, sawa na footer icons */
-  width: 32px; /* Upana wa duara (kama footer social icons) */
-  height: 32px; /* Urefu wa duara (kama footer social icons) */
-  border-radius: 50%; /* Inafanya iwe duara */
-  
-  /* Rangi ya Beige/Picha iliyofifia kama divider */
-  background-color: transparent; 
-  border: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%); 
-  
-  opacity: 0.7; 
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  
-  /* Nafasi kati ya bendera */
-  margin-right: 8px; 
-}
-
-.lang-switcher .lang-flag:hover {
-  opacity: 1;
-  /* Mabadiliko ya hover kwenye duara nzima */
-  border-color: var(--primary-brand-color, #ff5722); 
-}
-
-/* PICHA YA BENDERA INAYOKAA NDANI YA DUARA */
-.lang-switcher .flag-icon {
-  width: 18px; /* Ukubwa wa picha ya bendera (sawa na icons) */
-  height: 18px;
-  border-radius: 50%;
-  /* Ondoa border kwa picha yenyewe, duara linatumiwa kama border */
-  border: none; 
-  line-height: 0px; 
-  vertical-align: middle;
-}
-
-/* STYLE KWA BENDERA ILIYOCHAGULIWA (Active Effect) */
-.lang-switcher .flag-icon.active {
-  opacity: 1;
-  /* Kutoa kivuli kidogo tu, border itachukuliwa na .lang-flag:hover */
-  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
-  transform: scale(1.05);
-}
-
-@media (max-width: 1200px) {
-  /* ... sheria zako za awali ... */
-  
-  .header .logo {
-    order: 2; /* Hii itaweka Logo katikati ya simu */
-  }
-
-  /*
-   * Tumeshakubaliana kuficha social links,
-   * lakini kama Lang Switcher inajitegemea:
-   */
-  .lang-switcher {
-    order: 3; /* Hii itaweka Lang Icons mwishoni mwa flex row */
-  }
-  
-  /* Kuhakikisha Lang Switcher inashirikiana na Toggle */
-  .header .mobile-nav-toggle {
-    /* Haihitaji order:3 kwa sababu Lang Switcher ina order:3 */
-    /* Lang Switcher na mobile-nav-toggle huenda zikashare nafasi moja
-       ya "mwisho kabisa" kulingana na HTML markup. */
-  }
-}
-
-/*--------------------------------------------------------------
-# Active State Styling (Duara Zima)
---------------------------------------------------------------*/
-/* Hii inahakikisha duara zima linang'aa lugha inapochaguliwa */
-.lang-switcher .lang-flag.active {
-  opacity: 1;
-  /* Badilisha border ya duara kwa rangi ya primary/orange */
-  border-color: var(--primary-brand-color, #ff5722);
-}
-
-/* Kuzuia hover effect kwenye lugha ambayo tayari imechaguliwa */
-.lang-switcher .lang-flag.active:hover {
-  opacity: 1; /* Inabaki mkali */
-  transform: none; /* Inabaki imara */
-}
-
-/*--------------------------------------------------------------
-# Navigation Menu (Header imebadilika, hivi pia)
+# SAHILION NAVIGATION MENU
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
@@ -522,7 +412,96 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer (Tunatumia Brown)
+# LANGUAGE SWITCHER (Circular Beige) - Sahilion Custom
+--------------------------------------------------------------*/
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Nafasi kati ya navmenu & social icons */
+}
+
+/* Container of each flag (LANG-FLAG) - circular beige */
+.lang-switcher .lang-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%);
+  
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+  margin-right: 8px; /* Nafasi kati ya bendera */
+}
+
+.lang-switcher .lang-flag:hover {
+  opacity: 1;
+  border-color: var(--primary-brand-color, #ff5722);
+}
+
+/* PICHA YA BENDERA NDANI YA DUARA */
+.lang-switcher .flag-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* ACTIVE EFFECT (Chaguliwa) */
+.lang-switcher .lang-flag.active,
+.lang-switcher .flag-icon.active {
+  opacity: 1;
+  border-color: var(--primary-brand-color, #ff5722);
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+  transform: scale(1.05);
+}
+
+/* Kuzuia hover effect kwa lugha iliyochaguliwa */
+.lang-switcher .lang-flag.active:hover {
+  transform: none;
+}
+
+/*--------------------------------------------------------------
+# RESPONSIVE (<=1200px) - SAHILION HEADER ORDER
+--------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .lang-switcher {
+    order: 2;
+    margin-right: 10px;
+  }
+
+  .header .header-social-links {
+    display: none !important;
+  }
+
+  .header .mobile-nav-toggle {
+    order: 3;
+    margin-left: 10px;
+  }
+
+  .header,
+  .header .d-flex,
+  .header-right-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/*--------------------------------------------------------------
+# GLOBAL FOOTER (Tunatumia Brown)
 --------------------------------------------------------------*/
 .footer {
   --background-color: #4A2C2A; /* Brown */
@@ -668,7 +647,7 @@ h6 {
 
 @keyframes preloaderfinish {
   0% {
-    width: 5 0%;
+    width: 50%;
   }
 
   100% {
@@ -710,7 +689,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
+# DISABLE OAS ANIMATION DELAY ON MOBILE DEVICES
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
@@ -719,7 +698,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs (Kama sehemu ya body, tunatumia Beige)
+# GLOBAL PAGE TITLES & BREADCRUMBS
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color); /* Brown */
@@ -782,8 +761,12 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 50%); /* Brown iliyofifia */
 }
 
+.page-title nav.empty-breadcrumb {
+  padding: 35px 0; /* same height as other pages */
+}
+
 /*--------------------------------------------------------------
-# Global Sections (Kama sehemu ya body)
+# GLOBAC SECTION (Kama sehemu ya body)
 --------------------------------------------------------------*/
 section,
 .section {
@@ -803,10 +786,10 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Global Section Titles (Kama sehemu ya body)
+# GLOBAL SECTION TITLES (Kama sehemu ya body)
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   position: relative;
 }
 
@@ -841,7 +824,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section - SAHILION CUSTOMIZATION
+# HERO SECTION - SAHILION CUSTOMIZATION
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -906,7 +889,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Gallery Section
+# GALLERY SECTION
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   position: relative;
@@ -969,39 +952,66 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section (Kama sehemu ya body)
+# ABOUT SECTION
 --------------------------------------------------------------*/
 .about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--heading-color); /* Brown */
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--heading-color);
+}
+
+.about .content p {
+    margin-bottom: 15px !important;
+    font-style: normal !important;
+    text-align: justify;
+}
+
+.about .content p.m-0 {
+    margin-top: 15px !important;
+    margin-bottom: 0 !important;
+}
+
+.about .content .fst-italic {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+.about .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .about .content ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  color: var(--default-color); /* Brown */
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 5px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--default-color);
 }
 
 .about .content ul strong {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--primary-brand-color); /* Orange */
-  line-height: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--default-color, #ffb03b);
+    padding-right: 5px;
+    margin-top: 4px;
 }
 
 /*--------------------------------------------------------------
-# Gallery Details Section (Kama sehemu ya body)
+# GALLERRY DETAILS SECTION (Kama sehemu ya body)
 --------------------------------------------------------------*/
 .gallery-details .portfolio-details-slider img {
   width: 100%;
@@ -1154,7 +1164,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section (Hadithi na Maonyesho Hub)
+# SERVICE SECTION (Hadithi na Maonyesho Hub)
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color); /* White/Light Surface */
@@ -1241,15 +1251,14 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# STARTER SECTION
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+  /* Hapa unaweza kuongeza styles za container kubwa ya starter section */
+}
 
-/*--------------------------------------------------------------
-# Contact & Newsletter Forms
---------------------------------------------------------------*/
-.contact-form {
+/* Contact & Newsletter Forms ndani ya Starter Section */
+.starter-section .contact-form {
   background-color: #fffaf0;
   padding: 2rem;
   border-radius: 12px;
@@ -1257,21 +1266,21 @@ section,
   margin-bottom: 2rem;
 }
 
-.contact-form form {
+.starter-section .contact-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.starter-section .contact-form input,
+.starter-section .contact-form textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
 }
 
-.contact-form button {
+.starter-section .contact-form button {
   background-color: #4A2C2A;
   color: #F5F5DC;
   border: none;
@@ -1282,11 +1291,11 @@ section,
   transition: 0.3s;
 }
 
-.contact-form button:hover {
+.starter-section .contact-form button:hover {
   background-color: #D35400;
 }
 
-.newsletter-form {
+.starter-section .newsletter-form {
   text-align: center;
   padding: 2rem;
   background-color: #fefbf5;
@@ -1294,7 +1303,7 @@ section,
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
-.newsletter-form input[type="email"] {
+.starter-section .newsletter-form input[type="email"] {
   width: 70%;
   max-width: 400px;
   padding: 0.75rem;
@@ -1302,7 +1311,7 @@ section,
   border-radius: 8px;
 }
 
-.newsletter-form button {
+.starter-section .newsletter-form button {
   background-color: #4A2C2A;
   color: #F5F5DC;
   border: none;
@@ -1314,9 +1323,149 @@ section,
   transition: 0.3s;
 }
 
-.newsletter-form button:hover {
+.starter-section .newsletter-form button:hover {
   background-color: #D35400;
 }
 
+/* Buttons using brand color ndani ya Starter Section */
+.starter-section .btn-brand {
+  background-color: #D35400;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
 
+.starter-section .btn-brand:hover {
+  background-color: color-mix(in srgb, #D35400 90%, white 10%);
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# CONTACT INFO ICONS (Location, Call, Email)
+--------------------------------------------------------------*/
+.contact .info-item i {
+  font-size: 20px;
+  color: #4A2C2A; /* Brand brown */
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(77, 45, 42, 0.4); /* semi-transparent brown */
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info-item:hover i {
+  background-color: #5DADE2; /* Light blue hover */
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# CONTACT & NEWSLETTER FORMS - Sahilion Custom
+--------------------------------------------------------------*/
+
+/* Form Containers */
+.contact-form,
+.newsletter-form {
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  background-color: #fffaf0; /* Default for contact; newsletter override below */
+}
+
+.newsletter-form {
+  text-align: center;
+  background-color: #fefbf5; /* Newsletter specific */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Form Layout */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs & Textareas */
+.contact-form input,
+.contact-form textarea,
+.newsletter-form input[type="email"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newsletter-form input[type="email"] {
+  width: 70%;
+  max-width: 400px;
+}
+
+/* Buttons - unified style */
+.contact-form button,
+.newsletter-form button,
+.cta-btn.form-btn {
+  background-color: #4A2C2A;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.newsletter-form button {
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.2rem; /* maintain original newsletter size */
+}
+
+.cta-btn.form-btn {
+  background-color: #D35400; /* Brand orange */
+  letter-spacing: 0.5px;
+}
+
+.contact-form button:hover,
+.newsletter-form button:hover,
+.cta-btn.form-btn:hover,
+.cta-btn.form-btn:focus {
+  background-color: #5DADE2; /* Light blue hover */
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cta-btn.form-btn:active {
+  transform: translateY(0);
+  background-color: #4A2C2A; /* Optional pressed color */
+}
+
+/* Uniform spacing for contact sections */
+.section-title,
+.info-wrap,
+.newsletter-wrapper,
+.contact-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title,
+  .info-wrap,
+  .newsletter-wrapper,
+  .contact-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
