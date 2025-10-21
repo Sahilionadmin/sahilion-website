@@ -9,19 +9,23 @@
   <meta name="description" data-i18n="meta_desc_home" content="Ladha, harufu, na roho ya pwani ya Zanzibar. Gundua safari ya chakula cha Kiafrika Mashariki kutoka Sahilion.">
   <meta name="keywords" data-i18n="meta_keywords_home" content="Zanzibar, Chakula cha Pwani, Afrika Mashariki, Sahilion, Vyakula, Viungo">
 
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="favicon.png">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
@@ -32,7 +36,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo">
+        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo" data-i18n="[alt]logo_alt">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -48,37 +52,28 @@
           <li><a href="hadithi.html" data-i18n="nav_stories">Hadithi</a></li>
           <li><a href="mawasiliano.html" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
-<div class="header-right-tools d-flex align-items-center">
-        <div class="lang-switcher" id="lang-switcher">
-          <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
-            <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active">
-          </a>
-          <a href="#" class="lang-flag" data-lang="en" title="English">
-            <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon">
-          </a>
-        </div>
+      <div class="lang-switcher" id="lang-switcher">
+        <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
+          <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active" data-i18n="[alt]flag_sw">
+        </a>
+        <a href="#" class="lang-flag" data-lang="en" title="English">
+          <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon" data-i18n="[alt]flag_en">
+        </a>
+      </div>
 
       <div class="header-social-links">
         <div class="social-links">
-          <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok">
-            <i class="bi bi-tiktok"></i>
-          </a>
-          <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x">
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube">
-            <i class="bi bi-youtube"></i>
-          </a>
+          <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" title="TikTok" data-i18n="[title]social_tiktok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" title="Instagram" data-i18n="[title]social_instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" title="X (Twitter)" data-i18n="[title]social_twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" title="YouTube" data-i18n="[title]social_youtube"><i class="bi bi-youtube"></i></a>
         </div>
-
       </div>
+    </div>
   </header>
 
   <main class="main">
@@ -90,17 +85,16 @@
           <div class="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
 
             <div class="hero-card" style="
-              /* Rangi ya low opacity beige */
-              background-color: rgba(245, 245, 220, 0.7); /* Beige (F5F5DC) na opacity 0.7 */
+              background-color: rgba(245, 245, 220, 0.7);
               padding: 40px;
               border-radius: 10px;
               color: #4A2C2A; 
               border: 1px solid rgba(74, 44, 42, 0.3); 
-              /* backdrop-filter: blur(5px); */
             ">
               <h2 style="color: #4A2C2A;" data-i18n="hero_title">Kutoka Pwani hadi Ulimwenguni</h2>
               <p style="margin-bottom: 30px; color: #4A2C2A; background-color: transparent !important; padding: 0;" data-i18n="hero_subtitle">
-                Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Karibu Sahilion, karibu katika safari ya chakula cha Kiswahili kinachobeba historia, ubunifu, na utambulisho wa pwani yetu.</p>
+                Ladha, harufu, na roho ya pwani yetu zinakutana hapa. Karibu Sahilion, karibu katika safari ya chakula cha Kiswahili kinachobeba historia, ubunifu, na utambulisho wa pwani yetu.
+              </p>
               
               <div class="btn-group" style="display: flex; justify-content: center;">
                 <a href="kuhusu.html" class="btn-get-started" data-i18n="hero_cta_btn" style="
@@ -118,15 +112,23 @@
       </div>
 
     </section>
+
+    <div class="page-title">
+      <nav class="empty-breadcrumb">
+        <div class="container">
+          <!-- Empty -->
+        </div>
+      </nav>
+    </div>
     
+    <div class="container section-title mt-5 mb-0" data-aos="fade-up">
+      <h2 data-i18n="section_exhibitions_title">Maonyesho Yetu</h2>
+      <p class="fs-3" data-i18n="section_exhibitions_subtitle">Tazama uzuri na ubunifu wa pwani.</p>
+    </div>
+
     <section id="gallery" class="gallery section" style="background-color:#F5F5DC;">
 
-      <div class="container section-title" data-aos="fade-up">
-        <h2 style="color:#4A2C2A;" data-i18n="gallery_title">Maonyesho Yetu</h2>
-        <p style="color:#4A2C2A;" data-i18n="gallery_subtitle">Angalia ladha, rangi, na ubunifu wa vyakula vyetu vya pwani.</p>
-      </div>
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 justify-content-center">
 
@@ -214,7 +216,6 @@
 
   </main>
 
-
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
 
     <div class="container text-center">
@@ -224,18 +225,10 @@
       </div>
 
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-tiktok"></i>
-        </a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;">
-          <i class="bi bi-youtube"></i>
-        </a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_tiktok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_youtube"><i class="bi bi-youtube"></i></a>
       </div>
 
       <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">
@@ -246,9 +239,9 @@
 
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" data-i18n="[title]scroll_top_title" title="Rudi Juu"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader">
+  <div id="preloader" data-i18n="preloader_loading_text" aria-label="Inapakia...">
     <div class="line"></div>
   </div>
 

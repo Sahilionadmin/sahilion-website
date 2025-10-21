@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
   <title data-i18n="title_gallery">Maonyesho - Sahilion | Picha na Video</title>
   <meta name="description" data-i18n="meta_desc_gallery" content="Gundua makusanyo yetu ya picha na video, kutoka urithi wa pwani ya Afrika Mashariki hadi ubunifu wa kisasa.">
   <meta name="keywords" data-i18n="meta_keywords_gallery" content="Maonyesho, Picha, Video, Filamu, Sahilion, Utamaduni">
 
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="favicon.png">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body class="services-page">
 
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
+      <!-- Logo -->
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo">
+        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo" data-i18n="logo_alt">
       </a>
 
+      <!-- Navigation -->
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" data-i18n="nav_home">Nyumbani</a></li>
@@ -49,34 +56,36 @@
           <li><a href="hadithi.html" data-i18n="nav_stories">Hadithi</a></li>
           <li><a href="mawasiliano.html" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" data-i18n="mobile_nav_toggle"></i>
       </nav>
 
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher">
+        <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
+          <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active" data-i18n="sw_flag_alt">
+        </a>
+        <a href="#" class="lang-flag" data-lang="en" title="English">
+          <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon" data-i18n="en_flag_alt">
+        </a>
+      </div>
 
-<div class="header-right-tools d-flex align-items-center">
-        <div class="lang-switcher" id="lang-switcher">
-          <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
-            <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active">
-          </a>
-          <a href="#" class="lang-flag" data-lang="en" title="English">
-            <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon">
-          </a>
-        </div>
-
+      <!-- Social Links -->
       <div class="header-social-links">
         <div class="social-links">
-          <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
-          <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" data-i18n="social_tiktok_title"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" data-i18n="social_instagram_title"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" data-i18n="social_x_title"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" data-i18n="social_youtube_title"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
 
     </div>
   </header>
 
+  <!-- Main -->
   <main class="main">
 
+    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
@@ -89,6 +98,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Breadcrumbs -->
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
@@ -97,10 +108,18 @@
           </ol>
         </div>
       </nav>
-    </div><section id="services" class="services section">
-      <div class="container" data-aos="fade-up">
+    </div>
 
-        <div class="section-header">
+    <!-- Section Title -->
+    <div class="container section-title mt-5 mb-0" data-aos="fade-up">
+      <h2 data-i18n="section_title_gallery">Maonyesho yetu</h2>
+      <p class="fs-3" data-i18n="section_subtitle_gallery">Maisha ya pwani yakija kwa macho yako.</p>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-header text-center mb-5">
           <h2 data-i18n="gallery_section_title">Gundua Makusanyo Yetu</h2>
           <p class="fst-italic" data-i18n="gallery_section_subtitle">
             Tumekusanya picha na video zinazoonyesha kina na upana wa utamaduni, historia, na maisha ya kila siku ya pwani ya Afrika Mashariki.
@@ -111,29 +130,31 @@
 
           <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-camera"></i>
-              </div>
-              <h4><a href="picha.html" class="stretched-link" data-i18n="gallery_photos_title">Makusanyo ya Picha</a></h4>
+              <div class="icon"><i class="bi bi-camera"></i></div>
+              <h4>
+                <a href="picha.html" class="stretched-link" data-i18n="gallery_photos_title">Makusanyo ya Picha</a>
+              </h4>
               <p data-i18n="gallery_photos_desc">Angalia picha za kuvutia zinazoleta mazingira, masoko, na nyuso za Pwani ya Afrika Mashariki hai.</p>
             </div>
           </div>
 
           <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-film"></i>
-              </div>
-              <h4><a href="video.html" class="stretched-link" data-i18n="gallery_videos_title">Makusanyo ya Video</a></h4>
+              <div class="icon"><i class="bi bi-film"></i></div>
+              <h4>
+                <a href="video.html" class="stretched-link" data-i18n="gallery_videos_title">Makusanyo ya Video</a>
+              </h4>
               <p data-i18n="gallery_videos_desc">Tazama video fupi, vipindi, na maudhui mjongeo yanayosimulia hadithi za pwani.</p>
             </div>
           </div>
 
         </div>
-
       </div>
-    </section></main>
+    </section>
 
+  </main>
+
+  <!-- Footer -->
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
     <div class="container text-center">
       <div class="copyright mb-2">
@@ -141,25 +162,23 @@
       </div>
 
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-instagram"></i></a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;" data-i18n="social_tiktok_title"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;" data-i18n="social_instagram_title"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;" data-i18n="social_x_title"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;" data-i18n="social_youtube_title"><i class="bi bi-youtube"></i></a>
       </div>
 
-      <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">
-        Kutoka Pwani hadi Ulimwenguni
-      </div>
-
+      <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">Kutoka Pwani hadi Ulimwenguni</div>
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" data-i18n="scroll_top_title"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader">
     <div class="line"></div>
   </div>
 
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -167,5 +186,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

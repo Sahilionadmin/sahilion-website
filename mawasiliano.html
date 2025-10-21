@@ -2,7 +2,6 @@
 <html lang="sw">
 
 <head>
-
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title data-i18n="title_contact">Mawasiliano - Sahilion | Wasiliana Nasi</title>
@@ -10,40 +9,43 @@
     content="Sahilion – sauti ya ubunifu kutoka Pwani. Gundua na shiriki nasi katika safari ya utamaduni wa chakula, hadithi, na miradi ya ubunifu wa pwani. Wasiliana nasi au jisajili kwa jarida letu la habari mpya.">
   <meta name="keywords" data-i18n="meta_keywords_contact" content="Mawasiliano, Sahilion, Simu, Barua pepe, Pwani, Mradi">
 
-
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
-
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body class="contact-page">
 
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo">
+        <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo" data-i18n="logo_alt">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" data-i18n="nav_home">Nyumbani</a></li>
           <li><a href="kuhusu.html" data-i18n="nav_about">Kuhusu</a></li>
-          <li class="dropdown"><a href="maonyesho.html" data-i18n="nav_gallery"><span>Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown">
+            <a href="maonyesho.html" data-i18n="nav_gallery"><span>Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="picha.html" data-i18n="nav_gallery_photos">Picha</a></li>
               <li><a href="video.html" data-i18n="nav_gallery_videos">Video</a></li>
@@ -52,33 +54,34 @@
           <li><a href="hadithi.html" data-i18n="nav_stories">Hadithi</a></li>
           <li><a href="mawasiliano.html" class="active" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" data-i18n="mobile_nav_toggle"></i>
       </nav>
 
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-<div class="header-right-tools d-flex align-items-center">
-        <div class="lang-switcher" id="lang-switcher">
-          <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
-            <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active">
-          </a>
-          <a href="#" class="lang-flag" data-lang="en" title="English">
-            <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon">
-          </a>
-        </div>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher">
+        <a href="#" class="lang-flag" data-lang="sw" title="Swahili">
+          <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active" data-i18n="sw_flag_alt">
+        </a>
+        <a href="#" class="lang-flag" data-lang="en" title="English">
+          <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon" data-i18n="en_flag_alt">
+        </a>
+      </div>
 
+      <!-- Social Links -->
       <div class="header-social-links">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram"><i
-            class="bi bi-instagram"></i></a>
-        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" data-i18n="social_tiktok_title"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" data-i18n="social_instagram_title"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" data-i18n="social_x_title"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" data-i18n="social_youtube_title"><i class="bi bi-youtube"></i></a>
       </div>
 
     </div>
-
   </header>
 
   <main class="main">
 
+    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
@@ -86,78 +89,119 @@
             <div class="col-lg-8">
               <h1 data-i18n="page_title_contact">Wasiliana Nasi</h1>
               <p class="mb-0" data-i18n="page_subtitle_contact">
-                Tumia fomu ya mawasiliano kutufikia kwa maswali, ushauri, au maoni kuhusu miradi unayopenda tushirikiane
-                nayo. Tunathamini kila wazo na tunakaribisha mazungumzo yanayochochea ubunifu na ushirikiano.</p>
+                Tumia fomu ya mawasiliano kutufikia kwa maswali, ushauri, au maoni kuhusu miradi unayopenda tushirikiane nayo. Tunathamini kila wazo na tunakaribisha mazungumzo yanayochochea ubunifu na ushirikiano.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Breadcrumbs -->
       <nav class="breadcrumbs">
         <div class="container">
-
           <ol>
             <li><a href="index.html" data-i18n="nav_breadcrumbs_home">Nyumbani</a></li>
             <li class="current" data-i18n="nav_breadcrumbs_current_contact">Mawasiliano</li>
           </ol>
         </div>
       </nav>
-
     </div>
-    <section id="contact" class="contact section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100"
-        <div class="container section-title" data-aos="fade-up">
-          <h2 data-i18n="contact_section_title">Mawasiliano</h2>
-          <p data-i18n="contact_section_subtitle">Ungana nasi au tuandikie ujumbe wako. Tunafurahia kusikia kutoka kwako!</p>
+    <!-- Section Title -->
+    <div class="container section-title mt-5 mb-0" data-aos="fade-up">
+      <h2 data-i18n="section_title_contact">Mawasiliano</h2>
+      <p class="fs-3" data-i18n="section_subtitle_contact">Tunafurahia kusikia kutoka kwako!</p>
+    </div>
+
+    <!-- Contact Info Section -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Info Wrap -->
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <!-- Location -->
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact_location_title">Mahali</h3>
+                  <p data-i18n="contact_location_desc">Mjini/Magharibi, Zanzibar, Tanzania</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Telephone -->
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact_phone_title">Simu</h3>
+                  <p data-i18n="contact_phone_desc">+255 xxx xxxxxx / +255 xxx xxxxxx</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact_email_title">Barua Pepe</h3>
+                  <p data-i18n="contact_email_desc">info@sahilion.com</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
+        <!-- Newsletter -->
         <div class="newsletter-wrapper mb-5 text-center">
           <h4 data-i18n="newsletter_title">Usajili wa Jarida la Sahilion</h4>
           <p data-i18n="newsletter_subtitle">Jiunge nasi ili upokee habari, ladha, na hadithi mpya kutoka Pwani hadi Ulimwenguni.</p>
 
-         <form id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST"
-  class="newsletter-signup d-flex justify-content-center align-items-center mt-3">
+          <form id="newsletter-form" action="https://formspree.io/f/xanpjqnl" method="POST" class="newsletter-signup d-flex justify-content-center align-items-center mt-3">
             <input type="email" name="email" class="form-control me-2" data-i18n="[placeholder]newsletter_placeholder" placeholder="Weka barua pepe yako..." required>
-            <button type="submit" class="btn" data-i18n="newsletter_btn" style="background-color:#D35400; color:#fff;">Jiunge</button>
-
+            <button type="submit" class="cta-btn form-btn" data-i18n="newsletter_btn">Jiunge</button>
           </form>
+          <div class="newsletter-feedback text-center mt-2">
+            <div class="loading" style="display:none;" data-i18n="newsletter_loading">Inapakia...</div>
+            <div class="error-message" data-i18n="newsletter_error"></div>
+            <div class="sent-message" style="display:none;" data-i18n="newsletter_sent">Ujumbe wako umetumwa. Asante!</div>
+          </div>
         </div>
 
+        <!-- Contact Form -->
         <div class="contact-wrapper">
           <h4 class="text-center mb-4" data-i18n="contact_form_title">Tuma Ujumbe Wako</h4>
 
-          <form id="contact-form" action="https://formspree.io/f/mblzydly" method="POST" data-aos="fade-up" data-aos-delay="300"
-
-            class="php-email-form">
+          <form id="contact-form" action="https://formspree.io/f/mblzydly" method="POST" data-aos="fade-up" data-aos-delay="300">
             <div class="row gy-4">
-              <div class="col-md-6">
 
+              <div class="col-md-6">
                 <input type="text" name="name" class="form-control" data-i18n="[placeholder]contact_name_placeholder" placeholder="Jina Lako" required>
               </div>
-              <div class="col-md-6 ">
 
+              <div class="col-md-6">
                 <input type="email" class="form-control" name="email" data-i18n="[placeholder]contact_email_placeholder" placeholder="Barua Pepe Yako" required>
               </div>
-              <div class="col-md-12">
 
+              <div class="col-md-12">
                 <input type="text" class="form-control" name="subject" data-i18n="[placeholder]contact_subject_placeholder" placeholder="Kichwa cha Ujumbe" required>
               </div>
+
               <div class="col-md-12">
-
-                <textarea class="form-control" name="message" rows="6" data-i18n="[placeholder]contact_message_placeholder" placeholder="Ujumbe Wako"
-
-                  required></textarea>
+                <textarea class="form-control" name="message" rows="6" data-i18n="[placeholder]contact_message_placeholder" placeholder="Ujumbe Wako" required></textarea>
               </div>
 
-
               <div class="col-md-12 text-center">
-                <div class="loading" data-i18n="contact_status_loading" style="display:none;">Inapakia</div>
-                <div class="error-message"></div>
+                <div class="loading" style="display:none;" data-i18n="contact_form_loading">Inapakia...</div>
+                <div class="error-message" data-i18n="contact_form_error"></div>
+                <div class="sent-message" style="display:none;" data-i18n="contact_form_sent">Ujumbe wako umetumwa. Asante!</div>
 
-                <div class="sent-message" data-i18n="contact_status_sent" style="display:none;">Ujumbe wako umetumwa. Asante!</div>
-
-                <button type="submit" class="btn" data-i18n="contact_submit_btn" style="background-color:#D35400; color:#fff;">Tuma Ujumbe</button>
+                <button type="submit" class="cta-btn form-btn" data-i18n="contact_submit_btn">Tuma Ujumbe</button>
               </div>
 
             </div>
@@ -165,37 +209,29 @@
         </div>
 
       </div>
-
     </section>
-    </main>
 
+  </main>
+
+  <!-- Footer -->
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
-
     <div class="container text-center">
       <div class="copyright mb-2">
-
         <p style="color:#F5F5DC;">© <span>2025</span> <strong class="px-1 sitename">Sahilion.</strong> <span data-i18n="footer_copyright_reserved">Haki Zote Zimehifadhiwa.</span></p>
       </div>
 
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
-        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" style="color:#D35400; font-size:1.5rem;"><i
-            class="bi bi-tiktok"></i></a>
-        <a href="https://www.instagram.com/sahilionhq" target="_blank" style="color:#D35400; font-size:1.5rem;"><i
-            class="bi bi-instagram"></i></a>
-        <a href="https://x.com/SahilionHQ" target="_blank" style="color:#D35400; font-size:1.5rem;"><i
-            class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com/@sahilionmedia" target="_blank" style="color:#D35400; font-size:1.5rem;"><i
-            class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@sahilionhq" target="_blank" style="color:#D35400; font-size:1.5rem;" data-i18n="social_tiktok_title"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/sahilionhq" target="_blank" style="color:#D35400; font-size:1.5rem;" data-i18n="social_instagram_title"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/SahilionHQ" target="_blank" style="color:#D35400; font-size:1.5rem;" data-i18n="social_x_title"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com/@sahilionmedia" target="_blank" style="color:#D35400; font-size:1.5rem;" data-i18n="social_youtube_title"><i class="bi bi-youtube"></i></a>
       </div>
 
-      <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">
-        Kutoka Pwani hadi Ulimwenguni
-      </div>
+      <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">Kutoka Pwani hadi Ulimwenguni</div>
     </div>
-
   </footer>
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" data-i18n="scroll_top_title"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader">
     <div class="line"></div>
@@ -207,142 +243,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-
-<script>
-
-  // NOTE: This script handles the form submission messages.
-  // The error message 'Something went wrong. Please try again.' is hardcoded in English here.
-  // If you want this error message translated via your i18n script, you will need to add a key
-  // (e.g., 'contact_error_general') and load it into your JavaScript.
-  document.querySelector('#contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Use data-i18n to get the translated loading message if the script is run first
-    const loadingMessage = this.querySelector('.loading').textContent;
-    this.querySelector('.loading').style.display = 'block';
-
-
-    const formData = new FormData(this);
-
-
-    // Send the form data using Fetch API
-    fetch(this.action, {
-        method: 'POST',
-        body: formData
-
-    })
-
-    .then(response => {
-        if (response.ok) {
-           
- // Hide loading and show success message (which is translated by i18n)
-            this.querySelector('.loading').style.display = 'none';
-            this.querySelector('.sent-message').style.display = 'block';
-
-        } else {
-
-            // Error handling
-            this.querySelector('.loading').style.display = 'none';
-            this.querySelector('.error-message').style.display = 'block';
-
-            // Hardcoded English message below:
-            this.querySelector('.error-message').textContent = 'Something went wrong. Please try again.';
-
-        }
-
-    })
-
-    .catch(error => {
-        // Network error handling
-        this.querySelector('.loading').style.display = 'none';
-        this.querySelector('.error-message').style.display = 'block';
-        // Hardcoded English message below:
-        this.querySelector('.error-message').textContent = 'Network error. Please try again later.';
-
-    });
-
-});
-
-</script>
-
-<script>
-    // Fikiria getTranslation inapatikana hapa.
-
-    // Kazi ya kushughulikia Formspree submission (Tunaweza kuirejelea kwa fomu zote mbili)
-    function handleFormspreeSubmission(form) {
-        // ZUIA UTUMAJI WA KAWAIDA WA HTML
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            // Vipengele vya Status (kwa fomu ya Mawasiliano)
-            const loadingDiv = form.querySelector('.loading');
-            const errorDiv = form.querySelector('.error-message');
-            const sentDiv = form.querySelector('.sent-message');
-
-            // Handle kwa fomu ya Newsletter, ambayo haina error/loading div
-            if (!loadingDiv || !sentDiv) {
-                // Kwa sasa tunaacha Newsletter iendelee bila status, au ongeza status div kule
-                // kwa ajili ya usafi wa code, tutatumia alert ya muda.
-                // Inapendekezwa uongeze divs za status kwa Newsletter pia.
-                // Kwa sasa tunatumia alert.
-                alert("Jiunge inapakia..."); 
-            }
-            
-            if (loadingDiv) loadingDiv.style.display = 'block';
-            if (errorDiv) errorDiv.style.display = 'none';
-            if (sentDiv) sentDiv.style.display = 'none';
-
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json' // MUHIMU: Inahakikisha Formspree haitumi redirection
-                }
-            })
-            .then(response => {
-                if (loadingDiv) loadingDiv.style.display = 'none';
-
-                if (response.ok) {
-                    if (sentDiv) {
-                        sentDiv.style.display = 'block';
-                    } else {
-                        alert("Umefanikiwa kujiunga! Asante."); // Kwa Newsletter tu
-                    }
-                    form.reset(); // Safisha fomu
-                } else {
-                    if (errorDiv) {
-                        errorDiv.style.display = 'block';
-                        errorDiv.textContent = getTranslation('contact_error_general');
-                    } else {
-                        alert("Kuna tatizo limetokea. Tafadhali jaribu tena."); // Kwa Newsletter tu
-                    }
-                }
-            })
-            .catch(error => {
-                if (loadingDiv) loadingDiv.style.display = 'none';
-                if (errorDiv) {
-                    errorDiv.style.display = 'block';
-                    errorDiv.textContent = getTranslation('contact_error_network');
-                } else {
-                    alert("Hitilafu ya mtandao. Jaribu tena."); // Kwa Newsletter tu
-                }
-            });
-        });
-    }
-
-    // Tekeleza kazi kwa fomu zote mbili
-    const contactForm = document.querySelector('#contact-form');
-    if (contactForm) {
-        handleFormspreeSubmission(contactForm);
-    }
-
-    const newsletterForm = document.querySelector('#newsletter-form');
-    if (newsletterForm) {
-        handleFormspreeSubmission(newsletterForm);
-    }
-</script>
 
 </body>
 
