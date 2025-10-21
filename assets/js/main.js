@@ -23,15 +23,9 @@
     if (!lang || lang === DEFAULT_LANG) return {};
     try {
       const res = await fetch(`assets/i18n/${lang}.json`);
-      if (!res.ok) {
-        console.warn(`Could not load translation file for ${lang}`);
-        return {};
-      }
+      if (!res.ok) { console.warn(`Could not load translation file for ${lang}`); return {}; }
       return await res.json();
-    } catch (err) {
-      console.error('fetchTranslations error', err);
-      return {};
-    }
+    } catch (err) { console.error('fetchTranslations error', err); return {}; }
   }
 
   function getTranslation(key) {
@@ -45,8 +39,6 @@
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const attr = el.getAttribute('data-i18n');
         if (!attr) return;
-
-        // check if syntax is [attribute]key
         const match = attr.match(/^\[(.+?)\](.+)$/); // capture [attr]key
         let value = '';
         if (match) {
@@ -59,9 +51,7 @@
           if (value) el.innerHTML = value;
         }
       });
-    } catch (err) {
-      console.error('applyTranslations error', err);
-    }
+    } catch (err) { console.error('applyTranslations error', err); }
   }
 
   function updateFlagVisual(newLang) {
@@ -69,12 +59,8 @@
       const flagEl = parent.querySelector('.flag-icon');
       const flagLang = parent.getAttribute('data-lang');
       if (flagLang === newLang) {
-        parent.classList.add('active');
-        if (flagEl) flagEl.classList.add('active');
-      } else {
-        parent.classList.remove('active');
-        if (flagEl) flagEl.classList.remove('active');
-      }
+        parent.classList.add('active'); if (flagEl) flagEl.classList.add('active');
+      } else { parent.classList.remove('active'); if (flagEl) flagEl.classList.remove('active'); }
     });
   }
 
@@ -174,40 +160,45 @@
   }
 
   // -------------------------
-  // Formspree AJAX handler
+  // Formspree AJAX handler (with proper hide/show)
   // -------------------------
   function handleFormspreeSubmission(form){
     if(!form) return;
     if(form.__formspreeBound) return;
     form.__formspreeBound = true;
+
+    // Ensure messages hidden initially
+    const errorDiv = form.querySelector('.error-message');
+    const sentDiv = form.querySelector('.sent-message');
+    if(errorDiv) { errorDiv.style.display='none'; errorDiv.textContent=''; }
+    if(sentDiv) { sentDiv.style.display='none'; }
+
     form.addEventListener('submit', async function(event){
       event.preventDefault();
       try{
         const loadingDiv = form.querySelector('.loading');
-        const errorDiv = form.querySelector('.error-message');
-        const sentDiv = form.querySelector('.sent-message');
         if(loadingDiv) loadingDiv.style.display='block';
-        if(errorDiv){errorDiv.style.display='none'; errorDiv.textContent='';}
-        if(sentDiv) sentDiv.style.display='none';
+        if(errorDiv) { errorDiv.style.display='none'; errorDiv.textContent=''; }
+        if(sentDiv) { sentDiv.style.display='none'; }
+
         const formData = new FormData(form);
         const res = await fetch(form.action,{method:'POST',body:formData,headers:{'Accept':'application/json'}});
         if(loadingDiv) loadingDiv.style.display='none';
+
         if(res.ok){
-          if(sentDiv){sentDiv.style.display='block'; sentDiv.textContent = getTranslation('contact_status_sent') || 'Ujumbe wako umetumwa. Asante!';}
-          else alert(getTranslation('newsletter_status_sent') || 'Umejiunga! Asante.');
+          if(sentDiv){sentDiv.style.display='block'; sentDiv.textContent=getTranslation('contact_status_sent')||'Ujumbe wako umetumwa. Asante!';}
+          else alert(getTranslation('newsletter_status_sent')||'Umejiunga! Asante.');
           try{form.reset();}catch(e){}
         } else {
-          let errText = getTranslation('contact_error_general') || 'Tatizo limetokea. Tafadhali jaribu tena.';
-          try{const data = await res.json(); if(data && data.error) errText = data.error;}catch(e){}
+          let errText = getTranslation('contact_error_general')||'Tatizo limetokea. Tafadhali jaribu tena.';
+          try{const data = await res.json(); if(data && data.error) errText=data.error;}catch(e){}
           if(errorDiv){errorDiv.style.display='block'; errorDiv.textContent=errText;} else alert(errText);
         }
       }catch(err){
         console.error('Form submission error',err);
-        const errorDiv = form.querySelector('.error-message');
-        const loadingDiv = form.querySelector('.loading');
         if(loadingDiv) loadingDiv.style.display='none';
-        if(errorDiv){errorDiv.style.display='block'; errorDiv.textContent=getTranslation('contact_error_network') || 'Hitilafu ya mtandao. Jaribu tena.';}
-        else alert(getTranslation('contact_error_network') || 'Hitilafu ya mtandao. Jaribu tena.');
+        if(errorDiv){errorDiv.style.display='block'; errorDiv.textContent=getTranslation('contact_error_network')||'Hitilafu ya mtandao. Jaribu tena.';}
+        else alert(getTranslation('contact_error_network')||'Hitilafu ya mtandao. Jaribu tena.');
       }
     });
   }
@@ -217,10 +208,12 @@
   // -------------------------
   document.addEventListener('DOMContentLoaded', async ()=>{
     try{
-      const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
-      if(savedLang!==DEFAULT_LANG){translations = await fetchTranslations(savedLang); applyTranslations(savedLang, translations);}
+      const savedLang = localStorage.getItem(LANG_KEY)||DEFAULT_LANG;
+      if(savedLang!==DEFAULT_LANG){ translations=await fetchTranslations(savedLang); applyTranslations(savedLang, translations); }
       updateFlagVisual(savedLang);
-      document.querySelectorAll('.lang-flag').forEach(button=>{button.addEventListener('click', (e)=>{e.preventDefault(); const lang=button.getAttribute('data-lang'); if(!lang) return; setLanguageAndReload(lang);});});
+      document.querySelectorAll('.lang-flag').forEach(button=>{
+        button.addEventListener('click',(e)=>{ e.preventDefault(); const lang=button.getAttribute('data-lang'); if(!lang) return; setLanguageAndReload(lang); });
+      });
     }catch(err){console.error('i18n init error',err);}
     mobileNavToggleInit();
     mobileNavDropdowns();
@@ -228,7 +221,10 @@
     try{aosInit();}catch(e){}
     try{glightboxInit();}catch(e){}
     try{initSwiper();}catch(e){}
-    try{handleFormspreeSubmission(document.querySelector('#contact-form')); handleFormspreeSubmission(document.querySelector('#newsletter-form'));}catch(err){console.error('attach form handlers error',err);}
+    try{
+      handleFormspreeSubmission(document.querySelector('#contact-form'));
+      handleFormspreeSubmission(document.querySelector('#newsletter-form'));
+    }catch(err){console.error('attach form handlers error',err);}
   });
 
   try{initPreloader();}catch(err){console.error('initPreloader error',err);}
