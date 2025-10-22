@@ -30,7 +30,7 @@
   "gallery_item_4_alt": "Food Innovation",
   "gallery_item_4_title": "Modern innovation in authentic flavors",
   "gallery_item_4_caption": "Modern innovation in authentic flavors",
-  "gallery_cta_btn": "View More",
+  "gallery_cta_btn_view_more": "View More",
 
 
   "title_about": "About - Sahilion | The Taste, Heritage, and Art of the Coast",
@@ -59,11 +59,31 @@
   "about_item_7_value": "Inspired by the ingredients and traditions of the coast",
   "about_item_8_title": "Educating:",
   "about_item_8_value": "Raising awareness of the value of African food culture",
-  "about_paragraph_2": "It is a movement that draws inspiration from the richness of ingredients, cuisines, and culinary traditions of the East African coastal people, while bringing that spirit to the global stage. With the motto 'From the Coast to the World', we share coastal stories through food, authentic flavors, modern creativity, and community values.",
+  "about_paragraph_2": "It is a movement that draws inspiration from the richness of ingredients, cuisines, and culinary traditions of the East African coastal people, while bringing that spirit to the global stage. With the motto 'From the Coast to the Cosmos', we share coastal stories through food, authentic flavors, modern creativity, and community values.",
   "about_paragraph_3": "For Sahilion, food is not just nourishment,it is <i>pleasure, identity, art, and heritage</i> that lives through generations. Everything we do is guided by a vision of uniting food traditions with innovation, nature with technology, and the coast with the world. Sahilion invites you to experience the flavors, aromas, and soul of this coastal region, elevating them to tables around the globe.",
   "about_concept_1": "enjoyment, identity, art, and heritage",
   "section_title_about": "About Sahilion",
   "section_subtitle_about": "Discover our journey and purpose.",
+
+
+"title_gallery": "Gallery - Sahilion | Photos and Videos",
+  "meta_desc_gallery": "Explore our collection of photos and videos, showcasing everything from the heritage of the East African coast to modern creative innovations.",
+  "meta_keywords_gallery": "Gallery, Photos, Videos, Films, Sahilion, Culture",
+  "page_title_gallery": "Our Gallery",
+  "page_subtitle_gallery": "Our platform showcases creativity through photos and videos, highlighting coastal food culture and the vibrant life of coastal communities with modern production quality.",
+  "gallery_cta_btn_submit_project": "Submit Your Project",
+  "nav_breadcrumbs_home": "Home",
+  "nav_breadcrumbs_gallery": "Gallery",
+  "nav_breadcrumbs_current_gallery": "Gallery",
+  "section_title_gallery": "Our Gallery",
+  "section_subtitle_gallery": "The life of the coast brought to your eyes.",
+"gallery_section_title": "Discover Our Collections",
+  "gallery_section_subtitle": "We have curated a collection of photos and videos showcasing the depth and richness of the culture, history, and daily life of the East African coast.",
+  "gallery_photos_title": "Photo Collection",
+  "gallery_photos_desc": "Explore captivating photographs that bring the landscapes, markets, and faces of the East African Coast to life.",
+  "gallery_videos_title": "Video Collection",
+  "gallery_videos_desc": "Watch short films, episodes, and dynamic content that bring the stories of the coast to life.",
+  
 
 
   "title_stories": "Stories - Sahilion | Our Storytelling Services",
@@ -85,24 +105,6 @@
   "stories_card_3_desc": "Get an inside look at the Sahilion team and their role in preserving and advancing coastal culture. From product innovation to storytelling, our team is the heart driving the coastal food journey.",
 
 
-"title_gallery": "Gallery - Sahilion | Photos and Videos",
-  "meta_desc_gallery": "Explore our collection of photos and videos, showcasing everything from the heritage of the East African coast to modern creative innovations.",
-  "meta_keywords_gallery": "Gallery, Photos, Videos, Films, Sahilion, Culture",
-  "page_title_gallery": "Our Gallery",
-  "page_subtitle_gallery": "Our platform showcases creativity through photos and videos, highlighting coastal food culture and the vibrant life of coastal communities with modern production quality.",
-  "gallery_cta_btn": "Submit Your Project",
-  "nav_breadcrumbs_home": "Home",
-  "nav_breadcrumbs_gallery": "Gallery",
-  "nav_breadcrumbs_current_gallery": "Gallery",
-  "section_title_gallery": "Our Gallery",
-  "section_subtitle_gallery": "The life of the coast brought to your eyes.",
-"gallery_section_title": "Discover Our Collections",
-  "gallery_section_subtitle": "We have curated a collection of photos and videos showcasing the depth and richness of the culture, history, and daily life of the East African coast.",
-  "gallery_photos_title": "Photo Collection",
-  "gallery_photos_desc": "Explore captivating photographs that bring the landscapes, markets, and faces of the East African Coast to life.",
-  "gallery_videos_title": "Video Collection",
-  "gallery_videos_desc": "Watch short films, episodes, and dynamic content that bring the stories of the coast to life.",
-  
 "title_contact": "Contact - Sahilion | Contact Us",
   "meta_desc_contact": "The voice of creativity from the Coast. Discover and join us on a journey of food culture, stories, and coastal innovation projects. Contact us or subscribe to our newsletter for the latest updates.",
   "meta_keywords_contact": "Contact, Sahilion, Phone, Email, Coast, Project",
