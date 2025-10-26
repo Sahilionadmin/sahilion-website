@@ -981,7 +981,6 @@ section,
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 0;
 }
 
 .about .content ul {
@@ -1009,28 +1008,6 @@ section,
     color: var(--default-color, #ffb03b);
     padding-right: 5px;
     margin-top: 4px;
-}
-
-/* New styling for vision section - ensure image starts in line with text */
-#vision .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start; /* Align both content and image at the start */
-}
-
-#vision .col-lg-7.content {
-    flex: 1;
-}
-
-#vision .col-lg-4 {
-    flex: 0 0 100%; /* Ensures the image takes up full width on small screens */
-    margin-top: 0;
-}
-
-@media (min-width: 992px) {
-    #vision .col-lg-4 {
-        flex: 0 0 40%; /* Image width on larger screens */
-    }
 }
 
 /*--------------------------------------------------------------
