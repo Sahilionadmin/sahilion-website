@@ -28,14 +28,15 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-31C36WN94F');
-  </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-31C36WN94F');
+</script>
 
 </head>
 
@@ -115,10 +116,10 @@
       <p class="fs-3" data-i18n="section_subtitle_about">Gundua safari na dhamira yetu.</p>
     </div>
 
+    <!-- Original About Section -->
     <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
-          <!-- Row ya kwanza: Picha kushoto, content kulia -->
           <div class="col-lg-4">
             <img src="assets/img/logohq.png" class="img-fluid" data-i18n="[alt]about_logo_alt" alt="Picha ya Utambulisho wa Sahilion">
           </div>
@@ -148,34 +149,41 @@
             </p>
           </div>
         </div>
-
-        <!-- Row mpya: Content kushoto, Picha kulia -->
-        <div class="row gy-4 justify-content-center mt-5 align-items-start">
-          <div class="col-lg-7 content order-1">
-            <h3>Dira Yetu</h3>
-            <p class="text-justify"><i>Kuwa nguvu inayoongoza barani Afrika katika kuinua na kutangaza ladha, urithi, na ubunifu wa Pwani ya Waswahili kwa uhalisia, ubora wa kimataifa, na athari chanya kwa vizazi vijavyo.</i></p>
-
-            <h3>Dhamira Yetu</h3>
-            <p class="text-justify">Kuhifadhi, kuboresha, na kuwasilisha upya urithi wa chakula chetu kwa kuunganisha asili, ubunifu wa kisasa, na mbinu endelevu zinazojenga thamani kwa jamii.</p>
-
-            <h3>Misingi Yetu</h3>
-            <ul class="text-justify">
-              <li><i>Urithi:</i> Kuheshimu asili yetu na simulizi za pwani.</li>
-              <li><i>Ubunifu:</i> Kuleta uhai mpya kupitia mawazo mapya na teknolojia rafiki.</li>
-              <li><i>Uhalisia:</i> Kudumisha ladha, utambulisho, na ukweli wa pwani halisi.</li>
-              <li><i>Jamii:</i> Kuwezesha watu, kujenga ushirikiano, na kukuza maendeleo jumuishi.</li>
-            </ul>
-
-            <h3>Mtazamo Wetu</h3>
-            <p class="text-justify"><strong>Kiburudisho</strong>, <strong>utambulisho</strong>, <strong>sanaa</strong>, na <strong>urithi</strong> ni sehemu ya chakula chetu. Tunaamini katika kuunganisha asili na ubunifu, mila na teknolojia, pwani na ulimwengu. <i>Kutoka Pwani hadi Ulimwenguni</i>.</p>
-          </div>
-          <div class="col-lg-4 order-2">
-            <img src="assets/img/logohq.png" class="img-fluid" alt="Picha ya Utambulisho wa Sahilion" style="margin-top:0;">
-          </div>
-        </div>
-
       </div>
     </section>
+
+    <!-- New Vision Section -->
+    <section id="vision" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center align-items-start">
+          <div class="col-lg-7 content order-1">
+            <h3 data-i18n="vision_title">Dira Yetu</h3>
+            <p class="text-justify" data-i18n="vision_desc">Kuwa nguvu inayoongoza barani Afrika katika kuinua na kutangaza ladha, urithi, na ubunifu wa Pwani ya Waswahili kwa uhalisia, ubora wa kimataifa, na athari chanya kwa vizazi vijavyo.</p>
+
+            <h3 data-i18n="mission_title">Dhamira Yetu</h3>
+            <p class="text-justify" data-i18n="mission_desc">Kuhifadhi, kuboresha, na kuwasilisha upya urithi wa chakula chetu kwa kuunganisha asili, ubunifu wa kisasa, na mbinu endelevu zinazojenga thamani kwa jamii.</p>
+
+            <h3 data-i18n="values_title">Misingi Yetu</h3>
+            <ul class="text-justify" data-i18n="values_list">
+              <li><i class="bi bi-star-fill"></i> <strong>Urithi:</strong> Kuheshimu asili yetu na simulizi za pwani.</li>
+              <li><i class="bi bi-star-fill"></i> <strong>Ubunifu:</strong> Kuleta uhai mpya kupitia mawazo mapya na teknolojia rafiki.</li>
+              <li><i class="bi bi-star-fill"></i> <strong>Uhalisia:</strong> Kudumisha ladha, utambulisho, na ukweli wa pwani halisi.</li>
+              <li><i class="bi bi-star-fill"></i> <strong>Jamii:</strong> Kuwezesha watu, kujenga ushirikiano, na kukuza maendeleo jumuishi.</li>
+            </ul>
+
+            <h3 data-i18n="vision_statement_title">Mtazamo Wetu</h3>
+            <p class="text-justify" data-i18n="vision_statement_1"><strong>Kiburudisho</strong>, <strong>utambulisho</strong>, <strong>sanaa</strong>, na <strong>urithi</strong> yanayopatikana katika mtazamo wetu.</p>
+            <p class="text-justify" data-i18n="vision_statement_2"><i data-i18n="vision_tagline">Kutoka Pwani hadi Ulimwenguni</i>. Tunaamini katika kuunganisha asili na ubunifu, mila na teknolojia, pwani na ulimwengu.</p>
+            <p class="text-justify" data-i18n="vision_statement_3">Tunajiona kama daraja kati ya jana na kesho — tukihifadhi kilicho cha asili, huku tukitengeneza njia kwa ubunifu unaoelekea mbali. Kupitia Sahilion, tunaleta ladha, hadithi, na roho ya pwani yetu kwa ulimwengu mzima — kutoka Pwani hadi Ulimwenguni.</p>
+          </div>
+
+          <div class="col-lg-4 order-2">
+            <img src="assets/img/logohq.png" class="img-fluid" alt="Picha ya Utambulisho wa Sahilion" data-i18n="[alt]vision_image_alt" style="margin-top:0;">
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
