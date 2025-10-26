@@ -28,15 +28,14 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-31C36WN94F');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-31C36WN94F');
+  </script>
 
 </head>
 
@@ -44,7 +43,6 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="assets/img/sahilion_logo.png" alt="Sahilion Logo" data-i18n="[alt]logo_alt">
       </a>
@@ -63,7 +61,6 @@
           <li><a href="hadithi.html" data-i18n="nav_stories">Hadithi</a></li>
           <li><a href="mawasiliano.html" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
-
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -88,7 +85,6 @@
   </header>
 
   <main class="main">
-
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
@@ -116,74 +112,49 @@
       <p class="fs-3" data-i18n="section_subtitle_about">Gundua safari na dhamira yetu.</p>
     </div>
 
-    <!-- Original About Section -->
     <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
+          <!-- Content mpya kushoto, picha kushoto kama ulivyotaka -->
+          <div class="col-lg-7 content">
+            <h3 data-i18n="our_mission_title">Dira Yetu</h3>
+            <p data-i18n="our_mission_content">Kuwa nguvu inayoongoza barani Afrika katika kuinua na kutangaza ladha, urithi, na ubunifu wa Pwani ya Waswahili kwa uhalisia, ubora wa kimataifa, na athari chanya kwa vizazi vijavyo.</p>
+
+            <h3 data-i18n="our_vision_title">Dhamira Yetu</h3>
+            <p data-i18n="our_vision_content">Kuhifadhi, kuboresha, na kuwasilisha upya urithi wa chakula chetu kwa kuunganisha asili, ubunifu wa kisasa, na mbinu endelevu zinazojenga thamani kwa jamii.</p>
+
+            <h3 data-i18n="our_principles_title">Misingi Yetu</h3>
+            <ul>
+              <li><i class="bi bi-star-fill"></i> <strong data-i18n="principle_heritage_title">Urithi:</strong> <strong data-i18n="principle_heritage_value">Kuheshimu asili yetu na simulizi za pwani.</strong></li>
+              <li><i class="bi bi-star-fill"></i> <strong data-i18n="principle_innovation_title">Ubunifu:</strong> <strong data-i18n="principle_innovation_value">Kuleta uhai mpya kupitia mawazo mapya na teknolojia rafiki.</strong></li>
+              <li><i class="bi bi-star-fill"></i> <strong data-i18n="principle_authenticity_title">Uhalisia:</strong> <strong data-i18n="principle_authenticity_value">Kudumisha ladha, utambulisho, na ukweli wa pwani halisi.</strong></li>
+              <li><i class="bi bi-star-fill"></i> <strong data-i18n="principle_community_title">Jamii:</strong> <strong data-i18n="principle_community_value">Kuwezesha watu, kujenga ushirikiano, na kukuza maendeleo jumuishi.</strong></li>
+            </ul>
+
+            <h3 data-i18n="our_outlook_title">Mtazamo Wetu</h3>
+            <p class="text-justify" data-i18n="vision_statement_1">
+              Kwa Sahilion, chakula si tu lishe, bali ni <strong>kiburudisho</strong>, ni <strong>utambulisho</strong>, ni <strong>sanaa</strong>, ni <strong>urithi</strong> unaoishi kupitia vizazi.
+            </p>
+            <p class="text-justify" data-i18n="vision_statement_2">
+              Tunaamini katika kuunganisha asili na ubunifu, mila na teknolojia, pwani na ulimwengu.
+            </p>
+            <p class="text-justify" data-i18n="vision_statement_3">
+              Ni safari ya kuonyesha utajiri wa chakula chetu kwa sura mpya yenye heshima na thamani ya kimataifa.
+            </p>
+            <p class="text-justify" data-i18n="vision_statement_4">
+              Tunajiona kama daraja kati ya jana na kesho — tukihifadhi kilicho cha asili, huku tukitengeneza njia kwa ubunifu unaoelekea mbali.
+            </p>
+            <p class="text-justify" data-i18n="vision_statement_5">
+              Kupitia Sahilion, tunaleta ladha, hadithi, na roho ya pwani yetu kwa ulimwengu mzima — <i>kutoka Pwani hadi Ulimwenguni</i>.
+            </p>
+          </div>
+
           <div class="col-lg-4">
             <img src="assets/img/logohq.png" class="img-fluid" data-i18n="[alt]about_logo_alt" alt="Picha ya Utambulisho wa Sahilion">
           </div>
-          <div class="col-lg-7 content">
-            <h2 data-i18n="about_main_title">Sahilion: Urithi wa Pwani ya Afrika Mashariki</h2>
-            <p class="fst-italic py-3" data-i18n="about_paragraph_1">
-              Sahilion imezaliwa Zanzibar — <i>moyo wa pwani ya Afrika Mashariki</i> — mahali ambapo bahari hukutana na historia, ladha hukutana na urithi, na ubunifu unapata pumzi yake.
-            </p>
-            <div class="row">
-              <div class="col-lg-12">
-                <ul>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_1_title">Chimbuko:</strong> <span data-i18n="about_item_1_value">Zanzibar, Tanzania</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_2_title">Kaulimbiu:</strong> <span data-i18n="about_item_2_value">Kutoka Pwani hadi Ulimwenguni</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_3_title">Lengo la Msingi:</strong> <span data-i18n="about_item_3_value">Kukuza vyakula vya pwani yetu duniani</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_4_title">Thamani:</strong> <span data-i18n="about_item_4_value">Ubunifu, Utambulisho, Urithi</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_6_title">Dhana:</strong> <span data-i18n="about_item_6_value">Chakula ni kiburudisho, sanaa, na utambulisho</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_7_title">Harakati:</strong> <span data-i18n="about_item_7_value">Inachota nguvu kutoka viungo na tamaduni za pwani</span></li>
-                  <li><i class="bi bi-star-fill"></i> <strong data-i18n="about_item_8_title">Kuelimisha:</strong> <span data-i18n="about_item_8_value">Kuhusu thamani ya utamaduni wa chakula wa Kiafrika</span></li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3" data-i18n="about_paragraph_2">
-              Ni harakati inayochota nguvu kutoka katika utajiri wa viungo, vyakula, na tamaduni za chakula za watu wa pwani ya Afrika Mashariki, huku ikipeleka roho hiyo kwenye upeo wa dunia. Tukiwa na kaulimbiu "<i class="fst-italic">Kutoka Pwani hadi Ulimwenguni</i>", tunaleta simulizi za pwani kupitia chakula, ladha asilia, ubunifu wa kisasa, na thamani ya jamii.
-            </p>
-            <p class="m-0" data-i18n="about_paragraph_3">
-              Tunachokifanya kinaongozwa na mtazamo wa kuunganisha mila za chakula na ubunifu, asili na teknolojia, pwani na ulimwengu. Sahilion ni mwaliko wa kugusa ladha, harufu, na roho ya pwani ya Ukanda huu tukiiinua hadi kwenye meza za dunia.
-            </p>
-          </div>
         </div>
       </div>
     </section>
-
-    <!-- New Vision Section -->
-    <section id="vision" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center align-items-start">
-          <div class="col-lg-7 content order-1">
-            <h3 data-i18n="vision_title">Dira Yetu</h3>
-            <p class="text-justify" data-i18n="vision_desc">Kuwa nguvu inayoongoza barani Afrika katika kuinua na kutangaza ladha, urithi, na ubunifu wa Pwani ya Waswahili kwa uhalisia, ubora wa kimataifa, na athari chanya kwa vizazi vijavyo.</p>
-
-            <h3 data-i18n="mission_title">Dhamira Yetu</h3>
-            <p class="text-justify" data-i18n="mission_desc">Kuhifadhi, kuboresha, na kuwasilisha upya urithi wa chakula chetu kwa kuunganisha asili, ubunifu wa kisasa, na mbinu endelevu zinazojenga thamani kwa jamii.</p>
-
-            <h3 data-i18n="values_title">Misingi Yetu</h3>
-            <ul class="text-justify" data-i18n="values_list">
-              <li><i class="bi bi-star-fill"></i> <strong>Urithi:</strong> Kuheshimu asili yetu na simulizi za pwani.</li>
-              <li><i class="bi bi-star-fill"></i> <strong>Uhalisia:</strong> Kudumisha ladha, utambulisho, na ukweli wa pwani halisi.</li>
-              <li><i class="bi bi-star-fill"></i> <strong>Ubunifu:</strong> Kuleta uhai mpya kupitia mawazo mapya na teknolojia rafiki.</li>
-              <li><i class="bi bi-star-fill"></i> <strong>Jamii:</strong> Kuwezesha watu, kujenga ushirikiano, na kukuza maendeleo jumuishi.</li>
-            </ul>
-
-            <h3 data-i18n="vision_statement_title">Mtazamo Wetu</h3>
-            <p class="text-justify" data-i18n="vision_statement_1"><strong>Kiburudisho</strong>, <strong>utambulisho</strong>, <strong>sanaa</strong>, na <strong>urithi</strong> yanayopatikana katika mtazamo wetu.</p>
-            <p class="text-justify" data-i18n="vision_statement_2"><i data-i18n="vision_tagline">Kutoka Pwani hadi Ulimwenguni</i>. Tunaamini katika kuunganisha asili na ubunifu, mila na teknolojia, pwani na ulimwengu.</p>
-            <p class="text-justify" data-i18n="vision_statement_3">Tunajiona kama daraja kati ya jana na kesho — tukihifadhi kilicho cha asili, huku tukitengeneza njia kwa ubunifu unaoelekea mbali. Kupitia Sahilion, tunaleta ladha, hadithi, na roho ya pwani yetu kwa ulimwengu mzima — kutoka Pwani hadi Ulimwenguni.</p>
-          </div>
-
-          <div class="col-lg-4 order-2">
-            <img src="assets/img/logohq.png" class="img-fluid" alt="Picha ya Utambulisho wa Sahilion" data-i18n="[alt]vision_image_alt" style="margin-top:0;">
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
