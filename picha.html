@@ -28,21 +28,20 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-31C36WN94F');
-</script>
-
+    gtag('config', 'G-31C36WN94F');
+  </script>
 </head>
 
 <body class="services-page">
 
-   <header id="header" class="header d-flex align-items-center sticky-top">
+  <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -63,18 +62,17 @@
           <li><a href="hadithi.html" data-i18n="nav_stories">Hadithi</a></li>
           <li><a href="mawasiliano.html" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
-
-        <div class="lang-switcher" id="lang-switcher">
-          <a href="#" class="lang-flag" data-lang="sw" title="Swahili" data-i18n="[title]lang_sw_title">
-            <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active">
-          </a>
-          <a href="#" class="lang-flag" data-lang="en" title="English" data-i18n="[title]lang_en_title">
-            <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon">
-          </a>
-        </div>
+      <div class="lang-switcher" id="lang-switcher">
+        <a href="#" class="lang-flag" data-lang="sw" title="Swahili" data-i18n="[title]lang_sw_title">
+          <img src="assets/img/tz-flag-circular.png" alt="Tanzania Flag for Swahili" class="flag-icon active">
+        </a>
+        <a href="#" class="lang-flag" data-lang="en" title="English" data-i18n="[title]lang_en_title">
+          <img src="assets/img/uk-flag-circular.png" alt="UK Flag for English" class="flag-icon">
+        </a>
+      </div>
 
       <div class="header-social-links">
         <div class="social-links">
@@ -115,15 +113,124 @@
 
     <section id="gallery" class="gallery section">
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo1_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo2_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo3_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo4_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo5_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo6_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo7_title">...</div>
-          <div class="col-xl-3 col-lg-4 col-md-6" data-i18n="[title]gallery_photo8_title">...</div>
+
+        <!-- Filters Section -->
+        <div class="gallery-filters text-center mb-5">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Zote</button>
+          <button class="filter-btn" data-filter="main-dishes" data-i18n="filter_main_dishes">Vyakula Vikuu</button>
+          <button class="filter-btn" data-filter="snacks" data-i18n="filter_snacks">Vitafunwa</button>
+          <button class="filter-btn" data-filter="drinks" data-i18n="filter_drinks">Vinywaji</button>
+          <button class="filter-btn" data-filter="craft" data-i18n="filter_craft">Ufundi wa Upishi</button>
+          <button class="filter-btn" data-filter="hospitality" data-i18n="filter_hospitality">Ukarimu</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row gy-4 justify-content-center gallery-container">
+
+          <!-- Biriyani -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item main-dishes" data-i18n="[title]gallery_biriyani_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/biriyani.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/biriyani.jpg" class="img-fluid" alt="Biriyani">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_biriyani_title">Biriyani</h4>
+                <p data-i18n="item_biriyani_desc">Vyakula Vikuu</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pilau -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item main-dishes" data-i18n="[title]gallery_pilau_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/pilau.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/pilau.jpg" class="img-fluid" alt="Pilau">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_pilau_title">Pilau</h4>
+                <p data-i18n="item_pilau_desc">Vyakula Vikuu</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maandazi -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_maandazi_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/maandazi.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/maandazi.jpg" class="img-fluid" alt="Maandazi">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_maandazi_title">Maandazi</h4>
+                <p data-i18n="item_maandazi_desc">Vitafunwa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mkate wa Mayai -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_mkate_mayai_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/mkate-mayai.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/mkate-mayai.jpg" class="img-fluid" alt="Mkate wa Mayai">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_mkate_mayai_title">Mkate wa Mayai</h4>
+                <p data-i18n="item_mkate_mayai_desc">Vitafunwa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Keki -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_keki_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/keki.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/keki.jpg" class="img-fluid" alt="Keki">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_keki_title">Keki</h4>
+                <p data-i18n="item_keki_desc">Vitafunwa</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Njugu/Karanga -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item craft" data-i18n="[title]gallery_njugu_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/njugu.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/njugu.jpg" class="img-fluid" alt="Njugu/Karanga">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_njugu_title">Njugu/Karanga</h4>
+                <p data-i18n="item_njugu_desc">Ufundi wa Upishi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kitunguu Cha Kukaanga -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item craft" data-i18n="[title]gallery_kitunguu_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/kitunguu.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/kitunguu.jpg" class="img-fluid" alt="Kitunguu Cha Kukaanga">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_kitunguu_title">Kitunguu Cha Kukaanga</h4>
+                <p data-i18n="item_kitunguu_desc">Ufundi wa Upishi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mfano wa Kinywaji (Juisi) -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item drinks" data-i18n="[title]gallery_drinks_title">
+            <div class="gallery-item-wrap">
+              <a href="assets/img/gallery/vinywaji.jpg" class="glightbox" data-gallery="sahilion-gallery">
+                <img src="assets/img/gallery/vinywaji.jpg" class="img-fluid" alt="Vinywaji vya Pwani">
+              </a>
+              <div class="gallery-item-info">
+                <h4 data-i18n="item_drinks_title">Vinywaji Asilia</h4>
+                <p data-i18n="item_drinks_desc">Vinywaji</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -133,7 +240,7 @@
   <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
     <div class="container text-center">
       <div class="copyright mb-2">
-        <p style="color:#F5F5DC;">© <span>2025</span> <strong class="px-1 sitename">Sahilion.</strong> <span data-i18n="footer_copyright_reserved">Haki Zote Zimehifadhiwa.</span></p>
+        <p style="color:#F5F5DC;">© <span>2026</span> <strong class="px-1 sitename">Sahilion.</strong> <span data-i18n="footer_copyright_reserved">Haki Zote Zimehifadhiwa.</span></p>
       </div>
 
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
@@ -146,13 +253,13 @@
       <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">
         Kutoka Pwani hadi Ulimwenguni
       </div>
-
     </div>
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"><div class="line"></div></div>
 
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -160,5 +267,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
