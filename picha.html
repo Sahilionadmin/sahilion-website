@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- 1. Lugha ya ukurasa imebadilishwa kuwa "sw" -->
 <html lang="sw">
 
 <head>
@@ -12,7 +11,6 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <!-- 2. Favicon ya Apple Touch Icon imesasishwa hapa -->
   <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -34,7 +32,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-31C36WN94F"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag()){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-31C36WN94F');
@@ -95,11 +93,9 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <!-- 3. Kichwa cha ukurasa kimesasishwa -->
               <h1 data-i18n="page_title_photos">Taswira za Sahilion</h1>
-              <!-- 4. Maelezo ya juu yamebadilishwa kuwa yale mapya mepesi na ya kisasa -->
               <p class="mb-0" data-i18n="page_subtitle_photos">
-                Taswira zinazosherehekea ladha, urithi, ubunifu, na ukarimu wa pwani kupitia mtazamo wa Sahilion.
+                Taswira zinazosherehelea ladha, urithi, ubunifu, na ukarimu wa pwani kupitia mtazamo wa Sahilion.
               </p>
               <a href="mawasiliano.html" class="cta-btn" data-i18n="photos_cta_btn">Tupatie Mradi Wako<br></a>
             </div>
@@ -120,27 +116,19 @@
     <section id="gallery" class="gallery section">
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- 5. Filters zimesafishwa na kubaki zile tu zenye picha kwa sasa -->
+        <!-- Filters Section -->
         <div class="gallery-filters text-center mb-5">
-          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">
-            Zote
-          </button>
-          <button class="filter-btn" data-filter="main-dishes" data-i18n="filter_main_dishes">
-            Vyakula Vikuu
-          </button>
-          <button class="filter-btn" data-filter="snacks" data-i18n="filter_snacks">
-            Vitafunwa
-          </button>
-          <button class="filter-btn" data-filter="craft" data-i18n="filter_craft">
-            Ufundi wa Upishi
-          </button>
+          <button class="filter-btn active" data-filter="*">Zote</button>
+          <button class="filter-btn" data-filter=".filter-main-dishes">Vyakula Vikuu</button>
+          <button class="filter-btn" data-filter=".filter-snacks">Vitafunwa</button>
+          <button class="filter-btn" data-filter=".filter-craft">Ufundi wa Upishi</button>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="row gy-4 justify-content-center gallery-container">
+        <!-- Gallery Grid (Nimeongeza 'isotope-container' ili kuzuia picha zisipotee) -->
+        <div class="row gy-4 justify-content-center gallery-container isotope-container">
 
           <!-- Biriyani -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item main-dishes" data-i18n="[title]gallery_biriyani_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-main-dishes" data-i18n="[title]gallery_biriyani_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/biriyani.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/biriyani.jpg" class="img-fluid" alt="Biriyani">
@@ -153,7 +141,7 @@
           </div>
 
           <!-- Pilau -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item main-dishes" data-i18n="[title]gallery_pilau_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-main-dishes" data-i18n="[title]gallery_pilau_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/pilau.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/pilau.jpg" class="img-fluid" alt="Pilau">
@@ -166,7 +154,7 @@
           </div>
 
           <!-- Maandazi -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_maandazi_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-snacks" data-i18n="[title]gallery_maandazi_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/maandazi.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/maandazi.jpg" class="img-fluid" alt="Maandazi">
@@ -179,7 +167,7 @@
           </div>
 
           <!-- Mkate wa Mayai -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_mkate_mayai_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-snacks" data-i18n="[title]gallery_mkate_mayai_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/mkate-mayai.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/mkate-mayai.jpg" class="img-fluid" alt="Mkate wa Mayai">
@@ -192,7 +180,7 @@
           </div>
 
           <!-- Keki -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item snacks" data-i18n="[title]gallery_keki_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-snacks" data-i18n="[title]gallery_keki_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/keki.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/keki.jpg" class="img-fluid" alt="Keki">
@@ -204,21 +192,21 @@
             </div>
           </div>
 
-          <!-- Njugu/Karanga -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item craft" data-i18n="[title]gallery_njugu_title">
+          <!-- Vileja -->
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-craft" data-i18n="[title]gallery_njugu_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/vileja.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/vileja.jpg" class="img-fluid" alt="Vileja">
               </a>
               <div class="gallery-item-info">
                 <h4 data-i18n="item_njugu_title">Vileja</h4>
-                <p data-i18n="item_njugu_desc">Vitafunwi</p>
+                <p data-i18n="item_njugu_desc">Ufundi wa Upishi</p>
               </div>
             </div>
           </div>
 
           <!-- Kitunguu Cha Kukaanga -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item craft" data-i18n="[title]gallery_kitunguu_title">
+          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item isotope-item filter-craft" data-i18n="[title]gallery_kitunguu_title">
             <div class="gallery-item-wrap">
               <a href="assets/img/gallery/kitunguu.jpg" class="glightbox" data-gallery="sahilion-gallery">
                 <img src="assets/img/gallery/kitunguu.jpg" class="img-fluid" alt="Kitunguu Cha Kukaanga">
@@ -229,8 +217,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 6. Block ya Mfano wa Kinywaji (Juisi) IMEONDOLEWA kabisa kutoka hapa -->
 
         </div>
       </div>
