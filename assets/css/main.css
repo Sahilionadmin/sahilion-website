@@ -1450,28 +1450,1481 @@ section,
   background-color: #4A2C2A; /* Optional pressed color */
 }
 
-/* Uniform spacing for contact sections */
-.section-title,
-.info-wrap,
-.newsletter-wrapper,
-.contact-wrapper {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+/**
+* Template Name: PhotoFolio (MODIFIED FOR SAHILION)
+* Updated: 2026 (Sahilion Customization)
+* Author: BootstrapMade.com & Sahilion Team
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# FONT & COLOR VARIABLES - SAHILION CUSTOMIZATION
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --heading-font: "Madimi One", cursive; /* Fonti kwa vichwa vikuu */
+  --nav-font: "Roboto", sans-serif; /* Tumia Roboto kwa nav pia */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .section-title,
-  .info-wrap,
-  .newsletter-wrapper,
-  .contact-wrapper {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+/* GLOBAL COLORS - SAHILION PALETTE */
+:root {
+  /* Background/Default Colors The entire website, Light/Beige Mode */
+  --background-color: #F5F5DC; /* For the body background, Beige/Cream */
+  --default-color: #4A2C2A; /* For the website texts, Brown/Dark Accent */
+  --heading-color: #4A2C2A; /* For main Headings, Brown (Vichwa Vikuu) */
+  --surface-color: #FFFFFF; /* White/Light Surface for (cards/boxes) */
+  --contrast-color: #FFFFFF; /* White - ext color for accent background */
 
-/* --- Form messages hidden by default --- */
-.error-message,
-.sent-message {
-  display: none !important;
+  /* SAHILION ACCENT COLORS */
+  --primary-brand-color: #D35400; /* Orange/Accent color (CTA) */
+  --secondary-brand-color: #4A2C2A; /* Brown/Dark Accent (Primary/Darkest Color) */
+  --accent-color: var(--primary-brand-color); /* Tumia Orange kama rangi kuu ya accent */
+}
+
+/* NAV MENU COLORS */
+:root {
+  --nav-color: rgba(255, 255, 255, 0.7); /* White iliyofifia (Juxtaposed & Brown Header) */
+  --nav-hover-color: #ffffff; /* White */
+  --nav-mobile-background-color: #4A2C2A; /* Dark Surface (Brown) */
+  --nav-dropdown-background-color: #4A2C2A; /* Dark Surface (Brown) */
+  --nav-dropdown-color: rgba(255, 255, 255, 0.8);
+  --nav-dropdown-hover-color: #ffffff;
+}
+
+/* COLOR PRESETS */
+.light-background {
+  --background-color: #F5F5DC; /* Beige */
+  --surface-color: #FFFFFF;
+}
+
+.dark-background {
+  --background-color: #4A2C2A; /* Brown */
+  --default-color: #F5F5DC; /* Beige/Cream */
+  --heading-color: #F5F5DC;
+  --surface-color: #5D3C3A;
+  --contrast-color: #FFFFFF;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# GENERAL STYLING & SHARED CLASSES
+--------------------------------------------------------------*/
+body {
+  /* Maandishi #4A2C2A na Background #F5F5DC */
+  color: var(--default-color); 
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--secondary-brand-color); /* Tumia Brown kwa links */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--primary-brand-color); /* Links Orange kwenye hover */
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# GLOBAL HEADER
+--------------------------------------------------------------*/
+.header {
+  color: #F5F5DC; /* Beige */
+  background-color: #4A2C2A; /* Brown */
+  padding: 20px 0; 
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, #F5F5DC, transparent 90%); /* Border laini */
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+/* Kurekebisha saizi ya SVG Logo */
+.header .logo img {
+  max-height: 60px; 
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 400;
+  color: #F5F5DC; /* Beige */
+}
+
+.header .logo i {
+  font-size: 28px;
+  margin-right: 6px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header .header-social-links a {
+  color: color-mix(in srgb, #F5F5DC, transparent 40%); /* Beige iliyofifia */
+  padding-left: 6px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.header .header-social-links a:hover {
+  color: var(--primary-brand-color); /* Rangi ya Orange */
+}
+
+.header .header-social-links a i {
+  line-height: 0px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
   }
 
+  .header .logo h1 {
+    font-size: 26px;
+  }
+
+  .header .logo i {
+    font-size: 20px;
+  }
+
+  .header .header-social-links {
+    order: 2;
+  }
+
+  .header .header-social-links a {
+    font-size: 16px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+.scrolled .header {
+  border-color: color-mix(in srgb, #4A2C2A 90%, white 20%);
+}
+
+/*--------------------------------------------------------------
+# SAHILION NAVIGATION MENU
+--------------------------------------------------------------*/
+/* Navmenu - Desktop */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 14px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
+
+/* Navmenu - Mobile */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: #F5F5DC; /* Beige */
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, #F5F5DC, transparent 90%);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(74, 44, 42, 0.8); /* Brown Overlay */
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+# LANGUAGE SWITCHER (Circular Beige) - Sahilion Custom
+--------------------------------------------------------------*/
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Nafasi kati ya navmenu & social icons */
+}
+
+/* Container of each flag (LANG-FLAG) - circular beige */
+.lang-switcher .lang-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid color-mix(in srgb, #F5F5DC, transparent 40%);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-right: 8px; /* Nafasi kati ya bendera */
+}
+
+.lang-switcher .lang-flag:hover {
+  opacity: 1;
+  border-color: var(--primary-brand-color, #ff5722);
+}
+
+/* PICHA YA BENDERA NDANI YA DUARA */
+.lang-switcher .flag-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* ACTIVE EFFECT */
+.lang-switcher .lang-flag.active,
+.lang-switcher .flag-icon.active {
+  opacity: 1;
+  border-color: var(--primary-brand-color, #ff5722);
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+  transform: scale(1.05);
+}
+
+.lang-switcher .lang-flag.active:hover {
+  transform: none;
+}
+
+/*--------------------------------------------------------------
+# RESPONSIVE (<=1200px) - SAHILION HEADER ORDER
+--------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .lang-switcher {
+    order: 2;
+    margin-right: 10px;
+  }
+
+  .header .header-social-links {
+    display: none !important;
+  }
+
+  .header .mobile-nav-toggle {
+    order: 3;
+    margin-left: 10px;
+  }
+
+  .header,
+  .header .d-flex,
+  .header-right-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/*--------------------------------------------------------------
+# GLOBAL FOOTER
+--------------------------------------------------------------*/
+.footer {
+  --background-color: #4A2C2A; /* Brown */
+  border-top: 1px solid color-mix(in srgb, #F5F5DC, transparent 90%);
+  color: #F5F5DC; /* Beige */
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+  color: #F5F5DC; /* Beige */
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, #F5F5DC, transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, #F5F5DC, transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--primary-brand-color); /* Orange */
+  border-color: var(--primary-brand-color);
+}
+
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #F5F5DC; /* Beige */
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  background-color: #4A2C2A; /* Brown */
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.8s ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF; /* White */
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  animation: lineincrease 1000ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: color-mix(in srgb, #F5F5DC, transparent 95%); /* Light Beige/Cream */
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  animation: linemove 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes lineincrease {
+  0% { height: 0%; }
+  100% { height: 100%; }
+}
+
+@keyframes linemove {
+  0% { transform: translateY(200%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes preloaderfinish {
+  0% { width: 50%; }
+  100% { width: 0%; }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color); /* Orange */
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color); /* White */
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# DISABLE OAS ANIMATION DELAY ON MOBILE DEVICES
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# GLOBAL PAGE TITLES & BREADCRUMBS
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color); /* Brown */
+  background-color: var(--background-color); /* Beige */
+  position: relative;
+}
+
+.page-title .heading {
+  padding: 80px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.page-title .heading h1 {
+  font-size: 64px; 
+  font-weight: 400;
+  font-family: var(--heading-font);
+}
+
+.page-title .heading .cta-btn {
+  color: var(--contrast-color); /* White */
+  background: var(--primary-brand-color); /* Orange */
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-title .heading .cta-btn:hover {
+  background-color: color-mix(in srgb, var(--primary-brand-color) 90%, white 10%);
+}
+
+.page-title nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.page-title nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--default-color); /* Brown */
+}
+
+.page-title nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.page-title nav.empty-breadcrumb {
+  padding: 35px 0;
+}
+
+/*--------------------------------------------------------------
+# GLOBAL SECTION
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color); /* Brown */
+  background-color: var(--background-color); /* Beige */
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# GLOBAL SECTION TITLES
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  line-height: 1px;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  position: relative;
+  font-family: var(--default-font);
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color); /* Orange */
+  margin: 4px 10px;
+}
+
+.section-title p {
+  color: var(--heading-color); /* Brown */
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# HERO SECTION - SAHILION CUSTOMIZATION
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 30vh;
+  position: relative;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero h2 {
+  margin: 0 0 10px 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.hero h2 .underlight {
+  color: #4A2C2A; /* Brown */
+  background: #F5F5DC; /* Beige/Cream */
+  padding: 5px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.hero h2 .underlight:before {
+  content: none; 
+}
+
+.hero p {
+  color: #F5F5DC; /* Beige/Cream */
+  margin-bottom: 30px;
+  font-size: 18px;
+  background-color: rgba(74, 44, 42, 0.7);
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color); /* White */
+  background: var(--primary-brand-color); /* Orange */
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero .btn-get-started:hover {
+  background-color: color-mix(in srgb, var(--primary-brand-color) 90%, white 10%);
+}
+
+/*--------------------------------------------------------------
+# GALLERY SECTION & SAHILION CUSTOM PHOTO FILTERS
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery .gallery-item img {
+  transition: 0.3s;
+}
+
+.gallery .gallery-links {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgba(74, 44, 42, 0.7); /* Brown na opacity */
+  z-index: 3;
+}
+
+.gallery .gallery-links .preview-link,
+.gallery .gallery-links .details-link {
+  font-size: 20px;
+  color: #F5F5DC; /* Beige/Cream */
+  transition: 0.3s;
+  line-height: 1.2;
+  margin: 30px 8px 0 8px;
+}
+
+.gallery .gallery-links .preview-link:hover,
+.gallery .gallery-links .details-link:hover {
+  color: var(--primary-brand-color); /* Orange */
+}
+
+.gallery .gallery-links .details-link {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.gallery .gallery-item:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery .gallery-item:hover .preview-link,
+.gallery .gallery-item:hover .details-link {
+  margin-top: 0;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.glightbox-clean .gslide-description {
+  background: #4A2C2A; /* Brown */
+}
+
+.glightbox-clean .gslide-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Sahilion Gallery Interactive Filters Styles */
+.gallery-filters .filter-btn {
+  background: none;
+  border: 2px solid transparent;
+  color: var(--default-color, #4A2C2A);
+  padding: 8px 20px;
+  margin: 5px;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.gallery-filters .filter-btn:hover, 
+.gallery-filters .filter-btn.active {
+  background-color: #D35400; /* Orange */
+  color: #fff;
+}
+
+.gallery-item-wrap {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item-wrap img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item-info {
+  padding: 15px;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-item-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.gallery-item-info p {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# ABOUT SECTION
+--------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--heading-color);
+}
+
+.about .content p {
+  margin-bottom: 15px !important;
+  font-style: normal !important;
+  text-align: justify;
+}
+
+.about .content p.m-0 {
+  margin-top: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+.about .content .fst-italic {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.about .col-lg-4 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about .content ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about .content ul li {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 5px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: var(--default-color);
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--default-color, #ffb03b);
+  padding-right: 5px;
+  margin-top: 4px;
+}
+
+/*--------------------------------------------------------------
+# GALLERY DETAILS SECTION
+--------------------------------------------------------------*/
+.gallery-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.gallery-details .swiper-wrapper {
+  height: auto;
+}
+
+.gallery-details .swiper-button-prev,
+.gallery-details .swiper-button-next {
+  width: 48px;
+  height: 48px;
+}
+
+.gallery-details .swiper-button-prev:after,
+.gallery-details .swiper-button-next:after {
+  color: #FFFFFF; /* White */
+  background-color: rgba(74, 44, 42, 0.4);
+  font-size: 24px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.gallery-details .swiper-button-prev:hover:after,
+.gallery-details .swiper-button-next:hover:after {
+  background-color: rgba(74, 44, 42, 0.7);
+}
+
+@media (max-width: 575px) {
+  .gallery-details .swiper-button-prev,
+  .gallery-details .swiper-button-next {
+    display: none;
+  }
+}
+
+.gallery-details .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery-details .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.gallery-details .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color); /* Orange */
+}
+
+.gallery-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: var(--heading-color);
+}
+
+.gallery-details .portfolio-info h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+}
+
+.gallery-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  color: var(--default-color);
+}
+
+.gallery-details .portfolio-info ul li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.gallery-details .portfolio-info ul strong {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 14px;
+}
+
+.gallery-details .portfolio-info .btn-visit {
+  padding: 8px 40px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.gallery-details .portfolio-info .btn-visit:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.gallery-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+.gallery-details .portfolio-description p {
+  padding: 0;
+  color: var(--default-color);
+}
+
+.gallery-details .portfolio-description .testimonial-item {
+  padding: 30px 30px 0 30px;
+  position: relative;
+  background: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.gallery-details .portfolio-description .testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50px;
+  border: 6px solid var(--background-color);
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.gallery-details .portfolio-description .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0 5px 0;
+  padding-top: 20px;
+  color: var(--heading-color);
+}
+
+.gallery-details .portfolio-description .testimonial-item h4 {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# SERVICE SECTION (Hadithi na Maonyesho Hub)
+--------------------------------------------------------------*/
+.services .service-item {
+  background-color: var(--surface-color);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.services .service-item:before {
+  content: "";
+  position: absolute;
+  background: var(--secondary-brand-color);
+  inset: 100% 0 0 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.services .service-item .icon {
+  margin-bottom: 15px;
+}
+
+.services .service-item .icon i {
+  color: #F5F5DC;
+  background-color: var(--primary-brand-color);
+  font-size: 24px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: var(--default-font);
+}
+
+.services .service-item h4 a {
+  color: var(--heading-color);
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  transition: ease-in-out 0.3s;
+  color: var(--default-color);
+}
+
+.services .service-item:hover h4 a,
+.services .service-item:hover p {
+  color: #F5F5DC;
+}
+
+.services .service-item:hover i {
+  color: var(--secondary-brand-color);
+  background-color: #F5F5DC;
+}
+
+.services .service-item:hover:before {
+  background: var(--secondary-brand-color);
+  inset: 0;
+  border-radius: 0px;
+}
+
+.small-cta-link {
+  color: var(--primary-brand-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-top: 10px;
+  display: block;
+}
+
+.small-cta-link:hover {
+  color: color-mix(in srgb, var(--primary-brand-color), transparent 30%);
+}
+
+/*--------------------------------------------------------------
+# STARTER SECTION
+--------------------------------------------------------------*/
+.starter-section .contact-form {
+  background-color: #fffaf0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.starter-section .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.starter-section .contact-form input,
+.starter-section .contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.starter-section .contact-form button {
+  background-color: #4A2C2A;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.starter-section .contact-form button:hover {
+  background-color: #D35400;
+}
+
+.starter-section .newsletter-form {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fefbf5;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.starter-section .newsletter-form input[type="email"] {
+  width: 70%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.starter-section .newsletter-form button {
+  background-color: #4A2C2A;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.starter-section .newsletter-form button:hover {
+  background-color: #D35400;
+}
+
+.starter-section .btn-brand {
+  background-color: #D35400;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.starter-section .btn-brand:hover {
+  background-color: color-mix(in srgb, #D35400 90%, white 10%);
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# CONTACT INFO ICONS
+--------------------------------------------------------------*/
+.contact .info-item i {
+  font-size: 20px;
+  color: #4A2C2A;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(77, 45, 42, 0.4);
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info-item:hover i {
+  background-color: #5DADE2;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# CONTACT & NEWSLETTER FORMS - Sahilion Custom
+--------------------------------------------------------------*/
+.contact-form,
+.newsletter-form {
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  background-color: #fffaf0;
+}
+
+.newsletter-form {
+  text-align: center;
+  background-color: #fefbf5;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.newsletter-form input[type="email"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newsletter-form input[type="email"] {
+  width: 70%;
+  max-width: 400px;
+}
+
+.contact-form button,
+.newsletter-form button,
+.cta-btn.form-btn {
+  background-color: #4A2C2A;
+  color: #F5F5DC;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.newsletter-form button {
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.2rem;
+}
+
+.cta-btn.form-btn {
+  background-color: #D35400;
+  letter-spacing: 0.5px;
+}
+
+.contact-form button:hover,
+.newsletter-form button:hover,
+.cta-btn.form-btn:hover,
+.cta-btn.form-btn:focus {
+  background-color: #5DADE2;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cta-btn.form-btn:active {
+  transform: translateY(0);
+  background-color: #4A2C2A;
+}
+
+/* Uniform Spacing Layout Cleanups */
+.contact-form form .row, 
+.newsletter-form .row {
+  margin-bottom: 1rem;
 }
