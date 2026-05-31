@@ -160,7 +160,7 @@
       const scrollTop = document.querySelector('.scroll-top');
       if (!scrollTop) return;
       const toggle = () => { 
-        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active'); 
+        window.scrollY > 100 ? scrollTop.classList.add('add') : scrollTop.classList.remove('active'); 
       };
       window.addEventListener('load', toggle);
       document.addEventListener('scroll', toggle);
@@ -268,7 +268,7 @@
   }
 
   // -------------------------
-  // Sahilion Gallery Filter System
+  // Sahilion Gallery Filter System - MAREKEBISHO YA UHAKIKA HAPA
   // -------------------------
   function initGalleryFilter() {
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -283,15 +283,19 @@
           const filterValue = this.getAttribute("data-filter");
 
           galleryItems.forEach(item => {
+            // Badala ya kulazimisha inline display:none/block, tunadhibiti muonekano kwa ustadi salama wa CSS na AOS layout
             if (filterValue === "all" || item.classList.contains(filterValue)) {
-              item.style.display = "block";
-              item.setAttribute("data-aos", "fade-up");
+              item.style.setProperty('display', 'block', 'important');
+              item.style.opacity = "1";
+              item.style.visibility = "visible";
             } else {
-              item.style.display = "none";
+              item.style.setProperty('display', 'none', 'important');
+              item.style.opacity = "0";
+              item.style.visibility = "hidden";
             }
           });
           
-          // Re-trigger AOS to recalculate positions after filter layout changes
+          // Re-trigger AOS salama kabisa bila kuvuruga layout zilizofichwa
           if (typeof AOS !== 'undefined') {
             AOS.refresh();
           }
