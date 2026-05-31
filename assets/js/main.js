@@ -1,6 +1,6 @@
 /**
  * main.js - Sahilion (PhotoFolio modified)
- * Includes: i18n, preloader, nav, AOS, Glightbox, Swiper, Formspree AJAX handlers
+ * Includes: i18n, preloader, nav, AOS, Glightbox, Swiper, Formspree AJAX handlers, Gallery Filter
  *
  * Place at: assets/js/main.js
  * Ensure vendor scripts (bootstrap, aos, glightbox, swiper) are loaded before this file
@@ -23,9 +23,15 @@
     if (!lang || lang === DEFAULT_LANG) return {};
     try {
       const res = await fetch(`assets/i18n/${lang}.json`);
-      if (!res.ok) { console.warn(`Could not load translation file for ${lang}`); return {}; }
+      if (!res.ok) { 
+        console.warn(`Could not load translation file for ${lang}`); 
+        return {}; 
+      }
       return await res.json();
-    } catch (err) { console.error('fetchTranslations error', err); return {}; }
+    } catch (err) { 
+      console.error('fetchTranslations error', err); 
+      return {}; 
+    }
   }
 
   function getTranslation(key) {
@@ -51,7 +57,9 @@
           if (value) el.innerHTML = value;
         }
       });
-    } catch (err) { console.error('applyTranslations error', err); }
+    } catch (err) { 
+      console.error('applyTranslations error', err); 
+    }
   }
 
   function updateFlagVisual(newLang) {
@@ -59,8 +67,12 @@
       const flagEl = parent.querySelector('.flag-icon');
       const flagLang = parent.getAttribute('data-lang');
       if (flagLang === newLang) {
-        parent.classList.add('active'); if (flagEl) flagEl.classList.add('active');
-      } else { parent.classList.remove('active'); if (flagEl) flagEl.classList.remove('active'); }
+        parent.classList.add('active'); 
+        if (flagEl) flagEl.classList.add('active');
+      } else { 
+        parent.classList.remove('active'); 
+        if (flagEl) flagEl.classList.remove('active'); 
+      }
     });
   }
 
@@ -68,7 +80,9 @@
     try {
       localStorage.setItem(LANG_KEY, lang);
       if (lang !== DEFAULT_LANG) await fetchTranslations(lang);
-    } catch (e) { console.warn(e); }
+    } catch (e) { 
+      console.warn(e); 
+    }
     window.location.reload();
   }
 
@@ -81,22 +95,30 @@
         const preloader = document.getElementById('preloader') || document.querySelector('#preloader');
         if (!preloader) return;
         preloader.classList.add('loaded');
-        setTimeout(() => { try { preloader.remove(); } catch(e){} }, 800);
-      } catch (err) { console.error('preloader removal error', err); }
+        setTimeout(() => { 
+          try { preloader.remove(); } catch(e){} 
+        }, 800);
+      } catch (err) { 
+        console.error('preloader removal error', err); 
+      }
     });
+
+    // Fallback safety timeout
     setTimeout(() => {
       try {
         const preloader = document.getElementById('preloader') || document.querySelector('#preloader');
         if (preloader && !preloader.classList.contains('loaded')) {
           preloader.classList.add('loaded');
-          setTimeout(() => { try { preloader.remove(); } catch(e){} }, 500);
+          setTimeout(() => { 
+            try { preloader.remove(); } catch(e){} 
+          }, 500);
         }
       } catch(e){}
     }, 6000);
   }
 
   // -------------------------
-  // UI utilities
+  // UI Utilities
   // -------------------------
   function mobileNavToggleInit() {
     try {
@@ -112,7 +134,9 @@
           if (document.querySelector('.mobile-nav-active') && mobileBtn) mobileBtn.click();
         });
       });
-    } catch (err) { console.error('mobileNavToggleInit error', err); }
+    } catch (err) { 
+      console.error('mobileNavToggleInit error', err); 
+    }
   }
 
   function mobileNavDropdowns() {
@@ -126,112 +150,208 @@
           e.stopImmediatePropagation();
         });
       });
-    } catch (err) { console.error('mobileNavDropdowns error', err); }
+    } catch (err) { 
+      console.error('mobileNavDropdowns error', err); 
+    }
   }
 
   function scrollTopInit() {
     try {
       const scrollTop = document.querySelector('.scroll-top');
       if (!scrollTop) return;
-      const toggle = () => { window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active'); };
+      const toggle = () => { 
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active'); 
+      };
       window.addEventListener('load', toggle);
       document.addEventListener('scroll', toggle);
-      scrollTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top:0, behavior:'smooth' }); });
-    } catch (err) { console.error('scrollTopInit error', err); }
+      scrollTop.addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
+      });
+    } catch (err) { 
+      console.error('scrollTopInit error', err); 
+    }
   }
 
   // -------------------------
-  // AOS, GLightbox, Swiper
+  // Vendor Plugins (AOS, GLightbox, Swiper)
   // -------------------------
-  function aosInit() { try { if(typeof AOS!=='undefined') AOS.init({duration:600,easing:'ease-in-out',once:true,mirror:false}); } catch(err){console.error('AOS init error',err);} }
-  function glightboxInit() { try { if(typeof GLightbox!=='undefined') GLightbox({selector:'.glightbox'}); } catch(err){console.error('GLightbox init error',err);} }
+  function aosInit() { 
+    try { 
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 600, easing: 'ease-in-out', once: true, mirror: false });
+      } 
+    } catch(err) { console.error('AOS init error', err); } 
+  }
+
+  function glightboxInit() { 
+    try { 
+      if (typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox' });
+      } 
+    } catch(err) { console.error('GLightbox init error', err); } 
+  }
+
   function initSwiper() {
     try {
-      if(typeof Swiper==='undefined') return;
-      document.querySelectorAll(".init-swiper").forEach(swiperElement=>{
-        try{
+      if (typeof Swiper === 'undefined') return;
+      document.querySelectorAll(".init-swiper").forEach(swiperElement => {
+        try {
           const configEl = swiperElement.querySelector(".swiper-config");
-          if(!configEl) return;
+          if (!configEl) return;
           const config = JSON.parse(configEl.innerHTML.trim());
           new Swiper(swiperElement, config);
-        }catch(err){console.error('initSwiper element error',err);}
+        } catch(err) { 
+          console.error('initSwiper element error', err); 
+        }
       });
-    }catch(err){console.error('initSwiper error',err);}
+    } catch(err) { 
+      console.error('initSwiper error', err); 
+    }
   }
 
   // -------------------------
-  // Formspree AJAX handler (with proper hide/show)
+  // Formspree AJAX Handler
   // -------------------------
-  function handleFormspreeSubmission(form){
-    if(!form) return;
-    if(form.__formspreeBound) return;
+  function handleFormspreeSubmission(form) {
+    if (!form) return;
+    if (form.__formspreeBound) return;
     form.__formspreeBound = true;
 
-    // Ensure messages hidden initially
     const errorDiv = form.querySelector('.error-message');
     const sentDiv = form.querySelector('.sent-message');
-    if(errorDiv) { errorDiv.style.display='none'; errorDiv.textContent=''; }
-    if(sentDiv) { sentDiv.style.display='none'; }
+    const loadingDiv = form.querySelector('.loading');
+    
+    if (errorDiv) { errorDiv.style.display = 'none'; errorDiv.textContent = ''; }
+    if (sentDiv) { sentDiv.style.display = 'none'; }
+    if (loadingDiv) { loadingDiv.style.display = 'none'; }
 
-    form.addEventListener('submit', async function(event){
+    form.addEventListener('submit', async function(event) {
       event.preventDefault();
-      try{
-        const loadingDiv = form.querySelector('.loading');
-        if(loadingDiv) loadingDiv.style.display='block';
-        if(errorDiv) { errorDiv.style.display='none'; errorDiv.textContent=''; }
-        if(sentDiv) { sentDiv.style.display='none'; }
+      try {
+        if (loadingDiv) loadingDiv.style.display = 'block';
+        if (errorDiv) { errorDiv.style.display = 'none'; errorDiv.textContent = ''; }
+        if (sentDiv) { sentDiv.style.display = 'none'; }
 
         const formData = new FormData(form);
-        const res = await fetch(form.action,{method:'POST',body:formData,headers:{'Accept':'application/json'}});
-        if(loadingDiv) loadingDiv.style.display='none';
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (loadingDiv) loadingDiv.style.display = 'none';
 
-        if(res.ok){
-          if(sentDiv){sentDiv.style.display='block'; sentDiv.textContent=getTranslation('contact_status_sent')||'Ujumbe wako umetumwa. Asante!';}
-          else alert(getTranslation('newsletter_status_sent')||'Umejiunga! Asante.');
-          try{form.reset();}catch(e){}
+        if (res.ok) {
+          if (sentDiv) {
+            sentDiv.style.display = 'block'; 
+            sentDiv.textContent = getTranslation('contact_status_sent') || 'Ujumbe wako umetumwa. Asante!';
+          } else {
+            alert(getTranslation('newsletter_status_sent') || 'Umejiunga! Asante.');
+          }
+          try { form.reset(); } catch(e){}
         } else {
-          let errText = getTranslation('contact_error_general')||'Tatizo limetokea. Tafadhali jaribu tena.';
-          try{const data = await res.json(); if(data && data.error) errText=data.error;}catch(e){}
-          if(errorDiv){errorDiv.style.display='block'; errorDiv.textContent=errText;} else alert(errText);
+          let errText = getTranslation('contact_error_general') || 'Tatizo limetokea. Tafadhali jaribu tena.';
+          try { 
+            const data = await res.json(); 
+            if (data && data.error) errText = data.error;
+          } catch(e){}
+          if (errorDiv) { errorDiv.style.display = 'block'; errorDiv.textContent = errText; } else { alert(errText); }
         }
-      }catch(err){
-        console.error('Form submission error',err);
-        if(loadingDiv) loadingDiv.style.display='none';
-        if(errorDiv){errorDiv.style.display='block'; errorDiv.textContent=getTranslation('contact_error_network')||'Hitilafu ya mtandao. Jaribu tena.';}
-        else alert(getTranslation('contact_error_network')||'Hitilafu ya mtandao. Jaribu tena.');
+      } catch(err) {
+        console.error('Form submission error', err);
+        if (loadingDiv) loadingDiv.style.display = 'none';
+        const netErrText = getTranslation('contact_error_network') || 'Hitilafu ya mtandao. Jaribu tena.';
+        if (errorDiv) { errorDiv.style.display = 'block'; errorDiv.textContent = netErrText; } else { alert(netErrText); }
       }
     });
   }
 
   // -------------------------
-  // Initialization
+  // Sahilion Gallery Filter System
   // -------------------------
-  document.addEventListener('DOMContentLoaded', async ()=>{
-    try{
-      const savedLang = localStorage.getItem(LANG_KEY)||DEFAULT_LANG;
-      if(savedLang!==DEFAULT_LANG){ translations=await fetchTranslations(savedLang); applyTranslations(savedLang, translations); }
-      updateFlagVisual(savedLang);
-      document.querySelectorAll('.lang-flag').forEach(button=>{
-        button.addEventListener('click',(e)=>{ e.preventDefault(); const lang=button.getAttribute('data-lang'); if(!lang) return; setLanguageAndReload(lang); });
+  function initGalleryFilter() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+      filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          const filterValue = this.getAttribute("data-filter");
+
+          galleryItems.forEach(item => {
+            if (filterValue === "all" || item.classList.contains(filterValue)) {
+              item.style.display = "block";
+              item.setAttribute("data-aos", "fade-up");
+            } else {
+              item.style.display = "none";
+            }
+          });
+          
+          // Re-trigger AOS to recalculate positions after filter layout changes
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        });
       });
-    }catch(err){console.error('i18n init error',err);}
+    }
+  }
+
+  // -------------------------
+  // Initialization & Events
+  // -------------------------
+  document.addEventListener('DOMContentLoaded', async () => {
+    // i18n initialization
+    try {
+      const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
+      if (savedLang !== DEFAULT_LANG) { 
+        translations = await fetchTranslations(savedLang); 
+        applyTranslations(savedLang, translations); 
+      }
+      updateFlagVisual(savedLang);
+      document.querySelectorAll('.lang-flag').forEach(button => {
+        button.addEventListener('click', (e) => { 
+          e.preventDefault(); 
+          const lang = button.getAttribute('data-lang'); 
+          if (!lang) return; 
+          setLanguageAndReload(lang); 
+        });
+      });
+    } catch (err) { 
+      console.error('i18n init error', err); 
+    }
+
+    // Core UI Components
     mobileNavToggleInit();
     mobileNavDropdowns();
     scrollTopInit();
-    try{aosInit();}catch(e){}
-    try{glightboxInit();}catch(e){}
-    try{initSwiper();}catch(e){}
-    try{
+    initGalleryFilter();
+
+    // Vendor Plugins Init
+    try { aosInit(); } catch(e){}
+    try { glightboxInit(); } catch(e){}
+    try { initSwiper(); } catch(e){}
+
+    // Form Handling
+    try {
       handleFormspreeSubmission(document.querySelector('#contact-form'));
       handleFormspreeSubmission(document.querySelector('#newsletter-form'));
-    }catch(err){console.error('attach form handlers error',err);}
+    } catch (err) { 
+      console.error('attach form handlers error', err); 
+    }
   });
 
-  try{initPreloader();}catch(err){console.error('initPreloader error',err);}
-  window.addEventListener('load', ()=>{
-    try{aosInit();}catch(e){}
-    try{glightboxInit();}catch(e){}
-    try{initSwiper();}catch(e){}
+  // Early Preloader trigger
+  try { initPreloader(); } catch(err) { console.error('initPreloader error', err); }
+
+  // Window Load Safety execution
+  window.addEventListener('load', () => {
+    try { aosInit(); } catch(e){}
+    try { glightboxInit(); } catch(e){}
+    try { initSwiper(); } catch(e){}
   });
 
 })();
