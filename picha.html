@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 1. Lugha ya ukurasa imebadilishwa kuwa "sw" -->
+<html lang="sw">
 
 <head>
   <meta charset="utf-8">
@@ -11,7 +12,8 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="favicon.png">
+  <!-- 2. Favicon ya Apple Touch Icon imesasishwa hapa -->
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -93,8 +95,12 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1 data-i18n="page_title_photos">Makusanyo ya Picha</h1>
-              <p class="mb-0" data-i18n="page_subtitle_photos">Makusanyo yetu ya picha yanaangazia hadithi za chakula, bidhaa, na utamaduni wa pwani. Gundua kila picha na ufurahie ladha, harufu, na ubunifu wake.</p>
+              <!-- 3. Kichwa cha ukurasa kimesasishwa -->
+              <h1 data-i18n="page_title_photos">Taswira za Sahilion</h1>
+              <!-- 4. Maelezo ya juu yamebadilishwa kuwa yale mapya mepesi na ya kisasa -->
+              <p class="mb-0" data-i18n="page_subtitle_photos">
+                Taswira zinazosherehelea ladha, urithi, ubunifu, na ukarimu wa pwani kupitia mtazamo wa Sahilion.
+              </p>
               <a href="mawasiliano.html" class="cta-btn" data-i18n="photos_cta_btn">Tupatie Mradi Wako<br></a>
             </div>
           </div>
@@ -114,14 +120,20 @@
     <section id="gallery" class="gallery section">
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Filters Section -->
+        <!-- 5. Filters zimesafishwa na kubaki zile tu zenye picha kwa sasa -->
         <div class="gallery-filters text-center mb-5">
-          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Zote</button>
-          <button class="filter-btn" data-filter="main-dishes" data-i18n="filter_main_dishes">Vyakula Vikuu</button>
-          <button class="filter-btn" data-filter="snacks" data-i18n="filter_snacks">Vitafunwa</button>
-          <button class="filter-btn" data-filter="drinks" data-i18n="filter_drinks">Vinywaji</button>
-          <button class="filter-btn" data-filter="craft" data-i18n="filter_craft">Ufundi wa Upishi</button>
-          <button class="filter-btn" data-filter="hospitality" data-i18n="filter_hospitality">Ukarimu</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">
+            Zote
+          </button>
+          <button class="filter-btn" data-filter="main-dishes" data-i18n="filter_main_dishes">
+            Vyakula Vikuu
+          </button>
+          <button class="filter-btn" data-filter="snacks" data-i18n="filter_snacks">
+            Vitafunwa
+          </button>
+          <button class="filter-btn" data-filter="craft" data-i18n="filter_craft">
+            Ufundi wa Upishi
+          </button>
         </div>
 
         <!-- Gallery Grid -->
@@ -218,18 +230,7 @@
             </div>
           </div>
 
-          <!-- Mfano wa Kinywaji (Juisi) -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item drinks" data-i18n="[title]gallery_drinks_title">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/vinywaji.jpg" class="glightbox" data-gallery="sahilion-gallery">
-                <img src="assets/img/gallery/vinywaji.jpg" class="img-fluid" alt="Vinywaji vya Pwani">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_drinks_title">Vinywaji Asilia</h4>
-                <p data-i18n="item_drinks_desc">Vinywaji</p>
-              </div>
-            </div>
-          </div>
+          <!-- 6. Block ya Mfano wa Kinywaji (Juisi) IMEONDOLEWA kabisa kutoka hapa -->
 
         </div>
       </div>
