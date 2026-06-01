@@ -48,7 +48,6 @@
           <li><a href="index.html" data-i18n="nav_home">Nyumbani</a></li>
           <li><a href="kuhusu.html" data-i18n="nav_about">Kuhusu</a></li>
           <li class="dropdown">
-            <!-- MAREKEBISHO YAMEFANYIKA HAPA: data-i18n sasa iko ndani ya span kulinda rangi na mfumo wa dropdown -->
             <a href="maonyesho.html" class="active"><span data-i18n="nav_gallery">Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="picha.html" class="active" data-i18n="nav_gallery_photos">Picha</a></li>
@@ -126,126 +125,29 @@
           <button class="filter-btn" data-filter="filter-craft" data-i18n="filter_craft">Ufundi wa Upishi</button>
         </div>
 
-        <div class="row gy-4 justify-content-center gallery-container">
-
-          <!-- Biriyani -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-main-dishes">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/biriyani.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_biriyani_title" title="Biriyani">
-                <img src="assets/img/gallery/biriyani.jpg" class="img-fluid" alt="Biriyani" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_biriyani_title">Biriyani</h4>
-                <p data-i18n="item_biriyani_desc">Vyakula Vikuu</p>
-              </div>
-            </div>
+        <div class="row gy-4 justify-content-center gallery-container" id="gallery-container">
           </div>
 
-          <!-- Pilau -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-main-dishes">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/pilau.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_pilau_title" title="Pilau">
-                <img src="assets/img/gallery/pilau.jpg" class="img-fluid" alt="Pilau" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_pilau_title">Pilau</h4>
-                <p data-i18n="item_pilau_desc">Vyakula Vikuu</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Maandazi -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-snacks">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/maandazi.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_maandazi_title" title="Maandazi">
-                <img src="assets/img/gallery/maandazi.jpg" class="img-fluid" alt="Maandazi" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_maandazi_title">Maandazi</h4>
-                <p data-i18n="item_maandazi_desc">Vitafunwa</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mkate wa Mayai -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-snacks">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/mkate-mayai.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_mkate_mayai_title" title="Mkate wa Mayai">
-                <img src="assets/img/gallery/mkate-mayai.jpg" class="img-fluid" alt="Mkate wa Mayai" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_mkate_mayai_title">Mkate wa Mayai</h4>
-                <p data-i18n="item_mkate_mayai_desc">Vitafunwa</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Keki -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-snacks">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/keki.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_keki_title" title="Keki">
-                <img src="assets/img/gallery/keki.jpg" class="img-fluid" alt="Keki" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_keki_title">Keki</h4>
-                <p data-i18n="item_keki_desc">Vitafunwa</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Vileja -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-snacks">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/vileja.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_vileja_title" title="Vileja">
-                <img src="assets/img/gallery/vileja.jpg" class="img-fluid" alt="Vileja" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_vileja_title">Vileja</h4>
-                <p data-i18n="item_vileja_desc">Vitafunwa</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kitunguu Cha Kukaanga -->
-          <div class="col-xl-3 col-lg-4 col-md-6 gallery-item filter-craft">
-            <div class="gallery-item-wrap">
-              <a href="assets/img/gallery/kitunguu.jpg" class="glightbox" data-gallery="sahilion-gallery" data-i18n="[title]gallery_kitunguu_title" title="Kitunguu Cha Kukaanga">
-                <img src="assets/img/gallery/kitunguu.jpg" class="img-fluid" alt="Kitunguu Cha Kukaanga" loading="lazy" width="800" height="600">
-              </a>
-              <div class="gallery-item-info">
-                <h4 data-i18n="item_kitunguu_title">Kitunguu Cha Kukaanga</h4>
-                <p data-i18n="item_kitunguu_desc">Ufundi wa Upishi</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
   </main>
 
  <footer id="footer" class="footer" style="background-color:#4A2C2A; padding:2rem 0;">
-
     <div class="container text-center">
-
       <div class="copyright mb-2">
-        <p style="color:#F5F5DC;">© <span>2025</span> <strong class="px-1 sitename">Sahilion.</strong> <span data-i18n="footer_copyright_reserved">Haki Zote Zimehifadhiwa.</span></p>
+        <p style="color:#F5F5DC;">© <span>2026</span> <strong class="px-1 sitename">Sahilion.</strong> <span data-i18n="footer_copyright_reserved">Haki Zote Zimehifadhiwa.</span></p>
       </div>
-
       <div class="social-links d-flex justify-content-center gap-3 mb-2">
         <a href="https://www.tiktok.com/@sahilionhq" target="_blank" class="tiktok" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_tiktok"><i class="bi bi-tiktok"></i></a>
         <a href="https://www.instagram.com/sahilionhq" target="_blank" class="instagram" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://x.com/SahilionHQ" target="_blank" class="twitter-x" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="https://youtube.com/@sahilionmedia" target="_blank" class="youtube" style="color:#D35400; font-size:1.5rem;" data-i18n="[title]social_youtube"><i class="bi bi-youtube"></i></a>
       </div>
-
       <div class="credits" style="color:#F5F5DC;" data-i18n="footer_tagline">
         Kutoka Pwani hadi Ulimwenguni
       </div>
-
     </div>
-
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" data-i18n="[title]scroll_top_title" title="Rudi Juu"><i class="bi bi-arrow-up-short"></i></a>
@@ -260,7 +162,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script src="assets/js/content-loader.js"></script>
 
+</body>
 </html>
 
