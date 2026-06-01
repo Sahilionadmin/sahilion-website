@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
  <!-- Vendor CSS Files --> 
- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -54,7 +54,8 @@
           <li><a href="index.html" data-i18n="nav_home">Nyumbani</a></li>
           <li><a href="kuhusu.html" data-i18n="nav_about">Kuhusu</a></li>
           <li class="dropdown">
-            <a href="maonyesho.html" class="active" data-i18n="nav_gallery"><span>Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <!-- MAREKEBISHO YAMEFANYIKA HAPA: data-i18n sasa ipo ndani ya span ili kulinda icon na rangi yake -->
+            <a href="maonyesho.html" class="active"><span data-i18n="nav_gallery">Maonyesho</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="picha.html" data-i18n="nav_gallery_photos">Picha</a></li>
               <li><a href="video.html" class="active" data-i18n="nav_gallery_videos">Video</a></li>
@@ -64,8 +65,8 @@
           <li><a href="mawasiliano.html" data-i18n="nav_contact">Mawasiliano</a></li>
         </ul>
 
-<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
         <div class="lang-switcher" id="lang-switcher">
           <a href="#" class="lang-flag" data-lang="sw" title="Swahili" data-i18n="[title]lang_sw_title">
@@ -162,3 +163,4 @@
 </body>
 
 </html>
+
