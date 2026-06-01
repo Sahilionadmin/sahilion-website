@@ -1,4 +1,4 @@
-/**
+﻿/**
  * main.js - Sahilion (PhotoFolio modified)
  * Includes: i18n, preloader, nav, AOS, Glightbox, Swiper, Formspree AJAX handlers, Gallery Filter
  *
@@ -39,9 +39,15 @@
     return translations[key] || (window.translations && window.translations[key]) || key;
   }
 
-  function applyTranslations(lang, data) {
+  // MAREKEBISHO: Tumeifanya kazi hii iwe ya Global (window.localizePage) ili content-loader.js iweze kuitumia
+  window.localizePage = function() {
     try {
-      document.documentElement.setAttribute('lang', lang);
+      const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
+      document.documentElement.setAttribute('lang', savedLang);
+      
+      // Ikiwa ni lugha ya msingi (sw) na hakuna data, tumia window.translations kama ipo
+      const data = (savedLang === DEFAULT_LANG) ? (window.translations || {}) : translations;
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const attr = el.getAttribute('data-i18n');
         if (!attr) return;
@@ -58,9 +64,21 @@
         }
       });
     } catch (err) { 
-      console.error('applyTranslations error', err); 
+      console.error('localizePage error', err); 
     }
+  };
+
+  // Hii imebaki kwa uoanifu wa ndani (internal backward compatibility)
+  function applyTranslations(lang, data) {
+    window.localizePage();
   }
+
+  // Weka i18next flag simulation kwa ajili ya content-loader.js kujua mfumo upo tayari
+  window.i18next = {
+    t: function(key) {
+      return getTranslation(key);
+    }
+  };
 
   function updateFlagVisual(newLang) {
     document.querySelectorAll('.lang-flag').forEach(parent => {
@@ -160,7 +178,7 @@
       const scrollTop = document.querySelector('.scroll-top');
       if (!scrollTop) return;
       const toggle = () => { 
-        window.scrollY > 100 ? scrollTop.classList.add('add') : scrollTop.classList.remove('active'); 
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active'); 
       };
       window.addEventListener('load', toggle);
       document.addEventListener('scroll', toggle);
@@ -268,7 +286,7 @@
   }
 
   // -------------------------
-  // Sahilion Gallery Filter System - MAREKEBISHO YA UHAKIKA HAPA
+  // Sahilion Gallery Filter System
   // -------------------------
   function initGalleryFilter() {
     const filterButtons = document.querySelectorAll(".filter-btn");
@@ -283,7 +301,6 @@
           const filterValue = this.getAttribute("data-filter");
 
           galleryItems.forEach(item => {
-            // Badala ya kulazimisha inline display:none/block, tunadhibiti muonekano kwa ustadi salama wa CSS na AOS layout
             if (filterValue === "all" || item.classList.contains(filterValue)) {
               item.style.setProperty('display', 'block', 'important');
               item.style.opacity = "1";
@@ -295,7 +312,6 @@
             }
           });
           
-          // Re-trigger AOS salama kabisa bila kuvuruga layout zilizofichwa
           if (typeof AOS !== 'undefined') {
             AOS.refresh();
           }
@@ -313,8 +329,10 @@
       const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
       if (savedLang !== DEFAULT_LANG) { 
         translations = await fetchTranslations(savedLang); 
-        applyTranslations(savedLang, translations); 
       }
+      // Amsha tafsiri mara ya kwanza kabisa kurasa inayofunguka
+      window.localizePage();
+      
       updateFlagVisual(savedLang);
       document.querySelectorAll('.lang-flag').forEach(button => {
         button.addEventListener('click', (e) => { 
@@ -359,3 +377,4 @@
   });
 
 })();
+
