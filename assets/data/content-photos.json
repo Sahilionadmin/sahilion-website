@@ -1,0 +1,45 @@
+﻿[
+  {
+    "category": "filter-main-dishes",
+    "img_src": "assets/img/gallery/biriyani.jpg",
+    "title_key": "item_biriyani_title",
+    "desc_key": "item_biriyani_desc"
+  },
+  {
+    "category": "filter-main-dishes",
+    "img_src": "assets/img/gallery/pilau.jpg",
+    "title_key": "item_pilau_title",
+    "desc_key": "item_pilau_desc"
+  },
+  {
+    "category": "filter-snacks",
+    "img_src": "assets/img/gallery/maandazi.jpg",
+    "title_key": "item_maandazi_title",
+    "desc_key": "item_maandazi_desc"
+  },
+  {
+    "category": "filter-snacks",
+    "img_src": "assets/img/gallery/mkate-mayai.jpg",
+    "title_key": "item_mkate_mayai_title",
+    "desc_key": "item_mkate_mayai_desc"
+  },
+  {
+    "category": "filter-snacks",
+    "img_src": "assets/img/gallery/keki.jpg",
+    "title_key": "item_keki_title",
+    "desc_key": "item_keki_desc"
+  },
+  {
+    "category": "filter-snacks",
+    "img_src": "assets/img/gallery/vileja.jpg",
+    "title_key": "item_vileja_title",
+    "desc_key": "item_vileja_desc"
+  },
+  {
+    "category": "filter-craft",
+    "img_src": "assets/img/gallery/kitunguu.jpg",
+    "title_key": "item_kitunguu_title",
+    "desc_key": "item_kitunguu_desc"
+  }
+]
+
