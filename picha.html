@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sw">
 
 <head>
@@ -111,18 +111,20 @@
     <section id="gallery" class="gallery section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-     <div class="container section-title text-start mb-5">
-  <h2>Makusanyo Yetu</h2>
-  <p>
-    Taswira zinazohifadhi ladha, ubunifu na urithi wa pwani.
-  </p>
-</div>
+        <!-- Vichwa vya habari vimeongezewa data-i18n hapa -->
+        <div class="container section-title text-center mb-5">
+          <h2 data-i18n="section_collections_title">Makusanyo Yetu</h2>
+          <p data-i18n="section_collections_subtitle">
+            Taswira zinazohifadhi ladha, ubunifu na urithi wa pwani.
+          </p>
+        </div>
 
+        <!-- Filters zote zimeongezewa data-i18n hapa -->
         <div class="gallery-filters text-center mb-5">
-          <button class="filter-btn active" data-filter="all">Zote</button>
-          <button class="filter-btn" data-filter="filter-main-dishes">Vyakula Vikuu</button>
-          <button class="filter-btn" data-filter="filter-snacks">Vitafunwa</button>
-          <button class="filter-btn" data-filter="filter-craft">Ufundi wa Upishi</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Zote</button>
+          <button class="filter-btn" data-filter="filter-main-dishes" data-i18n="filter_main_dishes">Vyakula Vikuu</button>
+          <button class="filter-btn" data-filter="filter-snacks" data-i18n="filter_snacks">Vitafunwa</button>
+          <button class="filter-btn" data-filter="filter-craft" data-i18n="filter_craft">Ufundi wa Upishi</button>
         </div>
 
         <div class="row gy-4 justify-content-center gallery-container">
@@ -249,3 +251,4 @@
 </body>
 
 </html>
+
